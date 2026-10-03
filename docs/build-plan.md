@@ -75,6 +75,24 @@ Design checks added (they decide details in the design spec):
 
 Only lecture 01 is uploaded for Phase 0.
 
+**Results (2026-10-03, iPhone 14 Pro, iOS 18.7 / Safari 18.7.5, home-screen mode, dark mode):**
+
+| # | Check | Result | Consequence |
+|---|---|---|---|
+| 13 | Home screen name and icon | Pass | — |
+| 1 | Background audio | Pass | Persistent mini-player |
+| 2 | Lock-screen controls | Pass | Media Session with ±10 s |
+| 3 | Keep screen on | Pass | Not needed; not built |
+| 4 | Seek and resume | Pass (host returns HTTP 206) | Resume positions as specified |
+| 5 | German voice | Pass; 10 voices reported, most are Apple novelty voices | Default to Anna; prefer an installed enhanced/premium German voice; hide novelty voices; voice choice in Settings |
+| 6 | Storage | Pass; persistent storage granted; 41.2 GB quota | Request persistence on first launch; backup stays mandatory |
+| 7 | Text size | Pass | Type scale built on the iPhone text-size setting |
+| 8 | Notch and home bar | Fail (visual); measured insets correct, 59 / 34 pt | Solid backdrop behind the status bar on scrolling screens; owner note pending |
+| 9 | Keyboard key row | Pass | ä ö ü ß row above the keyboard in typed answers |
+| 10 | Long-press | Pass | Long-press to add a sentence |
+| 11 | Haptics | Pass via the switch-control workaround; standard vibration unavailable | Optional light tick; never relied on |
+| 12 | Return from a website | Inconclusive: fired at 0 s, before the owner returned | "Mark done?" shown inline until answered; no detection |
+
 ### Phase 1 — Core
 
 Lectures (player, mini-player or screen-awake fallback per Phase 0, notes, sentence-tick screen); review engine with word and sentence cards; content import (Goethe lists, Wiktionary, Tatoeba, DeReWo); basic Today; backup and restore. Built against the finished design spec.

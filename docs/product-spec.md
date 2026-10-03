@@ -38,7 +38,7 @@ The app is one part of a wider routine:
 - **Device:** iPhone only, portrait only. No tablet or desktop layouts.
 - **Form:** a website added to the iPhone home screen, where it opens full-screen like an app (a "home-screen web app"). Light and dark mode follow the phone setting.
 - **Connectivity:** internet required. Offline use is not a requirement.
-- **Background audio:** WebKit (Safari's engine) marks background audio for home-screen web apps as fixed since iOS 15.4. Expected behavior: lectures keep playing with the screen locked, with lock-screen controls. **Must be tested on the user's iPhone in the first build step.** Fallback if it fails: keep the screen awake during playback (supported since Safari 18.4).
+- **Background audio:** **Confirmed 2026-10-03** on the owner's iPhone 14 Pro (iOS 18.7, home-screen mode): lectures keep playing with the screen locked, and lock-screen controls (play/pause, ±10 s) work. The keep-awake fallback also works but is not needed.
 - **Storage:** all progress is stored on the phone, inside the home-screen app. Home-screen apps are exempt from Safari's 7-day data wipe, but iOS can still delete data under low storage or if the app is removed. **Therefore backup/export is mandatory** (see 4.7).
 - **Storage isolation:** the home-screen app and Safari keep separate data on iOS. Features must never be split between the two (e.g. never send lectures to a Safari tab).
 - **Lecture audio hosting:** 50 MP3 files, 367 MB total, 128 kbps stereo, ~6.4 hours. Plan: re-encode to mono ~64 kbps (≈185 MB). **Decided 2026-10-03 (owner):** the app and the MP3s are hosted on GitHub Pages from a public repository on a free GitHub account, so the MP3s are publicly visible. This replaces the earlier rule that they must not be publicly listed. Known risk: Language Transfer publishes no licence for re-hosting its audio; a takedown request is possible.
@@ -290,7 +290,7 @@ Every imported item keeps a record of its source, so it can be traced and attrib
 
 ## 11. Open items
 
-1. Phase 0 phone test results (background audio, voice, storage).
+1. ~~Phase 0 phone test results~~ Done 2026-10-03 on iPhone 14 Pro, iOS 18.7, home-screen mode: background audio, lock-screen controls, keep-awake, seek/resume, German voices, persistent storage (granted; 41 GB quota), text size, keyboard key row, long-press, haptic tick all pass. Return-from-link detection was inconclusive (fired immediately), so the "Mark done?" prompt is shown inline until answered instead of relying on detection. Safe-area values correct (59/34 pt); visual check pending owner note. Details: `docs/build-plan.md` section 4.
 2. ~~Private audio host choice.~~ Decided: GitHub Pages, public repository (see section 3).
 3. Free A2–B1 reading source with English translations (gap).
 4. Extract the Nicos Weg grammar topic order (needs the built-in browser).

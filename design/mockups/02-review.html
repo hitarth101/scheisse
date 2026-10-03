@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review · mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="f.css">
+<style>
+.rv-top { margin-top: 54px; height: 50px; padding: 0 14px; display: flex; align-items: center; justify-content: space-between; flex: none; }
+.rv-top .t { font-weight: 600; font-variant-numeric: tabular-nums; }
+.rv-top .t span { color: var(--label-2); font-weight: 500; }
+.rv-bar { margin: 2px 20px 0; }
+.rv-seg { margin: 10px 16px 0; }
+.rv-card { margin: 14px 16px 0; }
+.rv-bottom { padding: 0 16px 44px; flex: none; }
+.gap { display: inline-block; min-width: 64px; border-bottom: 2.5px solid var(--label); margin: 0 4px; }
+.typed { font-size: 1.294rem; line-height: 1.35; font-weight: 600; }
+.pl-line { margin-top: 6px; }
+.pl-line .l2 { margin-right: 6px; }
+/* AX3 frames: Dynamic Type "Accessibility 3" (body 40 pt). Written in px here because the mockup page's root size is fixed. */
+.ax .rv-top .t { font-size: 24px; }
+.ax .p { font-size: 36px; line-height: 1.22; color: var(--label-2); }
+.ax .hw { font-size: 60px; line-height: 1.1; font-weight: 700; letter-spacing: -.025em; }
+.ax .pl { font-size: 40px; line-height: 1.25; }
+.ax .se { font-size: 44px; line-height: 1.2; font-weight: 700; letter-spacing: -.02em; }
+.ax .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px 16px 40px; background: var(--bg); box-shadow: 0 -12px 16px -8px var(--bg); position: relative; }
+.ax .grid2 span { height: 64px; border-radius: 32px; background: var(--key); box-shadow: var(--shadow-key); display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 600; font-size: 24px; line-height: 1.05; }
+.ax .grid2 small { font-size: 17px; font-weight: 400; color: var(--label-2); }
+.ax .grid2 .again { background-color: var(--key-dark-b); background-image: linear-gradient(var(--key-dark-a), var(--key-dark-b)); color: #F4F4F1; }
+.ax .grid2 .again small { color: #D9D9D5; }
+.ax .grid2 .good { background-color: var(--signal); background-image: linear-gradient(var(--signal-hi), var(--signal)); color: var(--on-signal); }
+.ax .grid2 .good small { color: var(--on-signal); opacity: .85; }
+.forms th, .forms td { padding: 10px 8px; }
+.forms td { font-weight: 500; }
+</style>
+</head>
+<body class="doc">
+<div class="wrap">
+<h1>2 · Review</h1>
+<p class="lede">A focus mode with no tab bar. The header names the card type next to the count; the prompt sits high, the actions in the thumb zone: Reveal, then four round grading keys with the next interval printed under each as a plain fact. German from Wiktionary and Tatoeba (sentence numbers on the cards).</p>
+
+<h2 class="grp-title">Speak mode: prompt and answer</h2>
+<div class="row">
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">12 of 42 <span>· Word</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:26%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title1">table</div>
+    <div class="t-sub l2" style="margin-top:4px">noun · say it with article and plural</div>
+    <div class="win" style="margin-top:20px;min-height:120px;display:grid;place-items:center"><span class="t-sub l2">Say it aloud, then reveal.</span></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="rv-bottom"><div class="go center"><span>Reveal</span></div></div>
+</div></div><figcaption><b>Word card, before reveal</b>English meaning plus word type (and a short hint when two cards share the same English). Nothing plays before the reveal, so audio can't give the answer away.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">12 of 42 <span>· Word</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:26%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title3 l2" style="margin:0 0 14px;font-weight:400">table · noun</div>
+    <div class="win">
+      <div style="display:flex;justify-content:space-between;align-items:center"><div class="de-head" lang="de"><span class="art g-der">der</span> Tisch</div><span class="rkey" style="color:var(--label)"><i data-i="speaker"></i></span></div>
+      <div class="t-body pl-line" lang="de"><span class="l2" lang="en">plural</span>die Tische</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px"><span class="src">Human recording · Wiktionary</span><span class="tbtn" style="min-height:36px;font-size:.882rem">All forms</span></div>
+  </div>
+  <div class="card rv-card" style="padding:14px 20px">
+    <div class="t-title3" lang="de">Der Tisch wackelt.</div>
+    <div class="t-sub l2">The table is wobbly.</div>
+    <div class="src" style="margin-top:6px">Tatoeba 9280332</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grades" style="padding-bottom:44px"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">1 day</span><span class="gi">3 days</span><span class="gi">8 days</span></div>
+</div></div><figcaption><b>Word card, after reveal</b>Article in its gender colour, plural uncoloured, example sentence with its English. “All forms” opens Wiktionary's full table. Good is the green key because it is the usual answer.</figcaption></figure>
+
+<figure><div class="ph dark"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">13 of 42 <span>· Sentence</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:29%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title3 l2" style="margin:0 0 14px;font-weight:400">There’s no speed limit.</div>
+    <div class="win">
+      <div class="de-sent" lang="de">Es gibt keine Geschwindigkeits&shy;begrenzung.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px"><span class="src">Human recording · Tatoeba 2301788</span><span class="rkey" style="color:var(--label)"><i data-i="speaker"></i></span></div>
+    </div>
+  </div>
+  <div class="card rv-card" style="padding:14px 20px">
+    <div class="t-head" lang="de"><span class="art g-die">die</span> Geschwindigkeits&shy;begrenzung</div>
+    <div class="t-sub l2" lang="de"><span lang="en">speed limit · plural</span> die Geschwindigkeits&shy;begrenzungen</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grades" style="padding-bottom:44px"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">2 days</span><span class="gi">5 days</span><span class="gi">12 days</span></div>
+</div></div><figcaption><b>Sentence card, after reveal</b>The nouns in the sentence are listed under it with article and plural. The long compound breaks at its joint (Geschwindigkeits- / begrenzung).</figcaption></figure>
+
+<figure><div class="ph dark"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">27 of 42 <span>· Fill the gap</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:64%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="de-sent" lang="de">Ich suche <span class="gap">&nbsp;</span> Bahnhof.</div>
+    <div class="t-sub l2" style="margin-top:12px">An article is missing. I’m looking for the station.</div>
+    <div class="src" style="margin-top:12px">Tatoeba 8320752 · one word removed</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="rv-bottom"><div class="go center"><span>Reveal</span></div></div>
+</div></div><figcaption><b>Fill-in-the-blank card</b>A real sentence with one word removed; the English is the hint. Unlocked once the article topic is marked Practiced in Grammar.</figcaption></figure>
+</div>
+
+<h2 class="grp-title">Type mode and listening</h2>
+<div class="row">
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">18 of 42 <span>· Sentence</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:43%"></i></div>
+  <div class="seg rv-seg"><span>Speak</span><span class="on">Type</span></div>
+  <div class="card rv-card" style="padding-bottom:16px">
+    <div class="t-title2">I like trains!</div>
+    <div class="t-sub l2" style="margin-top:4px">Type it in German.</div>
+  </div>
+  <div style="margin:12px 16px 0;display:flex;gap:8px"><div class="field focus" style="flex:1" lang="de">Ich mag Zü<span class="caret"></span></div><div class="go center" style="height:52px;padding:0 16px">Check</div></div>
+  <div class="spacer"></div>
+  <div class="kbrow"><span>ä</span><span>ö</span><span>ü</span><span>ß</span><span style="min-width:44px">Ä</span><span style="min-width:44px">Ö</span><span style="min-width:44px">Ü</span></div>
+  <div class="kbd"></div>
+</div></div><figcaption><b>Typing</b>The ä ö ü ß row sits on top of the keyboard (Phase 0 check 9). Autocorrect and auto-capitalise are off in this field so the comparison is honest.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">18 of 42 <span>· Sentence</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:43%"></i></div>
+  <div class="seg rv-seg"><span>Speak</span><span class="on">Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title3 l2" style="margin:0 0 12px;font-weight:400">I like trains!</div>
+    <div class="typed diff" lang="de"><span class="t-sub l2" lang="en" style="font-weight:400;margin-right:8px">You typed</span>Ich mag <span class="x">z</span><span class="nt">ue</span>ge!</div>
+    <div class="win" style="margin-top:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center"><span class="de-sent" style="font-size:1.47rem" lang="de">Ich mag Züge!</span><span class="rkey" style="color:var(--label)"><i data-i="speaker"></i></span></div>
+    <div class="note"><i data-i="info"></i><span>Capital letter: German nouns start with one (Züge).</span></div>
+    <div class="note"><i data-i="info"></i><span>“ue” for ü is an accepted keyboard spelling, so it's a note, not a mistake.</span></div>
+    <div class="src" style="margin-top:10px">Tatoeba 13777906</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grades" style="padding-bottom:44px"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">1 day</span><span class="gi">4 days</span><span class="gi">9 days</span></div>
+</div></div><figcaption><b>Typed answer checked</b>Your line on top with differences marked; the answer in the window. Highlight = a difference, dotted underline = a note. You still grade yourself.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">31 of 42 <span>· Listening</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:74%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title2">What does it mean?</div>
+    <div class="win" style="margin-top:16px;padding:26px 16px;display:grid;justify-items:center;gap:14px">
+      <span class="rkey" style="width:88px;height:88px;border-radius:44px;color:var(--label)"><i data-i="play" class="big"></i></span>
+      <div style="display:flex;gap:10px"><span class="chip"><i data-i="turtle"></i>Play slowly</span><span class="chip">Played 2×</span></div>
+    </div>
+    <div class="src" style="margin-top:12px">iPhone voice · Anna</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="rv-bottom"><div class="go center"><span>Reveal</span></div></div>
+</div></div><figcaption><b>Listening card</b>Hear the German, say the meaning, reveal. The revealed side shows the German text and the English.</figcaption></figure>
+
+<figure><div class="ph dark"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">13 of 42 <span>· Sentence</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:29%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card"><div class="t-title3 l2" style="margin:0 0 14px;font-weight:400">There’s no speed limit.</div>
+    <div class="win"><div class="de-sent" lang="de">Es gibt keine Geschwindigkeits&shy;begrenzung.</div></div></div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div class="actlist">
+      <div class="a"><i data-i="undo"></i>Undo last grade<span class="r">Good · Der Tisch</span></div>
+      <div class="a"><i data-i="edit"></i>Edit card</div>
+      <div class="a"><i data-i="suspend"></i>Suspend card</div>
+      <div class="a"><i data-i="flag"></i>Flag: source data looks wrong</div>
+      <div class="a"><i data-i="speaker"></i>Play audio automatically<span class="sw on" style="margin-left:auto"></span></div>
+    </div>
+    <div class="acts"><div class="key2">Close</div></div>
+  </div>
+</div></div><figcaption><b>More menu</b>Everything secondary lives here so the card stays clean. Flagged cards are suspended and listed in Status. The switch is graphite: green stays reserved for the next action.</figcaption></figure>
+</div>
+
+<h2 class="grp-title">Card details: all forms, edit</h2>
+<div class="row">
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">12 of 42 <span>· Word</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="card rv-card"><div class="win"><div class="de-head" lang="de"><span class="art g-der">der</span> Tisch</div></div></div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><div class="t-title3" lang="de"><span class="art g-der">der</span> Tisch</div><span class="src">masculine · Wiktionary</span></div>
+    <table class="rtable forms" style="margin-top:10px">
+      <thead><tr><th></th><th>Singular</th><th>Plural</th></tr></thead>
+      <tbody lang="de">
+        <tr><th scope="row" lang="en">Nominative</th><td><span class="art g-der">der</span> Tisch</td><td>die Tische</td></tr>
+        <tr><th scope="row" lang="en">Accusative</th><td><span class="art g-der">den</span> Tisch</td><td>die Tische</td></tr>
+        <tr><th scope="row" lang="en">Dative</th><td><span class="art g-der">dem</span> Tisch</td><td>den Tischen</td></tr>
+        <tr><th scope="row" lang="en">Genitive</th><td><span class="art g-der">des</span> Tisches, <span class="art g-der">des</span> Tischs</td><td>der Tische</td></tr>
+      </tbody>
+    </table>
+    <div class="t-foot l2" style="margin-top:6px">Wiktionary also lists a rare dative “dem Tische”.</div>
+    <div class="acts"><div class="key2">Close</div></div>
+  </div>
+</div></div><figcaption><b>All forms</b>Opened from a card back or the word popup. Every form comes from Wiktionary's own table; case names are written out. Verbs get the same sheet with their conjugation.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr raised-bg">
+  <div class="navrow"><span class="tbtn neutral">Cancel</span><span class="ttl">Edit card</span><span class="tbtn">Save</span></div>
+  <div style="padding:14px 16px 0">
+    <div class="t-sub l2" style="margin:0 4px 6px">Article</div>
+    <div class="seg"><span class="on" style="color:var(--der)">der</span><span>die</span><span>das</span></div>
+    <div class="t-sub l2" style="margin:16px 4px 6px">Word</div>
+    <div class="field focus" lang="de">Tisch<span class="caret"></span></div>
+    <div class="t-sub l2" style="margin:16px 4px 6px">Plural</div>
+    <div class="field" lang="de">die Tische</div>
+    <div class="t-sub l2" style="margin:16px 4px 6px">English meaning</div>
+    <div class="field">table</div>
+    <div class="t-foot l2" style="margin:14px 4px 0">The original source entry is kept. Your edit shows on this card only, marked “edited”.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="kbrow"><span>ä</span><span>ö</span><span>ü</span><span>ß</span><span style="min-width:44px">Ä</span><span style="min-width:44px">Ö</span><span style="min-width:44px">Ü</span></div>
+  <div class="kbd" style="height:250px"></div>
+</div></div><figcaption><b>Edit card</b>From the More menu, Leeches or Flagged cards. Sentence cards and “Edit pair” (Reading, tick screen) use the same form with a German and an English field.</figcaption></figure>
+</div>
+
+<h2 class="grp-title">Very large text (Accessibility 3)</h2>
+<p class="grp-note">Body text at AX3 is 40 pt. Body text is never capped; display sizes stop growing at a ceiling (headword 60, answer sentence 44, page titles 48); the header and tab bar stay compact. At accessibility sizes the four round grading keys become a 2 × 2 grid of wide keys so their labels fit, and the card scrolls behind them.</p>
+<div class="row">
+<figure><div class="ph light ax"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">12 of 42</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="card rv-card">
+    <div class="p">table · noun</div>
+    <div class="win" style="margin-top:14px">
+      <div class="hw" lang="de"><span class="art g-der">der</span> Tisch</div>
+      <div class="pl" lang="de" style="margin-top:6px"><span class="l2" lang="en">plural</span> die Tische</div>
+      <div style="margin-top:12px"><span class="rkey" style="color:var(--label);width:52px;height:52px;border-radius:26px"><i data-i="speaker"></i></span></div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grid2"><span class="again">Again<small>&lt;10 min</small></span><span>Hard<small>1 day</small></span><span class="good">Good<small>3 days</small></span><span>Easy<small>8 days</small></span></div>
+</div></div><figcaption><b>Word card at AX3</b>Headword at its 60 pt ceiling still fits on one line; the plural wraps; the example card continues below and scrolls.</figcaption></figure>
+
+<figure><div class="ph dark ax"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">13 of 42</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="card rv-card">
+    <div class="p">There’s no speed limit.</div>
+    <div class="win" style="margin-top:14px"><div class="se" lang="de">Es gibt keine Geschwin&shy;dig&shy;keits&shy;begrenzung.</div></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grid2"><span class="again">Again<small>&lt;10 min</small></span><span>Hard<small>2 days</small></span><span class="good">Good<small>5 days</small></span><span>Easy<small>12 days</small></span></div>
+</div></div><figcaption><b>Sentence card at AX3</b>When even the first half of the compound no longer fits a line, it breaks at syllables as well as the joint (Geschwindig- / keits- / begrenzung). It never shrinks and never runs off the screen.</figcaption></figure>
+</div>
+
+<h2 class="grp-title">End, empty and error</h2>
+<div class="row">
+<figure><div class="ph dark"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">Reviews done</span><span style="width:42px"></span></div>
+  <div class="card rv-card" style="margin-top:24px">
+    <div style="display:flex;align-items:center;gap:12px"><span class="lamp done"></span><div class="t-title3">42 reviews · 13 min</div></div>
+    <div class="grp flush" style="margin:12px -20px 0;background:transparent;border-radius:0">
+      <div class="cl"><div class="ct"><b>Again</b></div><span class="det">5</span></div>
+      <div class="cl"><div class="ct"><b>Hard</b></div><span class="det">6</span></div>
+      <div class="cl"><div class="ct"><b>Good</b></div><span class="det">27</span></div>
+      <div class="cl"><div class="ct"><b>Easy</b></div><span class="det">4</span></div>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="rv-bottom"><div class="t-sub l2" style="text-align:center;margin-bottom:10px">Next: 10 new cards, about 6 min</div><div class="go"><span>Continue</span><i data-i="play"></i></div></div>
+</div></div><figcaption><b>Block finished</b>Counts, not judgement. The next block is one press away; Close returns to Today.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">Reviews</span><span style="width:42px"></span></div>
+  <div class="card rv-card" style="margin-top:24px">
+    <div style="display:flex;align-items:center;gap:12px"><span class="lamp"></span><div class="t-title3">Nothing due right now</div></div>
+    <div class="t-body l2" style="margin-top:8px">Next reviews: tomorrow, 37 cards.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="rv-bottom"><div class="key2">Back to Today</div></div>
+</div></div><figcaption><b>Nothing due</b>Reached from “Reviews only”. Says when the next cards come back; offers nothing to fill the gap.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="rv-top"><span class="rkey"><i data-i="close"></i></span><span class="t">9 of 42 <span>· Sentence</span></span><span class="rkey"><i data-i="more"></i></span></div>
+  <div class="bar rv-bar"><i style="width:19%"></i></div>
+  <div class="seg rv-seg"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card rv-card">
+    <div class="t-title3 l2" style="margin:0 0 14px;font-weight:400">Quit wasting time.</div>
+    <div class="win"><div class="de-sent" lang="de">Vergeude keine Zeit!</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px"><span class="src">Human recording · Tatoeba 4277876</span><span class="rkey" style="color:var(--label-3)"><i data-i="speaker"></i></span></div></div>
+    <div class="notice err" style="margin-top:10px;padding:10px 0 0;background:transparent;border-radius:0"><i data-i="warn"></i><div><b>Couldn't play the recording</b><span>Check your connection, or hear it in the iPhone voice instead.</span>
+      <div style="display:flex;gap:10px;margin-top:12px"><span class="chip">Try again</span><span class="chip">Use iPhone voice</span></div></div></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grades" style="padding-bottom:44px"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">1 day</span><span class="gi">3 days</span><span class="gi">8 days</span></div>
+</div></div><figcaption><b>Audio failed</b>The card stays usable; grading never waits on audio.</figcaption></figure>
+</div>
+</div>
+<script src="f.js"></script>
+</body>
+</html>

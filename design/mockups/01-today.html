@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="f.css">
+</head>
+<body class="doc">
+<div class="wrap">
+<h1>1 · Today</h1>
+<p class="lede">Home screen of the app. One green key fills the daily budget: due reviews, then new cards, then the main block. Every number is a measured fact. Numbers on this page are demo values; German text is from Wiktionary and Tatoeba.</p>
+
+<h2 class="grp-title">Session states</h2>
+<div class="row">
+<figure><div class="ph light" data-tab="today" data-inbox="3"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey" aria-label="Status and data"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div class="sh"><span>Session · about 30 min</span></div>
+  <div class="grp">
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>Reviews</b><span>42 due</span></div><span class="det">~14 min</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>New cards</b><span>10 · lecture 08 and Inbox</span></div><span class="det">~6 min</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="chip" style="min-height:30px;font-size:.78rem"><i data-i="swap"></i>Swap</span></div>
+  </div>
+  <div style="padding:16px 16px 0"><div class="go"><span>Start session</span><i data-i="play"></i></div></div>
+  <div class="sh" style="padding-top:24px"><span>Also</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="inbox"></i><div class="ct"><b>Inbox</b></div><span class="det">3</span><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="note"></i><div class="ct"><b>Reviews only</b></div><i data-i="chev"></i></div>
+  </div>
+  <div class="foot">Time today: 0 min. Last backup 5 days ago.</div>
+</div></div><figcaption><b>Fresh day</b>Next block's lamp is lit. Swap changes the main block. Time estimates use your own measured pace.</figcaption></figure>
+
+<figure><div class="ph dark" data-tab="today" data-mini="paused" data-inbox="3"><div class="scr pad-mini">
+  <div class="navrow"><span></span><span class="rkey" aria-label="Status and data"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div class="sh"><span>Session · about 30 min</span><span>17 min left</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>42 done</span></div><span class="det">13 min</span></div>
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>New cards</b><span>Next · 10 cards</span></div><span class="det">~6 min</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="det">~7 min</span></div>
+  </div>
+  <div style="padding:16px 16px 0"><div class="go"><span>Continue: new cards</span><i data-i="play"></i></div></div>
+  <div class="sh" style="padding-top:24px"><span>Also</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="inbox"></i><div class="ct"><b>Inbox</b></div><span class="det">3</span><i data-i="chev"></i></div>
+  </div>
+  <div class="foot">Time today: 13 min.</div>
+</div></div><figcaption><b>Mid-session, lecture loaded</b>Done block shows a solid lamp and its real time. The mini-player docks above the tab bar while a lecture is loaded.</figcaption></figure>
+
+<figure><div class="ph light" data-tab="today" data-inbox="3"><div class="scr">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Monday 5 October</div></div>
+  <div class="sh"><span>Session · about 30 min</span></div>
+  <div class="grp">
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>Reviews</b><span>95 of 160 due · 65 move to tomorrow</span></div><span class="det">~22 min</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>New cards</b><span>None today · reviews fill the budget</span></div><span class="det">0</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 10</b><span>5:44</span></div><span class="det">~8 min</span></div>
+  </div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div class="t-title3">Main block</div>
+    <div class="t-sub l2" style="margin-top:2px">Pick what fills the rest of today's session.</div>
+    <div class="grp flush" style="margin:14px 0 0;background:var(--bg)">
+      <div class="cl sel"><span style="color:var(--label);width:22px;height:22px;display:grid;place-items:center"><i data-i="check"></i></span><div class="ct"><b>Lecture 10</b><span>Language Transfer · next track</span></div><span class="det">5:44</span></div>
+      <div class="cl"><span style="width:22px"></span><div class="ct"><b>Nicos Weg · Kein Problem!</b><span>Basic words in German · opens DW website</span></div><i data-i="ext"></i></div>
+      <div class="cl"><span style="width:22px"></span><div class="ct"><b>Reading · Trains and stations</b><span>12 Tatoeba sentences · 96% of words known</span></div><span class="det">~8 min</span></div>
+    </div>
+    <div class="acts"><div class="key2">Done</div></div>
+  </div>
+</div></div><figcaption><b>Heavy day, swap sheet open</b>Reviews are capped at the budget and the carry-over is stated plainly; new cards drop to zero automatically. Swap offers only what's available today.</figcaption></figure>
+
+<figure><div class="ph light" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Thursday 3 December</div></div>
+  <div class="sh"><span>Session · about 30 min</span><span>12 min left</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>51 done</span></div><span class="det">15 min</span></div>
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>New cards</b><span>6 done</span></div><span class="det">4 min</span></div>
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>Nicos Weg · Was ist das?</b><span>Naming objects · grammar: definite articles</span></div><i data-i="ext"></i></div>
+    <div class="inline">
+      <div class="t-sub">You opened this lesson on the DW website. Mark it done?</div>
+      <div style="display:flex;gap:10px;margin-top:10px"><div class="key2" style="flex:1;height:44px">Mark done</div><div class="key2" style="flex:1;height:44px">Not yet</div></div>
+    </div>
+  </div>
+  <div style="padding:16px 16px 0"><div class="go"><span>Open lesson again</span><i data-i="ext"></i></div></div>
+  <div class="foot">All 50 lectures finished. The main block is now the next Nicos Weg lesson.</div>
+</div></div><figcaption><b>Nicos Weg block, back from the website</b>The question stays inline until answered, so it never depends on detecting your return (Phase 0 check 12).</figcaption></figure>
+</div>
+
+<h2 class="grp-title">Done, first run, loading</h2>
+<div class="row">
+<figure><div class="ph light" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div style="padding:22px 16px 0"><div class="card" style="margin:0;padding:22px 20px">
+    <div style="display:flex;align-items:center;gap:12px"><span class="lamp done"></span><div class="t-title3">Done for today</div></div>
+    <div class="t-body l2" style="margin-top:8px">Next reviews: tomorrow, 37 cards.</div>
+  </div></div>
+  <div class="sh"><span>Today's session</span><span>29 min</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>42 done</span></div><span class="det">13 min</span></div>
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>New cards</b><span>10 done</span></div><span class="det">7 min</span></div>
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Lecture 09</b><span>Finished · 4 sentences ticked</span></div><span class="det">9 min</span></div>
+  </div>
+  <div class="sh" style="padding-top:24px"><span>Also</span></div>
+  <div class="grp"><div class="cl"><i data-i="inbox"></i><div class="ct"><b>Inbox</b></div><span class="det">0</span><i data-i="chev"></i></div></div>
+</div></div><figcaption><b>Done for today · light</b>A statement of fact and when the next reviews are due. No praise, no "come back tomorrow".</figcaption></figure>
+
+<figure><div class="ph dark" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div style="padding:22px 16px 0"><div class="card" style="margin:0;padding:22px 20px">
+    <div style="display:flex;align-items:center;gap:12px"><span class="lamp done"></span><div class="t-title3">Done for today</div></div>
+    <div class="t-body l2" style="margin-top:8px">Next reviews: tomorrow, 37 cards.</div>
+  </div></div>
+  <div class="sh"><span>Today's session</span><span>29 min</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>42 done</span></div><span class="det">13 min</span></div>
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>New cards</b><span>10 done</span></div><span class="det">7 min</span></div>
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Lecture 09</b><span>Finished · 4 sentences ticked</span></div><span class="det">9 min</span></div>
+  </div>
+  <div class="sh" style="padding-top:24px"><span>Also</span></div>
+  <div class="grp"><div class="cl"><i data-i="inbox"></i><div class="ct"><b>Inbox</b></div><span class="det">0</span><i data-i="chev"></i></div></div>
+</div></div><figcaption><b>Done for today · dark</b></figcaption></figure>
+
+<figure><div class="ph light" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div class="sh"><span>First session · about 30 min</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp"></span><div class="ct"><b>Reviews</b><span>None yet</span></div><span class="det">0</span></div>
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>New cards</b><span>10 · first Goethe A1 words</span></div><span class="det">~8 min</span></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 01</b><span>Language Transfer · 7:25</span></div><span class="det">~8 min</span></div>
+  </div>
+  <div style="padding:16px 16px 0"><div class="go"><span>Start session</span><i data-i="play"></i></div></div>
+  <div style="padding:20px 16px 0"><div class="notice"><i data-i="info"></i><div><b>Your progress lives on this iPhone</b><span>Export a backup from Status now and then. Moving from another install? <span style="color:var(--label);font-weight:600;text-decoration:underline;text-underline-offset:3px">Restore from backup</span></span></div></div></div>
+</div></div><figcaption><b>First run</b>Same order as every day: reviews (none yet), new cards, then the lecture. One plain note about backup; nothing else to set up.</figcaption></figure>
+
+<figure><div class="ph dark" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div class="sh"><span>Session · about 30 min</span></div>
+  <div class="grp">
+    <div class="cl"><span class="lamp"></span><div class="ct"><div class="skel" style="width:40%"></div><div class="skel" style="width:62%;height:11px;margin-top:8px"></div></div></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><div class="skel" style="width:48%"></div><div class="skel" style="width:54%;height:11px;margin-top:8px"></div></div></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><div class="skel" style="width:36%"></div><div class="skel" style="width:58%;height:11px;margin-top:8px"></div></div></div>
+  </div>
+  <div style="padding:16px 16px 0"><div class="go is-disabled"><span>Start session</span><i data-i="play"></i></div></div>
+  <div class="foot">Loading word data · 3 of 5 files</div>
+</div></div><figcaption><b>Loading</b>Placeholder rows hold the layout; the key stays disabled until the session is computed. Only shown when data files are fetched (first run, after an update).</figcaption></figure>
+
+<figure><div class="ph light" data-tab="today"><div class="scr pad-tabs">
+  <div class="navrow"><span></span><span class="rkey"><i data-i="stats"></i></span></div>
+  <div class="ltitle"><div class="t-large">Today</div><div class="sub">Saturday 3 October</div></div>
+  <div style="padding:22px 16px 0"><div class="notice err"><i data-i="warn"></i><div><b>Couldn't load today's word data</b><span>Check your internet connection, then try again. Your progress is safe on this iPhone.</span></div></div></div>
+  <div style="padding:16px 16px 0"><div class="key2">Try again</div></div>
+</div></div><figcaption><b>Error</b>Names the problem and the recovery, and says what is not affected.</figcaption></figure>
+</div>
+</div>
+<script src="f.js"></script>
+</body>
+</html>

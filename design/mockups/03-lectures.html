@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lectures · mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="f.css">
+<style>
+.trk .no { width: 26px; font-variant-numeric: tabular-nums; color: var(--label-2); font-size: .882rem; flex: none; }
+.player { position: absolute; inset: 0; background: var(--bg); display: flex; flex-direction: column; }
+.ptop { margin-top: 54px; height: 50px; padding: 0 14px; display: flex; align-items: center; justify-content: space-between; }
+.scrub { position: relative; height: 6px; border-radius: 3px; background: var(--fill-press); margin: 0 4px; }
+.scrub i { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--label); }
+.scrub b { position: absolute; top: 50%; width: 22px; height: 22px; border-radius: 11px; background: var(--key); box-shadow: var(--shadow-key); transform: translate(-50%, -50%); }
+.times { display: flex; justify-content: space-between; font-size: .765rem; color: var(--label-2); font-variant-numeric: tabular-nums; margin-top: 10px; }
+.transport { display: flex; align-items: center; justify-content: center; gap: 30px; }
+.bigkey { width: 116px; height: 116px; border-radius: 58px; background-color: var(--signal); background-image: linear-gradient(var(--signal-hi), var(--signal)); color: var(--on-signal); display: grid; place-items: center;
+  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset, 0 2px 2px rgba(0,0,0,.16), 0 8px 18px -6px rgba(0,0,0,.28); }
+.tick { width: 28px; height: 28px; border-radius: 14px; box-shadow: inset 0 0 0 2px var(--lamp-off); display: grid; place-items: center; flex: none; }
+.tick.on { background: var(--label); box-shadow: none; color: var(--raised); }
+.tick svg { width: 16px; height: 16px; }
+.pair .en { font-size: .882rem; color: var(--label-2); }
+.pair .de { font-weight: 600; margin-top: 2px; }
+</style>
+</head>
+<body class="doc">
+<div class="wrap">
+<h1>3 · Lectures</h1>
+<p class="lede">The 50 Language Transfer tracks, a player built around constant pausing, and the screen that turns transcript sentences into cards. Background audio and lock-screen controls passed Phase 0, so a mini-player stays docked above the tab bar while a lecture is loaded. Track lengths are estimates from the files; statuses are demo values.</p>
+
+<h2 class="grp-title">List and player</h2>
+<div class="row">
+<figure><div class="ph light" data-tab="lectures" data-mini="playing"><div class="scr pad-mini">
+  <div class="navrow"><span></span><span></span></div>
+  <div class="ltitle"><div class="t-large">Lectures</div><div class="sub">Language Transfer · Complete German · 8 of 50 done</div></div>
+  <div class="sh"><span>Tracks</span><span>about 6 h 20 min in total</span></div>
+  <div class="grp trk">
+    <div class="cl done"><span class="lamp done"></span><span class="no">01</span><div class="ct"><b>Lecture 01</b></div><span class="det">7:25</span></div>
+    <div class="cl done"><span class="lamp done"></span><span class="no">02</span><div class="ct"><b>Lecture 02</b></div><span class="det">5:20</span></div>
+    <div class="cl done"><span class="lamp done"></span><span class="no">03</span><div class="ct"><b>Lecture 03</b></div><span class="det">7:17</span></div>
+    <div class="cl done"><span class="lamp done"></span><span class="no">08</span><div class="ct"><b>Lecture 08</b><span>4 sentences ticked</span></div><span class="det">5:57</span></div>
+    <div class="cl"><span class="lamp part"></span><span class="no">09</span><div class="ct"><b>Lecture 09</b><span>Playing · 3:41 of 9:45</span></div><span class="det">9:45</span></div>
+    <div class="cl"><span class="lamp"></span><span class="no">10</span><div class="ct"><b>Lecture 10</b></div><span class="det">5:44</span></div>
+    <div class="cl"><span class="lamp"></span><span class="no">11</span><div class="ct"><b>Lecture 11</b></div><span class="det">7:00</span></div>
+    <div class="cl"><span class="lamp"></span><span class="no">12</span><div class="ct"><b>Lecture 12</b></div><span class="det">7:04</span></div>
+  </div>
+</div></div><figcaption><b>Track list</b>Solid lamp: done (95% listened or marked done). Half lamp: in progress, with position. Ring: not started. Tracks 04–07 scrolled past for the picture.</figcaption></figure>
+
+<figure><div class="ph light"><div class="player">
+  <div class="ptop"><span class="rkey"><i data-i="down"></i></span><span class="t-head">Lecture 09</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div style="padding:22px 24px 0">
+    <div class="t-sub l2">Language Transfer · Complete German</div>
+    <div class="t-title1 num" style="margin-top:4px">3:41 <span class="l2" style="font-weight:500">of 9:45</span></div>
+  </div>
+  <div style="padding:26px 24px 0"><div class="scrub"><i style="width:38%"></i><b style="left:38%"></b></div><div class="times"><span>3:41</span><span>−6:04</span></div></div>
+  <div class="spacer"></div>
+  <div class="transport"><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="rew10" class="big"></i></span><span class="bigkey"><i data-i="pause" class="xl"></i></span><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="fwd10" class="big"></i></span></div>
+  <div style="padding:34px 24px 0"><div class="seg"><span>0.75×</span><span class="on">1×</span><span>1.25×</span><span>1.5×</span></div></div>
+  <div style="padding:16px 24px 46px;display:flex;justify-content:space-between"><span class="tbtn neutral"><i data-i="note"></i>Notes</span><span class="tbtn neutral">Mark done</span></div>
+</div></div><figcaption><b>Player · light</b>The pause key is the biggest thing on screen and sits under the thumb, because the course asks you to pause and answer constantly. Pulling down returns to the mini-player.</figcaption></figure>
+
+<figure><div class="ph dark"><div class="player">
+  <div class="ptop"><span class="rkey"><i data-i="down"></i></span><span class="t-head">Lecture 09</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div style="padding:22px 24px 0">
+    <div class="t-sub l2">Language Transfer · Complete German</div>
+    <div class="t-title1 num" style="margin-top:4px">3:20 <span class="l2" style="font-weight:500">of 9:45</span></div>
+  </div>
+  <div style="padding:26px 24px 0"><div class="scrub"><i style="width:34%"></i><b style="left:34%"></b></div><div class="times"><span>3:20</span><span>−6:25</span></div></div>
+  <div class="spacer"></div>
+  <div class="transport"><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="rew10" class="big"></i></span><span class="bigkey"><i data-i="play" class="xl"></i></span><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="fwd10" class="big"></i></span></div>
+  <div style="padding:34px 24px 0"><div class="seg"><span>0.75×</span><span class="on">1×</span><span>1.25×</span><span>1.5×</span></div></div>
+  <div style="padding:16px 24px 46px;display:flex;justify-content:space-between"><span class="tbtn neutral"><i data-i="note"></i>Notes</span><span class="tbtn neutral">Mark done</span></div>
+</div></div><figcaption><b>Player · dark, paused</b>Same layout; the key shows Play while paused. Position is saved every few seconds and on every pause.</figcaption></figure>
+
+<figure><div class="ph dark"><div class="player">
+  <div class="ptop"><span class="rkey"><i data-i="down"></i></span><span class="t-head">Lecture 10</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div style="padding:22px 24px 0"><div class="t-sub l2">Language Transfer · Complete German</div><div class="t-title1 num" style="margin-top:4px">0:00 <span class="l2" style="font-weight:500">of 5:44</span></div></div>
+  <div style="padding:26px 24px 0"><div class="scrub"><i style="width:0%"></i></div><div class="times"><span>0:00</span><span>−5:44</span></div></div>
+  <div class="spacer"></div>
+  <div class="transport"><span class="rkey lg" style="width:64px;height:64px;border-radius:32px;opacity:.4"><i data-i="rew10" class="big"></i></span><span class="bigkey" style="background:var(--fill);color:var(--label-2);box-shadow:none;font-weight:600;font-size:.941rem">Loading</span><span class="rkey lg" style="width:64px;height:64px;border-radius:32px;opacity:.4"><i data-i="fwd10" class="big"></i></span></div>
+  <div style="padding:34px 24px 0"><div class="seg"><span>0.75×</span><span class="on">1×</span><span>1.25×</span><span>1.5×</span></div></div>
+  <div style="padding:16px 24px 46px;display:flex;justify-content:space-between"><span class="tbtn neutral"><i data-i="note"></i>Notes</span><span class="tbtn neutral">Mark done</span></div>
+</div></div><figcaption><b>Loading · dark</b>The big key reads “Loading” and the skip keys wait; speed can already be set. Playback starts as soon as enough of the file has arrived.</figcaption></figure>
+
+<figure><div class="ph light"><div class="player">
+  <div class="ptop"><span class="rkey"><i data-i="down"></i></span><span class="t-head">Lecture 12</span><span class="rkey"><i data-i="more"></i></span></div>
+  <div style="padding:22px 24px 0"><div class="t-sub l2">Language Transfer · Complete German</div><div class="t-title1 num" style="margin-top:4px">2:05 <span class="l2" style="font-weight:500">of 7:04</span></div></div>
+  <div style="padding:20px 16px 0"><div class="notice err"><i data-i="warn"></i><div><b>Couldn't load lecture 12</b><span>Check your internet connection, then try again. Your position, 2:05, is saved.</span></div></div></div>
+  <div class="spacer"></div>
+  <div class="transport" style="opacity:.4"><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="rew10" class="big"></i></span><span class="bigkey" style="background:var(--fill);color:var(--label-3);box-shadow:none"><i data-i="play" class="xl"></i></span><span class="rkey lg" style="width:64px;height:64px;border-radius:32px"><i data-i="fwd10" class="big"></i></span></div>
+  <div style="padding:30px 24px 46px"><div class="go center"><span>Try again</span></div></div>
+</div></div><figcaption><b>Audio failed to load</b>Transport keys are disabled; the only action is the recovery. While the file is still loading, the big key shows a quiet “Loading” label instead of Play.</figcaption></figure>
+</div>
+
+<h2 class="grp-title">After a track</h2>
+<div class="row">
+<figure><div class="ph light"><div class="scr raised-bg">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Lecture 09</span><span class="tbtn neutral">Skip for now</span></div>
+  <div class="ltitle"><div class="t-title1">Sentences from this track</div><div class="sub" style="margin-top:6px">From the volunteer transcript, which has errors. Tick only the pairs that match what you heard. You can correct a pair first.</div></div>
+  <div style="padding:14px 0 0">
+    <div class="cl pair"><span class="tick on"><i data-i="check"></i></span><div class="ct"><div class="en">I’m looking for the station.</div><div class="de" lang="de">Ich suche den Bahnhof.</div></div><i data-i="edit"></i></div>
+    <div class="cl pair"><span class="tick on"><i data-i="check"></i></span><div class="ct"><div class="en">The station is on the right.</div><div class="de" lang="de">Der Bahnhof ist rechts.</div></div><i data-i="edit"></i></div>
+    <div class="cl pair"><span class="tick"></span><div class="ct"><div class="en">We’re going to the station.</div><div class="de" lang="de">Wir fahren zum Bahnhof.</div></div><i data-i="edit"></i></div>
+    <div class="cl pair" style="align-items:flex-start;padding-top:12px;padding-bottom:12px;background:var(--bg)"><span class="tick" style="margin-top:4px"></span><div class="ct" style="padding:0"><div class="en">There’s no time left.</div><div class="field focus" style="margin-top:8px;min-height:46px;background:var(--raised)" lang="de">Es bleibt keine Zeit.<span class="caret"></span></div><div style="display:flex;gap:14px;margin-top:6px"><span class="tbtn">Save correction</span><span class="tbtn neutral">Cancel</span></div></div></div>
+    <div class="cl pair"><span class="tick on"><i data-i="check"></i></span><div class="ct"><div class="en">Take your time.</div><div class="de" lang="de">Lass dir Zeit!</div></div><i data-i="edit"></i></div>
+  </div>
+  <div class="spacer"></div>
+  <div style="padding:0 16px 44px"><div class="go center"><span>Add 3 cards</span></div></div>
+</div></div><figcaption><b>Tick screen</b>Shown when a track ends; can be skipped and reopened from the track. Unticked pairs are discarded. Sample pairs here are Tatoeba sentences standing in for the transcript.</figcaption></figure>
+
+<figure><div class="ph dark" data-tab="lectures"><div class="scr pad-tabs">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Lectures</span><span></span></div>
+  <div class="ltitle"><div class="t-title1">Lecture 08</div><div class="sub">Done · 5:57 · listened 3 October</div></div>
+  <div style="padding:16px 16px 0;display:flex;gap:10px"><div class="key2" style="flex:1"><i data-i="play"></i>Play again</div><div class="key2" style="flex:1">Sentences (4)</div></div>
+  <div class="sh" style="padding-top:22px"><span>Notes</span><span>written after listening</span></div>
+  <div class="grp"><div style="padding:14px 18px;min-height:150px" class="t-body">Pausing before answering works better than answering along with the speaker.<br><br>Ask the tutor about the word order with “nicht”.</div></div>
+  <div class="foot">The course suggests not taking notes while listening, so notes open after the track or from here.</div>
+</div></div><figcaption><b>Track page with notes</b>Notes are plain text and saved as you type. Demo notes are English, written by you.</figcaption></figure>
+
+<figure><div class="ph light" data-tab="grammar" data-mini="playing"><div class="scr pad-mini">
+  <div class="navrow"><span></span><span></span></div>
+  <div class="ltitle"><div class="t-large">Grammar</div><div class="sub">Nicos Weg order · A1</div></div>
+  <div class="sh"><span>1 Meeting people</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Personal pronouns: ich, du</b><span lang="de">Ich heiße Emma</span></div><i data-i="chev"></i></div>
+    <div class="cl"><span class="lamp part"></span><div class="ct"><b>Conjugation: present tense</b><span lang="de">Woher kommst du?</span></div><i data-i="chev"></i></div>
+  </div>
+</div></div><figcaption><b>Mini-player on another page</b>Stays docked on every tabbed page while a lecture is loaded: play/pause, back 10 s, progress line. Tap to open the full player. Hidden in Review; starting Review pauses the lecture.</figcaption></figure>
+</div>
+</div>
+<script src="f.js"></script>
+</body>
+</html>

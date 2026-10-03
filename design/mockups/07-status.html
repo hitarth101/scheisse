@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status · mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="f.css">
+<style>
+.fc { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: end; height: 96px; padding: 0 18px; }
+.fc div { display: flex; flex-direction: column; align-items: center; gap: 4px; justify-content: flex-end; height: 100%; }
+.fc i { width: 100%; max-width: 28px; border-radius: 6px 6px 2px 2px; background: var(--fill-press); display: block; }
+.fc i.now { background: var(--label-2); }
+.fc b { font-size: .765rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.fcl { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; padding: 6px 18px 14px; font-size: .765rem; color: var(--label-2); text-align: center; }
+.big { font-size: 1.647rem; font-weight: 700; letter-spacing: -.015em; font-variant-numeric: tabular-nums; }
+.stepper { display: flex; align-items: center; justify-content: space-between; }
+.stepper .v { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body class="doc">
+<div class="wrap">
+<h1>7 · Status and data</h1>
+<p class="lede">Plain numbers, backup, settings and outside links. Reached from the key at the top right of Today. Every number here is a count or a duration; none is a score. All values are demo values.</p>
+<div class="row">
+<figure><div class="ph light" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div class="sh"><span>Reviews</span><span>next 7 days</span></div>
+  <div class="grp" style="padding-top:14px">
+    <div class="fc">
+      <div><b>42</b><i class="now" style="height:62%"></i></div><div><b>37</b><i style="height:54%"></i></div><div><b>41</b><i style="height:60%"></i></div><div><b>28</b><i style="height:41%"></i></div><div><b>33</b><i style="height:48%"></i></div><div><b>45</b><i style="height:66%"></i></div><div><b>30</b><i style="height:44%"></i></div>
+    </div>
+    <div class="fcl"><span>Today</span><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+  </div>
+  <div class="sh"><span>Cards</span><span>1,519 in total</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>New, not yet seen</b></div><span class="det">1,180</span></div>
+    <div class="cl"><div class="ct"><b>Learning</b></div><span class="det">24</span></div>
+    <div class="cl"><div class="ct"><b>In review</b></div><span class="det">312</span></div>
+    <div class="cl"><div class="ct"><b>Suspended</b><span>3 leeches, 0 flagged</span></div><span class="det">3</span><i data-i="chev"></i></div>
+  </div>
+  <div class="sh"><span>Words known</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>From reviews</b><span>review gap of 21 days or more</span></div><span class="det">186</span></div>
+    <div class="cl"><div class="ct"><b>Marked known in Reading</b></div><span class="det">41</span></div>
+  </div>
+</div></div><figcaption><b>Overview</b>The forecast is a labelled count per day, no trend lines or targets. Words known are two separate counts, as the product spec defines.</figcaption></figure>
+
+<figure><div class="ph light" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div class="sh"><span>Time logged</span><span>this week</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Reviews</b></div><span class="det">1 h 32 min</span></div>
+    <div class="cl"><div class="ct"><b>Lectures</b></div><span class="det">58 min</span></div>
+    <div class="cl"><div class="ct"><b>Reading</b></div><span class="det">20 min</span></div>
+    <div class="cl"><div class="ct"><b>Outside the app</b><span>TV, Nicos Weg, lessons</span></div><span class="det">2 h 15 min</span></div>
+    <div class="inline" style="display:flex;justify-content:space-between;align-items:center"><span class="t-head num">5 h 05 min</span><span class="tbtn"><i data-i="plus"></i>Add outside time</span></div>
+  </div>
+  <div class="foot">This month 14 h 10 min · total 31 h 40 min</div>
+  <div class="sh"><span>Progress</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Language Transfer</b></div><span class="det">8 of 50 tracks</span></div>
+    <div class="cl"><div class="ct"><b>Nicos Weg</b></div><span class="det">11 of 76 lessons</span></div>
+    <div class="cl"><div class="ct"><b>Grammar topics</b></div><span class="det">6 read · 2 practiced</span></div>
+  </div>
+</div></div><figcaption><b>Time and progress</b>Automatic time for reviews, lectures and reading; outside time is added by hand.</figcaption></figure>
+
+<figure><div class="ph dark" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div class="sh"><span>Backup</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="clock"></i><div class="ct"><b>Last backup</b><span>28 September 2026, 5 days ago</span></div></div>
+    <div class="cl"><i data-i="share"></i><div class="ct"><b>Export backup</b><span>One file, saved where you choose (Files, iCloud Drive)</span></div><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="restore"></i><div class="ct"><b>Restore from backup</b><span>Replaces everything on this iPhone</span></div><i data-i="chev"></i></div>
+  </div>
+  <div class="sh"><span>Needs a decision</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="suspend"></i><div class="ct"><b>Leeches</b><span>Failed 8 times, suspended automatically</span></div><span class="det">3</span><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="flag"></i><div class="ct"><b>Flagged cards</b><span>Source data marked as wrong</span></div><span class="det">0</span><i data-i="chev"></i></div>
+  </div>
+  <div class="sh"><span>More</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="grammar"></i><div class="ct"><b>Settings</b></div><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="book2"></i><div class="ct"><b>Dictionaries</b><span>dict.cc · Leo · DWDS · Wiktionary</span></div><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="info"></i><div class="ct"><b>Sources and credits</b></div><i data-i="chev"></i></div>
+  </div>
+</div></div><figcaption><b>Data · dark</b>“Last backup” is a plain line, never a warning badge. Restore says exactly what it replaces before you tap it.</figcaption></figure>
+
+<figure><div class="ph light" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Status</span><span></span></div>
+  <div class="ltitle"><div class="t-title1">Settings</div></div>
+  <div class="sh"><span>Session</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Daily time</b></div><span class="det">30 min</span><i data-i="chev"></i></div>
+    <div class="cl"><div class="ct"><b>New cards per day</b></div><span class="det">10</span><i data-i="chev"></i></div>
+    <div class="cl"><div class="ct"><b>Target memory rate</b><span>How often you should still remember a card when it comes back</span></div><span class="det">90%</span><i data-i="chev"></i></div>
+  </div>
+  <div class="sh"><span>Answers and audio</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Default answer mode</b></div><span class="det">Speak</span><i data-i="chev"></i></div>
+    <div class="cl"><div class="ct"><b>Play audio automatically</b></div><span class="sw on"></span></div>
+    <div class="cl"><div class="ct"><b>iPhone voice</b><span>Used when no human recording exists</span></div><span class="det">Anna</span><i data-i="chev"></i></div>
+    <div class="cl"><div class="ct"><b>Voice speed</b></div><span class="det">1.0×</span><i data-i="chev"></i></div>
+  </div>
+  <div class="sh"><span>Content and display</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Engineering vocabulary</b><span>Off until you turn it on; suggested after A2</span></div><span class="sw"></span></div>
+    <div class="cl"><div class="ct"><b>Colour articles by gender</b></div><span class="sw on"></span></div>
+    <div class="cl"><div class="ct"><b>Light tap feedback</b></div><span class="sw on"></span></div>
+  </div>
+</div></div><figcaption><b>Settings</b>Grouped by what they affect. Light and dark follow the iPhone, so there is no theme switch. Text size follows the iPhone's setting.</figcaption></figure>
+</div>
+<div class="row" style="margin-top:44px">
+<figure><div class="ph dark"><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Status</span><span></span></div>
+  <div class="ltitle"><div class="t-title1">Leeches</div><div class="sub">Cards failed 8 times are suspended until you decide</div></div>
+  <div style="height:16px"></div>
+  <div class="grp flush">
+    <div class="cl" style="align-items:flex-start;padding-top:12px;padding-bottom:12px"><div class="ct" style="padding:0"><b lang="de"><span class="art g-die">die</span> Geschwindigkeits&shy;begrenzung</b><span>Word · speed limit · failed 8 times</span>
+      <div style="display:flex;gap:8px;margin-top:10px"><span class="chip">Return to reviews</span><span class="chip"><i data-i="edit"></i>Edit</span><span class="chip">Delete</span></div></div></div>
+    <div class="cl" style="align-items:flex-start;padding-top:12px;padding-bottom:12px"><div class="ct" style="padding:0"><b lang="de">Nachts fahren weniger Züge.</b><span>Sentence · Tatoeba 12151895 · failed 8 times</span>
+      <div style="display:flex;gap:8px;margin-top:10px"><span class="chip">Return to reviews</span><span class="chip"><i data-i="edit"></i>Edit</span><span class="chip">Delete</span></div></div></div>
+  </div>
+</div></div><figcaption><b>Leeches · dark</b>Stated neutrally. The flagged-cards list uses the same layout.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div class="t-title3">Add outside time</div>
+    <div class="seg" style="margin-top:14px"><span class="on">TV</span><span>Nicos Weg</span><span>Lesson</span><span>Other</span></div>
+    <div class="stepper" style="margin-top:20px"><span class="rkey lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14"/></svg></span><span class="v">45 min</span><span class="rkey lg"><i data-i="plus"></i></span></div>
+    <div class="cl" style="padding:0;margin-top:14px;border-top:.5px solid var(--sep)"><div class="ct"><b>Date</b></div><span class="det">Today</span><i data-i="chev"></i></div>
+    <div class="acts"><div class="go center">Add 45 min</div></div>
+  </div>
+</div></div><figcaption><b>Manual time entry</b>Steps of 5 minutes; the key repeats the amount so the action is unambiguous.</figcaption></figure>
+
+<figure><div class="ph light"><div class="scr">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div class="t-title3">Replace everything with this backup?</div>
+    <div class="win" style="margin-top:12px"><div class="t-head">Backup from 28 September 2026, 21:14</div><div class="t-sub l2" style="margin-top:4px">1,402 cards · 7 of 50 lectures done · 27 h 15 min logged</div></div>
+    <div class="t-sub l2" style="margin-top:12px">Everything on this iPhone since then is lost, including today's 42 reviews. Export a backup first if you might want it back.</div>
+    <div class="acts"><div class="key2" style="color:var(--danger)">Replace with this backup</div><div class="key2">Export current data first</div><div class="key2">Cancel</div></div>
+  </div>
+</div></div><figcaption><b>Restore: confirm</b>Names the backup's date and contents and what will be lost. The destructive key is red text on a plain key, never the green key.</figcaption></figure>
+
+<figure><div class="ph dark" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Today</span><span></span></div>
+  <div class="ltitle"><div class="t-large">Status</div></div>
+  <div style="padding:16px 16px 0"><div class="notice err"><i data-i="warn"></i><div><b>Export didn't finish</b><span>Nothing was saved. Try again, or pick another place in the share sheet.</span></div></div></div>
+  <div style="padding:10px 16px 0"><div class="notice err"><i data-i="warn"></i><div><b>This file isn't a Scheiße backup</b><span>It may be damaged or from another app. Nothing on this iPhone was changed.</span></div></div></div>
+  <div class="sh"><span>Backup</span></div>
+  <div class="grp">
+    <div class="cl"><i data-i="clock"></i><div class="ct"><b>Last backup</b><span>28 September 2026, 5 days ago</span></div></div>
+    <div class="cl"><i data-i="share"></i><div class="ct"><b>Export backup</b></div><i data-i="chev"></i></div>
+    <div class="cl"><i data-i="restore"></i><div class="ct"><b>Restore from backup</b></div><i data-i="chev"></i></div>
+  </div>
+</div></div><figcaption><b>Export and restore errors · dark</b>Both shown at once here for the picture; in use only one appears, at the top of Status, until dismissed. Each says that nothing was lost or changed.</figcaption></figure>
+
+<figure><div class="ph dark" data-backdrop><div class="scr" style="padding-bottom:30px">
+  <div class="navrow"><span class="back"><i data-i="back"></i>Status</span><span></span></div>
+  <div class="ltitle"><div class="t-title1">Sources and credits</div></div>
+  <div class="sh"><span>Content</span></div>
+  <div class="grp flush">
+    <div class="cl"><div class="ct"><b>Tatoeba</b><span>Sentences and some recordings · CC BY 2.0 FR</span></div><i data-i="ext"></i></div>
+    <div class="cl"><div class="ct"><b>Wiktionary</b><span>Meanings, gender, plurals, word forms · CC BY-SA</span></div><i data-i="ext"></i></div>
+    <div class="cl"><div class="ct"><b>Wikibooks German course</b><span>Dialogues and tables · CC BY-SA 3.0</span></div><i data-i="ext"></i></div>
+    <div class="cl"><div class="ct"><b>Language Transfer</b><span>Complete German audio</span></div><i data-i="ext"></i></div>
+    <div class="cl"><div class="ct"><b>Goethe-Institut</b><span>A1, A2, B1 word lists</span></div><i data-i="ext"></i></div>
+    <div class="cl"><div class="ct"><b>Project Gutenberg, Wikisource</b><span>Public-domain texts and translations</span></div><i data-i="ext"></i></div>
+  </div>
+  <div class="sh"><span>App</span></div>
+  <div class="grp flush"><div class="cl"><div class="ct"><b>Scheiße</b><span>Version 0.1 · icon letter from Inter (SIL OFL)</span></div></div></div>
+</div></div><figcaption><b>Credits · dark</b>Attribution the open licences require, in one place.</figcaption></figure>
+</div>
+</div>
+<script src="f.js"></script>
+</body>
+</html>

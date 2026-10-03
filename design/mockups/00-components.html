@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components · mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="f.css">
+<style>
+.pair-row { display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+.sw-pal { display: flex; flex-wrap: wrap; gap: 10px; }
+.sw-pal div { width: 84px; }
+.sw-pal i { display: block; height: 44px; border-radius: 12px; box-shadow: inset 0 0 0 .5px rgba(128,128,128,.4); }
+.sw-pal span { display: block; font-size: 10.5px; color: var(--label-2); margin-top: 4px; line-height: 1.3; }
+</style>
+</head>
+<body class="doc">
+<div class="wrap">
+<h1>0 · Components</h1>
+<p class="lede">Every building block in both themes, with its states. Token names match <code>f.css</code> and the design spec. Light on the left, dark on the right.</p>
+<div class="pair-row"><div class="panel light" id="pl"></div><div class="panel dark" id="pd"></div></div>
+</div>
+<script>
+const T = `
+<div class="lbl">Colour tokens</div>
+<div class="sw-pal">
+ ${['bg','raised','well','fill','label','label-2','label-3','sep','signal','select','switch-on','der','die','das','danger','mark'].map(t=>`<div><i style="background:var(--${t})"></i><span>--${t}</span></div>`).join('')}
+</div>
+<div class="lbl">Signal key (the only green: one per screen) · default · pressed · disabled</div>
+<div class="line"><div class="go" style="width:220px"><span>Start session</span><i data-i="play"></i></div><div class="go is-pressed" style="width:150px"><span>Pressed</span></div><div class="go is-disabled" style="width:150px"><span>Disabled</span></div></div>
+<div class="lbl">Plain key · default · pressed · text buttons · icon keys</div>
+<div class="line"><div class="key2">Mark done</div><div class="key2 is-pressed">Pressed</div><span class="tbtn">Add outside time</span><span class="tbtn neutral">Cancel</span><span class="tbtn danger">Delete</span><span class="rkey"><i data-i="close"></i></span><span class="rkey lg"><i data-i="speaker"></i></span></div>
+<div class="lbl">Grading keys · with intervals · pressed state on Good</div>
+<div class="grades" style="width:360px;padding:0"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good is-pressed">Good</span><span class="gk">Easy</span><span class="gi">&lt;10 min</span><span class="gi">1 day</span><span class="gi">3 days</span><span class="gi">8 days</span></div>
+<div class="lbl">Lamps · off · next · part (in progress, read) · done</div>
+<div class="line" style="gap:28px"><div class="stack"><span class="lamp"></span><div class="cap">off</div></div><div class="stack"><span class="lamp on"></span><div class="cap">next</div></div><div class="stack"><span class="lamp part"></span><div class="cap">part</div></div><div class="stack"><span class="lamp done"></span><div class="cap">done</div></div></div>
+<div class="lbl">Grouped list · default · pressed · selected · with switch</div>
+<div class="grp" style="margin:0;width:380px">
+ <div class="cl"><span class="lamp on"></span><div class="ct"><b>Reviews</b><span>42 due</span></div><span class="det">~14 min</span></div>
+ <div class="cl is-pressed"><span class="lamp"></span><div class="ct"><b>Pressed row</b></div><i data-i="chev"></i></div>
+ <div class="cl sel"><span style="color:var(--label)"><i data-i="check"></i></span><div class="ct"><b>Selected option</b></div></div>
+ <div class="cl"><div class="ct"><b>Play audio automatically</b></div><span class="sw on"></span></div>
+</div>
+<div class="lbl">Segmented control · chips (32 pt to see, 44 pt to tap)</div>
+<div class="line"><div class="seg" style="width:220px"><span class="on">Speak</span><span>Type</span></div><span class="chip"><i data-i="swap"></i>Swap</span><span class="chip">Played 2×</span></div>
+<div class="lbl">Text fields · default · focus · error · ä ö ü ß row</div>
+<div class="line" style="align-items:flex-start"><div class="field ph-text" style="width:170px">Placeholder</div><div class="field focus" style="width:170px" lang="de">Ich mag Zü<span class="caret"></span></div><div class="field err" style="width:170px">Required</div></div>
+<div class="kbrow" style="margin-top:10px;width:380px;border-radius:12px"><span>ä</span><span>ö</span><span>ü</span><span>ß</span><span style="min-width:40px">Ä</span><span style="min-width:40px">Ö</span><span style="min-width:40px">Ü</span></div>
+<div class="lbl">Answer window · gender colours · diff marks</div>
+<div class="win" style="width:380px;box-sizing:border-box"><div class="de-head" lang="de" style="font-size:2rem"><span class="art g-der">der</span> Tisch · <span class="art g-die">die</span> Zeit · <span class="art g-das">das</span> Buch</div>
+ <div class="t-title3 diff" style="margin-top:10px" lang="de">Ich mag <span class="x">z</span><span class="nt">ue</span>ge!</div></div>
+<div class="lbl">Notices · info · error · loading skeleton · toast</div>
+<div class="notice" style="width:380px;box-sizing:border-box"><i data-i="info"></i><div><b>Your progress lives on this iPhone</b><span>Export a backup from Status now and then.</span></div></div>
+<div class="notice err" style="width:380px;box-sizing:border-box;margin-top:8px"><i data-i="warn"></i><div><b>Couldn't load lecture 12</b><span>Check your connection, then try again.</span></div></div>
+<div class="line" style="margin-top:10px"><div style="width:180px"><div class="skel" style="width:70%"></div><div class="skel" style="width:90%;height:11px;margin-top:8px"></div></div><div class="toast" style="position:relative;left:auto;bottom:auto;transform:none">Saved to Inbox <b>Undo</b></div></div>
+<div class="lbl">Mini-player · tab bar (active tab has a graphite dot)</div>
+<div style="width:361px"><div class="mini"><div class="mt"><b>Lecture 09</b><span>3:41 of 9:45</span></div><span class="rkey"><i data-i="rew10"></i></span><span class="rkey" style="color:var(--label)"><i data-i="pause"></i></span><div class="bar"><i style="width:38%"></i></div></div></div>
+<div style="width:361px;margin-top:10px"><nav class="tabbar"><a class="on"><i data-i="today"></i>Today</a><a><i data-i="lectures"></i>Lectures</a><a><i data-i="reading"></i>Reading</a><a><i data-i="grammar"></i>Grammar</a><a><i data-i="inbox"></i>Inbox<span class="badge">3</span></a></nav></div>
+<div class="lbl">Icon set · 24-unit grid, 1.8 stroke, round ends</div>
+<div class="line" style="gap:16px;color:var(--label)">${['today','lectures','reading','grammar','inbox','stats','close','more','chev','back','down','play','pause','rew10','fwd10','speaker','mic','keyboard','check','plus','edit','flag','suspend','undo','trash','ext','info','warn','share','restore','clock','note','swap','turtle','book2'].map(n=>`<span title="${n}"><i data-i="${n}"></i></span>`).join('')}</div>
+`;
+document.getElementById('pl').innerHTML = T; document.getElementById('pd').innerHTML = T;
+</script>
+<script src="f.js"></script>
+</body>
+</html>
