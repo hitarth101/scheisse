@@ -1,0 +1,18 @@
+# Original lecture files stay on the PC; only re-encoded copies under site/ or app/public/ are published.
+Language Transfer Lectures/
+
+# Impeccable design-tool working files
+.impeccable/
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# OS and editor clutter
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Local tool settings
+.claude/

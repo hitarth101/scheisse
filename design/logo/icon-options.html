@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App icon options</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEFEC;--text:#1C1C1A;--text-2:#64645F;--line:#D6D6D1}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+.wrap{padding:40px 48px 56px;max-width:1800px}
+h1{font-size:28px;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em}
+.lede{color:var(--text-2);max-width:78ch;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.opt h2{font-size:18px;margin:0 0 4px}
+.opt p{margin:0 0 16px;color:var(--text-2);font-size:13.5px;min-height:78px}
+.master{width:100%;max-width:240px;aspect-ratio:1;border-radius:22.4%;display:block;box-shadow:0 1px 2px rgba(0,0,0,.08),0 10px 30px -12px rgba(0,0,0,.3)}
+.strip{margin-top:18px;border-radius:18px;padding:18px 14px 12px;display:flex;justify-content:space-around}
+.strip.light{background:linear-gradient(160deg,#C9D6E3,#E9DCCB)}
+.strip.dark{background:linear-gradient(160deg,#141A26,#2A2234);margin-top:10px}
+.app{display:flex;flex-direction:column;align-items:center;gap:5px;width:64px}
+.app img,.app i{width:60px;height:60px;border-radius:13.4px;display:block}
+.app i{background:rgba(255,255,255,.55)}
+.dark .app i{background:rgba(255,255,255,.14)}
+.app span{font-size:11px;color:#1C1C1A}
+.dark .app span{color:#F2F2EF}
+.small{display:flex;align-items:center;gap:14px;margin-top:14px;color:var(--text-2);font-size:12.5px}
+.small img{display:block}
+.s40{width:40px;height:40px;border-radius:9px}
+.s29{width:29px;height:29px;border-radius:6.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>App icon options</h1>
+  <p class="lede">Five icons built from the locked F direction: grey housing, graphite, one green signal lamp. None uses letters of a name, so all work with whatever the app is called. Each is shown large, at real home-screen size (60 pt) on a light and a dark wallpaper, and at the two small sizes iOS also uses (Spotlight 40 pt, Settings 29 pt).</p>
+  <div class="grid">
+    <div class="opt"><h2>1 · Lamp</h2><p>One green indicator lamp in a recessed bezel: the app's "next thing to do" signal. The quietest option and the most Braun.</p>
+      <img class="master" src="icon-1-lamp.svg" alt="">
+      <div class="strip light"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-1-lamp.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="strip dark"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-1-lamp.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="small"><img class="s40" src="icon-1-lamp.svg" alt=""><img class="s29" src="icon-1-lamp.svg" alt=""> 40 and 29 pt</div></div>
+    <div class="opt"><h2>2 · Umlaut</h2><p>A drawn "ä" whose two dots are the green lamps. Says German at a glance without spelling a word.</p>
+      <img class="master" src="icon-2-umlaut.svg" alt="">
+      <div class="strip light"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-2-umlaut.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="strip dark"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-2-umlaut.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="small"><img class="s40" src="icon-2-umlaut.svg" alt=""><img class="s29" src="icon-2-umlaut.svg" alt=""> 40 and 29 pt</div></div>
+    <div class="opt"><h2>3 · Drei</h2><p>Three lamps in the gender colours (blue der, red die, teal das) in one recessed strip. The app's own learning aid as its mark.</p>
+      <img class="master" src="icon-3-drei.svg" alt="">
+      <div class="strip light"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-3-drei.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="strip dark"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-3-drei.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="small"><img class="s40" src="icon-3-drei.svg" alt=""><img class="s29" src="icon-3-drei.svg" alt=""> 40 and 29 pt</div></div>
+    <div class="opt"><h2>4 · Grille</h2><p>A round speaker perforation, as on a Braun radio, with one hole lit green. Points to listening, the core of the routine.</p>
+      <img class="master" src="icon-4-grille.svg" alt="">
+      <div class="strip light"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-4-grille.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="strip dark"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-4-grille.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="small"><img class="s40" src="icon-4-grille.svg" alt=""><img class="s29" src="icon-4-grille.svg" alt=""> 40 and 29 pt</div></div>
+    <div class="opt"><h2>5 · Eszett key</h2><p>One key cap carrying a drawn ß, with a small green lamp like a caps-lock light. The one letter only German has.</p>
+      <img class="master" src="icon-5-eszett.svg" alt="">
+      <div class="strip light"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-5-eszett.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="strip dark"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="icon-5-eszett.svg" alt=""><span>German</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>
+      <div class="small"><img class="s40" src="icon-5-eszett.svg" alt=""><img class="s29" src="icon-5-eszett.svg" alt=""> 40 and 29 pt</div></div>
+  </div>
+</div>
+</body>
+</html>

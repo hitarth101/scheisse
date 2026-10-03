@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction E · Apple standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#C7C7CC;color:#000;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+.sheet{padding:40px 48px 56px}
+.sheet h1{font:700 28px/1.2 -apple-system,"Inter",sans-serif;margin:0 0 6px;letter-spacing:-.01em}
+.sheet p.lede{margin:0 0 4px;max-width:72ch;color:#333}
+.sheet ul.traits{margin:10px 0 28px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;color:#333;font-size:13.5px}
+.sheet ul.traits b{color:#000;font-weight:600}
+.row{display:flex;gap:44px;flex-wrap:wrap;align-items:flex-start}
+.cap{font-size:12.5px;color:#444;margin:14px 0 0 6px}
+.phone{position:relative;width:393px;height:852px;border-radius:55px;overflow:hidden;flex:none;box-shadow:0 0 0 9px #0d0e10,0 0 0 10px #3a3d42,0 40px 70px -30px rgba(0,0,0,.55)}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:126px;height:37px;border-radius:20px;background:#000;z-index:60}
+.sb{position:absolute;top:0;left:0;right:0;height:54px;display:flex;justify-content:space-between;align-items:center;padding:4px 30px 0 48px;z-index:55;font:600 16.5px/1 -apple-system,"Inter",sans-serif;color:var(--sb)}
+.homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:136px;height:5px;border-radius:3px;background:var(--sb);z-index:60}
+
+.light{--bg:#F2F2F7;--cell:#FFFFFF;--fill:#E9E9EE;--label:#000;--label-2:#6C6C70;--label-3:#8E8E93;--sep:#D1D1D6;--tint:#007AFF;--on-tint:#fff;
+  --red:#FF3B30;--orange:#FF9500;--green:#34C759;--blue:#007AFF;--der:#0040DD;--die:#D70015;--das:#248A3D;--glass:rgba(255,255,255,.72);--sb:#000}
+.dark{--bg:#000000;--cell:#1C1C1E;--fill:#2C2C2E;--label:#FFFFFF;--label-2:#AEAEB2;--label-3:#8E8E93;--sep:#38383A;--tint:#0A84FF;--on-tint:#fff;
+  --red:#FF453A;--orange:#FF9F0A;--green:#30D158;--blue:#0A84FF;--der:#409CFF;--die:#FF6961;--das:#30DB5B;--glass:rgba(44,44,46,.72);--sb:#fff}
+.screen{position:absolute;inset:0;background:var(--bg);color:var(--label);display:flex;flex-direction:column;font:400 17px/22px -apple-system,BlinkMacSystemFont,"Inter",sans-serif;letter-spacing:-.01em}
+.nav{padding:54px 16px 0;height:100px;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center}
+.lt{font-size:34px;line-height:41px;font-weight:700;letter-spacing:-.02em;padding:0 16px}
+.sub{color:var(--label-2);font-size:15px;padding:2px 16px 0}
+.cbtn{width:40px;height:40px;border-radius:20px;background:var(--glass);display:grid;place-items:center;color:var(--label);box-shadow:0 1px 3px rgba(0,0,0,.08),inset 0 0 0 .5px rgba(0,0,0,.06);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.cbtn svg{width:20px;height:20px}
+.sh{font-size:13px;color:var(--label-2);text-transform:uppercase;padding:22px 32px 7px;letter-spacing:0}
+.grp{margin:0 16px;background:var(--cell);border-radius:22px;overflow:hidden}
+.cl{display:flex;align-items:center;gap:12px;min-height:52px;padding:0 16px;position:relative}
+.cl+.cl::before{content:"";position:absolute;top:0;left:60px;right:0;height:.5px;background:var(--sep)}
+.ico{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;color:#fff;flex:none}
+.ico svg{width:18px;height:18px}
+.ct{flex:1;padding:9px 0}
+.ct b{font-weight:400;display:block}
+.ct span{font-size:14px;color:var(--label-2);line-height:18px}
+.det{color:var(--label-2);font-variant-numeric:tabular-nums;font-size:16px}
+.chev{color:var(--label-3);opacity:.6}
+.pill{margin:18px 16px 0;height:52px;border-radius:26px;background:var(--tint);color:var(--on-tint);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px}
+.foot{font-size:13px;color:var(--label-2);padding:8px 32px 0}
+.spacer{flex:1}
+.tabbar{position:absolute;left:16px;right:16px;bottom:24px;height:62px;border-radius:31px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(1.6);backdrop-filter:blur(24px) saturate(1.6);
+  box-shadow:0 6px 24px -6px rgba(0,0,0,.18),inset 0 0 0 .5px rgba(0,0,0,.08);display:flex;justify-content:space-around;align-items:center;padding:0 6px;z-index:20}
+.dark .tabbar{box-shadow:0 6px 24px -6px rgba(0,0,0,.6),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10.5px;font-weight:500;color:var(--label);height:52px;justify-content:center;border-radius:26px}
+.tabbar a svg{width:25px;height:25px}
+.tabbar a.on{color:var(--tint);background:var(--fill)}
+/* review */
+.rnav{padding:54px 16px 0;height:104px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between}
+.rnav .t{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums}
+.segc{margin:4px 16px 0;height:34px;border-radius:17px;background:var(--fill);display:grid;grid-template-columns:1fr 1fr;padding:2px}
+.segc span{display:grid;place-items:center;font-size:14px;font-weight:500;border-radius:15px;color:var(--label)}
+.segc span.on{background:var(--cell);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.dark .segc span.on{background:#636366}
+.card{margin:16px 16px 0;background:var(--cell);border-radius:26px;padding:22px 20px}
+.k{font-size:13px;color:var(--label-2);font-weight:500}
+.pr{font-size:22px;line-height:28px;color:var(--label-2);margin:4px 0 18px}
+.sepf{height:.5px;background:var(--sep);margin:0 -20px 18px}
+.hw{font-size:44px;line-height:50px;font-weight:700;letter-spacing:-.025em}
+.art{color:var(--g);font-weight:600}
+.g-der{--g:var(--der)}.g-die{--g:var(--die)}.g-das{--g:var(--das)}
+.pl{font-size:19px;margin-top:6px}
+.pl small{font-size:13px;color:var(--label-2);margin-right:6px}
+.au{width:44px;height:44px;border-radius:22px;background:var(--fill);display:grid;place-items:center;color:var(--tint);flex:none}
+.au svg{width:21px;height:21px}
+.src{font-size:13px;color:var(--label-3);margin-top:14px}
+.ex{margin:14px 16px 0;background:var(--cell);border-radius:22px;padding:14px 20px}
+.ex .de{font-size:19px;font-weight:500;margin-top:2px}
+.ex .en{color:var(--tint);font-size:15px;margin-top:8px}
+.gr{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px 40px}
+.gr span{height:60px;border-radius:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-weight:600;font-size:16px;color:color-mix(in oklab,var(--c) 70%,var(--label));background:color-mix(in oklab,var(--c) 16%,var(--cell))}
+.gr small{font-size:12px;font-weight:500;opacity:.85;font-variant-numeric:tabular-nums}
+.sent{font-size:30px;line-height:36px;font-weight:700;letter-spacing:-.02em;hyphens:manual}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <h1>E · Apple standard</h1>
+  <p class="lede">The app looks and behaves like one of Apple’s own: the iPhone system font, grouped lists on grey, large titles, the floating glass tab bar, system colours. Nothing to learn and nothing distinctive: the most familiar option, played straight.</p>
+  <ul class="traits">
+    <li><b>Type:</b> San Francisco (the iPhone’s own font; shown here with a look-alike on Windows)</li>
+    <li><b>Gender:</b> article in Apple’s high-contrast blue, red, green; plural uncoloured</li>
+    <li><b>Grading:</b> four tinted capsules, red to blue</li>
+    <li><b>Risk:</b> looks like every other well-made iPhone app, by design</li>
+  </ul>
+  <div class="row">
+<!-- TODAY LIGHT -->
+<div><div class="phone light"><div class="screen">
+  <div class="nav"><span class="cbtn" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="lt">Today</div>
+  <div class="sub">Saturday 3 October</div>
+  <div class="sh">Session · about 30 min</div>
+  <div class="grp">
+    <div class="cl"><span class="ico" style="background:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div class="ct"><b>Reviews</b><span>42 done · 13 min</span></div></div>
+    <div class="cl"><span class="ico" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><div class="ct"><b>New cards</b><span>Next · from lecture 08 and Inbox</span></div><span class="det">10</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="ico" style="background:var(--orange)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5h-2V12a6 6 0 0 0-12 0v3.5z"/><rect x="3.5" y="14" width="4" height="6.5" rx="1.5"/><rect x="16.5" y="14" width="4" height="6.5" rx="1.5"/></svg></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="det">7 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="pill">Continue Session</div>
+  <div class="foot">About 17 minutes left.</div>
+  <div class="sh">Also</div>
+  <div class="grp">
+    <div class="cl"><span class="ico" style="background:#8E8E93"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg></span><div class="ct"><b>Inbox</b></div><span class="det">3</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="ico" style="background:#5856D6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M8 10h8M8 14h5"/></svg></span><div class="ct"><b>Reviews Only</b></div><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="foot">Tomorrow: 37 reviews due.</div>
+  <nav class="tabbar">
+    <a class="on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3.5a1 1 0 0 1 2 0V5h8V3.5a1 1 0 1 1 2 0V5h.5A2.5 2.5 0 0 1 21 7.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-11A2.5 2.5 0 0 1 5.5 5H6zM5 10v8.5c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V10z"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H5.6A1.6 1.6 0 0 1 4 18.9zM20 14.5h-3.2v6h1.6a1.6 1.6 0 0 0 1.6-1.6z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · light</div></div>
+
+<!-- REVIEW LIGHT -->
+<div><div class="phone light"><div class="screen">
+  <div class="rnav"><span class="cbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span><span class="t">12 of 42</span><span style="width:40px"></span></div>
+  <div class="segc"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card">
+    <div class="k">Word</div>
+    <div class="pr">table</div>
+    <div class="sepf"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center"><div class="hw"><span class="art g-der">der</span> Tisch</div><span class="au"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span></div>
+    <div class="pl"><small>Plural</small>die Tische</div>
+    <div class="src">Human recording · Wiktionary</div>
+  </div>
+  <div class="ex"><div class="k">Example</div><div class="de">Der Tisch wackelt.</div><div class="en">Show English</div></div>
+  <div class="spacer"></div>
+  <div class="gr"><span style="--c:var(--red)">Again<small>&lt;10m</small></span><span style="--c:var(--orange)">Hard<small>1d</small></span><span style="--c:var(--green)">Good<small>3d</small></span><span style="--c:var(--blue)">Easy<small>8d</small></span></div>
+</div></div><div class="cap">Review, word card after reveal · light</div></div>
+
+<!-- TODAY DARK -->
+<div><div class="phone dark"><div class="screen">
+  <div class="nav"><span class="cbtn" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="lt">Today</div>
+  <div class="sub">Saturday 3 October</div>
+  <div class="sh">Session · about 30 min</div>
+  <div class="grp">
+    <div class="cl"><span class="ico" style="background:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div class="ct"><b>Reviews</b><span>42 done · 13 min</span></div></div>
+    <div class="cl"><span class="ico" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><div class="ct"><b>New cards</b><span>Next · from lecture 08 and Inbox</span></div><span class="det">10</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="ico" style="background:var(--orange)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5h-2V12a6 6 0 0 0-12 0v3.5z"/><rect x="3.5" y="14" width="4" height="6.5" rx="1.5"/><rect x="16.5" y="14" width="4" height="6.5" rx="1.5"/></svg></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="det">7 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="pill">Continue Session</div>
+  <div class="foot">About 17 minutes left.</div>
+  <div class="sh">Also</div>
+  <div class="grp">
+    <div class="cl"><span class="ico" style="background:#8E8E93"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg></span><div class="ct"><b>Inbox</b></div><span class="det">3</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="ico" style="background:#5E5CE6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M8 10h8M8 14h5"/></svg></span><div class="ct"><b>Reviews Only</b></div><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="foot">Tomorrow: 37 reviews due.</div>
+  <nav class="tabbar">
+    <a class="on"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3.5a1 1 0 0 1 2 0V5h8V3.5a1 1 0 1 1 2 0V5h.5A2.5 2.5 0 0 1 21 7.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-11A2.5 2.5 0 0 1 5.5 5H6zM5 10v8.5c0 .3.2.5.5.5h13c.3 0 .5-.2.5-.5V10z"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H5.6A1.6 1.6 0 0 1 4 18.9zM20 14.5h-3.2v6h1.6a1.6 1.6 0 0 0 1.6-1.6z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · dark</div></div>
+
+<!-- REVIEW DARK -->
+<div><div class="phone dark"><div class="screen">
+  <div class="rnav"><span class="cbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span><span class="t">13 of 42</span><span style="width:40px"></span></div>
+  <div class="segc"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card">
+    <div class="k">Sentence · say it in German</div>
+    <div class="pr">There’s no speed limit.</div>
+    <div class="sepf"></div>
+    <div class="sent" lang="de">Es gibt keine Geschwindigkeits&shy;begrenzung.</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="src" style="margin:0">Human recording · Tatoeba</span><span class="au"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span></div>
+  </div>
+  <div class="ex"><div class="k">Words in this sentence</div><div class="de"><span class="art g-die">die</span> Geschwindigkeits&shy;begrenzung</div><div style="font-size:15px;color:var(--label-2);margin-top:2px">speed limit · plural -en</div></div>
+  <div class="spacer"></div>
+  <div class="gr"><span style="--c:var(--red)">Again<small>&lt;10m</small></span><span style="--c:var(--orange)">Hard<small>2d</small></span><span style="--c:var(--green)">Good<small>5d</small></span><span style="--c:var(--blue)">Easy<small>12d</small></span></div>
+</div></div><div class="cap">Review, sentence card after reveal · dark</div></div>
+  </div>
+</div>
+<script>
+const sb=`<div class="island"></div><div class="sb"><span>9:41</span><span style="display:flex;gap:7px;align-items:center">
+<svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.3A10.3 10.3 0 0 0 8 .3 10.3 10.3 0 0 0 .7 3.3L2 4.6a8.4 8.4 0 0 1 6-2.4zm0 3.7c1.3 0 2.5.5 3.4 1.3l1.3-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.7 1.9l1.3 1.3c.9-.8 2.1-1.3 3.4-1.3zM8 9.6l2-2a2.9 2.9 0 0 0-4 0z"/></svg>
+<svg width="27" height="13" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" fill="currentColor" opacity=".45"/></svg></span></div><div class="homebar"></div>`;
+document.querySelectorAll('.phone').forEach(p=>p.insertAdjacentHTML('beforeend',sb));
+
+if(location.search.includes('comp')){const ph=[...document.querySelectorAll('.row > div')];ph.forEach((d,i)=>{if(i!==0&&i!==3)d.remove();});
+document.querySelectorAll('.sheet h1,.sheet p.lede,.sheet ul.traits,.cap').forEach(n=>n.remove());
+document.querySelector('.sheet').style.padding='34px 40px';}
+</script>
+</body>
+</html>

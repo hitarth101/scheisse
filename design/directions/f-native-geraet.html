@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction F · Native Gerät</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#C7C7CC;color:#000;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+.sheet{padding:40px 48px 56px}
+.sheet h1{font:700 28px/1.2 -apple-system,"Inter",sans-serif;margin:0 0 6px;letter-spacing:-.01em}
+.sheet p.lede{margin:0 0 4px;max-width:72ch;color:#333}
+.sheet ul.traits{margin:10px 0 28px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;color:#333;font-size:13.5px}
+.sheet ul.traits b{color:#000;font-weight:600}
+.row{display:flex;gap:44px;flex-wrap:wrap;align-items:flex-start}
+.cap{font-size:12.5px;color:#444;margin:14px 0 0 6px}
+.phone{position:relative;width:393px;height:852px;border-radius:55px;overflow:hidden;flex:none;box-shadow:0 0 0 9px #0d0e10,0 0 0 10px #3a3d42,0 40px 70px -30px rgba(0,0,0,.55)}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:126px;height:37px;border-radius:20px;background:#000;z-index:60}
+.sb{position:absolute;top:0;left:0;right:0;height:54px;display:flex;justify-content:space-between;align-items:center;padding:4px 30px 0 48px;z-index:55;font:600 16.5px/1 -apple-system,"Inter",sans-serif;color:var(--sb)}
+.homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:136px;height:5px;border-radius:3px;background:var(--sb);z-index:60}
+
+/* ---------- Native Gerät tokens ---------- */
+.light{--bg:#EFEFEC;--cell:#FFFFFF;--well:#E6E6E2;--fill:#E4E4E0;--label:#1C1C1A;--label-2:#64645F;--label-3:#8B8B85;--sep:#D6D6D1;
+  --signal:#2E7D32;--signal-hi:#3A8C3F;--on-signal:#FFFFFF;--lamp-off:#BDBDB8;--lamp-done:#4A4A46;
+  --key:#FAFAF8;--key-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 1px 1px rgba(0,0,0,.10),0 3px 8px -2px rgba(0,0,0,.14);
+  --well-shadow:inset 0 1px 3px rgba(0,0,0,.12);
+  --der:#2763B8;--die:#C2363A;--das:#0D6E74;--glass:rgba(255,255,255,.74);--sb:#1C1C1A}
+.dark{--bg:#000000;--cell:#1C1C1E;--well:#121213;--fill:#2C2C2E;--label:#F2F2EF;--label-2:#A6A6A1;--label-3:#7C7C77;--sep:#333335;
+  --signal:#4FBF63;--signal-hi:#66CC78;--on-signal:#0B1A0D;--lamp-off:#45454A;--lamp-done:#D1D1CC;
+  --key:#2C2C2E;--key-shadow:0 1px 0 rgba(255,255,255,.07) inset,0 1px 1px rgba(0,0,0,.6),0 4px 10px -2px rgba(0,0,0,.7);
+  --well-shadow:inset 0 1px 4px rgba(0,0,0,.8);
+  --der:#7DAEF1;--die:#F28C88;--das:#5CCFD3;--glass:rgba(40,40,42,.74);--sb:#F2F2EF}
+.screen{position:absolute;inset:0;background:var(--bg);color:var(--label);display:flex;flex-direction:column;font:400 17px/22px -apple-system,BlinkMacSystemFont,"Inter",sans-serif;letter-spacing:-.01em}
+.nav{padding:54px 16px 0;height:100px;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center}
+.lt{font-size:34px;line-height:41px;font-weight:700;letter-spacing:-.02em;padding:0 20px}
+.sub{color:var(--label-2);font-size:15px;padding:2px 20px 0}
+.rkey{width:42px;height:42px;border-radius:21px;background:var(--key);box-shadow:var(--key-shadow);display:grid;place-items:center;color:var(--label-2)}
+.rkey svg{width:20px;height:20px}
+.sh{font-size:13px;color:var(--label-2);padding:22px 36px 7px;display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.grp{margin:0 16px;background:var(--cell);border-radius:20px;overflow:hidden}
+.cl{display:flex;align-items:center;gap:14px;min-height:56px;padding:0 18px;position:relative}
+.cl+.cl::before{content:"";position:absolute;top:0;left:42px;right:0;height:.5px;background:var(--sep)}
+.lamp{width:10px;height:10px;border-radius:5px;box-shadow:inset 0 0 0 1.5px var(--lamp-off);flex:none}
+.lamp.done{background:var(--lamp-done);box-shadow:none}
+.lamp.on{background:var(--signal);box-shadow:inset 0 -2px 3px rgba(0,0,0,.2),0 0 0 3px color-mix(in oklab,var(--signal) 22%,transparent)}
+.ct{flex:1;padding:9px 0}
+.ct b{font-weight:500;display:block}
+.ct span{font-size:14px;color:var(--label-2);line-height:18px}
+.cl.done .ct b{color:var(--label-2);font-weight:400}
+.det{color:var(--label-2);font-variant-numeric:tabular-nums;font-size:15.5px;text-align:right;line-height:19px}
+.chev{color:var(--label-3);opacity:.7;flex:none}
+.go{margin:16px 16px 0;height:58px;border-radius:18px;background:linear-gradient(var(--signal-hi),var(--signal));color:var(--on-signal);display:flex;align-items:center;justify-content:space-between;padding:0 22px;font-weight:600;font-size:17px;
+  box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 2px 2px rgba(0,0,0,.12),0 6px 14px -4px color-mix(in oklab,var(--signal) 55%,transparent)}
+.foot{font-size:13px;color:var(--label-2);padding:8px 36px 0}
+.spacer{flex:1}
+.tabbar{position:absolute;left:16px;right:16px;bottom:24px;height:62px;border-radius:31px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(1.5);backdrop-filter:blur(24px) saturate(1.5);
+  box-shadow:0 6px 24px -6px rgba(0,0,0,.18),inset 0 0 0 .5px rgba(0,0,0,.08);display:flex;justify-content:space-around;align-items:center;padding:0 6px;z-index:20}
+.dark .tabbar{box-shadow:0 6px 24px -6px rgba(0,0,0,.6),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10.5px;font-weight:500;color:var(--label-2);height:52px;justify-content:center;position:relative}
+.tabbar a svg{width:25px;height:25px}
+.tabbar a.on{color:var(--label)}
+.tabbar a.on::before{content:"";position:absolute;top:1px;width:5px;height:5px;border-radius:3px;background:var(--signal)}
+/* review */
+.rnav{padding:54px 16px 0;height:104px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between}
+.rnav .t{font-weight:600;font-size:17px;font-variant-numeric:tabular-nums}
+.segc{margin:4px 16px 0;height:34px;border-radius:17px;background:var(--fill);display:grid;grid-template-columns:1fr 1fr;padding:2px}
+.segc span{display:grid;place-items:center;font-size:14px;font-weight:500;border-radius:15px;color:var(--label)}
+.segc span.on{background:var(--cell);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.dark .segc span.on{background:#636366}
+.card{margin:16px 16px 0;background:var(--cell);border-radius:24px;padding:20px 20px 22px}
+.k{font-size:12.5px;color:var(--label-3);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.pr{font-size:21px;line-height:27px;color:var(--label-2);margin:4px 0 16px}
+.win{background:var(--well);box-shadow:var(--well-shadow);border-radius:18px;padding:16px 16px 14px;margin:0 -6px}
+.hw{font-size:42px;line-height:48px;font-weight:700;letter-spacing:-.025em}
+.art{color:var(--g);font-weight:600}
+.g-der{--g:var(--der)}.g-die{--g:var(--die)}.g-das{--g:var(--das)}
+.pl{font-size:18px;margin-top:6px}
+.pl small{font-size:12px;color:var(--label-3);margin-right:6px;letter-spacing:.05em;font-weight:600}
+.au{width:46px;height:46px;border-radius:23px;background:var(--key);box-shadow:var(--key-shadow);display:grid;place-items:center;color:var(--label);flex:none}
+.au svg{width:21px;height:21px}
+.src{font-size:12.5px;color:var(--label-3);margin-top:12px}
+.ex{margin:12px 16px 0;background:var(--cell);border-radius:20px;padding:14px 20px}
+.ex .de{font-size:19px;font-weight:500;margin-top:4px}
+.ex .en{color:var(--label-2);font-size:15px;margin-top:3px}
+.grades{display:grid;grid-template-columns:repeat(4,1fr);padding:0 12px 44px;justify-items:center;row-gap:8px}
+.gk{width:76px;height:76px;border-radius:38px;background:var(--key);box-shadow:var(--key-shadow);display:grid;place-items:center;font-weight:600;font-size:15.5px;color:var(--label)}
+.gk.again{background:linear-gradient(#5a5a56,#41413e);color:#F4F4F1}
+.dark .gk.again{background:linear-gradient(#4a4a47,#383836)}
+.gk.good{background:linear-gradient(var(--signal-hi),var(--signal));color:var(--on-signal);box-shadow:0 1px 0 rgba(255,255,255,.3) inset,0 2px 2px rgba(0,0,0,.12),0 6px 14px -4px color-mix(in oklab,var(--signal) 55%,transparent)}
+.gi{font-size:13px;color:var(--label-2);font-variant-numeric:tabular-nums}
+.sent{font-size:29px;line-height:35px;font-weight:700;letter-spacing:-.02em;hyphens:manual}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <h1>F · Native Gerät (Apple layout, Gerät details)</h1>
+  <p class="lede">The structure of an Apple app (system font, large titles, grouped lists, the floating tab bar), finished with the Gerät details you liked: indicator lamps instead of coloured icon tiles, a recessed window for the answer, four round calculator keys for grading, and one green key for the next action.</p>
+  <ul class="traits">
+    <li><b>Type:</b> San Francisco, the iPhone system font (a look-alike on Windows)</li>
+    <li><b>Gender:</b> article printed in colour: blue der, red die, teal das (kept clear of the green action key); plural uncoloured</li>
+    <li><b>Signature:</b> round calculator keys for grading; lamps for session state</li>
+    <li><b>Colour:</b> greys plus one green signal; no other accent</li>
+  </ul>
+  <div class="row">
+<!-- TODAY LIGHT -->
+<div><div class="phone light"><div class="screen">
+  <div class="nav"><span class="rkey" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="lt">Today</div>
+  <div class="sub">Saturday 3 October</div>
+  <div class="sh"><span>Session · about 30 min</span><span>17 min left</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>42 done</span></div><span class="det">13 min</span></div>
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>New cards</b><span>Next · from lecture 08 and Inbox</span></div><span class="det">10<br>~6 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="det">~7 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="go"><span>Continue: new cards</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg></div>
+  <div class="sh" style="padding-top:26px"><span>Also</span></div>
+  <div class="grp">
+    <div class="cl"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="color:var(--label-2);margin-left:-5px"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg><div class="ct" style="margin-left:-4px"><b>Inbox</b></div><span class="det">3</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="color:var(--label-2);margin-left:-5px"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M8 10h8M8 14h5"/></svg><div class="ct" style="margin-left:-4px"><b>Reviews only</b></div><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="foot">Tomorrow: 37 reviews due.</div>
+  <nav class="tabbar">
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H5.6A1.6 1.6 0 0 1 4 18.9zM20 14.5h-3.2v6h1.6a1.6 1.6 0 0 0 1.6-1.6z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · light</div></div>
+
+<!-- REVIEW LIGHT (das noun) -->
+<div><div class="phone light"><div class="screen">
+  <div class="rnav"><span class="rkey"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span><span class="t">12 of 42</span><span class="rkey"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/></svg></span></div>
+  <div class="segc"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card">
+    <div class="k">Word</div>
+    <div class="pr">book · noun</div>
+    <div class="win">
+      <div style="display:flex;justify-content:space-between;align-items:center"><div class="hw"><span class="art g-das">das</span> Buch</div><span class="au"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8"/></svg></span></div>
+      <div class="pl"><small>PLURAL</small>die Bücher</div>
+    </div>
+    <div class="src">Human recording · Wiktionary</div>
+  </div>
+  <div class="ex"><div class="k">Example</div><div class="de">Kauf das Buch.</div><div class="en">Buy the book.</div></div>
+  <div class="spacer"></div>
+  <div class="grades"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">1 day</span><span class="gi">3 days</span><span class="gi">8 days</span></div>
+</div></div><div class="cap">Review, word card after reveal · light</div></div>
+
+<!-- TODAY DARK -->
+<div><div class="phone dark"><div class="screen">
+  <div class="nav"><span class="rkey" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="lt">Today</div>
+  <div class="sub">Saturday 3 October</div>
+  <div class="sh"><span>Session · about 30 min</span><span>17 min left</span></div>
+  <div class="grp">
+    <div class="cl done"><span class="lamp done"></span><div class="ct"><b>Reviews</b><span>42 done</span></div><span class="det">13 min</span></div>
+    <div class="cl"><span class="lamp on"></span><div class="ct"><b>New cards</b><span>Next · from lecture 08 and Inbox</span></div><span class="det">10<br>~6 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><span class="lamp"></span><div class="ct"><b>Lecture 09</b><span>Resume at 3:20 of 9:45</span></div><span class="det">~7 min</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="go"><span>Continue: new cards</span><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></svg></div>
+  <div class="sh" style="padding-top:26px"><span>Also</span></div>
+  <div class="grp">
+    <div class="cl"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="color:var(--label-2);margin-left:-5px"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg><div class="ct" style="margin-left:-4px"><b>Inbox</b></div><span class="det">3</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="cl"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="color:var(--label-2);margin-left:-5px"><rect x="4" y="5" width="16" height="14" rx="2.5"/><path d="M8 10h8M8 14h5"/></svg><div class="ct" style="margin-left:-4px"><b>Reviews only</b></div><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+  </div>
+  <div class="foot">Tomorrow: 37 reviews due.</div>
+  <nav class="tabbar">
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H5.6A1.6 1.6 0 0 1 4 18.9zM20 14.5h-3.2v6h1.6a1.6 1.6 0 0 0 1.6-1.6z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l2.4-7A2 2 0 0 1 7.8 5h8.4a2 2 0 0 1 1.9 1.5l2.4 7V18a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 18z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · dark</div></div>
+
+<!-- REVIEW DARK sentence -->
+<div><div class="phone dark"><div class="screen">
+  <div class="rnav"><span class="rkey"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span><span class="t">13 of 42</span><span class="rkey"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/></svg></span></div>
+  <div class="segc"><span class="on">Speak</span><span>Type</span></div>
+  <div class="card">
+    <div class="k">Sentence · say it in German</div>
+    <div class="pr">There’s no speed limit.</div>
+    <div class="win">
+      <div class="sent" lang="de">Es gibt keine Geschwindigkeits&shy;begrenzung.</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px"><span class="src" style="margin:0">Human recording · Tatoeba</span><span class="au"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8"/></svg></span></div>
+    </div>
+  </div>
+  <div class="ex"><div class="k">Words in this sentence</div><div class="de"><span class="art g-die">die</span> Geschwindigkeits&shy;begrenzung</div><div class="en">speed limit · plural die Geschwindigkeits&shy;begrenzungen</div></div>
+  <div class="spacer"></div>
+  <div class="grades"><span class="gk again">Again</span><span class="gk">Hard</span><span class="gk good">Good</span><span class="gk">Easy</span>
+    <span class="gi">&lt;10 min</span><span class="gi">2 days</span><span class="gi">5 days</span><span class="gi">12 days</span></div>
+</div></div><div class="cap">Review, sentence card after reveal · dark</div></div>
+  </div>
+</div>
+<script>
+const sb=`<div class="island"></div><div class="sb"><span>9:41</span><span style="display:flex;gap:7px;align-items:center">
+<svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.3A10.3 10.3 0 0 0 8 .3 10.3 10.3 0 0 0 .7 3.3L2 4.6a8.4 8.4 0 0 1 6-2.4zm0 3.7c1.3 0 2.5.5 3.4 1.3l1.3-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.7 1.9l1.3 1.3c.9-.8 2.1-1.3 3.4-1.3zM8 9.6l2-2a2.9 2.9 0 0 0-4 0z"/></svg>
+<svg width="27" height="13" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" fill="currentColor" opacity=".45"/></svg></span></div><div class="homebar"></div>`;
+document.querySelectorAll('.phone').forEach(p=>p.insertAdjacentHTML('beforeend',sb));
+if(location.search.includes('comp')){const ph=[...document.querySelectorAll('.row > div')];ph.forEach((d,i)=>{if(i!==1&&i!==2)d.remove();});
+document.querySelectorAll('.sheet h1,.sheet p.lede,.sheet ul.traits,.cap').forEach(n=>n.remove());
+document.querySelector('.sheet').style.padding='34px 40px';}
+</script>
+</body>
+</html>

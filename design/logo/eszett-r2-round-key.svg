@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+  <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6F6F3"/><stop offset="1" stop-color="#E1E1DC"/></linearGradient>
+  <linearGradient id="well" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C6C6C1"/><stop offset="1" stop-color="#ECECE8"/></linearGradient>
+  <radialGradient id="lamp" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#4A9A50"/><stop offset=".55" stop-color="#2E7D32"/><stop offset="1" stop-color="#256B2B"/></radialGradient>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="drop" x="-25%" y="-25%" width="150%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+  <radialGradient id="cap" cx=".42" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".75" stop-color="#F4F4F1"/><stop offset="1" stop-color="#E3E3DF"/></radialGradient></defs>
+
+  <rect width="1024" height="1024" fill="url(#hs)"/>
+  <circle cx="512" cy="556" r="326" fill="#000" opacity=".22" filter="url(#drop)"/>
+  <circle cx="512" cy="520" r="326" fill="url(#cap)"/>
+  <circle cx="512" cy="520" r="324.5" fill="none" stroke="#fff" stroke-width="3" opacity=".85"/>
+  <path d="M442.6 700L371.1 700L371.1 438.5Q371.1 407.7 386.1 385.7Q401.1 363.6 428.3 351.8Q455.5 340 491.9 340L491.9 340Q526.3 340 554.6 350.8Q583.0 361.7 600.1 383.0Q617.1 404.4 617.1 435.8L617.1 435.8Q617.1 463.3 603.4 482.9Q589.7 502.6 565.4 509.7L565.4 509.7L565.4 513.6Q600.4 515.9 620.7 540.5Q640.9 565.1 640.9 602.3L640.9 602.3Q640.9 633.0 626.6 654.9Q612.3 676.9 586.7 688.4Q561.1 700 527.7 700L527.7 700L481.2 700L481.2 641.4L516.5 641.4Q540.3 641.4 554.4 628.7Q568.5 616.1 568.5 595.6L568.5 595.6Q568.5 574.4 552.8 561.4Q537.2 548.4 510.5 548.4L510.5 548.4L482.6 548.4L482.6 492.1L501.5 492.1Q514.3 492.1 523.8 485.8Q533.2 479.5 538.4 469.1Q543.7 458.7 543.7 446.3L543.7 446.3Q543.7 426.5 530.6 413.4Q517.4 400.3 494.3 400.3L494.3 400.3Q471.2 400.3 456.9 413.5Q442.6 426.8 442.6 448.7L442.6 448.7L442.6 700Z" fill="#1C1C1A"/>
+  
+  <circle cx="846" cy="176" r="52.199999999999996" fill="url(#well)"/>
+  <circle cx="846" cy="178.88" r="37.44" fill="#000" opacity=".18" filter="url(#soft)"/>
+  <circle cx="846" cy="176" r="36" fill="url(#lamp)"/>
+  <ellipse cx="835.2" cy="162.32" rx="12.24" ry="7.2" fill="#fff" opacity=".16"/>
+</svg>

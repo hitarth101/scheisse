@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scheiße icon refinements</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEFEC;--text:#1C1C1A;--text-2:#5F5F5A;--line:#D6D6D1}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif}
+.wrap{padding:40px 48px 56px}
+h1{font-size:28px;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em}
+.lede{color:var(--text-2);max-width:82ch;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:24px}
+.opt h2{font-size:17px;margin:0 0 4px}
+.opt.before h2{color:var(--text-2)}
+.opt p{margin:0 0 14px;color:var(--text-2);font-size:13px;min-height:96px}
+.master{width:100%;max-width:220px;aspect-ratio:1;border-radius:22.4%;display:block;box-shadow:0 1px 2px rgba(0,0,0,.08),0 10px 30px -12px rgba(0,0,0,.3)}
+.strip{margin-top:16px;border-radius:16px;padding:16px 8px 10px;display:flex;justify-content:space-around}
+.strip.light{background:linear-gradient(160deg,#C9D6E3,#E9DCCB)}
+.strip.dark{background:linear-gradient(160deg,#141A26,#2A2234);margin-top:10px}
+.app{display:flex;flex-direction:column;align-items:center;gap:5px;width:64px}
+.app img,.app i{width:60px;height:60px;border-radius:13.4px;display:block}
+.app i{background:rgba(255,255,255,.55)}
+.dark .app i{background:rgba(255,255,255,.14)}
+.app span{font-size:11px;color:#1C1C1A}
+.dark .app span{color:#F2F2EF}
+.small{display:flex;align-items:center;gap:12px;margin-top:12px;color:var(--text-2);font-size:12px}
+.s40{width:40px;height:40px;border-radius:9px;display:block}
+.s29{width:29px;height:29px;border-radius:6.5px;display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Scheiße · Eszett-key refinements</h1>
+  <p class="lede">The first column is the original option 5. The two weak points were the key drawn as a frame inside the icon’s own frame, and a hand-drawn ß. All five refinements use the ß from Inter, a free typeface close to the iPhone’s own font, converted to an outline so the icon needs no font file. Each takes a different route out of the frame-inside-a-frame problem. Home-screen previews use the real name, at real size (60 pt), plus Spotlight (40 pt) and Settings (29 pt).</p>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const opts=[
+ ['before','Before · option 5','icon-5-eszett.svg','The original: a key cap drawn as a rounded square inside the rounded-square icon, and a hand-drawn ß.'],
+ ['','R1 · The tile is the key','eszett-r1-tile-key.svg','No inner frame: the whole tile is shaded as one convex key, so the iPhone’s own corner mask becomes the key’s edge. The ß is half again as large, and the lamp is bigger so it still reads at 40 pt.'],
+ ['','R2 · Round key','eszett-r2-round-key.svg','A round key on the grey housing. A circle inside a rounded square reads as an object, not a repeated frame, and it is the same shape as the app’s grading keys, so the icon and the review screen match.'],
+ ['','R3 · Printed panel','eszett-r3-printed.svg','No key at all: the ß is printed on the housing at the lower left and the lamp sits at the upper right, laid out on a grid like the lettering on a Braun panel. Largest letter and the least detail, so it is the clearest at 29 pt.'],
+ ['','R4 · Anodised','eszett-r4-anodised.svg','R1 in the black version of the device, matching the app’s dark mode. White on near-black has the most contrast of the set, and it stands out among light icons on the home screen.'],
+ ['','R5 · Key with height','eszett-r5-key-object.svg','The key drawn as a physical object with its front skirt visible. The depth makes it read as a thing sitting on the housing rather than a flat frame; it keeps the original idea most literally.'],
+];
+const g=document.getElementById('grid');
+for(const [cls,t,src,txt] of opts){
+  const strip=k=>`<div class="strip ${k}"><div class="app"><i></i><span>&nbsp;</span></div><div class="app"><img src="${src}" alt=""><span>Scheiße</span></div><div class="app"><i></i><span>&nbsp;</span></div></div>`;
+  g.insertAdjacentHTML('beforeend',`<div class="opt ${cls}"><h2>${t}</h2><p>${txt}</p><img class="master" src="${src}" alt="">${strip('light')}${strip('dark')}<div class="small"><img class="s40" src="${src}" alt=""><img class="s29" src="${src}" alt="">40 and 29 pt</div></div>`);
+}
+</script>
+</body>
+</html>

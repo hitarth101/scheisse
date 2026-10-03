@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+  <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6F6F3"/><stop offset="1" stop-color="#E1E1DC"/></linearGradient>
+  <linearGradient id="well" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C6C6C1"/><stop offset="1" stop-color="#ECECE8"/></linearGradient>
+  <radialGradient id="lamp" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#4A9A50"/><stop offset=".55" stop-color="#2E7D32"/><stop offset="1" stop-color="#256B2B"/></radialGradient>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+  <filter id="drop" x="-25%" y="-25%" width="150%" height="160%"><feGaussianBlur stdDeviation="24"/></filter>
+  <radialGradient id="dish" cx=".5" cy=".42" r=".62"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#F3F3F0"/><stop offset="1" stop-color="#DCDCD7"/></radialGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".08" stop-color="#fff" stop-opacity="0"/><stop offset=".9" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".10"/></linearGradient></defs>
+
+  <rect width="1024" height="1024" fill="url(#dish)"/>
+  <rect width="1024" height="1024" fill="url(#edge)"/>
+  <path d="M401.4 820L290.1 820L290.1 413.2Q290.1 365.3 313.5 331.0Q336.8 296.7 379.1 278.4Q421.4 260 478.1 260L478.1 260Q531.5 260 575.7 276.9Q619.8 293.7 646.3 326.9Q672.8 360.1 672.8 409.1L672.8 409.1Q672.8 451.7 651.5 482.3Q630.2 512.9 592.3 524.1L592.3 524.1L592.3 530.0Q646.9 533.7 678.4 571.9Q709.9 610.1 709.9 667.9L709.9 667.9Q709.9 715.8 687.7 749.9Q665.4 784.0 625.5 802.0Q585.7 820 533.7 820L533.7 820L461.4 820L461.4 728.8L516.3 728.8Q553.4 728.8 575.3 709.1Q597.2 689.5 597.2 657.6L597.2 657.6Q597.2 624.6 572.9 604.3Q548.6 584.1 507.0 584.1L507.0 584.1L463.7 584.1L463.7 496.6L493.0 496.6Q513.0 496.6 527.6 486.8Q542.3 477.0 550.4 460.8Q558.6 444.7 558.6 425.4L558.6 425.4Q558.6 394.6 538.2 374.2Q517.8 353.8 481.8 353.8L481.8 353.8Q445.9 353.8 423.6 374.4Q401.4 395.0 401.4 429.1L401.4 429.1L401.4 820Z" fill="#1C1C1A"/>
+  
+  <circle cx="800" cy="222" r="63.8" fill="url(#well)"/>
+  <circle cx="800" cy="225.52" r="45.760000000000005" fill="#000" opacity=".18" filter="url(#soft)"/>
+  <circle cx="800" cy="222" r="44" fill="url(#lamp)"/>
+  <ellipse cx="786.8" cy="205.28" rx="14.96" ry="8.8" fill="#fff" opacity=".16"/>
+</svg>

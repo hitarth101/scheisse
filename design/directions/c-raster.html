@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C · Raster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#C8CCD2;color:#0c0c0d;font:15px/1.45 "Archivo",sans-serif}
+.sheet{padding:40px 48px 56px}
+.sheet h1{font:800 28px/1.2 "Archivo",sans-serif;font-stretch:112%;margin:0 0 6px;letter-spacing:-.01em}
+.sheet p.lede{margin:0 0 4px;max-width:72ch;color:#2f343a}
+.sheet ul.traits{margin:10px 0 28px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;color:#2f343a;font-size:13.5px}
+.sheet ul.traits b{color:#0c0c0d;font-weight:700}
+.row{display:flex;gap:44px;flex-wrap:wrap;align-items:flex-start}
+.cap{font-size:12.5px;color:#41464d;margin:14px 0 0 6px}
+.phone{position:relative;width:393px;height:852px;border-radius:55px;overflow:hidden;flex:none;box-shadow:0 0 0 9px #0d0e10,0 0 0 10px #3a3d42,0 40px 70px -30px rgba(0,0,0,.55)}
+.island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:126px;height:37px;border-radius:20px;background:#000;z-index:60}
+.sb{position:absolute;top:0;left:0;right:0;height:54px;display:flex;justify-content:space-between;align-items:center;padding:4px 30px 0 48px;z-index:55;font:600 16.5px/1 -apple-system,"Inter",sans-serif;color:var(--sb)}
+.homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:136px;height:5px;border-radius:3px;background:var(--sb);z-index:60}
+
+/* ---------- Raster tokens ---------- */
+.light{--ground:#FFFFFF;--grid:#E6EEF8;--gridM:#CFDDEF;--ink:#0C0C0D;--ink-2:#565C65;--ink-3:#868D96;--plane:#FFD21F;--on-plane:#0C0C0D;--rule:#0C0C0D;
+  --der:#1B55F0;--die:#E0302A;--das:#0B8F52;--sb:#0C0C0D}
+.dark{--ground:#0B0C0E;--grid:#141922;--gridM:#1E2633;--ink:#F2F3F5;--ink-2:#A3AAB4;--ink-3:#747C87;--plane:#FFD21F;--on-plane:#0C0C0D;--rule:#F2F3F5;
+  --der:#7AA3FF;--die:#FF7068;--das:#3FCB88;--sb:#F2F3F5}
+.screen{position:absolute;inset:0;color:var(--ink);display:flex;flex-direction:column;font:400 17px/24px "Archivo",sans-serif;
+  background-color:var(--ground);
+  background-image:
+    linear-gradient(to right,var(--gridM) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--gridM) 1px,transparent 1px),
+    linear-gradient(to right,var(--grid) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:96px 96px,96px 96px,24px 24px,24px 24px;
+  background-position:4.5px 0,0 0,4.5px 0,0 0}
+.c{padding:0 28.5px}
+.u1{height:24px}.u2{height:48px}.u3{height:72px}
+.top{height:120px;box-sizing:border-box;padding-top:48px;position:relative}
+.title{font-weight:800;font-stretch:112%;font-size:68px;line-height:72px;letter-spacing:-.035em;margin:0}
+.sq{width:48px;height:48px;display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--ground)}
+.sq svg{width:22px;height:22px}
+.date{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:var(--ink-2);font-stretch:100%}
+.tab{font-variant-numeric:tabular-nums}
+.tbl{border-top:2px solid var(--rule)}
+.tr{display:grid;grid-template-columns:48px 1fr auto;align-items:center;height:72px;border-bottom:1px solid var(--rule);gap:12px}
+.idx{width:48px;height:48px;display:grid;place-items:center;font-weight:700;font-size:17px;box-shadow:inset 0 0 0 1.5px var(--ink);font-variant-numeric:tabular-nums;background:var(--ground)}
+.tr.done .idx{background:var(--ink);color:var(--ground);box-shadow:none}
+.tr.next .idx{background:var(--plane);color:var(--on-plane);box-shadow:none}
+.nm{font-weight:700;font-size:18px;line-height:24px;font-stretch:100%}
+.sub{font-size:14px;line-height:20px;color:var(--ink-2);font-weight:400}
+.num{font-size:15px;color:var(--ink-2);text-align:right;line-height:20px;font-variant-numeric:tabular-nums}
+.tr.done .nm{color:var(--ink-2);font-weight:500}
+.plane{height:72px;background:var(--plane);color:var(--on-plane);display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-weight:800;font-size:19px;font-stretch:108%;letter-spacing:-.01em}
+.lr{height:48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--gridM);font-weight:600}
+.lr .m{font-weight:400;color:var(--ink-2)}
+.spacer{flex:1}
+.tabs{height:84px;box-sizing:border-box;padding:0 4.5px 34px;display:grid;grid-template-columns:repeat(5,1fr);background:var(--ground);border-top:2px solid var(--rule)}
+.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--ink-3);font:600 11px/13px "Archivo",sans-serif;font-stretch:100%;position:relative}
+.tabs a svg{width:24px;height:24px}
+.tabs a.on{color:var(--ink)}
+.tabs a.on::before{content:"";position:absolute;top:-2px;left:22%;right:22%;height:5px;background:var(--plane)}
+/* review */
+.rtop{height:120px;box-sizing:border-box;padding-top:60px;display:flex;align-items:center;justify-content:space-between}
+.seg{display:flex}
+.seg span{height:48px;padding:0 14px;display:flex;align-items:center;font-weight:700;font-size:13px;letter-spacing:.06em;box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--ground);color:var(--ink-2)}
+.seg span+span{margin-left:-1.5px}
+.seg span.on{background:var(--ink);color:var(--ground)}
+.cnt{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.kind{font-size:12px;line-height:24px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-2)}
+.prompt{font-size:22px;line-height:48px;color:var(--ink-2);font-weight:500}
+.art{color:var(--g);font-weight:700}
+.g-der{--g:var(--der)}.g-die{--g:var(--die)}.g-das{--g:var(--das)}
+.artline{font-size:28px;line-height:48px;font-weight:700;display:flex;align-items:flex-end;justify-content:space-between}
+.mono{font-weight:850;font-size:104px;line-height:96px;letter-spacing:-.045em;font-stretch:100%;margin-left:-5px}
+.pl{font-size:24px;line-height:48px;font-weight:500}
+.pl small{font-size:12px;letter-spacing:.1em;font-weight:700;color:var(--ink-2);margin-right:10px;vertical-align:3px}
+.ex{font-size:20px;line-height:24px;font-weight:600}
+.out{height:48px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;letter-spacing:.04em;box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--ground)}
+.grades{display:grid;grid-template-columns:repeat(4,84px);padding:0 28.5px 42px}
+.grades span{height:72px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-shadow:inset 0 0 0 1.5px var(--ink);background:var(--ground);font-weight:800;font-size:17px;font-stretch:104%}
+.grades span+span{margin-left:-1.5px}
+.grades small{font-weight:500;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;font-stretch:100%}
+.grades .again{color:var(--die)}
+.grades .good{background:var(--plane);color:var(--on-plane);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.grades .good small{color:var(--on-plane)}
+.sent{font-weight:750;font-size:41px;line-height:48px;letter-spacing:-.02em;font-stretch:66%;hyphens:manual}
+.src{font-size:12.5px;color:var(--ink-3);line-height:24px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <h1>C · Raster (the construction grid)</h1>
+  <p class="lede">The app is a Dutch-Swiss type specimen drawn on graph paper. A faint blue construction grid is always visible and everything snaps to it: 24-point cells, black rules, one yellow plane for the next action. The German word is set huge, and long compounds condense their letter width to fit instead of shrinking.</p>
+  <ul class="traits">
+    <li><b>Type:</b> Archivo, a variable font whose width axis squeezes long compounds</li>
+    <li><b>Gender:</b> the article is printed in its colour (blue der, red die, green das); plural uncoloured</li>
+    <li><b>Signature:</b> the headword fills the screen; Geschwindigkeitsbegrenzung narrows rather than wraps</li>
+    <li><b>Option:</b> the grid can be switched off in settings, as a real state</li>
+  </ul>
+  <div class="row">
+<!-- TODAY LIGHT -->
+<div><div class="phone light"><div class="screen">
+  <div class="c top"><div class="title">Today</div>
+    <span class="sq" style="position:absolute;right:28.5px;top:72px" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="c" style="flex:1;display:flex;flex-direction:column">
+    <div class="u2 date"><span>Saturday 3 October · about 30 min</span><span class="tab">17 min left</span></div>
+    <div class="tbl">
+      <div class="tr done"><span class="idx"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div class="nm">Reviews</div><div class="num">42 done<br>13 min</div></div>
+      <div class="tr next"><span class="idx">2</span><div><div class="nm">New cards</div><div class="sub">From lecture 08 and Inbox</div></div><div class="num">10<br>~6 min</div></div>
+      <div class="tr"><span class="idx">3</span><div><div class="nm">Lecture 09</div><div class="sub">Resume at 3:20 of 9:45</div></div><div class="num">~7 min</div></div>
+    </div>
+    <div class="u2"></div>
+    <div class="plane"><span>Continue: new cards</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+    <div class="u1"></div>
+    <div class="lr"><span>Inbox <span class="m">3 phrases</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="lr"><span>Reviews only</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="spacer"></div>
+    <div class="u2 date"><span>Tomorrow</span><span class="tab">37 reviews due</span></div>
+  </div>
+  <nav class="tabs">
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3.5" y="5" width="17" height="15.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H4zM20 14.5h-3.2v6H20z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3.5" y="4.5" width="17" height="15"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M3.5 13.5l2.6-8h11.8l2.6 8v6h-17z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · light</div></div>
+
+<!-- REVIEW LIGHT -->
+<div><div class="phone light"><div class="screen">
+  <div class="c rtop">
+    <span class="sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span>
+    <span class="cnt">12/42</span>
+    <span class="seg"><span class="on">SPEAK</span><span>TYPE</span></span>
+  </div>
+  <div class="c" style="flex:1">
+    <div class="u1 kind">Word</div>
+    <div class="prompt">table</div>
+    <div style="border-top:2px solid var(--rule)"></div>
+    <div class="artline"><span class="art g-der">der</span><span class="sq" style="margin-bottom:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8"/></svg></span></div>
+    <div class="mono">Tisch</div>
+    <div class="pl"><small>PLURAL</small>die Tische</div>
+    <div class="u1 src">Human recording · Wiktionary</div>
+    <div class="u1"></div>
+    <div class="u1 kind">Example</div>
+    <div class="u2 ex" style="display:flex;align-items:center">Der Tisch wackelt.</div>
+    <div class="out">SHOW ENGLISH</div>
+  </div>
+  <div class="grades">
+    <span class="again">Again<small>&lt;10 min</small></span><span>Hard<small>1 day</small></span><span class="good">Good<small>3 days</small></span><span>Easy<small>8 days</small></span>
+  </div>
+</div></div><div class="cap">Review, word card after reveal · light</div></div>
+
+<!-- TODAY DARK -->
+<div><div class="phone dark"><div class="screen">
+  <div class="c top"><div class="title">Today</div>
+    <span class="sq" style="position:absolute;right:28.5px;top:72px" aria-label="Status and data"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 20v-7M10 20V5M15 20v-9M20 20V9"/></svg></span></div>
+  <div class="c" style="flex:1;display:flex;flex-direction:column">
+    <div class="u2 date"><span>Saturday 3 October · about 30 min</span><span class="tab">17 min left</span></div>
+    <div class="tbl">
+      <div class="tr done"><span class="idx"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div class="nm">Reviews</div><div class="num">42 done<br>13 min</div></div>
+      <div class="tr next"><span class="idx">2</span><div><div class="nm">New cards</div><div class="sub">From lecture 08 and Inbox</div></div><div class="num">10<br>~6 min</div></div>
+      <div class="tr"><span class="idx">3</span><div><div class="nm">Lecture 09</div><div class="sub">Resume at 3:20 of 9:45</div></div><div class="num">~7 min</div></div>
+    </div>
+    <div class="u2"></div>
+    <div class="plane"><span>Continue: new cards</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+    <div class="u1"></div>
+    <div class="lr"><span>Inbox <span class="m">3 phrases</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="lr"><span>Reviews only</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M9 5.5l6.5 6.5L9 18.5"/></svg></div>
+    <div class="spacer"></div>
+    <div class="u2 date"><span>Tomorrow</span><span class="tab">37 reviews due</span></div>
+  </div>
+  <nav class="tabs">
+    <a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3.5" y="5" width="17" height="15.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Today</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5"/><path d="M4 14.5h3.2v6H4zM20 14.5h-3.2v6H20z"/></svg>Lectures</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13"/></svg>Reading</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="3.5" y="4.5" width="17" height="15"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/></svg>Grammar</a>
+    <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M3.5 13.5l2.6-8h11.8l2.6 8v6h-17z"/><path d="M3.5 13.5h4.6l1.4 2.4h5l1.4-2.4h4.6"/></svg>Inbox</a>
+  </nav>
+</div></div><div class="cap">Today · dark</div></div>
+
+<!-- REVIEW DARK -->
+<div><div class="phone dark"><div class="screen">
+  <div class="c rtop">
+    <span class="sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></span>
+    <span class="cnt">13/42</span>
+    <span class="seg"><span class="on">SPEAK</span><span>TYPE</span></span>
+  </div>
+  <div class="c" style="flex:1">
+    <div class="u1 kind">Sentence · say it in German</div>
+    <div class="prompt">There’s no speed limit.</div>
+    <div style="border-top:2px solid var(--rule)"></div>
+    <div class="u1"></div>
+    <div class="sent" lang="de">Es gibt keine Geschwindigkeits&shy;begrenzung.</div>
+    <div class="u2" style="display:flex;align-items:center;justify-content:space-between"><span class="src">Human recording · Tatoeba</span><span class="sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 9.5h3.4L12 5.6v12.8l-4.6-3.9H4z"/><path d="M15.6 9.2a4 4 0 0 1 0 5.6M18.2 6.6a7.6 7.6 0 0 1 0 10.8"/></svg></span></div>
+    <div class="u1"></div>
+    <div class="u1 kind">Words in this sentence</div>
+    <div class="u1" style="font-weight:700;font-stretch:88%"><span class="art g-die">die</span> Geschwindigkeits&shy;begrenzung</div>
+    <div class="u1" style="color:var(--ink-2);font-size:15px">speed limit · plural -en</div>
+  </div>
+  <div class="grades">
+    <span class="again">Again<small>&lt;10 min</small></span><span>Hard<small>2 days</small></span><span class="good">Good<small>5 days</small></span><span>Easy<small>12 days</small></span>
+  </div>
+</div></div><div class="cap">Review, sentence card after reveal · dark</div></div>
+  </div>
+</div>
+<script>
+const sb=`<div class="island"></div><div class="sb"><span>9:41</span><span style="display:flex;gap:7px;align-items:center">
+<svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+<svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.3A10.3 10.3 0 0 0 8 .3 10.3 10.3 0 0 0 .7 3.3L2 4.6a8.4 8.4 0 0 1 6-2.4zm0 3.7c1.3 0 2.5.5 3.4 1.3l1.3-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.7 1.9l1.3 1.3c.9-.8 2.1-1.3 3.4-1.3zM8 9.6l2-2a2.9 2.9 0 0 0-4 0z"/></svg>
+<svg width="27" height="13" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2" fill="currentColor"/><path d="M25 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" fill="currentColor" opacity=".45"/></svg></span></div><div class="homebar"></div>`;
+document.querySelectorAll('.phone').forEach(p=>p.insertAdjacentHTML('beforeend',sb));
+
+if(location.search.includes('comp')){const ph=[...document.querySelectorAll('.row > div')];ph.forEach((d,i)=>{if(i!==0&&i!==3)d.remove();});
+document.querySelectorAll('.sheet h1,.sheet p.lede,.sheet ul.traits,.cap').forEach(n=>n.remove());
+document.querySelector('.sheet').style.padding='34px 40px';}
+</script>
+</body>
+</html>

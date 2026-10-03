@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+  <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6F6F3"/><stop offset="1" stop-color="#E1E1DC"/></linearGradient>
+  <linearGradient id="well" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9C9C4"/><stop offset="1" stop-color="#E9E9E5"/></linearGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
+  <radialGradient id="ld" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#4F82CC"/><stop offset=".55" stop-color="#2763B8"/><stop offset="1" stop-color="#20579F"/></radialGradient>
+  <radialGradient id="lf" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#D25A5E"/><stop offset=".55" stop-color="#C2363A"/><stop offset="1" stop-color="#A62D31"/></radialGradient>
+  <radialGradient id="ln" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#2F8C92"/><stop offset=".55" stop-color="#0D6E74"/><stop offset="1" stop-color="#0A5D62"/></radialGradient></defs>
+<rect width="1024" height="1024" fill="url(#hs)"/>
+
+  <rect x="172" y="392" width="680" height="240" rx="120" fill="url(#well)"/>
+  <rect x="172" y="392" width="680" height="240" rx="120" fill="none" stroke="#000" stroke-opacity=".06" stroke-width="2"/>
+  
+  <circle cx="302" cy="518" r="86" fill="#000" opacity=".15" filter="url(#soft)"/>
+  <circle cx="302" cy="512" r="82" fill="url(#ld)"/>
+  <ellipse cx="278" cy="482" rx="30" ry="18" fill="#fff" opacity=".15"/>
+  <circle cx="512" cy="518" r="86" fill="#000" opacity=".15" filter="url(#soft)"/>
+  <circle cx="512" cy="512" r="82" fill="url(#lf)"/>
+  <ellipse cx="488" cy="482" rx="30" ry="18" fill="#fff" opacity=".15"/>
+  <circle cx="722" cy="518" r="86" fill="#000" opacity=".15" filter="url(#soft)"/>
+  <circle cx="722" cy="512" r="82" fill="url(#ln)"/>
+  <ellipse cx="698" cy="482" rx="30" ry="18" fill="#fff" opacity=".15"/>
+</svg>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scheiße">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#EFEFEC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Scheiße</title>
+<style>
+:root{--bg:#EFEFEC;--cell:#FFFFFF;--label:#1C1C1A;--label-2:#64645F;--sep:#D6D6D1;--signal:#2E7D32;--on-signal:#FFFFFF;--fail:#B3261E;--fill:#E4E4E0;--band:rgba(46,125,50,.28);color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root{--bg:#000000;--cell:#1C1C1E;--label:#F2F2EF;--label-2:#A6A6A1;--sep:#333335;--signal:#4FBF63;--on-signal:#0B1A0D;--fail:#F2B8B5;--fill:#2C2C2E;--band:rgba(79,191,99,.32)}}
+*{box-sizing:border-box}
+html{font:-apple-system-body;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--label);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.4;
+  padding:calc(env(safe-area-inset-top) + 12px) 16px calc(env(safe-area-inset-bottom) + 96px)}
+.band{position:fixed;left:0;right:0;background:var(--band);pointer-events:none;z-index:50}
+.band.top{top:0;height:env(safe-area-inset-top)}
+.band.bot{bottom:0;height:env(safe-area-inset-bottom)}
+h1{font-size:1.9rem;line-height:1.15;margin:.4rem 4px .2rem;letter-spacing:-.02em}
+.sub{color:var(--label-2);margin:0 4px 1rem}
+.banner{border-radius:16px;padding:12px 16px;margin:0 0 16px;background:var(--cell)}
+.banner.warn{box-shadow:inset 0 0 0 2px var(--fail)}
+.banner.ok{box-shadow:inset 0 0 0 2px var(--signal)}
+section{background:var(--cell);border-radius:20px;padding:16px;margin:0 0 14px}
+section h2{font-size:1.05rem;margin:0 0 .35rem}
+section p{margin:.3rem 0;color:var(--label-2);font-size:.95rem}
+section ol{margin:.3rem 0 .3rem 1.2rem;padding:0;color:var(--label-2);font-size:.95rem}
+.auto{font:.85rem/1.35 ui-monospace,Menlo,monospace;background:var(--fill);border-radius:10px;padding:8px 10px;margin:.5rem 0;white-space:pre-wrap;word-break:break-word;color:var(--label)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:.5rem 0}
+button,.btn{min-height:44px;padding:0 16px;border-radius:12px;border:0;background:var(--fill);color:var(--label);font:600 1rem -apple-system,sans-serif;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+button.primary{background:var(--signal);color:var(--on-signal)}
+.verdict{display:flex;gap:8px;margin-top:.7rem;padding-top:.7rem;border-top:.5px solid var(--sep)}
+.verdict button{flex:1}
+.verdict button.on.pass{background:var(--signal);color:var(--on-signal)}
+.verdict button.on.fail{background:var(--fail);color:#fff}
+@media (prefers-color-scheme: dark){.verdict button.on.fail{color:#3C0A07}}
+audio{width:100%;margin:.4rem 0}
+select,input[type=text],textarea{font:1rem -apple-system,sans-serif;width:100%;min-height:44px;border-radius:12px;border:1px solid var(--sep);background:var(--bg);color:var(--label);padding:8px 12px}
+textarea{min-height:90px}
+.sentence{font-size:1.25rem;font-weight:600;padding:14px;border-radius:14px;background:var(--fill);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}
+.sentence.hit{box-shadow:inset 0 0 0 2px var(--signal)}
+.dt{font:-apple-system-body}
+#kbar{position:fixed;left:0;right:0;bottom:0;display:none;gap:8px;justify-content:center;padding:8px;background:var(--cell);box-shadow:0 -.5px 0 var(--sep);z-index:60}
+#kbar button{min-width:56px;font-size:1.2rem}
+.copybar{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(env(safe-area-inset-bottom) + 10px);background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);z-index:40}
+.copybar button{width:100%}
+label.sw{display:flex;align-items:center;gap:10px;min-height:44px}
+.hidden-sw{position:absolute;left:-9999px;top:0}
+</style>
+</head>
+<body>
+<div class="band top"></div><div class="band bot"></div>
+<h1>Scheiße · Phase 0</h1>
+<p class="sub">Phone checks before the build. Do each check, tap Pass or Fail, then “Copy results” at the bottom and paste them into the chat.</p>
+<div id="mode" class="banner"></div>
+
+<section id="t13"><h2>13 · Home screen</h2>
+  <ol><li>In Safari: Share → Add to Home Screen. If you see “Open as Web App”, leave it on.</li><li>Check the name under the icon says <b>Scheiße</b> and the icon is the grey ß key with a green lamp.</li><li>Open the app from that icon, not from Safari.</li></ol>
+  <div class="auto" id="a13"></div></section>
+
+<section id="t1"><h2>1 · Background audio</h2>
+  <ol><li>Press play below and listen for 10 seconds.</li><li>Lock the phone (side button). Wait 30 seconds.</li><li>Pass if the lecture kept playing the whole time.</li></ol>
+  <audio id="aud" controls preload="metadata" src="audio/01.mp3"></audio>
+  <div class="auto" id="a1"></div></section>
+
+<section id="t2"><h2>2 · Lock-screen controls</h2>
+  <ol><li>With the lecture playing and the phone locked, wake the screen without unlocking.</li><li>Pass if you see “Lecture 01”, a play/pause button and back/forward 10-second buttons, and they all work.</li></ol></section>
+
+<section id="t3"><h2>3 · Keep screen on (fallback)</h2>
+  <ol><li>Tap “Keep screen on”, then play the lecture.</li><li>Don’t touch the phone for longer than your auto-lock time (Settings → Display &amp; Brightness → Auto-Lock).</li><li>Pass if the screen stayed on.</li></ol>
+  <div class="row"><button id="wake">Keep screen on</button></div>
+  <div class="auto" id="a3"></div></section>
+
+<section id="t4"><h2>4 · Seeking and resume</h2>
+  <ol><li>Tap “Jump to 3:20” and press play for a few seconds.</li><li>Close the app fully: swipe up from the bottom, then swipe the app away.</li><li>Reopen it and tap “Resume”. Pass if it continues from about 3:20 or later.</li></ol>
+  <div class="row"><button id="jump">Jump to 3:20</button><button id="resume">Resume</button></div>
+  <div class="auto" id="a4"></div></section>
+
+<section id="t5"><h2>5 · German voice</h2>
+  <ol><li>Pick a voice and tap “Speak”.</li><li>Pass if you hear clear German. Try each voice and note in the box at the end which sounds best.</li></ol>
+  <select id="voice"></select>
+  <div class="row"><button id="speak" class="primary">Speak</button><button id="slow">Speak slowly</button></div>
+  <p lang="de">Es gibt keine Geschwindigkeitsbegrenzung.</p>
+  <p>Tatoeba sentence 2301788: “There’s no speed limit.”</p>
+  <div class="auto" id="a5"></div></section>
+
+<section id="t6"><h2>6 · Storage</h2>
+  <ol><li>Tap “Ask to keep data”.</li><li>Close the app fully and reopen it.</li><li>Pass if “Times opened” went up and “First saved” stayed the same.</li></ol>
+  <div class="row"><button id="persist">Ask to keep data</button></div>
+  <div class="auto" id="a6"></div></section>
+
+<section id="t7"><h2>7 · Text size</h2>
+  <p class="dt">This line follows the iPhone text-size setting.</p>
+  <ol><li>Note the number below.</li><li>Change Settings → Display &amp; Brightness → Text Size, come back.</li><li>Pass if the number and this text changed. Set it back afterwards.</li></ol>
+  <div class="auto" id="a7"></div></section>
+
+<section id="t8"><h2>8 · Notch and home bar</h2>
+  <ol><li>Thin green bands sit at the very top and bottom of the screen.</li><li>Pass if the top band covers exactly the status bar and Dynamic Island area, the bottom band covers the home-bar area, and no text is hidden behind either.</li></ol>
+  <div class="auto" id="a8"></div></section>
+
+<section id="t9"><h2>9 · ä ö ü ß keys above the keyboard</h2>
+  <ol><li>Tap the box. A row of ä ö ü ß keys should appear.</li><li>Pass if the row sits directly on top of the keyboard and tapping a key types that letter without closing the keyboard.</li></ol>
+  <input type="text" id="kin" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Tap here">
+  <div class="auto" id="a9"></div></section>
+
+<section id="t10"><h2>10 · Long-press a sentence</h2>
+  <ol><li>Press and hold the sentence for about half a second.</li><li>Pass if a green outline appears and iOS does <b>not</b> show its own Copy / Look Up menu or select the text.</li></ol>
+  <div class="sentence" id="sent" lang="de">Der Tisch wackelt.</div>
+  <div class="auto" id="a10"></div></section>
+
+<section id="t11"><h2>11 · Vibration</h2>
+  <ol><li>Flip the switch by hand. Did you feel a light tick?</li><li>Then tap “Tick from the app”. Did you feel a tick?</li><li>Pass only if the second one ticked (that is the one the app can use); note the first in the box at the end.</li></ol>
+  <label class="sw"><input type="checkbox" switch id="swvis"> Switch</label>
+  <label class="hidden-sw" id="hapLabel" aria-hidden="true"><input type="checkbox" switch id="hap" tabindex="-1"></label>
+  <div class="row"><button id="tick">Tick from the app</button></div>
+  <div class="auto" id="a11"></div></section>
+
+<section id="t12"><h2>12 · Returning from a website</h2>
+  <ol><li>Tap the link: it opens the DW Nicos Weg course.</li><li>Come back to this app (Done, or swipe back).</li><li>Pass if this box then says it noticed your return.</li></ol>
+  <div class="row"><a class="btn" id="ext" href="https://learngerman.dw.com/en/nicos-weg/c-36519789" target="_blank" rel="noopener">Open Nicos Weg</a></div>
+  <div class="auto" id="a12">Waiting.</div></section>
+
+<section><h2>Notes</h2><p>Anything else worth knowing (which voice sounded best, what looked odd).</p><textarea id="notes"></textarea></section>
+
+<div id="kbar"><button data-k="ä">ä</button><button data-k="ö">ö</button><button data-k="ü">ü</button><button data-k="ß">ß</button></div>
+<div class="copybar"><button class="primary" id="copy">Copy results</button></div>
+<textarea id="copyout" style="position:absolute;left:-9999px" aria-hidden="true"></textarea>
+
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const store = { get(k, d) { try { const v = localStorage.getItem('p0.' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+                set(k, v) { try { localStorage.setItem('p0.' + k, JSON.stringify(v)); } catch (e) {} } };
+const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+const auto = {};
+const say = (id, text) => { auto[id] = text; const el = $('a' + id); if (el) el.textContent = text; };
+
+// Pass / Fail buttons on every check
+const TESTS = { 13: 'Home screen', 1: 'Background audio', 2: 'Lock-screen controls', 3: 'Keep screen on', 4: 'Seeking and resume', 5: 'German voice',
+  6: 'Storage', 7: 'Text size', 8: 'Notch and home bar', 9: 'Keyboard key row', 10: 'Long-press', 11: 'Vibration', 12: 'Return from website' };
+const verdicts = store.get('verdicts', {});
+for (const id of Object.keys(TESTS)) {
+  const sec = $('t' + id); const v = document.createElement('div'); v.className = 'verdict';
+  v.innerHTML = '<button class="pass">Pass</button><button class="fail">Fail</button>';
+  sec.appendChild(v);
+  const paint = () => { v.querySelector('.pass').classList.toggle('on', verdicts[id] === 'pass'); v.querySelector('.fail').classList.toggle('on', verdicts[id] === 'fail'); };
+  v.querySelector('.pass').onclick = () => { verdicts[id] = verdicts[id] === 'pass' ? undefined : 'pass'; store.set('verdicts', verdicts); paint(); };
+  v.querySelector('.fail').onclick = () => { verdicts[id] = verdicts[id] === 'fail' ? undefined : 'fail'; store.set('verdicts', verdicts); paint(); };
+  paint();
+}
+$('notes').value = store.get('notes', ''); $('notes').oninput = e => store.set('notes', e.target.value);
+
+// 13 · standalone mode
+const standalone = window.navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
+$('mode').className = 'banner ' + (standalone ? 'ok' : 'warn');
+$('mode').textContent = standalone ? 'Running as the home-screen app. Good: all checks apply.'
+  : 'Running in Safari, not the home-screen app. Do check 13 first, then reopen from the icon.';
+say(13, 'Home-screen mode: ' + (standalone ? 'yes' : 'no') + '\n' + navigator.userAgent);
+
+// 1, 2, 4 · audio, lock screen, seeking
+const audio = $('aud');
+const seek = d => { audio.currentTime = Math.max(0, Math.min((audio.duration || 1e9) - 1, audio.currentTime + d)); };
+if ('mediaSession' in navigator) {
+  try { navigator.mediaSession.metadata = new MediaMetadata({ title: 'Lecture 01', artist: 'Language Transfer · Complete German', album: 'Scheiße',
+    artwork: [{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' }] }); } catch (e) {}
+  const h = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
+  h('play', () => audio.play()); h('pause', () => audio.pause());
+  h('seekbackward', d => seek(-((d && d.seekOffset) || 10))); h('seekforward', d => seek((d && d.seekOffset) || 10));
+  h('seekto', d => { if (d && typeof d.seekTime === 'number') audio.currentTime = d.seekTime; });
+}
+let lastSave = 0, hiddenWhilePlayingAt = null, resumedAfterHidden = null;
+audio.addEventListener('timeupdate', () => {
+  const now = Date.now();
+  if (now - lastSave > 2000) { lastSave = now; store.set('pos', { t: audio.currentTime, at: now }); idbPut('pos', audio.currentTime); }
+  if ('mediaSession' in navigator && isFinite(audio.duration)) { try { navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate, position: Math.min(audio.currentTime, audio.duration) }); } catch (e) {} }
+  render4();
+});
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && !audio.paused) hiddenWhilePlayingAt = { t: audio.currentTime, at: Date.now() };
+  if (document.visibilityState === 'visible' && hiddenWhilePlayingAt) {
+    const gone = (Date.now() - hiddenWhilePlayingAt.at) / 1000, moved = audio.currentTime - hiddenWhilePlayingAt.t;
+    resumedAfterHidden = 'Last time the app was hidden while playing: away ' + gone.toFixed(0) + ' s, audio advanced ' + moved.toFixed(0) + ' s' + (audio.paused ? ' (now paused)' : ' (still playing)');
+    hiddenWhilePlayingAt = null; render1();
+  }
+});
+function render1() {
+  say(1, 'Duration: ' + (isFinite(audio.duration) ? fmt(audio.duration) : 'not loaded yet') + (resumedAfterHidden ? '\n' + resumedAfterHidden : '') + '\n' + (range || 'Checking how the host serves audio…'));
+}
+let range = '';
+fetch('audio/01.mp3', { headers: { Range: 'bytes=0-1' }, cache: 'no-store' })
+  .then(r => { range = 'Partial download: HTTP ' + r.status + (r.status === 206 ? ' (supported)' : ' (NOT supported)') + ', ' + (r.headers.get('content-range') || 'no content-range'); render1(); })
+  .catch(e => { range = 'Partial download check failed: ' + e.message; render1(); });
+audio.addEventListener('loadedmetadata', render1);
+render1();
+$('jump').onclick = () => { audio.currentTime = 200; audio.play(); };
+function render4() {
+  const p = store.get('pos', null);
+  say(4, 'Now at ' + fmt(audio.currentTime) + (p ? '\nSaved position: ' + fmt(p.t) + ' (saved ' + new Date(p.at).toLocaleTimeString() + ')' : '\nNo saved position yet'));
+}
+$('resume').onclick = () => { const p = store.get('pos', null); if (p) { audio.currentTime = p.t; audio.play(); } };
+render4();
+
+// 3 · wake lock
+let lock = null;
+const render3 = msg => say(3, ('wakeLock' in navigator ? 'Keep-screen-on is available in this browser.' : 'Keep-screen-on is NOT available in this browser.') + (msg ? '\n' + msg : ''));
+$('wake').onclick = async () => {
+  if (!('wakeLock' in navigator)) return render3('Cannot request it.');
+  try {
+    if (lock) { await lock.release(); lock = null; $('wake').textContent = 'Keep screen on'; return render3('Released.'); }
+    lock = await navigator.wakeLock.request('screen'); $('wake').textContent = 'Screen kept on (tap to stop)';
+    lock.addEventListener('release', () => { render3('Released at ' + new Date().toLocaleTimeString()); });
+    render3('Active since ' + new Date().toLocaleTimeString());
+  } catch (e) { render3('Request failed: ' + e.name + ' ' + e.message); }
+};
+document.addEventListener('visibilitychange', async () => { if (lock && document.visibilityState === 'visible' && lock.released) { try { lock = await navigator.wakeLock.request('screen'); render3('Re-acquired after returning'); } catch (e) {} } });
+render3();
+
+// 5 · German voices
+const SENT = 'Es gibt keine Geschwindigkeitsbegrenzung.';
+let voices = [];
+function loadVoices() {
+  voices = (window.speechSynthesis ? speechSynthesis.getVoices() : []).filter(v => (v.lang || '').toLowerCase().startsWith('de'));
+  const sel = $('voice'), keep = sel.value; sel.innerHTML = '';
+  voices.forEach((v, i) => { const o = document.createElement('option'); o.value = i; o.textContent = v.name + ' (' + v.lang + ')' + (v.localService ? '' : ' · online'); sel.appendChild(o); });
+  if (keep) sel.value = keep;
+  say(5, window.speechSynthesis ? (voices.length ? voices.length + ' German voice(s): ' + voices.map(v => v.name + ' ' + v.lang).join(', ') : 'No German voices reported yet (they can take a moment to load).') : 'Speech is NOT available in this browser.');
+}
+if (window.speechSynthesis) { speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); setTimeout(loadVoices, 1500); }
+const speak = rate => { if (!window.speechSynthesis) return; audio.pause(); speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(SENT); u.lang = 'de-DE'; const v = voices[+$('voice').value]; if (v) u.voice = v; u.rate = rate; speechSynthesis.speak(u); };
+$('speak').onclick = () => speak(1); $('slow').onclick = () => speak(0.7);
+
+// 6 · storage
+let db = null;
+function idb() { return new Promise((res, rej) => { if (db) return res(db); const r = indexedDB.open('phase0', 1);
+  r.onupgradeneeded = () => r.result.createObjectStore('kv'); r.onsuccess = () => { db = r.result; res(db); }; r.onerror = () => rej(r.error); }); }
+async function idbGet(k) { const d = await idb(); return new Promise(res => { const q = d.transaction('kv').objectStore('kv').get(k); q.onsuccess = () => res(q.result); q.onerror = () => res(undefined); }); }
+async function idbPut(k, v) { try { const d = await idb(); d.transaction('kv', 'readwrite').objectStore('kv').put(v, k); } catch (e) {} }
+async function render6(extra) {
+  const lines = [];
+  try {
+    let first = await idbGet('firstSaved'); if (!first) { first = new Date().toISOString(); await idbPut('firstSaved', first); }
+    const opens = ((await idbGet('opens')) || 0); lines.push('First saved: ' + new Date(first).toLocaleString(), 'Times opened: ' + opens);
+  } catch (e) { lines.push('Database error: ' + e.message); }
+  if (navigator.storage && navigator.storage.persisted) lines.push('Kept safe from automatic deletion: ' + (await navigator.storage.persisted() ? 'yes' : 'no'));
+  else lines.push('Persistent storage request: NOT available');
+  if (navigator.storage && navigator.storage.estimate) { const e = await navigator.storage.estimate(); lines.push('Space: ' + (e.usage / 1e6).toFixed(1) + ' MB used of ' + (e.quota / 1e9).toFixed(1) + ' GB allowed'); }
+  if (extra) lines.push(extra);
+  say(6, lines.join('\n'));
+}
+(async () => { try { const n = ((await idbGet('opens')) || 0) + 1; await idbPut('opens', n); } catch (e) {} render6(); })();
+$('persist').onclick = async () => { if (!(navigator.storage && navigator.storage.persist)) return render6('Cannot ask.'); const ok = await navigator.storage.persist(); render6('Asked: ' + (ok ? 'granted' : 'refused')); };
+
+// 7 · Dynamic Type
+const render7 = () => say(7, 'Text size now: ' + getComputedStyle(document.querySelector('.dt')).fontSize + ' (default is 17px)');
+document.addEventListener('visibilitychange', render7); window.addEventListener('resize', render7); setInterval(render7, 2000); render7();
+
+// 8 · safe areas
+function render8() {
+  const p = document.createElement('div'); p.style.cssText = 'position:fixed;visibility:hidden;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)';
+  document.body.appendChild(p); const s = getComputedStyle(p);
+  say(8, 'Safe areas: top ' + s.paddingTop + ', bottom ' + s.paddingBottom + ', left ' + s.paddingLeft + ', right ' + s.paddingRight + '\nScreen ' + screen.width + '×' + screen.height + ' at ' + devicePixelRatio + '×, window ' + innerWidth + '×' + innerHeight);
+  p.remove();
+}
+window.addEventListener('resize', render8); render8();
+
+// 9 · key row above the keyboard
+const kin = $('kin'), kbar = $('kbar'), vv = window.visualViewport; let kbLog = '';
+function placeBar() { if (!vv) return; const gap = innerHeight - (vv.height + vv.offsetTop); kbar.style.transform = 'translateY(' + (-Math.max(0, gap)) + 'px)'; kbLog = 'Keyboard height seen by the page: ' + Math.round(Math.max(0, gap)) + ' px'; say(9, kbLog + '\nTyped: ' + kin.value); }
+kin.addEventListener('focus', () => { kbar.style.display = 'flex'; setTimeout(placeBar, 50); setTimeout(placeBar, 400); });
+kin.addEventListener('blur', () => { kbar.style.display = 'none'; });
+kin.addEventListener('input', placeBar);
+if (vv) { vv.addEventListener('resize', placeBar); vv.addEventListener('scroll', placeBar); }
+kbar.querySelectorAll('button').forEach(b => {
+  b.addEventListener('pointerdown', e => e.preventDefault());
+  b.addEventListener('click', e => { e.preventDefault(); const s = kin.selectionStart ?? kin.value.length, t = kin.selectionEnd ?? s; kin.setRangeText(b.dataset.k, s, t, 'end'); kin.focus(); placeBar(); });
+});
+say(9, vv ? 'Waiting for you to tap the box.' : 'visualViewport NOT available.');
+
+// 10 · long-press
+const sent = $('sent'); let lp = null, start = null;
+sent.addEventListener('contextmenu', e => e.preventDefault());
+sent.addEventListener('pointerdown', e => { start = { x: e.clientX, y: e.clientY }; lp = setTimeout(() => { sent.classList.add('hit'); tickNow(); say(10, 'Long-press detected at ' + new Date().toLocaleTimeString()); setTimeout(() => sent.classList.remove('hit'), 1200); }, 500); });
+const cancel = () => { clearTimeout(lp); lp = null; };
+sent.addEventListener('pointerup', cancel); sent.addEventListener('pointercancel', () => { cancel(); say(10, 'Press was taken over by the system (pointercancel).'); });
+sent.addEventListener('pointermove', e => { if (start && Math.hypot(e.clientX - start.x, e.clientY - start.y) > 10) cancel(); });
+say(10, 'Waiting for a long-press.');
+
+// 11 · haptics
+function tickNow() { if (navigator.vibrate) { try { navigator.vibrate(10); } catch (e) {} } $('hapLabel').click(); }
+$('tick').onclick = () => { tickNow(); say(11, 'Tick requested at ' + new Date().toLocaleTimeString() + '\nStandard vibration method: ' + (navigator.vibrate ? 'available' : 'NOT available (expected on iPhone)') + '\nSwitch-based tick: ' + ('switch' in document.createElement('input') ? 'switch control supported' : 'switch control not recognised')); };
+say(11, 'Standard vibration method: ' + (navigator.vibrate ? 'available' : 'NOT available (expected on iPhone)'));
+
+// 12 · return from an outside link
+let leftAt = null; const seen = [];
+$('ext').addEventListener('click', () => { leftAt = Date.now(); seen.length = 0; say(12, 'Opened the link at ' + new Date().toLocaleTimeString() + '. Waiting for you to come back…'); });
+const back = ev => { if (!leftAt) return; seen.push(ev); const gone = ((Date.now() - leftAt) / 1000).toFixed(0);
+  if (ev === 'visible' || ev === 'focus' || ev === 'pageshow') { say(12, 'Noticed your return after ' + gone + ' s (signals: ' + seen.join(', ') + ')'); leftAt = null; } };
+document.addEventListener('visibilitychange', () => { if (leftAt) seen.push(document.visibilityState); if (document.visibilityState === 'visible') back('visible'); });
+window.addEventListener('focus', () => back('focus')); window.addEventListener('blur', () => { if (leftAt) seen.push('blur'); });
+window.addEventListener('pageshow', () => back('pageshow'));
+
+// copy results
+$('copy').onclick = async () => {
+  const lines = ['Scheiße · Phase 0 results · ' + new Date().toLocaleString(), 'Home-screen mode: ' + (standalone ? 'yes' : 'no') + ' · ' + (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') + ' mode', ''];
+  for (const id of [13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) {
+    lines.push(id + ' ' + TESTS[id] + ': ' + (verdicts[id] ? verdicts[id].toUpperCase() : 'not marked'));
+    if (auto[id]) lines.push('   ' + auto[id].replace(/\n/g, '\n   '));
+  }
+  lines.push('', 'Notes: ' + ($('notes').value || '(none)'));
+  const text = lines.join('\n');
+  try { await navigator.clipboard.writeText(text); $('copy').textContent = 'Copied. Paste it into the chat.'; }
+  catch (e) { const t = $('copyout'); t.style.cssText = 'width:100%;min-height:200px'; t.value = text; t.removeAttribute('aria-hidden'); $('notes').closest('section').appendChild(t); t.select(); $('copy').textContent = 'Select the text in the box and copy it'; }
+  setTimeout(() => { $('copy').textContent = 'Copy results'; }, 4000);
+};
+})();
+</script>
+</body>
+</html>
