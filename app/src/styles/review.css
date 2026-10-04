@@ -49,3 +49,4 @@ body.ax .gi { display: none; }
 
 /* Summary */
 .sum-rows .cl { padding: 0 20px; }
+.rv-top .t { font-size: min(1rem, 20px); }

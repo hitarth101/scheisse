@@ -1,7 +1,7 @@
 # Scheiße — Build Plan
 
-Status: draft for owner approval
-Last updated: 2026-10-03
+Status: Phase 1 built and tested on the PC; waiting for the owner's OK to publish, then the on-phone checklist (section 4)
+Last updated: 2026-10-04
 
 This plan covers **how** the app is built and shipped. **What** it does is in `docs/product-spec.md`; **how it looks** is in `design/design-spec.md` (being written). If this plan conflicts with the product spec, the product spec wins.
 
@@ -51,7 +51,7 @@ Large raw datasets (Wiktionary dump, Tatoeba exports) stay on the PC and are nev
 
 Phase content follows product spec section 9.
 
-### Phase 0 — Phone checks (next)
+### Phase 0 — Phone checks (done 2026-10-03)
 
 A bare test page, not the app. It is published at the address above, added to the home screen, and run on the iPhone 14 Pro. Each check has Pass / Fail buttons; at the end, a "Copy results" button produces text to paste into the chat.
 
@@ -97,6 +97,53 @@ Only lecture 01 is uploaded for Phase 0.
 
 Lectures (player, mini-player or screen-awake fallback per Phase 0, notes, sentence-tick screen); review engine with word and sentence cards; content import (Goethe lists, Wiktionary, Tatoeba, DeReWo); basic Today; backup and restore. Built against the finished design spec.
 
+**Built (2026-10-03/04), on branch `phase1`, not yet published:**
+
+| Step | What | Where |
+|---|---|---|
+| 1 | App skeleton: Vite + React + TypeScript, design tokens from `f.css`, tab bar, status-bar backdrop (fixes Phase 0 check 8), update check | `app/` |
+| 2 | Lectures: list, full player, mini-player, lock-screen controls, speed, resume, notes, 95% rule; backup export (share sheet) and restore with confirmation; Settings; Credits | `app/src/lectures`, `app/src/status` |
+| 3 | Content import: 2,947 Goethe A1–B1 words with Wiktionary meanings, forms and recordings, ordered by DeReWo; 13,465 native-speaker Tatoeba sentence pairs; 485 transcript pairs for the tick screen | `tools/`, reports in `tools/out/` |
+| 4 | Review: FSRS scheduling, word and sentence cards (say it, hear it), speak or type, typed-answer comparison, grading keys with intervals, undo, edit, suspend, flag, leeches, All forms sheet, iPhone-voice fallback | `app/src/review` |
+| 5 | Tick screen (opens when a lecture ends) and Today (daily plan within the time budget) | `app/src/lectures/TickScreen.tsx`, `app/src/today` |
+
+Tests: 24 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 14 Pro size, light and dark). The publishing job runs all of them before every publish. The 50 lectures are re-encoded to mono 64 kbps (184 MB; `tools/encode-lectures.sh`).
+
+**Decisions made during the build** (none changes a feature in the product spec; listed so the owner can object):
+
+1. Only the Today and Lectures tabs are shown until Reading, Grammar and Inbox exist (Phases 2–3), so no tab leads to an empty page.
+2. "New cards per day" counts new items. Each item makes two cards: say it (today) and hear it (from the next day, not counted against the limit), so the two sides never meet in one session.
+3. New items: the next Goethe words by frequency, plus one Tatoeba sentence for every three words once a sentence exists whose words have all been introduced.
+4. Today's plan is fixed the first time the app is opened each day. On a heavy day, reviews are capped so the lecture still fits the daily time.
+5. Time estimates start at 15 s per review and 35 s per new card, and switch to the owner's measured pace after 10 answers. Today says so in its footnote until then.
+6. A card answered during a session comes back within the same session when its next step is due within 20 minutes (FSRS learning steps).
+7. The 95% rule counts 5-second stretches actually played, so rewinding and re-listening never counts twice and skipping to the end does not count.
+8. Tick screen wording adds: "where the student and the teacher differ, go by the teacher", because the transcript records the student's wrong attempts too.
+9. The All forms sheet shows Wiktionary's forms exactly as listed (without articles); the mockup showed articles.
+10. Recordings: Wikimedia Commons (via Wiktionary) for words; Tatoeba only under CC BY 4.0 or CC BY-NC 4.0. Unlicensed Tatoeba recordings are not used.
+11. Austrian and Swiss variants in the Goethe lists are left out. The DeReWo list itself is never published (its licence forbids it without its documentation); only each word's position is.
+12. The Phase 0 test page is no longer published; the app replaces it at the same address.
+13. Imported content is stored as two whole lists on the phone (first import 0.7 s instead of minutes).
+
+**Proposal for the owner (needs a decision; the product spec is followed until then):** ordering by real-world frequency puts function words first: *der, in, und, sein, werden, von, mit, haben, für, sich*. Wiktionary's English for some of them is a grammar description ("nominative masculine singular definite article, the"). Language Transfer teaches these words anyway, and every noun card already drills the articles. Option: leave articles, pronouns, prepositions and conjunctions out of word cards (they keep appearing in sentence cards). That would change product spec 5.5, so it is only a proposal.
+
+**On-phone checklist (after publishing):**
+
+1. Delete the Phase 0 icon. In Safari open `https://hitarth101.github.io/scheisse/`, Share, Add to Home Screen. Name "Scheiße", Eszett-key icon.
+2. Lectures: scroll the list. No text shows behind the time and battery at the top (check 8).
+3. Today on first launch: Reviews "None yet", New cards "10 · first Goethe A1 words", Lecture 01. "Loading word data" in the footnote disappears within a few seconds.
+4. Start session: say the answer, Reveal, the word's recording plays, grade. Switch to Type: the ä ö ü ß row sits directly above the keyboard; typing "ue" for ü shows a note, not a mistake.
+5. After the cards, "Continue: Lecture 01" starts the lecture. Lock the phone: it keeps playing; lock-screen ±10 s work.
+6. Close the app completely and reopen: the mini-player shows the lecture at its position.
+7. Play lecture 02 to its end (or skip close to the end and let it finish): the tick screen opens. Tick two pairs, Add 2 cards.
+8. Track page notes: type a note, close the app, reopen: the note is there.
+9. Status, Export backup: the share sheet opens; save to Files. "Last backup" shows today. Restore from that file: the confirm sheet names its date; Replace works.
+10. iPhone text size at the largest accessibility size: the app follows; on a revealed card the grading keys become a 2 × 2 grid.
+11. Dark mode.
+12. On a track page, swipe from the left edge: goes back once.
+13. Settings, iPhone voice: German voices listed (no novelty voices); choosing one speaks a sample sentence.
+14. Tomorrow: Today shows due reviews and the "hear it" cards from today's words.
+
 ### Phase 2
 
 Full Today session builder; Capture; Grammar path and reference tables; fill-in-the-blank cards; Status page; dictionary links.
@@ -113,6 +160,7 @@ Each phase ends with: all tests passing, a WebKit screen check against the desig
 
 ## 5. Open decisions
 
-1. **Other copyrighted data in a public repo.** Besides the MP3s, the Goethe-Institut word lists (marked "personal use" in the product spec) and the volunteer Language Transfer transcript would also become public once processed into the repo. Options: publish them too (same kind of risk as the MP3s), or keep them off GitHub and load them onto the phone once from a file (no exposure, one extra setup step, covered by backup). **Needed before Phase 1 content import.**
-2. **Re-encoding the MP3s** to mono 64 kbps (halves size and loading time) needs the free tool FFmpeg installed on the PC (download via Windows' own `winget` installer). Not needed for Phase 0, which uses the original lecture 01. **Needed before Phase 1.**
-3. **Repository name** `scheisse` (GitHub addresses can't contain ß). Change now if wanted; renaming later changes the app's address, so the app would have to be re-added to the home screen and progress restored from a backup.
+1. ~~Other copyrighted data in a public repo.~~ Decided 2026-10-03 (owner): the processed Goethe word data and the transcript pairs are published, with attribution, like the MP3s.
+2. ~~Re-encoding the MP3s.~~ Done 2026-10-03: FFmpeg installed (winget), 50 lectures at mono 64 kbps, durations checked against the originals.
+3. **Repository name** `scheisse` (GitHub addresses can't contain ß). Renaming later changes the app's address, so the app would have to be re-added to the home screen and progress restored from a backup.
+4. **Function words as word cards:** see the proposal in Phase 1 above.

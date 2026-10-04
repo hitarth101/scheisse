@@ -300,3 +300,7 @@ textarea.field { padding: 14px 16px; resize: none; line-height: 1.3; }
   .mini, .sheet { animation: fade-in 150ms ease-out; }
   .sw, .sw::after { transition: none; }
 }
+
+/* Nav rows, the review header and segmented controls stay compact at very large text sizes (design spec 2.1). */
+.navrow .ttl, .navrow .back, .navrow .tbtn { font-size: min(1rem, 20px); }
+.seg button { font-size: min(.824rem, 17px); }

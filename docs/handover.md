@@ -1,36 +1,30 @@
-# Handover: start of Phase 1
+# Handover: Phase 1 built, waiting to publish
 
-Written 2026-10-03 for a new chat. Read this first, then the files it points to.
+Written 2026-10-04 for a new chat. Read this first, then the files it points to.
 
 ## Read these, in this order
 1. `docs/product-spec.md`: what the app does. It is the source of truth; changes are proposed, never made silently.
-2. `docs/build-plan.md`: how it is built and shipped, plus the Phase 0 results.
-3. `design/design-spec.md`: how it looks and behaves. `DESIGN.md` and `design/mockups/f.css` hold the exact tokens; the mockups are in `design/mockups/index.html`.
-4. `PRODUCT.md`: short summary for the Impeccable skill (use Impeccable for any UI work).
+2. `docs/build-plan.md`: how it is built and shipped, Phase 0 results, **Phase 1 results, the decisions made during the build, a proposal awaiting the owner, and the on-phone checklist**.
+3. `design/design-spec.md` with `DESIGN.md` and `design/mockups/f.css`: how it looks. Use the Impeccable skill for UI work.
+4. `tools/README.md`: how content is prepared; reports in `tools/out/`.
 
-## Settled
-- **App:** "Scheiße" (owner's choice). Icon: Eszett key R1 (`design/logo/eszett-r1-tile-key.svg`, PNGs in `site/phase0/`).
-- **Visual direction:** F "Native Gerät". Apple layout plus Braun details. One green for "next action" only. Articles coloured der blue / die red / das teal; plural uncoloured.
-- **Stack:** TypeScript + Vite + React, IndexedDB via Dexie, ts-fsrs. Vitest and Playwright (WebKit) tests run before every publish.
-- **Hosting:** GitHub Pages from the **public** repo `hitarth101/scheisse`, at https://hitarth101.github.io/scheisse/. Every push to `main` publishes through `.github/workflows/pages.yml`, which currently uploads `site/` as-is; Phase 1 replaces it with a test-and-build job. The MP3s are public, by owner decision; Language Transfer has no published re-hosting licence.
-- **Phase 0 passed** on an iPhone 14 Pro running iOS 18.7: background audio, lock-screen controls, Dynamic Type, the ä ö ü ß key row, long-press, haptic tick, persistent storage. Return-from-link detection was unreliable, so "Mark done?" prompts are shown inline instead.
+## State
+- Phase 1 is built on the local branch `phase1` (3 commits on top of `main`). **Nothing is pushed.** Pushing to `main` publishes, so it needs the owner's OK.
+- Checks: `npm --prefix app run check` runs the type check, 24 logic tests (Vitest), the build and 28 screen tests (Playwright, WebKit, light and dark). All passed on 2026-10-04. Screen tests run one browser at a time, because Playwright's WebKit crashed under parallel runs on the owner's PC.
+- The publishing job (`.github/workflows/pages.yml`) runs the same checks on GitHub and publishes `app/dist`. The Phase 0 page (`site/`) is no longer published.
+- Dev server for the browser preview: `.claude/launch.json` → `app-dev` (port 5173, app at `/scheisse/`).
 
-## Open before or during Phase 1
-1. **Goethe word lists and the Language Transfer transcript:** publish them in the public repo, or load them onto the phone from a file? This needs the owner's decision before content import.
-2. **FFmpeg** (to re-encode the MP3s to mono at 64 kbps): needs the owner's OK to install. Only `01.mp3` is uploaded so far; the originals are in `Language Transfer Lectures/`, which is gitignored.
-3. **Phase 0 check 8** (notch and home bar) was marked Fail although the measured insets were correct. Ask the owner what they saw.
-4. **The 1857 Grimm text uses old spelling.** Find a modern-spelling public-domain edition, or show the "Historical spelling" label.
-5. **Nicos Weg A1 lesson and grammar order** was extracted from DW's page data (77 entries: 76 lessons plus the final test; 62 grammar topics). It was not saved; re-extract with `curl` from `learngerman.dw.com/en/nicos-weg/c-36519789` (WebFetch is blocked there). A2 and B1 are still to do.
-6. **Commits** use the owner's university email (optional: switch to GitHub's noreply address).
+## Next steps
+1. Owner OK → merge `phase1` into `main` and push; watch the GitHub job; then the owner runs the on-phone checklist (build plan, section 4, Phase 1).
+2. Owner decision on the function-word proposal (build plan, Phase 1).
+3. Phase 2 (product spec 9): full Today session builder with Swap and Nicos Weg, Capture/Inbox, Grammar path and tables, fill-in-the-blank cards, full Status page, dictionary links. The Nicos Weg A1 lesson list is saved in `tools/sources/nicos-weg-a1.txt`; A2 and B1 are still to extract (`curl` on learngerman.dw.com; WebFetch is blocked there).
 
-## Phase 1 scope (product spec section 9)
-- Lectures: player, mini-player, notes, sentence-tick screen.
-- Review engine with word and sentence cards.
-- Content import: Goethe lists, Wiktionary (kaikki.org), Tatoeba, DeReWo.
-- Basic Today.
-- Backup and restore.
+## Still open from before
+- The 1857 Grimm text uses old spelling (Phase 3): find a modern-spelling public-domain edition or show the "Historical spelling" label.
+- Commits use the owner's university email (owner: not needed right now).
 
 ## Working rules
-- The owner doesn't read code. Show results, test before claiming anything works, and use plain English.
-- Never write German learning content. Real sources only, each with its English.
+- The owner doesn't read code. Show results, test before claiming anything works, use plain English.
+- Never write German learning content. Real sources only, each with its English. (Even a voice-test phrase: the app uses Tatoeba sentence 2301788.)
 - Push only with the owner's OK.
+- When patching files with Python one-liners, write regexes with care: a `\b` inside a normal Python string becomes an invisible backspace character. Prefer direct edits.

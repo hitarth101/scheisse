@@ -293,8 +293,8 @@ Every imported item keeps a record of its source, so it can be traced and attrib
 1. ~~Phase 0 phone test results~~ Done 2026-10-03 on iPhone 14 Pro, iOS 18.7, home-screen mode: background audio, lock-screen controls, keep-awake, seek/resume, German voices, persistent storage (granted; 41 GB quota), text size, keyboard key row, long-press, haptic tick all pass. Return-from-link detection was inconclusive (fired immediately), so the "Mark done?" prompt is shown inline until answered instead of relying on detection. Safe-area values correct (59/34 pt); visual check pending owner note. Details: `docs/build-plan.md` section 4.
 2. ~~Private audio host choice.~~ Decided: GitHub Pages, public repository (see section 3).
 3. Free A2–B1 reading source with English translations (gap).
-4. Extract the Nicos Weg grammar topic order (needs the built-in browser).
-5. Check that the A2/B1 Goethe PDFs extract cleanly.
+4. Extract the Nicos Weg grammar topic order. A1 done (77 entries, `tools/sources/nicos-weg-a1.txt`); A2 and B1 still to do (Phase 2).
+5. ~~Check that the A2/B1 Goethe PDFs extract cleanly.~~ Done 2026-10-03: A1, A2 and B1 headword columns extract cleanly; 2,947 words imported, the rest listed in `tools/out/content-report.md`.
 6. ~~App name and icon~~ Name decided 2026-10-03: **Scheiße** (the owner's first German word and an inside joke). Icon decided 2026-10-03: Eszett key, refinement R1 "the tile is the key" (`design/logo/eszett-r1-tile-key.svg`).
 
 ## 12. Notes for the design chat
