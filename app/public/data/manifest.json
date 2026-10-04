@@ -1,0 +1,17 @@
+{
+ "version": "87f82c197395",
+ "files": [
+  "words.json",
+  "word-forms.json",
+  "sentences.json"
+ ],
+ "counts": {
+  "words": 2955,
+  "sentences": 13465,
+  "wordsByLevel": {
+   "A1": 665,
+   "A2": 577,
+   "B1": 1713
+  }
+ }
+}

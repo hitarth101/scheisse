@@ -23,3 +23,4 @@ tools/raw/
 # Test reports
 app/test-results/
 app/playwright-report/
+__pycache__/
