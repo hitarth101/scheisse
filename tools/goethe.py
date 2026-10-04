@@ -183,6 +183,8 @@ def _parse(e: Entry) -> list[Entry]:
         return _skip(e, "not a single word")
     word = head.rstrip("-")  # "all-", "ander-", "jed-": stems that take endings
     stem = head.endswith("-")
+    if stem and word[:1].isupper():
+        return _skip(e, "compound prefix")  # "Lieblings-", "Haupt-": parts of compounds, not words
     looks_verb = bool(re.search(r"(en|ern|eln|n)$", word)) and ("," in t or word[:1].islower())
     has_forms = bool(re.search(r",\s*(hat|ist|\w+t\b)", t))
     kind = "verb" if (word[:1].islower() and has_forms) else ("verb?" if looks_verb else "other")

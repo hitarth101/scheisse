@@ -5,6 +5,8 @@ export default defineConfig({
   testDir: 'e2e',
   timeout: 30_000,
   retries: process.env.CI ? 1 : 0,
+  // One browser at a time: Playwright's WebKit build crashed under parallel runs on the Windows PC.
+  workers: 1,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     baseURL: 'http://localhost:4174/scheisse/',

@@ -28,29 +28,39 @@ export interface TimeRow { date: string; activity: Activity; seconds: number }
 
 export type Gender = 'm' | 'f' | 'n';
 
-/** A word or sentence the learner studies. Content is copied from the source and never written by the app. */
+/** Where a recording comes from: a Wikimedia Commons file (via Wiktionary) or a Tatoeba recording. */
+export interface AudioRef { url: string; kind: 'wiktionary' | 'tatoeba'; by?: string; lic?: string }
+
+/** A word or sentence the learner studies. Content is copied from the source when the note is made, so a later
+ *  content update never changes a card silently, and is never written by the app. */
 export interface NoteRow {
   id: string;
   kind: 'word' | 'sentence';
-  /** German: the lemma for words, the sentence for sentences. */
+  /** German: the word (lemma) or the sentence. */
   de: string;
-  /** English: meanings joined for words, the translation for sentences. */
-  en: string;
+  /** English meanings, most common first (sentences: one translation). */
+  en: string[];
   pos?: string;
   gender?: Gender;
+  gender2?: Gender;
   plural?: string | null;
-  /** Short hint shown when another card has the same English (words). */
+  pluralOnly?: boolean;
+  /** German with soft hyphens at compound joints, for line breaking. */
+  hy?: string;
+  /** Short hint shown when another card has the same English (product spec 5.1). */
   hint?: string;
-  /** Example sentence (words): Tatoeba id, German, English. */
-  example?: { id: number; de: string; en: string };
-  /** Key forms shown on the card back. */
+  /** Key verb forms: present 3rd person, past, perfect. */
   forms?: string[];
-  audio?: string;
+  example?: { id: number; de: string; en: string };
+  audio?: AudioRef;
+  /** e.g. "Goethe A1 · Wiktionary", "Tatoeba", "Language Transfer transcript · lecture 09". */
   source: string;
+  /** Word id in words.json, Tatoeba sentence number, or the lecture track. */
   sourceRef?: string;
+  level?: string;
   createdAt: number;
   edited?: 0 | 1;
-  original?: { de: string; en: string; gender?: Gender; plural?: string | null };
+  original?: { de: string; en: string[]; gender?: Gender; plural?: string | null };
 }
 
 export type CardType = 'production' | 'listening';
@@ -95,23 +105,28 @@ export interface WordRow {
   lemma: string;
   pos: string;
   gender?: Gender;
+  gender2?: Gender;
   plural?: string | null;
+  pluralOnly?: boolean;
+  genitive?: string;
   level: 'A1' | 'A2' | 'B1';
   order: number;
   en: string[];
   hint?: string;
   forms?: string[];
+  hy?: string;
+  audio?: string;
   example?: { id: number; de: string; en: string };
 }
 
-/** Imported Tatoeba sentence pairs. */
+/** Imported Tatoeba sentence pairs, with the ids of the Goethe words they use. */
 export interface SentenceRow {
   id: number;
   de: string;
   en: string;
   enId: number;
-  audio?: string;
-  words: string[];
+  w: string[];
+  a?: { id: number; by: string; lic: string };
 }
 
 export class ScheisseDB extends Dexie {
@@ -122,8 +137,8 @@ export class ScheisseDB extends Dexie {
   notes!: EntityTable<NoteRow, 'id'>;
   cards!: EntityTable<CardRow, 'id'>;
   revlog!: EntityTable<ReviewLogRow, 'id'>;
-  words!: EntityTable<WordRow, 'id'>;
-  sentences!: EntityTable<SentenceRow, 'id'>;
+  /** Imported content as two whole lists ('words', 'sentences'): one write each instead of thousands of rows. */
+  content!: EntityTable<KeyValueRow, 'key'>;
 
   constructor(name = 'scheisse') {
     super(name);
@@ -135,8 +150,7 @@ export class ScheisseDB extends Dexie {
       notes: 'id, kind, createdAt',
       cards: 'id, noteId, due, state, suspended, createdAt',
       revlog: '++id, cardId, at',
-      words: 'id, order, lemma',
-      sentences: 'id',
+      content: 'key',
     });
   }
 }

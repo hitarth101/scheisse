@@ -139,11 +139,26 @@ def clean_gloss(g: str) -> str:
     return g
 
 
+def sense_texts(s: dict) -> list[str]:
+    """The English of one sense: for nested senses the heading first, then the specific meaning."""
+    gl = s.get("glosses") or []
+    if len(gl) > 1 and not ("form_of" in s or "alt_of" in s or {"form-of", "alt-of"} & set(s.get("tags", []))):
+        out = []
+        for g in (gl[0], gl[-1]):
+            c = clean_gloss(g)
+            if c and len(c) <= 140 and not re.search(r"\b(inflection|plural|participle|gerund|form|forms) of\b", c):
+                out.append(c)
+        return out
+    c = sense_text(s)
+    return [c] if c else []
+
+
 def sense_text(s: dict) -> str | None:
     """The English of one sense, or None when it only points to another word."""
-    g = (s.get("glosses") or [None])[0]
-    if not g:
+    gl = s.get("glosses") or []
+    if not gl:
         return None
+    g = gl[0]
     tags = set(s.get("tags", []))
     if "form_of" in s or "alt_of" in s or "form-of" in tags or "alt-of" in tags:
         # "agent noun of fahren; driver" / "female equivalent of Freund: female friend" /
@@ -155,6 +170,9 @@ def sense_text(s: dict) -> str | None:
             pass  # "female equivalent of Lehrer (“teacher”)" is itself the English definition
         else:
             return None
+    elif len(gl) > 1:
+        # Nested senses: ["As a copulative verb", "to be"] -> the specific meaning under the heading
+        g = gl[-1]
     c = clean_gloss(g)
     if not c or len(c) > 140 or re.search(r"\b(inflection|plural|participle|gerund|form|forms) of\b", c):
         return None
@@ -172,6 +190,13 @@ def form_of_targets(entries: list[dict]) -> list[str]:
     return out
 
 
+# Senses that describe grammar rather than give a meaning ("forms the perfect aspect",
+# "nominative masculine singular definite article") go after plain meanings ("to have").
+DESCRIPTIVE = re.compile(r"^(forms?|describes?|used|indicates?|expresses|denotes|introduces?|marks?|serves|refers|links|as an? |"
+                         r"nominative|accusative|dative|genitive|a particle|an? (intensifier|modal particle)|"
+                         r"\(?(with|plus|\+) )", re.I)
+
+
 def glosses(entries: list[dict], limit: int = 4) -> list[str]:
     main: list[str] = []
     later: list[str] = []
@@ -180,12 +205,13 @@ def glosses(entries: list[dict], limit: int = 4) -> list[str]:
             tags = set(s.get("tags", []))
             if tags & SKIP_SENSE_TAGS:
                 continue
-            c = sense_text(s)
-            if not c:
-                continue
-            bucket = later if tags & LATER_SENSE_TAGS else main
-            if c not in main and c not in later:
-                bucket.append(c)
+            for c in sense_texts(s):
+                c = re.sub(r"^\[[^\]]*\]\s*", "", c)  # "[with dative] in, inside" -> "in, inside"
+                if not c:
+                    continue
+                bucket = later if (tags & LATER_SENSE_TAGS or DESCRIPTIVE.match(c)) else main
+                if c not in main and c not in later:
+                    bucket.append(c)
     return (main + later)[:limit]
 
 
@@ -571,9 +597,22 @@ def main():
     sentences = sorted(keep.values(), key=lambda s: s["id"])
     log(f"Sentences: {candidates} pairs use only Goethe words; kept {len(sentences)} ({PER_WORD} per word at most)")
 
-    # Example sentence per word: the best-ranked kept sentence.
+    # Example sentence per word: the best-ranked kept sentence. Short function words have many forms
+    # ("der" also covers "das"; Wiktionary lists "vor" as an old form of "für"), so for them the
+    # example must contain the word itself, and not as a split-off verb prefix at the end ("Ich nehme ab.").
+    FUNCTION = {"article", "determiner", "pronoun", "preposition", "conjunction", "adverb", "particle", "postposition"}
+
+    def shows(word: dict, s: dict) -> bool:
+        if word["pos"] not in FUNCTION:
+            return True
+        toks = [t.lower() for t in TOKEN.findall(s["de"])]
+        lemma = word["lemma"].lower()
+        if lemma not in toks:
+            return False
+        return not (word["pos"] in ("preposition", "adverb") and toks[-1] == lemma and toks.count(lemma) == 1)
+
     for x in out_words:
-        lst = by_word.get(x["id"])
+        lst = [s for s in by_word.get(x["id"], []) if shows(x, s)]
         if lst:
             s = min(lst, key=rank)
             x["example"] = {"id": s["id"], "de": s["de"], "en": s["en"]}

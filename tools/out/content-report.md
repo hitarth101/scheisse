@@ -1,46 +1,37 @@
 # Content report
 
-Built 2026-10-04 11:08 by `tools/build_content.py`. Content version `87f82c197395`.
+Built 2026-10-04 13:42 by `tools/build_content.py`. Content version `4c11e3d4449f`.
 
 ## Words
 
 | Level | Words |
 |---|---|
-| A1 | 665 |
+| A1 | 664 |
 | A2 | 577 |
-| B1 | 1713 |
-| Total | 2955 |
+| B1 | 1706 |
+| Total | 2947 |
 
-- Nouns: 1586, of which 1507 have a plural (the rest are singular-only by source).
-- With an example sentence from Tatoeba: 2700.
-- With a human recording (Wikimedia Commons via Wiktionary): 2951.
-- With a full forms table: 2218.
+- Nouns: 1578, of which 1501 have a plural (the rest are singular-only by source).
+- With an example sentence from Tatoeba: 2693.
+- With a human recording (Wikimedia Commons via Wiktionary): 2944.
+- With a full forms table: 2211.
 
 ### Not imported
 
-- Goethe lines that are not single words (phrases such as *an sein*, Austrian/Swiss variants, notes): 176.
-- No Wiktionary entry (34): best (A1), -Karte (A1), einzel (A2), Fundsachen (A2), Geburts (A2), bio (B1), Elektro (B1), runterwerfen (B1), Intensivkurs (B1), Kriminal (B1), Kursleiter (B1), Kursleiter (B1), Migrantin (B1), Mobilbox (B1), Müllabfuhr (B1), Öko (B1), Personenstand (B1), Profisportler (B1), Profisportlerin (B1), Prost (B1), en (B1), Nord- (B1), Serviceangestellte (B1), Serviceangestellte (B1), Sonder (B1), Spezial (B1), Spezialistin (B1), Steward (B1), Umtausch (B1), un (B1), Verliererin (B1), Versichertenkarte (B1), -weise (B1), e (B1).
-- Wiktionary entry without a usable English meaning (28): geboren (A1), Lkw (A1), möchten (A1), beschwert (A2), Disko (A2), geehrt (A2), nächste (A2), tschüs (A2), Abgase (B1), Abitur (B1), aller (B1), ausgebildet (B1), chic (B1), Daten (B1), Drogerie (B1), entspannend (B1), erkältet (B1), Friede (B1), Groß (B1), miss (B1), Müesli (B1), nützen (B1), Phantasie (B1), rück (B1), sämtliche (B1), umgezogen (B1), untersagt (B1), verabredet (B1).
+- Goethe lines that are not single words (phrases such as *an sein*, Austrian/Swiss variants, notes): 195.
+- No Wiktionary entry (28): best (A1), -Karte (A1), einzel (A2), Fundsachen (A2), bio (B1), runterwerfen (B1), Intensivkurs (B1), Kursleiter (B1), Kursleiter (B1), Migrantin (B1), Mobilbox (B1), Müllabfuhr (B1), Personenstand (B1), Profisportler (B1), Profisportlerin (B1), Prost (B1), en (B1), Nord- (B1), Serviceangestellte (B1), Serviceangestellte (B1), Spezialistin (B1), Steward (B1), Umtausch (B1), un (B1), Verliererin (B1), Versichertenkarte (B1), -weise (B1), e (B1).
+- Wiktionary entry without a usable English meaning (27): geboren (A1), Lkw (A1), möchten (A1), beschwert (A2), Disko (A2), geehrt (A2), nächste (A2), tschüs (A2), Abgase (B1), Abitur (B1), aller (B1), ausgebildet (B1), chic (B1), Daten (B1), Drogerie (B1), entspannend (B1), erkältet (B1), Friede (B1), miss (B1), Müesli (B1), nützen (B1), Phantasie (B1), rück (B1), sämtliche (B1), umgezogen (B1), untersagt (B1), verabredet (B1).
 
 ### Checks
 
-Gender differs between Goethe and Wiktionary (16); Goethe's article is used:
+Gender differs between Goethe and Wiktionary (7); Goethe's article is used:
 
 - E-Mail: Goethe f, Wiktionary ?
 - Grad: listed without an article; Wiktionary gender m used
-- Lieblings: listed without an article; Wiktionary gender ? used
 - Abgase: listed without an article; Wiktionary gender n used
-- Bio: listed without an article; Wiktionary gender f used
-- Doppel: listed without an article; Wiktionary gender n used
-- Einzel: listed without an article; Wiktionary gender n used
 - Golf: listed without an article; Wiktionary gender m used
-- Groß: listed without an article; Wiktionary gender n used
-- Haupt: listed without an article; Wiktionary gender n used
 - Hinweise: Goethe m, Wiktionary ?
-- Not: listed without an article; Wiktionary gender f used
 - Ratschlag: listed without an article; Wiktionary gender m used
-- Schwieger: listed without an article; Wiktionary gender f used
-- Speise: listed without an article; Wiktionary gender f used
 - Tram: Goethe n, Wiktionary f/m
 
 Plural differs or comes from Goethe only (62):
@@ -110,5 +101,5 @@ Plural differs or comes from Goethe only (62):
 
 ## Sentences
 
-- Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: 132757. Kept for the app (shortest 6 per word, recordings first): 13465.
+- Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: 132733. Kept for the app (shortest 6 per word, recordings first): 13454.
 - Of these, with an open-licence recording: 4338.

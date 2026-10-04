@@ -1,1 +1,51 @@
-/* Review (design/mockups/02-review.html). */
+/* Review (design/mockups/02-review.html). A focus mode: no tab bar; prompt high, actions in the thumb zone. */
+.rv { min-height: 100dvh; display: flex; flex-direction: column; padding-bottom: calc(var(--safe-bottom) + 12px); }
+.rv-top { margin-top: var(--safe-top); min-height: 50px; padding: 4px 14px 0; display: flex; align-items: center; justify-content: space-between; flex: none; gap: 8px; }
+.rv-top .t { font-weight: 600; font-variant-numeric: tabular-nums; text-align: center; }
+.rv-top .t span { color: var(--label-2); font-weight: 500; }
+.rv-bar { margin: 2px 20px 0; }
+.rv-seg { margin: 10px 16px 0; }
+.rv-card { margin: 14px 16px 0; }
+.rv-bottom { padding: 16px 16px 20px; flex: none; position: sticky; bottom: 0; background: linear-gradient(transparent, var(--bg) 14px); }
+.rv-scroll { flex: 1; display: flex; flex-direction: column; }
+.gap { display: inline-block; min-width: 64px; border-bottom: 2.5px solid var(--label); margin: 0 4px; }
+.typed { font-size: 1.294rem; line-height: 1.35; font-weight: 600; }
+.pl-line { margin-top: 6px; }
+.pl-line .l2 { margin-right: 6px; }
+.win-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.win-row > :first-child { min-width: 0; }
+.reveal-in { animation: reveal 200ms ease-out; }
+@keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.meanings { margin: 10px 2px 0; padding: 0; list-style: none; }
+.meanings li { font-size: .882rem; color: var(--label-2); line-height: 1.35; }
+.meanings li + li { margin-top: 2px; }
+
+/* Grading keys: four 76 pt round keys with the next interval under each */
+.grades { display: grid; grid-template-columns: repeat(4, 1fr); padding: 12px 12px 8px; justify-items: center; row-gap: 8px; flex: none;
+  position: sticky; bottom: 0; background: linear-gradient(transparent, var(--bg) 16px); }
+.gk { width: 76px; height: 76px; border-radius: 38px; background: var(--key); box-shadow: var(--shadow-key); display: grid; place-items: center; font-weight: 600; font-size: .882rem; color: var(--label); position: relative; }
+.gk:active { box-shadow: var(--shadow-key-press); transform: translateY(1px); }
+.gk.again { background-color: var(--key-dark-b); background-image: linear-gradient(var(--key-dark-a), var(--key-dark-b)); color: #F4F4F1; }
+.gk.good { background-color: var(--signal); background-image: linear-gradient(var(--signal-hi), var(--signal)); color: var(--on-signal); box-shadow: var(--shadow-signal); }
+.gk.good:active { background-image: none; box-shadow: var(--shadow-signal-press); }
+.gk small { display: none; }
+.gi { font-size: .765rem; color: var(--label-2); font-variant-numeric: tabular-nums; }
+
+/* Accessibility text sizes (body 28 pt and up): a 2 × 2 grid of wide keys with the interval inside */
+body.ax .grades { grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px 16px 10px; }
+body.ax .gk { width: 100%; height: auto; min-height: 64px; border-radius: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1rem; line-height: 1.05; padding: 8px 12px; }
+body.ax .gk small { display: block; font-size: .7rem; font-weight: 400; opacity: .85; margin-top: 2px; }
+body.ax .gi { display: none; }
+
+/* Listening */
+.listen-key { width: 88px; height: 88px; border-radius: 44px; color: var(--label); }
+.listen-key .ico { width: 40px; height: 40px; }
+
+/* Forms table and edit form */
+.forms th, .forms td { padding: 10px 8px; }
+.forms td { font-weight: 500; }
+.form-label { font-size: .882rem; color: var(--label-2); margin: 16px 4px 6px; display: block; }
+.form-label:first-child { margin-top: 0; }
+
+/* Summary */
+.sum-rows .cl { padding: 0 20px; }

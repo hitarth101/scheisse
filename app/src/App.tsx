@@ -2,7 +2,11 @@ import { useEffect } from 'react';
 import { useSettings } from './db/settings';
 import { isFocus, tabOf, useRoute, type Route } from './lib/router';
 import { usePlayerSheet } from './lib/ui';
-import { usePlayer } from './lectures/player';
+import { onTrackEnded, usePlayer } from './lectures/player';
+import { loadPairs } from './lectures/transcript';
+import { db } from './db/db';
+import { navigate } from './lib/router';
+import { closePlayerSheet } from './lib/ui';
 import { MiniPlayer } from './lectures/MiniPlayer';
 import { PlayerSheet } from './lectures/PlayerSheet';
 import { LecturesPage } from './lectures/LecturesPage';
@@ -62,9 +66,30 @@ export function App() {
 
   useEdgeSwipeBack(route);
 
+  // When a track ends, the sentences from it are offered for ticking (product spec 4.2).
+  useEffect(() => onTrackEnded(async track => {
+    const row = await db.lectures.get(track);
+    if (row?.ticksDone) return;
+    try {
+      const d = await loadPairs();
+      if (!d.tracks[String(track)]?.length) return;
+    } catch { return; }
+    closePlayerSheet();
+    navigate({ name: 'tick', track });
+  }), []);
+
   useEffect(() => {
     document.body.classList.toggle('raised-bg', route.name === 'tick');
   }, [route.name]);
+
+  // Accessibility text sizes (body 28 pt and up) switch some layouts, e.g. the grading keys (design spec 2.1).
+  useEffect(() => {
+    const check = () => document.body.classList.toggle('ax', parseFloat(getComputedStyle(document.documentElement).fontSize) >= 28);
+    check();
+    window.addEventListener('resize', check);
+    document.addEventListener('visibilitychange', check);
+    return () => { window.removeEventListener('resize', check); document.removeEventListener('visibilitychange', check); };
+  }, []);
 
   return (
     <div className={settings.genderColours ? undefined : 'no-gender'}>

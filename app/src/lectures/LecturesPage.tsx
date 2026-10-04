@@ -6,6 +6,7 @@ import { open, usePlayer } from './player';
 import { useLectures } from './store';
 import { TOTAL_SECONDS, trackSeconds } from './tracks';
 import type { LectureRow } from '../db/db';
+import { coveredFraction } from './progress';
 
 export function lectureLamp(r: LectureRow, current: boolean): LampState {
   if (r.done) return 'done';
@@ -35,6 +36,7 @@ export function LecturesPage() {
           const dur = trackSeconds(r.track);
           let sub: string | undefined;
           if (current && (p.status === 'playing' || p.status === 'loading')) sub = `Playing · ${clock(p.position)} of ${clock(dur)}`;
+          else if (!r.done && (current ? p.position : r.position) >= dur - 3) sub = `Reached the end · ${Math.round(coveredFraction(r.covered) * 100)}% listened`;
           else if (!r.done && (current ? p.position : r.position) > 0) sub = `Resume at ${clock(current ? p.position : r.position)}`;
           else if (r.done && r.ticked) sub = `${r.ticked} sentence${r.ticked === 1 ? '' : 's'} ticked`;
           return (

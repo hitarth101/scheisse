@@ -8,6 +8,7 @@ import { getMeta, getSettings, setMeta } from './db/settings';
 import { enableActiveStyles, loadHapticsSetting, requestPersistence } from './lib/device';
 import { initRouter } from './lib/router';
 import { checkForUpdate } from './lib/version';
+import { ensureContent } from './content/load';
 import { restore, setInitialRate } from './lectures/player';
 import { lectureNow, startLectureCache } from './lectures/store';
 
@@ -32,6 +33,7 @@ async function boot() {
 
   createRoot(document.getElementById('root')!).render(<StrictMode><App /></StrictMode>);
   void checkForUpdate();
+  void ensureContent();
 }
 
 void boot();
