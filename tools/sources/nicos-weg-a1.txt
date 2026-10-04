@@ -1,0 +1,77 @@
+1. [Welcome to A1!] Hallo! — Greetings | grammar: Informal and formal
+2. [Welcome to A1!] Kein Problem! — Basic words in German
+3. [Welcome to A1!] Tschüss! — Saying goodbye | grammar: Informal and formal
+4. [Welcome to A1!] Von A bis Z — Spelling
+5. [1 Meeting people] Ich heiße Emma — Introducing yourself | grammar: Personal pronouns: ich, du
+6. [1 Meeting people] Das ist Nico — Introducing others
+7. [1 Meeting people] Woher kommst du? — Name and background | grammar: Conjugation: present tense
+8. [1 Meeting people] Nico hat ein Problem — Finding out about other people | grammar: Personal pronouns: er, sie
+9. [2 Contact details] Zahlen von 1 bis 100 — Numbers from 1 to 100 | grammar: Numbers from 11 to 19
+10. [2 Contact details] Wichtige Nummern — Important numbers
+11. [2 Contact details] Adressen — Providing personal information | grammar: W-questions
+12. [2 Contact details] Auf dem Amt — Formal address | grammar: Numbers over 100
+13. [3 In company] Was machst du hier? — Social situations
+14. [3 In company] Was trinkst du? — Offering drinks | grammar: Nouns: gender
+15. [3 In company] Eine Pizza bitte! — Placing an order | grammar: Vowel change: e to i
+16. [3 In company] Zahlen bitte!  — Paying the bill
+17. [4 Around the world] Ich war schon in Berlin — Sightseeing attractions | grammar: Simple past: sein
+18. [4 Around the world] Wo liegt das? — Geographic info | grammar: Questions and statements
+19. [4 Around the world] In Europa — Speaking about countries | grammar: Indefinite pronouns: man
+20. [4 Around the world] Andere Länder — Languages | grammar: Conjugation: sprechen
+21. [5 Things] Was ist das? — Naming objects | grammar: Articles: definite
+22. [5 Things] Wem gehört das? — Asking about objects | grammar: Articles: indefinite
+23. [5 Things] Ich habe kein … — What you (do not) have | grammar: Sentence construction: subject
+24. [5 Things] Das Auto ist rot — Naming objects | grammar: Adjectives following "sein"
+25. [6 Living] So wohne ich — Living arrangements | grammar: Articles
+26. [6 Living] Meine Wohnung — The rooms in an apartment | grammar: Negatives: nicht
+27. [6 Living] Sofa, Sessel und Tisch — Describing interiors | grammar: zu + adjective
+28. [6 Living] Unser Haus — Saying what is whose | grammar: Possessive determiners
+29. [7 Days and times] Emmas Tag — Talking about the day | grammar: Time: 12-hour clock
+30. [7 Days and times] Tageszeiten — Describing the day | grammar: Separable verbs
+31. [7 Days and times] Am Sonntag koche ich — Free time activities | grammar: Prepositions of time: an
+32. [7 Days and times] Emmas Wochenende — The weekend | grammar: Adverbs: sequence
+33. [8 Appointments] Wie spät ist es? — Understanding time and date | grammar: Time specification: 24-hour clock
+34. [8 Appointments] Hast du morgen Zeit? — Planning dates | grammar: Ordinal numbers
+35. [8 Appointments] Wann spielen wir? — Making arrangements | grammar: Conjugation: können
+36. [8 Appointments] Zu spät!? — Delays | grammar: Simple past: haben
+37. [9 Working life] Ich bin Lehrerin — Talking about professions | grammar: Word formation: professions
+38. [9 Working life] Mein Beruf — Describing activities | grammar: Modal verbs
+39. [9 Working life] Wo ist der Aufzug? — Finding your way around a building | grammar: The dative
+40. [9 Working life] Traumberufe — Career hopes | grammar: Modal verbs: wollen
+41. [10 Orientation] Wo ist der Bahnhof? — Living and working | grammar: Prepositions: bei, von
+42. [10 Orientation] An der Ampel links — Giving directions | grammar: Prepositions of place
+43. [10 Orientation] Mit Bus und Bahn — Commuting to work | grammar: Prepositions: mit
+44. [10 Orientation] Im Büro — Objects in the office | grammar: Two-case prepositions 
+45. [11 Eating and leisure] Lebensmittel — Talking about food | grammar: Negation: nicht/kein
+46. [11 Eating and leisure] Ich mag (nicht)! — Eating preferences | grammar: Comparative
+47. [11 Eating and leisure] Haushaltsarbeit — Preferences at home | grammar: Comparison: wie/als
+48. [11 Eating and leisure] Was macht dir Spaß? — Leisure activities | grammar: gehen + infinitive
+49. [12 Food] Mengen und Preise — Buying groceries | grammar: Prepositions: in, auf
+50. [12 Food] Was darf es sein? — Shopping conversations
+51. [12 Food] Sonst noch etwas? — Shopping at the market | grammar: Question words: wie viel
+52. [12 Food] Wie viel Mehl? — Following a recipe | grammar: Instructions
+53. [13 Weather and holiday] Wie war dein Urlaub? — Talking about vacations | grammar: Present perfect with "haben"
+54. [13 Weather and holiday] Jahreszeiten — Comparing the seasons | grammar: Comparison
+55. [13 Weather and holiday] Der Ausflug — Talking about the past | grammar: Present perfect with "sein"
+56. [13 Weather and holiday] Wie wird das Wetter? — Talking about the weather | grammar: Pronouns: es
+57. [14 Clothing] Das ist jetzt modern — Talking about clothing | grammar: Adjective declension
+58. [14 Clothing] Mein Lieblingspulli — Describing clothing | grammar: Question words: welch-
+59. [14 Clothing] Das passt gut! — Shopping for clothes | grammar: Verbs with a dative object
+60. [14 Clothing] Schick! — Casual wear
+61. [15 Family] Meine Familie — Talking about family | grammar: Adjective declension
+62. [15 Family] Meine Eltern — Introducing parents | grammar: Personal pronouns: accusative
+63. [15 Family] Meine Tante — Career choices | grammar: The possessive determiner
+64. [15 Family] Mein Bruder — Talking about siblings | grammar: Modal verbs: sollen
+65. [16 Sports and exercise] Von Kopf bis Fuß — Sports | grammar: Comparison
+66. [16 Sports and exercise] Bist du fit? — Sports and training | grammar: Time specification: Wann ...?
+67. [16 Sports and exercise] Fitness — Fitness tips | grammar: Comparison
+68. [16 Sports and exercise] Ist das gesund? — Talking about nutrition | grammar: Imperative: informal
+69. [17 Health] Geht es dir gut? — Talking about illnesses | grammar: Müssen or sollen?
+70. [17 Health] Beim Arzt — Checking in at the doctor's office | grammar: Modal verbs: dürfen
+71. [17 Health] Gute Besserung! — Inquiring about patients | grammar: Present perfect
+72. [17 Health] Nehmen Sie … — A visit to the doctor | grammar: Prepositions: vor, nach
+73. [18 Home] Meine Heimat — Talking about home | grammar: Adjective declension
+74. [18 Home] Leben in Deutschland — To miss something | grammar: Personal pronouns: dative
+75. [18 Home] Anders als zu Hause — Comparisons
+76. [18 Home] Ich träume von … — Hopes and dreams | grammar: Subjunctive: Wishes
+77. [] Final Test A1 — Check your knowledge

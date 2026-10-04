@@ -1,4 +1,7 @@
-name: Publish to GitHub Pages
+name: Test and publish to GitHub Pages
+
+# Every push to main runs all tests, builds the app and publishes it.
+# A failing test stops the job, so the live app never receives a broken version.
 
 on:
   push:
@@ -15,17 +18,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Logic tests (Vitest)
+        run: npx vitest run
+      - name: Build
+        run: npx vite build
+      - name: Install WebKit (Safari's engine)
+        run: npx playwright install --with-deps webkit
+      - name: Screen tests (Playwright, WebKit, iPhone 14 Pro size)
+        run: npx playwright test
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      # Phase 0 publishes the static test site as-is. From Phase 1 this job also runs the tests and builds the app first.
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
       - id: deployment
         uses: actions/deploy-pages@v4

@@ -16,3 +16,10 @@ Desktop.ini
 
 # Local tool settings
 .claude/
+
+# Raw source datasets (Wiktionary, Tatoeba, DeReWo, PDFs) stay on the PC; only processed files are published.
+tools/raw/
+
+# Test reports
+app/test-results/
+app/playwright-report/
