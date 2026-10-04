@@ -207,6 +207,8 @@ A separate word deck of general engineering terms, **off by default**, enabled i
 
 Sentence and fill-in-the-blank cards are introduced alongside, using sentences made mostly of words already learned.
 
+**Function words get no word card** *(owner decision, 2026-10-04)*: articles and other article words (der, ein, mein, dieser, kein…), pronouns, prepositions and conjunctions are left out of word cards (99 of the 2,947 imported words). Language Transfer teaches them, noun cards drill the articles, and they keep appearing in sentence cards; a sentence counts as "made of learned words" when its other words are learned. Word types follow Wiktionary, so a few content-like words it files as pronouns are also left out (viel, mehr, nichts, etwas, jemand, niemand).
+
 ## 6. Definitions used by the app
 
 - **Known word:** a word whose production card has reached a review interval of 21 days or more, or which the learner marked "known" in Reading. Status shows both counts separately. Word forms (e.g. "ging") count toward their base word ("gehen"), using Wiktionary's form data.

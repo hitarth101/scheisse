@@ -107,7 +107,7 @@ Lectures (player, mini-player or screen-awake fallback per Phase 0, notes, sente
 | 4 | Review: FSRS scheduling, word and sentence cards (say it, hear it), speak or type, typed-answer comparison, grading keys with intervals, undo, edit, suspend, flag, leeches, All forms sheet, iPhone-voice fallback | `app/src/review` |
 | 5 | Tick screen (opens when a lecture ends) and Today (daily plan within the time budget) | `app/src/lectures/TickScreen.tsx`, `app/src/today` |
 
-Tests: 24 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 14 Pro size, light and dark). The publishing job runs all of them before every publish. The 50 lectures are re-encoded to mono 64 kbps (184 MB; `tools/encode-lectures.sh`).
+Tests: 27 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 14 Pro size, light and dark). The publishing job runs all of them before every publish. The 50 lectures are re-encoded to mono 64 kbps (184 MB; `tools/encode-lectures.sh`).
 
 **Decisions made during the build** (none changes a feature in the product spec; listed so the owner can object):
 
@@ -125,7 +125,7 @@ Tests: 24 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 1
 12. The Phase 0 test page is no longer published; the app replaces it at the same address.
 13. Imported content is stored as two whole lists on the phone (first import 0.7 s instead of minutes).
 
-**Proposal for the owner (needs a decision; the product spec is followed until then):** ordering by real-world frequency puts function words first: *der, in, und, sein, werden, von, mit, haben, für, sich*. Wiktionary's English for some of them is a grammar description ("nominative masculine singular definite article, the"). Language Transfer teaches these words anyway, and every noun card already drills the articles. Option: leave articles, pronouns, prepositions and conjunctions out of word cards (they keep appearing in sentence cards). That would change product spec 5.5, so it is only a proposal.
+**Function words (decided by the owner 2026-10-04, product spec 5.5):** ordering by real-world frequency put function words first (*der, in, und, sein, werden, von, mit…*), some with grammar descriptions as their English. Articles and other article words, pronouns, prepositions and conjunctions now get no word card (99 words); they keep appearing in sentence cards. The first new words are now *sein, werden, haben, nicht, auch, können, aus, so, noch, nur*.
 
 **On-phone checklist (after publishing):**
 
@@ -163,4 +163,4 @@ Each phase ends with: all tests passing, a WebKit screen check against the desig
 1. ~~Other copyrighted data in a public repo.~~ Decided 2026-10-03 (owner): the processed Goethe word data and the transcript pairs are published, with attribution, like the MP3s.
 2. ~~Re-encoding the MP3s.~~ Done 2026-10-03: FFmpeg installed (winget), 50 lectures at mono 64 kbps, durations checked against the originals.
 3. **Repository name** `scheisse` (GitHub addresses can't contain ß). Renaming later changes the app's address, so the app would have to be re-added to the home screen and progress restored from a backup.
-4. **Function words as word cards:** see the proposal in Phase 1 above.
+4. ~~Function words as word cards.~~ Decided 2026-10-04: no word cards for them (Phase 1 above).

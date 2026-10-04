@@ -57,9 +57,20 @@ export async function introducedToday(now = Date.now()): Promise<number> {
 }
 
 /**
- * Introduces up to `count` new notes: the next words in learning order (Goethe A1 → B1, by frequency),
- * with one Tatoeba sentence for every three words once a sentence exists whose words have all been
- * introduced (product spec 5.5).
+ * Function words get no word card of their own: articles and other article words, pronouns, prepositions
+ * and conjunctions. Language Transfer teaches them, noun cards drill the articles, and they keep appearing
+ * in sentence cards (owner decision 2026-10-04, product spec 5.5). "ein" is the indefinite article,
+ * which Wiktionary files as a numeral.
+ */
+const NO_WORD_CARD = new Set(['article', 'determiner', 'pronoun', 'preposition', 'conjunction']);
+export function isFunctionWord(w: Pick<WordRow, 'pos' | 'lemma'>): boolean {
+  return NO_WORD_CARD.has(w.pos) || (w.pos === 'numeral' && w.lemma === 'ein');
+}
+
+/**
+ * Introduces up to `count` new notes: the next words in learning order (Goethe A1 → B1, by frequency,
+ * function words left out), with one Tatoeba sentence for every three words once a sentence exists whose
+ * words have all been introduced or are function words (product spec 5.5).
  */
 export async function introduce(count: number, now = Date.now()): Promise<NoteRow[]> {
   if (count <= 0) return [];
@@ -68,10 +79,11 @@ export async function introduce(count: number, now = Date.now()): Promise<NoteRo
 
   const wantSentences = Math.floor(count / 3);
   const data = await contentData();
+  const functionWords = new Set(data.words.filter(isFunctionWord).map(w => w.id));
   const words: WordRow[] = [];
   for (const w of data.words) {
     if (words.length >= count) break;
-    if (!existing.has(`w:${w.id}`)) words.push(w);
+    if (!existing.has(`w:${w.id}`) && !functionWords.has(w.id)) words.push(w);
   }
 
   const picked: NoteRow[] = [];
@@ -80,7 +92,8 @@ export async function introduce(count: number, now = Date.now()): Promise<NoteRo
   if (wantSentences > 0 && known.size >= 5) {
     const all = data.sentences;
     const eligible = all
-      .filter(s => !existing.has(`s:${s.id}`) && s.w.length > 0 && s.w.every(id => known.has(id)))
+      .filter(s => !existing.has(`s:${s.id}`) && s.w.length > 0 && s.w.every(id => known.has(id) || functionWords.has(id))
+        && s.w.some(id => known.has(id)))
       .sort((a, b) => a.de.length - b.de.length);
     sentencesOut.push(...eligible.slice(0, wantSentences));
   }
