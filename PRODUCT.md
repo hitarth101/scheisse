@@ -28,7 +28,7 @@ Not a consumer language app. It does not teach; it organises real material the o
 
 ## Operating Context
 
-- Pages: Today (session builder), Lectures (50 Language Transfer tracks, 7–19 min each, player with resume, 10 s rewind, speed, notes; after a track, tick volunteer-transcript sentences that match the audio to create cards), Review (one FSRS spaced-repetition queue; word, sentence, grammar cloze and listening cards; speak-then-reveal or type; self-grade Again/Hard/Good/Easy), Grammar (topic path in Nicos Weg order, links out to free explanations and exercises with done-tracking; reference tables), Reading (German texts with hidden English, tap sentence for translation, tap word for dictionary popup, long-press sentence to send to Review, known-word % before opening; single sentences up to full public-domain books, audio where available), Capture (fast inbox for phrases heard on TV), Status and data (plain numbers, backup/export, settings, outside dictionary links).
+- Pages (restructured by the owner 2026-10-04: no sessions, separate tabs): Flashcards (one continuous review queue with a daily new-card allowance, every card listed and searchable, the Capture inbox), Lectures (50 Language Transfer tracks, 7–19 min each, player with resume, 10 s rewind, speed, notes; after a track, tick volunteer-transcript sentences that match the audio to create cards), Review (one FSRS spaced-repetition queue; word, sentence, grammar cloze and listening cards; speak-then-reveal or type; self-grade Again/Hard/Good/Easy), Grammar (topic path in Nicos Weg order, links out to free explanations and exercises with done-tracking; reference tables), Reading (German texts with hidden English, tap sentence for translation, tap word for dictionary popup, long-press sentence to send to Review, known-word % before opening; single sentences up to full public-domain books, audio where available), Capture (fast inbox for phrases heard on TV), Status and data (plain numbers, backup/export, settings, outside dictionary links).
 - Default review answer mode: say it aloud, then reveal.
 - Audio: human recordings where available, otherwise the iPhone's built-in German voice.
 
@@ -56,7 +56,7 @@ Not a consumer language app. It does not teach; it organises real material the o
 
 ## Product Principles
 
-1. The routine is the product: opening the app should lead straight into today's work.
+1. Each tab is ready to use at any moment: no sessions to start or finish, and nothing waits for anything else (owner decision 2026-10-04).
 2. Real material only; the app organises and remembers, it never invents German.
 3. German first, English on request.
 4. Facts, not feelings: every number is a measurement, never a reward or a nudge.

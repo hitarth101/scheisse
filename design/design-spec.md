@@ -1,7 +1,7 @@
 # Scheiße — Design Spec
 
-Status: complete for build, version 1
-Last updated: 2026-10-03
+Status: complete for build, version 1; navigation updated 2026-10-05 for the owner's restructure (no sessions)
+Last updated: 2026-10-05
 Direction: **F · Native Gerät** (locked by the owner after two rounds)
 
 This document defines **how the app looks and behaves**. What each page does is defined in `docs/product-spec.md`, which wins on any conflict about features. How the app is built and shipped is in `docs/build-plan.md`.
@@ -155,28 +155,27 @@ Optional light ticks, with "Light tap feedback" on in Settings (default on). Pha
 
 ## 3. Navigation structure
 
+**Changed 2026-10-04 by the owner** (product spec 4.1): there are no sessions, so Today is replaced by Flashcards, the Inbox moves inside Flashcards and Status becomes a tab. Everything else in this spec (look, components, states) is unchanged; the new screens are built from the same components.
+
 ```
 Tab bar (floating, 5 tabs)
-├── Today ──────────── top-right key → Status and data
-│                                       ├── Settings
-│                                       ├── Leeches / Flagged cards
-│                                       ├── Dictionaries
-│                                       └── Sources and credits
+├── Flashcards ─────── + key → Capture · Study (focus) · Inbox · card page
 ├── Lectures ───────── track page (notes, sentences) · full player (sheet)
 ├── Reading ────────── text (reading view) · word popup (sheet) · add-sentence (sheet)
-├── Grammar ────────── Topics | Tables (segmented) · topic page · table page
-└── Inbox ──────────── Capture (full-screen, keyboard up) · confirm match (sheet)
+├── Grammar ────────── Topics | Lessons | Tables (segmented) · topic page · table page
+└── Status ─────────── Settings · Dictionaries · Sources and credits
 
 Focus modes (no tab bar, full screen, close key top-left):
-  Review session · Capture · Tick screen after a track
+  Study · Capture · Tick screen after a track
 ```
 
-- **Tab bar:** Today · Lectures · Reading · Grammar · Inbox. The active tab shows its label in `--label` and a small graphite dot above the icon. The Inbox tab carries a grey count badge when phrases are waiting. No other badges anywhere.
-- **Review is a focus mode, not a tab.** It is started from Today (session, or "Reviews only"). The close key returns to Today and keeps progress.
-- **Status and data** lives behind the top-right key on Today, because it is opened rarely.
-- **Mini-player:** docked above the tab bar on every tabbed page while a lecture is loaded. Tap opens the full player as a sheet; pull the player down to return. Hidden in focus modes. Starting Review, or playing any card audio, pauses the lecture (approved proposal).
+- **Tab bar:** Flashcards · Lectures · Reading · Grammar · Status. The active tab shows its label in `--label` and a small graphite dot above the icon. No badges; the Inbox count is a row on Flashcards.
+- **Study is a focus mode, not a tab.** It is opened with the green Study key on Flashcards and shows "N left · Word" instead of "12 of 42". The close key returns to Flashcards; every grade is already saved.
+- **Flashcards** (replaces Today, 5.1): large title; "Now" group with a Reviews row and a New cards row (lamp, one-line fact, estimated time; the lit lamp marks what Study shows first); the green Study key, or the "Nothing due right now" card when nothing is left; a group with "Add 5 more new cards today" and the Inbox row; then "All cards" with a search field, a Show row (filter sheet) and the card list. A card page lists its two sides with their state and offers Suspend / Return to reviews, Edit and Delete (the decisions of 11.4).
+- **Leeches and flagged cards** are found under Suspended in the Flashcards list instead of on Status.
+- **Mini-player:** docked above the tab bar on every tabbed page while a lecture is loaded. Tap opens the full player as a sheet; pull the player down to return. Hidden in focus modes. Studying, or playing any card audio, pauses the lecture (approved proposal).
 - **Back:** standard back chevron with the previous page's title, top left. Swipe from the left edge also goes back.
-- **App launch:** always opens on Today, except when relaunched within 10 minutes, in which case it reopens the last page (so Capture after a TV pause stays two taps away).
+- **App launch:** opens on Flashcards, except when relaunched within 10 minutes, in which case it reopens the last page (so Capture after a TV pause stays two taps away).
 
 ## 4. Components
 
@@ -216,7 +215,9 @@ All in `f.css`, shown in `design/mockups/00-components.html`. "Pressed" means wh
 
 Every screen is in `design/mockups/`. "→" means the mockup file.
 
-### 5.1 Today → `01-today.html`
+### 5.1 Today → `01-today.html` (replaced by Flashcards, see section 3)
+
+Kept for reference: the Flashcards tab reuses this page's parts (lamps, one-line facts with times, one green key, the "Done for today" card as "Nothing due right now"). Swap, the main block and the session states no longer exist.
 
 Layout, top to bottom: Status key (top right) · large title "Today" + date · section header "Session · about 30 min" (right: time left) · grouped session list, one row per block with a lamp, a one-line fact, and its time · green key · "Also" group (Inbox count, Reviews only) · footnote with time today.
 
@@ -273,6 +274,8 @@ Lock-screen controls: title "Lecture NN", artist "Language Transfer · Complete 
 
 ### 5.4 Grammar → `04-grammar.html`
 
+Added 2026-10-04: a third view, **Lessons**, lists the Nicos Weg lessons in DW's order (lamp, German lesson title, English subtitle); a lesson opens on DW's website and then shows the inline "Mark it done?" with Mark done / Not yet. Reference tables measure themselves and switch to the stacked layout whenever the columns don't fit, not only at accessibility sizes.
+
 | Screen | Layout |
 |---|---|
 | Topic path | Topics / Tables segmented control. Sections per Nicos Weg chapter (DW's own names and order); each row: lamp (off / next / read = part / practiced = done), topic name, the DW lesson title(s) in German and status |
@@ -299,6 +302,8 @@ A1 has 62 grammar topics across 76 lessons; topics repeat across lessons, so the
 
 ### 5.6 Inbox (Capture) → `06-inbox.html`
 
+Since 2026-10-04 the Inbox is a page inside Flashcards (back key "Flashcards", + key top right) instead of a tab. Capture returns to the page it was opened from.
+
 | Screen | Layout |
 |---|---|
 | Capture | Focus mode, keyboard up, cursor in the phrase field (`t-title2` size); optional "What were you watching?" with the last answer shown below; green "Save to Inbox" above the ä ö ü ß Ä Ö Ü row (TV phrases often start with a capitalised noun). Reached from the + key on Inbox, or the Inbox tab's empty state |
@@ -308,6 +313,8 @@ A1 has 62 grammar topics across 76 lessons; topics repeat across lessons, so the
 | Empty | "Nothing waiting" with one line on how to use it, and a Capture key |
 
 ### 5.7 Status and data → `07-status.html`
+
+Since 2026-10-04 Status is a tab: no back key. "Needs a decision" moved to Flashcards (Suspended). Settings' "Session" group is now "Flashcards": new cards per day, "Pause new cards after" (minutes of reviews in a day), target memory rate.
 
 | Screen | Layout |
 |---|---|

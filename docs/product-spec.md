@@ -1,7 +1,7 @@
 # German Learning App — Product Spec
 
-Status: approved for design and build planning
-Last updated: 2026-10-03
+Status: approved; restructured by the owner on 2026-10-04 (no sessions, separate tabs)
+Last updated: 2026-10-05
 Owner: hitarth101 (single user)
 
 This document defines **what the app does**. It is the source of truth for the design chat and the build chat. The visual design lives in a separate design spec (`design/design-spec.md`). If the design needs a feature to change, it is proposed and this file is updated — features are not changed silently.
@@ -20,7 +20,7 @@ The app is one part of a wider routine:
 | DW "Nicos Weg" (free online course, A1–B1) | Structured course backbone after/alongside Language Transfer | External website; the app links to it and tracks progress |
 | German-dubbed TV and films | Large amounts of listening | Own time; phrases captured in the app (Capture) |
 | In-person lessons | Speaking practice and correction | Later; not built into the app |
-| **This app** | Daily ~30-minute practice hub, memory system, reading practice | iPhone |
+| **This app** | Practice hub in separate tabs (flashcards, lectures, reading, grammar), used whenever and for as long as the learner likes; memory system; reading practice | iPhone |
 
 ## 2. Non-negotiable principles
 
@@ -48,27 +48,26 @@ The app is one part of a wider routine:
 
 ## 4. Pages
 
-Navigation structure is decided in the design spec. The pages are:
+**Tabs** (owner decision 2026-10-04): Flashcards · Lectures · Reading · Grammar · Status. There are no sessions: every tab can be used at any time, in any order, and nothing waits for anything else. The look of each page is in the design spec.
 
-### 4.1 Today (home)
+### 4.1 Flashcards (replaces Today, owner decision 2026-10-04)
 
-Purpose: remove daily decisions. One "Start session" button fills the daily time budget (default 30 minutes, adjustable).
+There are no sessions. Flashcards shows what the one review queue (4.3) holds right now as plain facts, one **Study** key, and every card.
 
-Session order:
-1. **Due reviews.** All cards due today. If due reviews alone would exceed the budget, the session caps them and carries the rest to tomorrow (stated plainly).
-2. **New cards.** Up to the daily new-card limit (default 10), reduced automatically when reviews already use most of the budget.
-3. **Main block,** chosen by this rule (the learner can swap it):
-   - next unfinished Language Transfer track, while any remain;
-   - otherwise the next Nicos Weg lesson (external link + "Mark done");
-   - a reading block when a suitable text exists (see 4.5).
+- **Study** opens the review screen. Cards keep coming until nothing is left; closing at any point loses nothing, because every grade is saved the moment it is given.
+- **Order of cards:**
+  1. missed cards whose few-minute step is up;
+  2. due reviews, most likely forgotten first;
+  3. "hear it" cards of items whose "say it" card was first answered on an earlier day;
+  4. new cards up to today's allowance: cards the learner picked (ticked lecture sentences, Reading, Inbox) first, oldest first; then the next items in learning order (5.5).
+  Missed cards coming back within 20 minutes are shown early when nothing else is left.
+- **New-card allowance:** "New cards per day" (default 10). Picked cards count toward it. "Add 5 more new cards today" raises it for that day only.
+- **Pause rule:** when a day's reviews (answered plus still due) take longer than "Pause new cards after" (default 30 minutes, at the learner's measured pace), new cards pause for the rest of that day, so the following days don't grow. "Add 5 more" still works.
+- **Facts on the page:** reviews due and their estimated time; new cards left today, paused or done (and picked cards waiting for tomorrow); when missed cards come back; next reviews when nothing is due; time today; last backup. A first-run notice points to Restore from backup.
+- **All cards:** search in German or English (umlauts optional), a filter (all cards, words, sentences, from lectures, suspended), newest first. A card page shows both sides with their state, the source, Suspend / Return to reviews, Edit and Delete. Leeches and flagged cards are found under Suspended.
+- **Inbox** (4.6) is reached from here; the + key opens Capture.
 
-   **Swap** offers a choice from whichever of these are available today (next Language Transfer track, next Nicos Weg lesson, a suggested reading text). *(Approved design proposal, 2026-10-03.)*
-
-When the learner returns to the app from an external lesson or topic link (Nicos Weg, Grimm Grammar, Schubert-Verlag), the app asks once: "Mark [lesson/topic] done?" *(Approved design proposal, 2026-10-03.)*
-
-The page also shows, as plain facts: cards due now, what the main block will be, time spent today, and any Capture items waiting. When everything is done: a neutral "Done for today" state with when the next reviews are due. No praise.
-
-Time estimates use the learner's own measured average seconds per card, not a fixed guess.
+Dropped with Today: the session builder, Swap, the main block, "Reviews only", the fixed daily plan and the review cap.
 
 ### 4.2 Lectures
 
@@ -80,10 +79,13 @@ Time estimates use the learner's own measured average seconds per card, not a fi
   - The learner ticks only the pairs that match what they heard, and may correct a pair before ticking.
   - Ticked pairs become sentence cards (see 5). Unticked pairs are discarded.
   - The screen can be skipped and revisited later from the track.
+- Sentences can be chosen at any time from the track page ("Sentences (N)"); the page says how many of the lecture's sentences are already cards. Ticked sentences come first among new cards and use the daily allowance (owner decision 2026-10-04).
 
 ### 4.3 Review
 
 One spaced-repetition queue (cards return just before you are likely to forget them). Scheduling uses **FSRS**, the open-source scheduling method used by Anki.
+
+Opened with **Study** on the Flashcards tab (4.1); its header shows how many cards are left right now. When nothing is left it says so, with when the next reviews are due, and offers "Add 5 more new cards". A "hear it" card first appears the day after its "say it" card was first answered, so the two sides of an item never meet on the same day.
 
 - **Answer modes**, switchable per session and remembered:
   - *Speak:* see prompt → say the answer aloud → tap to reveal.
@@ -104,7 +106,10 @@ Two parts:
    - a status the learner sets: not started / read / practiced;
    - marking a topic "practiced" unlocks its related fill-in-the-blank card type, if one exists (see 5.3).
    The topic list itself is copied from Nicos Weg's structure at build time (topic names and links only, not their content).
-2. **Reference tables,** readable on a phone screen, sourced from Wiktionary and the Wikibooks German course (open license, attributed). Planned tables: definite and indefinite articles by case; personal pronouns by case; possessive words; prepositions grouped by case; adjective endings (three tables); present tense of sein, haben, werden and modal verbs.
+2. **Reference tables,** readable on a phone screen, sourced from Wiktionary and the Wikibooks German course (open license, attributed): definite and indefinite articles by case; personal pronouns by case; possessive words; prepositions grouped by case (the Wikibooks course's table, meanings from Wiktionary); adjective endings after der-words, after ein-words and without an article (Wiktionary's declension of *gut*); present tense of sein, haben, werden and the modal verbs. Where the columns don't fit the screen, each row becomes its own block.
+3. **Lessons** (owner decision 2026-10-04: with Today gone, Nicos Weg progress lives here): every Nicos Weg lesson A1–B1 in DW's order, opening on DW's website. After a lesson is opened, "Mark it done?" stays inline until answered.
+
+The Grammar tab shows these as three views: Topics, Lessons, Tables.
 
 Per-word tables (all forms of a specific verb or noun) are shown from Wiktionary data in the word popup and on card backs.
 
@@ -120,32 +125,37 @@ Goal: build reading ability with a German text and its English translation avail
   - Long-press a sentence → add it as a sentence card. The German/English pair is shown for confirmation first, because translations of older books don't always line up sentence by sentence.
   - Audio playback where available (human recording or iPhone voice).
   - Reading position saved per text.
+  - Tapping works in two steps: tap a sentence for its English; tap a word in that (highlighted) sentence for its popup. Tapping the sentence again hides the English. *(Build decision 2026-10-05, so the two taps never compete.)*
+  - Reading time is logged automatically while the page is in use.
 - **Reading ladder:**
 
 | Stage | Source | Approximate level | Notes |
 |---|---|---|---|
-| 1 | Tatoeba sentence sets | A1+ | Sentences chosen where the learner knows all but one word. Human English translations. |
+| 1 | Tatoeba sentence sets | A1+ | A daily set of up to 20 sentences in which the learner has studied every word but one (a word counts once any of its cards has been answered), function words aside. Human English translations. |
 | 2 | Wikibooks German course dialogues | A1–A2 | Short dialogues with English translations. Open license. Community-written; quality uneven. |
 | 3 | Grimm fairy tales (Project Gutenberg) | B1+ | German original + public-domain 19th-century English translation. Loose translation → sentence alignment imperfect; paragraph-level fallback. |
 | 4 | Longer public-domain books, e.g. Heidi (Project Gutenberg) | B1–B2 | Same caveats as stage 3. |
 
-Known gap: no free source with English translations has been found for the A2–B1 range between stages 2 and 3. Reading will be thin there. Search continues during the build.
+Known gap: no free source with English translations has been found for the A2–B1 range between stages 2 and 3. Reading will be thin there.
+
+For the known-word percentage, articles, pronouns, prepositions and conjunctions count as known, because they get no word card (5.5) and the courses teach them first. Names are not counted.
 
 ### 4.6 Capture
 
-Fast inbox for phrases heard while watching German TV.
+Fast inbox for phrases heard while watching German TV. Reached from the Flashcards tab (+ key and the Inbox row); after saving, Capture returns to where it was opened.
 
 - One text field, opens with the keyboard ready. Optional: what you were watching.
 - Later, from the inbox, each item is looked up against the app's sources (Tatoeba sentences and Wiktionary words/phrases):
   - **match found with English** → shown for confirmation → becomes a card;
   - **no match** → stays in the inbox marked "No source translation — ask tutor", with a button to open an outside dictionary. No machine translation.
 - Items can be deleted.
+- Matching uses only the app's own data: a Tatoeba sentence that is the phrase (rough spelling allowed: umlauts, "ue"/"ss", a few wrong letters), or the shortest one containing it; a single word matches its Goethe word, also through its forms, except function words. The sentence data holds the 13,454 sentences made of Goethe A1–B1 words, so many TV phrases will have no match.
 
 ### 4.7 Status and data
 
-Plain facts only.
+A tab (owner decision 2026-10-04). Plain facts only.
 
-- **Review:** cards due today and over the next 7 days; total cards by state (new / learning / review / suspended); leech list; flagged-card list.
+- **Review:** cards due today and over the next 7 days; total cards by state (new / learning / review / suspended). The leech and flagged lists are under Suspended on the Flashcards tab.
 - **Words known** (definition in 6).
 - **Time logged:** automatic for reviews, lectures and reading; manual entries for outside activities (TV, Nicos Weg, lessons). Shown by week, month and total.
 - **Progress:** Language Transfer tracks done (x / 50); Nicos Weg lessons done; grammar topics read/practiced.
@@ -153,7 +163,7 @@ Plain facts only.
   - "Export backup" creates one file of all progress, saved via the iPhone share sheet (e.g. to iCloud Drive or Files).
   - "Restore from backup" loads that file.
   - Shows "Last backup: [date]" as a plain line.
-- **Settings:** daily time budget; new cards per day; default answer mode; audio auto-play; voice speed; target memory rate (FSRS "desired retention", default 90%); engineering vocabulary on/off; display options defined by the design spec.
+- **Settings:** new cards per day; pause new cards after (minutes of reviews in a day, default 30; replaces the daily time budget); default answer mode; audio auto-play; voice speed; target memory rate (FSRS "desired retention", default 90%); engineering vocabulary on/off; display options defined by the design spec.
 - **Dictionary links:** dict.cc, Leo, DWDS, Wiktionary.
 - **Credits:** required attributions for open-license sources (Tatoeba, Wiktionary, Wikibooks, IATE if used).
 
@@ -192,11 +202,15 @@ Version 1 blank types:
 - prepositions;
 - the conjugated verb.
 
-Adjective endings come later. Each blank type is unlocked by marking its grammar topic "practiced" (4.4).
+- adjective endings (an adjective with an ending, before a noun).
+
+Each blank type is unlocked by marking its grammar topic "practiced" (4.4). Which word may be removed is worked out on the PC from Wiktionary's grammar tags: an article directly before a noun; a preposition (not a split-off verb prefix at the end of the sentence, not *zu* before a verb); a conjugated verb (present or past, with a person); an adjective with an ending before a noun. The card shows the English and, for verbs and adjectives, the base form as a hint. Fill-in-the-blank cards have no listening side and can't be edited, so the source sentence stays exact.
 
 ### 5.4 Engineering vocabulary
 
 A separate word deck of general engineering terms, **off by default**, enabled in Settings (suggested after A2). Source: Wiktionary entries labeled with engineering-related topics. IATE (the EU's free official terminology database) is an optional later addition; its download requires the user to create a free EU Login account.
+
+Built (2026-10-05): 514 words, most frequent first (DeReWo). A sense counts when it carries a specific engineering label (engineering, mechanical or electrical engineering, manufacturing, construction, tools, physics, electronics and similar) and none of the unrelated fields that share Wiktionary's "engineering" label (computing, firearms, aviation, law…). Only those senses' English is used; names, brands and Goethe words are left out. When on, one engineering word joins every three new words.
 
 ### 5.5 Order of new words
 
@@ -205,13 +219,13 @@ A separate word deck of general engineering terms, **off by default**, enabled i
 3. Goethe B1 words, same ordering.
 4. Beyond B1 (toward B2): most frequent DeReWo words not already covered.
 
-Sentence and fill-in-the-blank cards are introduced alongside, using sentences made mostly of words already learned.
+Sentence and fill-in-the-blank cards are introduced alongside, using sentences made mostly of words already learned: one Tatoeba sentence for every three words, and, once a blank type is unlocked, one fill-in-the-blank card for every three words (the type with the fewest cards first). With the engineering deck on, one engineering word joins every three words.
 
 **Function words get no word card** *(owner decision, 2026-10-04)*: articles and other article words (der, ein, mein, dieser, kein…), pronouns, prepositions and conjunctions are left out of word cards (99 of the 2,947 imported words). Language Transfer teaches them, noun cards drill the articles, and they keep appearing in sentence cards; a sentence counts as "made of learned words" when its other words are learned. Word types follow Wiktionary, so a few content-like words it files as pronouns are also left out (viel, mehr, nichts, etwas, jemand, niemand).
 
 ## 6. Definitions used by the app
 
-- **Known word:** a word whose production card has reached a review interval of 21 days or more, or which the learner marked "known" in Reading. Status shows both counts separately. Word forms (e.g. "ging") count toward their base word ("gehen"), using Wiktionary's form data.
+- **Known word:** a word whose production card has reached a review interval of 21 days or more, or which the learner marked "known" in Reading. Status shows both counts separately. Word forms (e.g. "ging") count toward their base word ("gehen"), using Wiktionary's form data. Engineering-deck words count too. For the Reading percentage only, function words count as known (4.5).
 - **Due:** FSRS says the card should be reviewed today.
 - **Leech:** a card failed 8 times in total.
 
@@ -262,25 +276,27 @@ Every imported item keeps a record of its source, so it can be traced and attrib
   - availability of the German voice;
   - whether storage can be marked persistent;
   - audio hosting on GitHub Pages works (streaming and seeking).
-- **Phase 1 — Core:**
+- **Phase 1 — Core** (done 2026-10-04):
   - Lectures (player, notes, sentence tick screen);
   - Review engine with word and sentence cards;
   - content import for Goethe lists, Wiktionary, Tatoeba and DeReWo;
   - basic Today (due reviews + next lecture);
   - backup/restore.
-- **Phase 2:**
-  - full Today session builder;
+- **Restructure** (owner decision 2026-10-04, done 2026-10-05): Flashcards tab instead of Today and sessions (4.1); Status as a tab.
+- **Phase 2** (done 2026-10-05, the session builder dropped):
+  - ~~full Today session builder~~ (replaced by the restructure);
   - Capture;
   - Grammar path and reference tables;
   - fill-in-the-blank cards;
   - Status page;
   - dictionary links.
-- **Phase 3:** Reading — Tatoeba sets, then Wikibooks dialogues, then Gutenberg books — with coverage estimates.
-- **Phase 4:** engineering deck, LibriVox audio, IATE (optional), adjective-ending blanks.
+- **Phase 3** (done 2026-10-05): Reading — Tatoeba sets, then Wikibooks dialogues, then Gutenberg books — with coverage estimates.
+- **Phase 4:** engineering deck (done), adjective-ending blanks (done), LibriVox audio, IATE (optional; needs the owner's EU Login).
 
 ## 10. Out of scope (version 1)
 
 - Gamification of any kind (permanent).
+- Sessions and daily plans (owner decision 2026-10-04).
 - Push notifications.
 - Pronunciation scoring or speech recognition.
 - Writing practice. Needed later for B2; likely done with a tutor.
@@ -295,9 +311,11 @@ Every imported item keeps a record of its source, so it can be traced and attrib
 1. ~~Phase 0 phone test results~~ Done 2026-10-03 on iPhone 14 Pro, iOS 18.7, home-screen mode: background audio, lock-screen controls, keep-awake, seek/resume, German voices, persistent storage (granted; 41 GB quota), text size, keyboard key row, long-press, haptic tick all pass. Return-from-link detection was inconclusive (fired immediately), so the "Mark done?" prompt is shown inline until answered instead of relying on detection. Safe-area values correct (59/34 pt); visual check pending owner note. Details: `docs/build-plan.md` section 4.
 2. ~~Private audio host choice.~~ Decided: GitHub Pages, public repository (see section 3).
 3. Free A2–B1 reading source with English translations (gap).
-4. Extract the Nicos Weg grammar topic order. A1 done (77 entries, `tools/sources/nicos-weg-a1.txt`); A2 and B1 still to do (Phase 2).
+4. ~~Extract the Nicos Weg grammar topic order.~~ Done 2026-10-05: A1, A2 and B1 (231 lessons), `tools/sources/nicos-weg.json`.
 5. ~~Check that the A2/B1 Goethe PDFs extract cleanly.~~ Done 2026-10-03: A1, A2 and B1 headword columns extract cleanly; 2,947 words imported, the rest listed in `tools/out/content-report.md`.
 6. ~~App name and icon~~ Name decided 2026-10-03: **Scheiße** (the owner's first German word and an inside joke). Icon decided 2026-10-03: Eszett key, refinement R1 "the tile is the key" (`design/logo/eszett-r1-tile-key.svg`).
+7. The Inbox searches only the app's own sentence data (sentences made of Goethe A1–B1 words). A larger Tatoeba lookup would find more TV phrases but costs download size.
+8. IATE needs the owner's EU Login before it can be added.
 
 ## 12. Notes for the design chat
 

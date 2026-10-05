@@ -454,7 +454,7 @@ Switch: 51 x 31 pt, fill-press track when off, graphite track when on (near-whit
 
 ### Navigation
 - **Nav bar:** 44 pt row under the status bar: back chevron with previous title or close key left, inline title centred on detail pages, action key right.
-- **Tab bar:** floating glass capsule, 62 pt tall, five tabs (Today, Lectures, Reading, Grammar, Inbox), 25 pt icons, 10.5 pt labels. Inactive in secondary graphite; active label in graphite ink with a 5 pt graphite dot above the icon. The Inbox tab may carry a grey count badge; no other badges.
+- **Tab bar:** floating glass capsule, 62 pt tall, five tabs (Flashcards, Lectures, Reading, Grammar, Status; changed 2026-10-04 from Today and Inbox, see design-spec section 3), 25 pt icons, 10.5 pt labels. Inactive in secondary graphite; active label in graphite ink with a 5 pt graphite dot above the icon. No badges.
 - **Mini-player:** floating glass capsule, 58 pt, above the tab bar: title, tabular time, skip-back-10, play/pause on 44 pt keys, a 2 pt progress line.
 
 ### Sheets, notices, feedback
