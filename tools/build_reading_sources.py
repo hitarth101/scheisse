@@ -1,47 +1,54 @@
 """Builds the Reading texts (product spec 4.5, stages 2-4) from public-domain / open-licence sources.
 
-Nothing here writes, translates or corrects German or English. Every string in the output is copied
-from a named source; the only changes are (a) whitespace is normalised, (b) layout markup that is not
-text is removed (Project Gutenberg illustration markers, spaced-print tildes, italic underscores,
-footnote stars, the "* * *" divider lines, wiki tags), and (c) the 1921 Grimm print's speaker-change
-dash " -- " is treated as a break between speeches and is not kept. A check at the end of the run proves
-that every output string is a plain substring of its source text after those removals.
+Nothing here writes, translates or corrects German or English. Every string in the output is copied from a named
+source; the only changes are (a) whitespace is normalised, (b) layout marks that are not text are removed (Project
+Gutenberg illustration markers, spaced-print tildes, italic underscores, footnote stars, "* * *" divider lines, page
+numbers and wiki tags), and (c) the 1921 Grimm print's speaker-change dash " -- " is treated as a break between
+speeches and is not kept. A check at the end of every run looks each output string up in the whole source text
+after those removals; the run stops if one is missing.
 
 Sources (downloaded once into tools/raw/reading/, never published):
-  Stage 2  Wikibooks German course, Level I lessons 1-3 (CC BY-SA 4.0): the German dialogue and the
-           English translation that the same page gives in its exercise answers.
-  Stage 3  Grimm fairy tales. German: Project Gutenberg #77905 (Langewiesche-Brandt print of 1921, modern
-           spelling) for most tales; German Wikisource, "Kinder- und Haus-Märchen" 7th edition 1857
-           (historical spelling) for tales the 1921 print does not contain.
-           English: Margaret Hunt 1884, Project Gutenberg #5314 "Household Tales by Brothers Grimm".
-  Stage 4  Heidi by Johanna Spyri. German: Project Gutenberg #7500 (modernised spelling), part 1,
-           14 chapters. English: Marian Edwardes' translation, Project Gutenberg #1448.
+  Stage 2  Wikibooks German course, Level I lessons 1-3 (CC BY-SA 4.0): the German dialogue and the English
+           translation that the same page gives in its exercise answers (the only passages in the whole book that
+           have one; the report lists what was inspected and left out).
+  Stage 3  Grimm tales. German: Project Gutenberg #77905 (Langewiesche-Brandt print of 1921, modern spelling), or
+           for tales it does not contain German Wikisource, "Kinder- und Haus-Märchen" 7th edition 1857
+           (historical spelling). English: Margaret Hunt 1884, Project Gutenberg #5314.
+  Stage 4  Heidi, part 1, 14 chapters. German: Project Gutenberg #7500 (modernised spelling). English: Marian
+           Edwardes' translation, Project Gutenberg #1448.
 
 Method (per text)
-  1. Cut the German and the English text into paragraphs.
-  2. Align the paragraphs with a length-based dynamic programme in the style of Gale & Church (1993):
-     allowed groups 1-1, 1-2, 2-1, 1-0, 0-1; the English/German length ratio is measured per text.
-  3. For each group, cut both sides into sentences (quotation marks and abbreviations handled). If the
-     two sides have the same number of sentences and every pair has a believable length ratio, the
-     group is stored as sentence pairs ("en"). Otherwise the German sentences are stored with the whole
-     English paragraph(s) ("enPara"). A German paragraph with no English counterpart gets "enPara": null.
-     No sentence pairing is ever forced.
-  For the Grimm tales the 1921 print runs speeches together with " -- ", while Hunt (like the 1857 print)
-  often gives each speech its own paragraph. The script therefore tries both readings of the German
-  paragraphs and keeps the one that yields more sentence pairs.
+  1. Cut both texts into paragraphs.
+  2. Align the paragraphs with a length-based dynamic programme in the style of Gale & Church (1993): groups 1-1,
+     1-2, 2-1, 1-0, 0-1 as specified, plus 2-2, 2-3, 3-2, 3-3 and 1-k / k-1 up to k = 8 (the 1921 print runs
+     short speeches together where Hunt starts a paragraph for each, and without wider groups the English drifts
+     against the German). The English/German length ratio and the variance are measured on the text itself.
+     Quotation marks, question marks and the final mark of a group also count, because lengths alone are
+     ambiguous in dialogue.
+  3. Cut each group into sentences (quotation marks, abbreviations). Only if both sides then have the same
+     number of sentences and every pair has a believable length (and passes the other checks in
+     judge_steps) are the pairs stored ("en", same length as "de"), paragraph by paragraph, and only if a
+     sentence-level alignment of the whole text agrees (_verify_groups). Everything else is stored as the
+     German sentences with the whole English paragraph(s) ("enPara"); a German paragraph with no English
+     counterpart gets "enPara": null. No pairing is ever forced.
+  4. If the fine split gives different counts, the same test is made on a coarse split that keeps every quotation
+     in one piece. A group in which nothing passes is joined with up to three neighbours and tried again.
+     Where the books break paragraphs at different places, a sentence-level alignment (steps may join
+     sentences) is used only to find which English paragraphs hold the translation of a German paragraph
+     (_locate_fallbacks); no pair is taken from it unless MERGED_UNITS is switched on (it is off).
 
 Outputs
   tools/sources/reading/<id>.json   one file per text
   tools/sources/reading/index.json  the list in reading-ladder order
-  tools/out/reading-report.md       counts, alignment shares, problems
+  tools/out/reading-report.md       counts, alignment shares, selection, problems, spot checks
 
-Run from the repo root:  py tools/build_reading_sources.py        (add --refresh to download again)
+Needs lxml (already installed with the other tools' dependencies) for the two wiki sources.
+Run from the repo root:  py tools/build_reading_sources.py   (--refresh downloads again, --no-merged-stats is faster)
 """
 from __future__ import annotations
 
 import argparse
 import collections
-import html as html_lib
 import json
 import math
 import re
@@ -102,7 +109,7 @@ def wiki_parse(host: str, page: str, dest: Path, refresh: bool = False) -> dict:
 # ---------------------------------------------------------------- text helpers
 def collapse(s: str) -> str:
     """Normalises whitespace (including no-break spaces) to single spaces."""
-    return re.sub(r"\s+", " ", s.replace(" ", " ").replace(" ", " ")).strip()
+    return re.sub(r"\s+", " ", s.replace("\u00a0", " ").replace("\u202f", " ")).strip()
 
 
 def plain_key(s: str) -> str:
@@ -313,12 +320,12 @@ def match_cost(l1: int, l2: int, m: Model, prior: float) -> float:
     return -math.log(max(math.erfc(abs(z_score(l1, l2, m)) / math.sqrt(2)), 1e-12)) - math.log(prior)
 
 
-# Paragraph groups: the spec's 1-1, 1-2, 2-1, 1-0 and 0-1 (Gale & Church's own priors), plus 2-2 and 1-k / k-1 up to 1-8.
+# Paragraph groups: the spec's 1-1, 1-2, 2-1, 1-0 and 0-1 (Gale & Church's own priors), plus 2-2, 2-3, 3-2, 3-3 and 1-k / k-1 up to 1-8.
 # The 1921 print puts several short speeches into one paragraph where Hunt starts a new paragraph for each speech, so
 # without wider groups the English paragraphs drift against the German ones and the whole-paragraph fallback would
 # show the wrong English. Wider groups never loosen the rule for sentence pairs (that stays: equal counts).
 PARA_MOVES: dict[tuple[int, int], float] = {(1, 1): 0.89, (1, 0): 0.01, (0, 1): 0.01, (2, 1): 0.045, (1, 2): 0.045,
-                                            (2, 2): 0.01}
+                                            (2, 2): 0.01, (2, 3): 0.005, (3, 2): 0.005, (3, 3): 0.003}
 for _k in range(3, 9):
     PARA_MOVES[(1, _k)] = PARA_MOVES[(_k, 1)] = 0.02 * 0.4 ** (_k - 3)
 # Sentence groups inside one paragraph group: no deletions; a step may join up to four sentences on each side (a long
@@ -329,11 +336,12 @@ SENT_MOVES: dict[tuple[int, int], float] = {(k, l): _SENT_PRIOR[k + l] for k in 
 
 
 def _dp_align(l1: list[int], l2: list[int], m: Model, moves: dict[tuple[int, int], float],
-              cross_ok=None, extra=None) -> list[tuple[int, int, int, int]] | None:
+              cross_ok=None, extra=None, band: int | None = None) -> list[tuple[int, int, int, int]] | None:
     """Length-based dynamic programme. Returns steps (i0, i1, j0, j1) or None when no path exists.
     cross_ok(side, a, b) may veto a step that spans items a..b-1 of side 0 (German) or 1 (English);
-    extra(i0, i1, j0, j1) may add a cost to a step."""
+    extra(i0, i1, j0, j1) may add a cost to a step; band limits the path to this many items from the diagonal."""
     n, k = len(l1), len(l2)
+    slope = k / n if n else 1.0
     p1, p2 = [0], [0]
     for x in l1:
         p1.append(p1[-1] + x)
@@ -351,6 +359,8 @@ def _dp_align(l1: list[int], l2: list[int], m: Model, moves: dict[tuple[int, int
             for (di, dj), prior in moves.items():
                 ni, nj = i + di, j + dj
                 if ni > n or nj > k:
+                    continue
+                if band is not None and abs(nj - ni * slope) > band:
                     continue
                 if cross_ok is not None and ((di > 1 and not cross_ok(0, i, ni)) or (dj > 1 and not cross_ok(1, j, nj))):
                     continue
@@ -385,9 +395,15 @@ def quote_count(s: str) -> int:
     return sum(1 for ch in s if ch in QUOTE_MARKS)
 
 
+def end_class(s: str) -> str:
+    """The sentence-final mark a text ends with: ".", "!", "?", or "o" for anything else."""
+    mt = TERMINAL.search(s)
+    return mt.group(1)[-1] if mt and mt.group(1)[-1] in ".!?" else "o"
+
+
 def align_paragraphs(de_paras: list[str], en_paras: list[str], m: Model) -> list[tuple[list[int], list[int]]]:
-    """Aligns two lists of paragraphs by their lengths. Quotation marks and question marks add to a group's cost when
-    the two sides disagree, because paragraph lengths alone are ambiguous in dialogue. Returns the groups
+    """Aligns two lists of paragraphs by their lengths. Quotation marks, question marks and the final mark of the
+    group add to a group's cost when the two sides disagree, because paragraph lengths alone are ambiguous in dialogue. Returns the groups
     [(german indices, english indices)] in order."""
     def prefix(paras: list[str], f) -> list[int]:
         out = [0]
@@ -397,10 +413,15 @@ def align_paragraphs(de_paras: list[str], en_paras: list[str], m: Model) -> list
 
     qd, qe = prefix(de_paras, quote_count), prefix(en_paras, quote_count)
     md, me = prefix(de_paras, lambda p: p.count("?")), prefix(en_paras, lambda p: p.count("?"))
+    de_end = [end_class(p) for p in de_paras]
+    en_end = [end_class(p) for p in en_paras]
 
     def extra(i0: int, i1: int, j0: int, j1: int) -> float:
-        return (min(abs((qd[i1] - qd[i0]) - (qe[j1] - qe[j0])), 6)
+        cost = (min(abs((qd[i1] - qd[i0]) - (qe[j1] - qe[j0])), 6)
                 + min(abs((md[i1] - md[i0]) - (me[j1] - me[j0])), 4))
+        if i1 > i0 and j1 > j0 and de_end[i1 - 1] != en_end[j1 - 1]:
+            cost += 1.2                 # a group usually ends with the same kind of mark on both sides (. ! ?)
+        return cost
 
     steps = _dp_align([len(p) for p in de_paras], [len(p) for p in en_paras], m, PARA_MOVES, None, extra) or []
     return [(list(range(i0, i1)), list(range(j0, j1))) for i0, i1, j0, j1 in steps]
@@ -462,31 +483,11 @@ def steps_are_believable(de_sents: list[str], en_sents: list[str], steps: list[t
     return n < 6 or merged <= MAX_MERGED_SHARE * n
 
 
-def paragraphs_that_pass(de_sents: list[str], en_sents: list[str], de_para: list[int], n_paras: int, m: Model) -> list[bool]:
-    """The spec's rule for a group whose German and English sentence counts are equal: sentence k is paired with
-    sentence k. The pairs of each German paragraph are kept when none of them is bad and not too many carry a
-    signal; a paragraph next to a doubtful pair gets the whole English paragraph instead (never a forced pairing)."""
-    de_len = sum(map(len, de_sents))
-    if de_len >= 40 and not 0.65 <= sum(map(len, en_sents)) / (m.c * de_len) <= 1.55:
-        return [False] * n_paras
-    steps = [(k, k + 1, k, k + 1) for k in range(len(de_sents))]
-    bad, flagged = judge_steps(de_sents, en_sents, steps, m)
-    passes = []
-    for q in range(n_paras):
-        idx = [k for k, p in enumerate(de_para) if p == q]
-        ok = not any(bad[k] for k in idx)
-        if ok and len(idx) >= 2 and sum(flagged[k] for k in idx) > max(1, int(SLACK * len(idx))):
-            ok = False
-        passes.append(ok)
-    return passes
-
-
-def _units(de_sents, de_para, de_hard, en_sents, en_para, m: Model) -> list[tuple[int, int, int, int]] | None:
+def _dp_steps(de_sents, de_para, de_hard, en_sents, en_para, m: Model, band: int | None = None) -> list[tuple[int, int, int, int]] | None:
     """Sentence-level Gale-Church inside a group, where a step may join up to four sentences of one side (never across
     a paragraph break and never across a dropped speaker-change dash). Quotation marks and question marks add to a
-    step's cost, so speeches and questions help to keep the two sides in step. Returns the steps if the whole
-    alignment is believable, else None. Used to locate English paragraphs, and for the output only with
-    MERGED_UNITS."""
+    step's cost, so speeches and questions help to keep the two sides in step, and so does a step that ends a German
+    and an English paragraph together."""
     def cross_ok(side: int, a: int, b: int) -> bool:
         para = de_para if side == 0 else en_para
         if len({para[x] for x in range(a, b)}) > 1:
@@ -512,10 +513,35 @@ def _units(de_sents, de_para, de_hard, en_sents, en_para, m: Model) -> list[tupl
             cost -= 0.7                 # both paragraphs end here: a good place for a step to end
         return cost
 
-    steps = _dp_align([len(x) for x in de_sents], [len(x) for x in en_sents], m, SENT_MOVES, cross_ok, extra)
+    return _dp_align([len(x) for x in de_sents], [len(x) for x in en_sents], m, SENT_MOVES, cross_ok, extra, band)
+
+
+def _units(de_sents, de_para, de_hard, en_sents, en_para, m: Model) -> list[tuple[int, int, int, int]] | None:
+    """The steps of _dp_steps if the whole alignment is believable, else None. Used to locate English paragraphs, and
+    for the output only with MERGED_UNITS."""
+    steps = _dp_steps(de_sents, de_para, de_hard, en_sents, en_para, m)
     if steps and steps_are_believable(de_sents, en_sents, steps, m):
         return steps
     return None
+
+
+def paragraphs_that_pass(de_sents: list[str], en_sents: list[str], de_para: list[int], n_paras: int, m: Model) -> list[bool]:
+    """The spec's rule for a group whose German and English sentence counts are equal: sentence k is paired with
+    sentence k. The pairs of each German paragraph are kept when none of them is bad and not too many carry a
+    signal; a paragraph next to a doubtful pair gets the whole English paragraph instead (never a forced pairing)."""
+    de_len = sum(map(len, de_sents))
+    if de_len >= 40 and not 0.65 <= sum(map(len, en_sents)) / (m.c * de_len) <= 1.55:
+        return [False] * n_paras
+    steps = [(k, k + 1, k, k + 1) for k in range(len(de_sents))]
+    bad, flagged = judge_steps(de_sents, en_sents, steps, m)
+    passes = []
+    for q in range(n_paras):
+        idx = [k for k, p in enumerate(de_para) if p == q]
+        ok = not any(bad[k] for k in idx)
+        if ok and len(idx) >= 2 and sum(flagged[k] for k in idx) > max(1, int(SLACK * len(idx))):
+            ok = False
+        passes.append(ok)
+    return passes
 
 
 @dataclass
@@ -573,6 +599,41 @@ def _try_sentences(g: Group, de_sent, en_sent, m: Model) -> bool:
         return False
     _, g.objects, g.exact, g.coarse = best
     return True
+
+
+def _verify_groups(groups: list[Group], de_sent, en_sent, m: Model) -> None:
+    """Where short lines of dialogue follow each other, an off-by-one pairing looks as good as the right one by length
+    alone, and a paragraph break that sits a sentence away in the other book makes it happen. The pairs that were
+    accepted on equal counts are therefore checked against a sentence-level alignment of the whole text (steps may
+    join sentences and may cross paragraph groups; it also looks at quotation marks and paragraph ends): a German
+    paragraph keeps its pairs only if that alignment pairs each of its sentences with the same English sentence."""
+    for mode in (0, 1):
+        todo = [g for g in groups if g.objects is not None and g.exact and g.coarse == (mode == 1)]
+        if not todo:
+            continue
+        de_split, en_split = de_sent[mode], en_sent[mode]
+        de_sents = [t for x in de_split for t, _ in x]
+        de_para = [q for q, x in enumerate(de_split) for _ in x]
+        de_hard = [h for x in de_split for _, h in x]
+        en_sents = [t for x in en_split for t, _ in x]
+        en_para = [q for q, x in enumerate(en_split) for _ in x]
+        de_off, en_off = [0], [0]
+        for x in de_split:
+            de_off.append(de_off[-1] + len(x))
+        for x in en_split:
+            en_off.append(en_off[-1] + len(x))
+        steps = _dp_steps(de_sents, de_para, de_hard, en_sents, en_para, m, band=max(30, len(en_sents) // 6)) or []
+        one_to_one = {i0: j0 for i0, i1, j0, j1 in steps if (i1 - i0, j1 - j0) == (1, 1)}
+        for g in todo:
+            k = 0                                   # index of the group's sentence in the group's own English
+            for q, i in enumerate(g.di):
+                count = len(de_split[i])
+                start = en_off[g.ei[0]]
+                if g.objects[q] is not None and not all(one_to_one.get(de_off[i] + t) == start + k + t for t in range(count)):
+                    g.objects[q] = None
+                k += count
+            if all(o is None for o in g.objects):
+                g.objects = None
 
 
 def _locate_fallbacks(groups: list[Group], de_sent, en_sent, en_paras: list[str], m: Model) -> None:
@@ -678,6 +739,7 @@ def build_aligned(de_paras: list[str], en_paras: list[str], m: Model, direct: bo
             if not done:
                 break
     if not direct:
+        _verify_groups(groups, de_sent, en_sent, m)
         _locate_fallbacks(groups, de_sent, en_sent, en_paras, m)
     for g in groups:
         built.group_kinds[f"{len(g.di)}-{len(g.ei)}"] += 1
@@ -759,7 +821,8 @@ HUNT_CONTENTS = re.compile(r"^\s*(\d+\*?|Legend \d+)\s+(.+?)\s*\((.+)\)\s*$")
 
 def parse_hunt(refresh: bool = False) -> dict[str, dict]:
     """Hunt 1884, Project Gutenberg #5314: {tale key -> title, German title from the contents list, paragraphs}.
-    Keys are the Grimm numbers ("5", "151*") and "Legend 1" ... "Legend 10"."""
+    Keys are the Grimm numbers ("5", "151*") and "Legend 1" ... "Legend 10". "main" is the text before a divider line
+    "* * * * * * *"; only Rotkäppchen has one, followed by a second story that the 1921 print does not contain."""
     lines = pg_text(5314, refresh).split("\n")
     ci = next(i for i, ln in enumerate(lines) if ln.strip() == "CONTENTS")
     contents, last = [], ci
@@ -785,14 +848,16 @@ def parse_hunt(refresh: bool = False) -> dict[str, dict]:
         i, title = heads[key]
         end = heads[keys[n + 1]][0] if n + 1 < len(keys) else len(lines)
         paras = paragraphs_from_lines(lines[i + 1:end])
-        cleaned = []
+        cleaned, main = [], None
         for p in paras:
-            if re.fullmatch(r"[\s*]+", p):          # "* * * * * * *" divider
+            if re.fullmatch(r"[\s*]+", p):          # "* * * * * * *" divider: what follows is an addition (only in Rotkäppchen)
+                main = main if main is not None else list(cleaned)
                 continue
             p = re.sub(r"(?<=[A-Za-z.,;:!?”’])\*(?=\s|$)", "", p)   # footnote star (the note itself is not in the file)
             cleaned.append(p)
         de_title = next(d for k, _, d in contents if k == key)
-        out[key] = {"key": key, "title": title, "titleDe": de_title, "paragraphs": cleaned}
+        out[key] = {"key": key, "title": title, "titleDe": de_title, "paragraphs": cleaned,
+                    "main": main if main is not None else cleaned}
     return out
 
 
@@ -974,11 +1039,11 @@ GRIMM_SELECTION = [
     ("1921", "diescholle", "172"),
     ("wikisource", "Der süße Brei (1857)", "103"),
     ("wikisource", "Die Sternthaler (1857)", "153"),
-    ("1921", "dasaltemutterchen", "Legend 8"),
     ("1921", "desherrnunddesteufelsgetier", "148"),
     ("1921", "vomtodedeshuhnchens", "80"),
     ("wikisource", "Das Lumpengesindel (1857)", "10"),
     ("1921", "derwolfunddiesiebenjungengeisslein", "5"),
+    ("1921", "rotkappchen", "26"),
     ("1921", "rumpelstilzchen", "55"),
     ("1921", "diewichtelmanner", "39"),
     ("1921", "frauholle", "24"),
@@ -1001,10 +1066,6 @@ def stats_of(paragraphs: list[dict]) -> dict:
             "sentencesAligned": aligned, "words": words, "wordsAligned": words_aligned,
             "sentenceAligned": round(aligned / max(1, entries), 3),
             "enParaNull": sum(1 for p in paragraphs if "enPara" in p and p["enPara"] is None)}
-
-
-def count_true_sentences(paragraphs: list[dict]) -> int:
-    return sum(len(split_sentences(s, "de")) for p in paragraphs for s in p["de"])
 
 
 def pg_flat(ebook: int, refresh: bool = False) -> str:
@@ -1120,7 +1181,7 @@ def survey_grimm(hunt: dict, g1921: dict, refresh: bool) -> list[dict]:
         if hk is None:
             rows.append({"title": tale["title"], "hunt": None, "source": "1921", "note": "no counterpart in Hunt's list"})
             continue
-        built = align_text(tale["paragraphs"], hunt[hk]["paragraphs"], True)
+        built = align_text(tale["paragraphs"], hunt[hk]["main"], True)
         st = stats_of(built.paragraphs)
         rows.append({"title": tale["title"], "titleEn": hunt[hk]["title"], "hunt": hk, "source": "1921", "key": key,
                      "c": round(built.model.c, 2), **st, "turnsSplit": built.turns_split})
@@ -1151,14 +1212,15 @@ def build_grimm(hunt: dict, g1921: dict, refresh: bool, merged: bool) -> list[Re
             de = {"source": "German Wikisource", "edition": "Kinder- und Haus-Märchen, 7th edition (Ausgabe letzter Hand), Göttingen: Dieterich, 1857",
                   "url": t["url"], "license": "Public domain (original text); Wikisource transcription under CC BY-SA 4.0"}
             flat_de, extra_notes = t["flat"], []
-        built = align_text(de_paras, h["paragraphs"], kind == "1921")
+        en_paras = h["main"] if kind == "1921" else h["paragraphs"]
+        built = align_text(de_paras, en_paras, kind == "1921")
         title_id = re.split(r"\s+oder\s+", title)[0]
         en = dict(HUNT_SOURCE)
         doc = make_doc("grimm-" + slug(title_id), 3, title, h["title"], "Brüder Grimm", year, historical, de, en, built.paragraphs,
                        {"khm": hk})
         res = Result(doc, built, stats_of(built.paragraphs), flat_de, flat_hunt, notes=extra_notes)
         if merged:
-            res.merged_share = merged_word_share(de_paras, h["paragraphs"], kind == "1921")
+            res.merged_share = merged_word_share(de_paras, en_paras, kind == "1921")
         results.append(res)
     results.sort(key=lambda r: r.stats["words"])
     return results

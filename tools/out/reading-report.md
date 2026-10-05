@@ -1,8 +1,8 @@
 # Reading sources report
 
-Built 2026-10-05 02:37 by `tools/build_reading_sources.py` in 23 s. Texts: `tools/sources/reading/<id>.json`, list: `tools/sources/reading/index.json`.
+Built 2026-10-05 02:47 by `tools/build_reading_sources.py` in 53 s. Texts: `tools/sources/reading/<id>.json`, list: `tools/sources/reading/index.json`.
 
-Nothing in these files was written, translated or corrected by Claude or by the script. Every German and English string is copied from its source; only whitespace is normalised and layout marks that are not text are removed (see Method). The copy check below found **0 strings** out of 4060 that are not plain substrings of their source.
+Nothing in these files was written, translated or corrected by Claude or by the script. Every German and English string is copied from its source; only whitespace is normalised and layout marks that are not text are removed (see Method). The copy check below found **0 strings** out of 4088 that are not plain substrings of their source.
 
 ## Summary
 
@@ -15,37 +15,37 @@ Nothing in these files was written, translated or corrected by Claude or by the 
 | grimm-die-scholle | 3 | 215 | 3 | 11 | 100% | 100% | - |
 | grimm-der-suesse-brei | 3 | 222 | 1 | 6 | 0% | 0% | - |
 | grimm-die-sternthaler | 3 | 298 | 1 | 11 | 0% | 0% | - |
-| grimm-das-alte-muetterchen | 3 | 311 | 1 | 12 | 100% | 100% | - |
 | grimm-des-herrn-und-des-teufels-getier | 3 | 314 | 3 | 15 | 100% | 100% | - |
 | grimm-vom-tode-des-huehnchens | 3 | 587 | 5 | 25 | 80% | 52% | - |
 | grimm-das-lumpengesindel | 3 | 723 | 2 | 23 | 50% | 30% | - |
+| grimm-rotkaeppchen | 3 | 996 | 22 | 48 | 68% | 48% | - |
 | grimm-der-wolf-und-die-sieben-jungen-geisslein | 3 | 1000 | 8 | 49 | 50% | 35% | - |
 | grimm-rumpelstilzchen | 3 | 1002 | 8 | 42 | 50% | 19% | - |
 | grimm-die-wichtelmaenner | 3 | 1065 | 11 | 45 | 55% | 24% | - |
 | grimm-frau-holle | 3 | 1082 | 6 | 46 | 33% | 4% | - |
 | grimm-die-bremer-stadtmusikanten | 3 | 1184 | 9 | 49 | 33% | 16% | - |
-| grimm-der-froschkoenig | 3 | 1278 | 15 | 51 | 60% | 39% | - |
+| grimm-der-froschkoenig | 3 | 1278 | 15 | 52 | 53% | 36% | - |
 | grimm-haensel-und-gretel | 3 | 2664 | 30 | 131 | 70% | 68% | - |
-| heidi-1-01 | 4 | 4293 | 50 | 141 | 58% | 42% | - |
+| heidi-1-01 | 4 | 4293 | 50 | 141 | 34% | 23% | - |
 | heidi-1-02 | 4 | 2470 | 39 | 112 | 69% | 41% | - |
-| heidi-1-03 | 4 | 4265 | 84 | 203 | 61% | 40% | - |
-| heidi-1-04 | 4 | 4670 | 62 | 155 | 65% | 47% | - |
-| heidi-1-05 | 4 | 3669 | 59 | 122 | 78% | 62% | - |
-| heidi-1-06 | 4 | 2622 | 53 | 112 | 81% | 79% | - |
-| heidi-1-07 | 4 | 4544 | 114 | 216 | 75% | 56% | - |
-| heidi-1-08 | 4 | 3368 | 53 | 170 | 55% | 28% | - |
+| heidi-1-03 | 4 | 4265 | 84 | 203 | 58% | 38% | - |
+| heidi-1-04 | 4 | 4670 | 62 | 155 | 58% | 50% | - |
+| heidi-1-05 | 4 | 3669 | 59 | 122 | 73% | 57% | - |
+| heidi-1-06 | 4 | 2622 | 53 | 112 | 77% | 77% | - |
+| heidi-1-07 | 4 | 4544 | 114 | 216 | 76% | 57% | - |
+| heidi-1-08 | 4 | 3368 | 53 | 170 | 49% | 26% | - |
 | heidi-1-09 | 4 | 1940 | 42 | 78 | 57% | 37% | - |
 | heidi-1-10 | 4 | 3229 | 60 | 127 | 58% | 57% | - |
-| heidi-1-11 | 4 | 1836 | 22 | 44 | 64% | 39% | - |
-| heidi-1-12 | 4 | 3689 | 62 | 158 | 65% | 44% | - |
-| heidi-1-13 | 4 | 5712 | 80 | 199 | 55% | 39% | - |
-| heidi-1-14 | 4 | 4736 | 63 | 156 | 60% | 46% | - |
+| heidi-1-11 | 4 | 1836 | 22 | 44 | 59% | 34% | - |
+| heidi-1-12 | 4 | 3689 | 62 | 159 | 58% | 41% | - |
+| heidi-1-13 | 4 | 5712 | 80 | 207 | 42% | 24% | - |
+| heidi-1-14 | 4 | 4736 | 63 | 160 | 40% | 31% | - |
 
 - Stage 2 Wikibooks: 3 texts, 143 German words, 32 sentences; sentence pairs for 84% of the sentences and 58% of the words.
 
-- Stage 3 Grimm: 15 texts, 12090 German words, 521 sentences; sentence pairs for 42% of the sentences and 40% of the words.
+- Stage 3 Grimm: 15 texts, 12775 German words, 558 sentences; sentence pairs for 41% of the sentences and 39% of the words.
 
-- Stage 4 Heidi part 1: 14 texts, 51043 German words, 1993 sentences; sentence pairs for 47% of the sentences and 45% of the words.
+- Stage 4 Heidi part 1: 14 texts, 51043 German words, 2006 sentences; sentence pairs for 42% of the sentences and 39% of the words.
 
 "Sentences" are the entries of the `de` lists. Where the fine split gives different sentence counts on the two sides, the same test is made with a coarse split that keeps each quotation in one piece; those entries are then speech-sized (counts per text are in the detail tables). The last column is for information: it shows how much more would be paired if the programme were also allowed to join two or three sentences on one side (`MERGED_UNITS = True`). The rule for the output is the specified one (equal counts and believable lengths, otherwise the whole English paragraph).
 
@@ -85,18 +85,18 @@ Choice of the 15 tales: the three that the brief named and that exist in a usabl
 | Der süße Brei | 103 | 1857 Wikisource | 222 | 1 | 6 | 0% | 0% | yes |
 | Das Bürle im Himmel | 167 | 1921 | 233 | 1 | 8 | 0% | 0% |  |
 | Die Sternthaler | 153 | 1857 Wikisource | 298 | 1 | 11 | 0% | 0% | yes |
-| Das alte Mütterchen | Legend 8 | 1921 | 311 | 1 | 12 | 100% | 100% | yes |
+| Das alte Mütterchen | Legend 8 | 1921 | 311 | 1 | 12 | 100% | 100% |  |
 | Des Herrn und des Teufels Getier | 148 | 1921 | 314 | 3 | 15 | 100% | 100% | yes |
-| Der Bauer und der Teufel | 189 | 1921 | 335 | 4 | 18 | 25% | 28% |  |
+| Der Bauer und der Teufel | 189 | 1921 | 335 | 2 | 18 | 0% | 0% |  |
 | Der Fuchs und die Frau Gevatterin | 74 | 1921 | 339 | 4 | 14 | 50% | 50% |  |
 | Der Fuchs und das Pferd | 132 | 1921 | 456 | 1 | 17 | 0% | 0% |  |
 | Die Lebenszeit | 176 | 1921 | 535 | 3 | 35 | 0% | 0% |  |
 | Vom Tode des Hühnchens | 80 | 1921 | 587 | 5 | 25 | 80% | 52% | yes |
 | Die drei Brüder | 124 | 1921 | 610 | 3 | 21 | 67% | 29% |  |
-| Der Wolf und der Fuchs | 73 | 1921 | 666 | 5 | 31 | 80% | 77% |  |
+| Der Wolf und der Fuchs | 73 | 1921 | 666 | 3 | 31 | 67% | 55% |  |
 | Die faule Spinnerin | 128 | 1921 | 671 | 8 | 31 | 62% | 29% |  |
-| Der Schneider im Himmel | 35 | 1921 | 709 | 3 | 29 | 67% | 28% |  |
-| Die Hochzeit der Frau Füchsin | 38 | 1921 | 719 | 26 | 56 | 77% | 59% |  |
+| Der Schneider im Himmel | 35 | 1921 | 709 | 6 | 29 | 50% | 28% |  |
+| Die Hochzeit der Frau Füchsin | 38 | 1921 | 719 | 26 | 58 | 58% | 45% |  |
 | Das Lumpengesindel | 10 | 1857 Wikisource | 723 | 2 | 23 | 50% | 30% | yes |
 | Der Sperling und seine vier Kinder | 157 | 1921 | 815 | 7 | 36 | 0% | 0% |  |
 | Die Geschenke des kleinen Volkes | 182 | 1921 | 843 | 2 | 30 | 50% | 60% |  |
@@ -105,43 +105,43 @@ Choice of the 15 tales: the three that the brief named and that exist in a usabl
 | Die drei Feldscherer | 118 | 1921 | 930 | 3 | 47 | 0% | 0% |  |
 | Die sieben Schwaben | 119 | 1921 | 943 | 19 | 44 | 74% | 32% |  |
 | Die Rübe | 146 | 1921 | 996 | 1 | 37 | 0% | 0% |  |
-| Rotkäppchen | 26 | 1921 | 996 | 22 | 53 | 32% | 13% |  |
+| Rotkäppchen | 26 | 1921 | 996 | 22 | 48 | 68% | 48% | yes |
 | Der Wolf und die sieben jungen Geißlein | 5 | 1921 | 1000 | 8 | 49 | 50% | 35% | yes |
 | Rumpelstilzchen | 55 | 1921 | 1002 | 8 | 42 | 50% | 19% | yes |
-| Die drei Handwerksburschen | 120 | 1921 | 1032 | 15 | 57 | 7% | 4% |  |
+| Die drei Handwerksburschen | 120 | 1921 | 1032 | 1 | 57 | 0% | 0% |  |
 | Die Wichtelmänner | 39 | 1921 | 1065 | 11 | 45 | 55% | 24% | yes |
 | Frau Holle | 24 | 1921 | 1082 | 6 | 46 | 33% | 4% | yes |
-| Der Hund und der Sperling | 58 | 1921 | 1094 | 4 | 62 | 25% | 13% |  |
+| Der Hund und der Sperling | 58 | 1921 | 1094 | 11 | 62 | 27% | 13% |  |
 | Der Gevatter Tod | 44 | 1921 | 1108 | 14 | 53 | 71% | 53% |  |
 | Die Bremer Stadtmusikanten | 27 | 1921 | 1184 | 9 | 49 | 33% | 16% | yes |
 | Dornröschen | 50 | 1921 | 1216 | 5 | 45 | 60% | 60% |  |
 | Der Hase und der Igel | 187 | 1921 | 1227 | 21 | 65 | 33% | 29% |  |
-| Der Froschkönig oder der eiserne Heinrich | 1 | 1921 | 1278 | 15 | 51 | 60% | 39% | yes |
+| Der Froschkönig oder der eiserne Heinrich | 1 | 1921 | 1278 | 15 | 52 | 53% | 36% | yes |
 | Die kluge Bauerntochter | 94 | 1921 | 1288 | 2 | 49 | 0% | 0% |  |
 | Der Stiefel von Büffelleder | 199 | 1921 | 1311 | 2 | 66 | 0% | 0% |  |
 | Der Grabhügel | 195 | 1921 | 1328 | 11 | 68 | 18% | 7% |  |
-| Rapunzel | 12 | 1921 | 1334 | 16 | 60 | 44% | 32% |  |
-| Die drei Vügelkens | 96 | 1921 | 1358 | 23 | 72 | 61% | 38% |  |
+| Rapunzel | 12 | 1921 | 1334 | 13 | 60 | 46% | 22% |  |
+| Die drei Vügelkens | 96 | 1921 | 1358 | 14 | 72 | 29% | 19% |  |
 | Daumerlings Wanderschaft | 45 | 1921 | 1465 | 8 | 82 | 38% | 11% |  |
-| König Drosselbart | 52 | 1921 | 1529 | 12 | 85 | 8% | 8% |  |
+| König Drosselbart | 52 | 1921 | 1529 | 12 | 85 | 0% | 0% |  |
 | Der Geist im Glas | 99 | 1921 | 1630 | 6 | 73 | 17% | 19% |  |
 | Marienkind | 3 | 1921 | 1763 | 8 | 67 | 25% | 22% |  |
 | Der Bärenhäuter | 101 | 1921 | 1833 | 12 | 79 | 8% | 11% |  |
-| Die drei Männlein im Walde | 13 | 1921 | 1854 | 36 | 87 | 86% | 67% |  |
-| Hans im Glück | 83 | 1921 | 1871 | 30 | 91 | 63% | 33% |  |
-| Sechse kommen durch die ganze Welt | 71 | 1921 | 1882 | 5 | 79 | 0% | 0% |  |
+| Die drei Männlein im Walde | 13 | 1921 | 1854 | 36 | 87 | 81% | 62% |  |
+| Hans im Glück | 83 | 1921 | 1871 | 30 | 91 | 60% | 31% |  |
+| Sechse kommen durch die ganze Welt | 71 | 1921 | 1882 | 14 | 79 | 7% | 1% |  |
 | Daumesdick | 37 | 1921 | 2071 | 23 | 105 | 52% | 28% |  |
 | Das Wasser des Lebens | 97 | 1921 | 2084 | 16 | 81 | 25% | 22% |  |
-| Brüderchen und Schwesterchen | 11 | 1921 | 2246 | 15 | 98 | 73% | 61% |  |
+| Brüderchen und Schwesterchen | 11 | 1921 | 2246 | 22 | 97 | 73% | 67% |  |
 | Schneeweißchen und Rosenrot | 161 | 1921 | 2256 | 11 | 91 | 64% | 43% |  |
 | Der Teufel mit den drei goldenen Haaren | 29 | 1921 | 2395 | 11 | 119 | 27% | 18% |  |
-| Aschenputtel | 21 | 1921 | 2414 | 30 | 121 | 53% | 30% |  |
+| Aschenputtel | 21 | 1921 | 2414 | 30 | 121 | 50% | 29% |  |
 | Hänsel und Gretel | 15 | 1921 | 2664 | 30 | 131 | 70% | 68% | yes |
-| Der treue Johannes | 6 | 1921 | 2812 | 9 | 107 | 44% | 44% |  |
-| Sneewittchen | 53 | 1921 | 2834 | 41 | 155 | 66% | 32% |  |
+| Der treue Johannes | 6 | 1921 | 2812 | 19 | 106 | 47% | 35% |  |
+| Sneewittchen | 53 | 1921 | 2834 | 41 | 155 | 63% | 32% |  |
 | Von dem Fischer un syner Fru | 19 | 1921 | 2978 | 31 | 147 | 55% | 31% |  |
 | Das tapfere Schneiderlein | 20 | 1921 | 2985 | 10 | 138 | 20% | 14% |  |
-| Von dem Machandelboom | 47 | 1921 | 2990 | 58 | 132 | 53% | 33% |  |
+| Von dem Machandelboom | 47 | 1921 | 2990 | 58 | 135 | 41% | 21% |  |
 | Märchen von einem, der auszog, das Fürchten zu lernen | 4 | 1921 | 3401 | 11 | 171 | 27% | 18% |  |
 | Bruder Lustig | 81 | 1921 | 3821 | 51 | 176 | 47% | 30% |  |
 | Tischchen Goldesel, Knüppel aus deck dich, und dem Sack | - | 1921 | - | - | - | - | - | not matched (no counterpart in Hunt's list) |
@@ -156,20 +156,20 @@ Part 2 (German #7512, 10 chapters; Edwardes chapters XV to XXIII, 9 chapters) wa
 
 | id | German title | English title | words | paragraphs | sentences | paragraphs with pairs | sentences with pairs |
 |---|---|---|---|---|---|---|---|
-| heidi-1-01 | Zum Alm-Öhi hinauf | Up the Mountain to Alm-Uncle | 4293 | 50 | 141 | 58% | 42% |
+| heidi-1-01 | Zum Alm-Öhi hinauf | Up the Mountain to Alm-Uncle | 4293 | 50 | 141 | 34% | 23% |
 | heidi-1-02 | Beim Großvater | At Home with Grandfather | 2470 | 39 | 112 | 69% | 41% |
-| heidi-1-03 | Auf der Weide | Out with the Goats | 4265 | 84 | 203 | 61% | 40% |
-| heidi-1-04 | Bei der Großmutter | The Visit to Grandmother | 4670 | 62 | 155 | 65% | 47% |
-| heidi-1-05 | Es kommt ein Besuch und dann noch einer, der mehr Folgen hat | Two Visits and What Came of Them | 3669 | 59 | 122 | 78% | 62% |
-| heidi-1-06 | Ein neues Kapitel und lauter neue Dinge | A New Chapter about New Things | 2622 | 53 | 112 | 81% | 79% |
-| heidi-1-07 | Fräulein Rottenmeier hat einen unruhigen Tag | Fraulein Rottenmeier Spends an Uncomfortable Day | 4544 | 114 | 216 | 75% | 56% |
-| heidi-1-08 | Im Hause Sesemann geht's unruhig zu | There is Great Commotion in the Large House | 3368 | 53 | 170 | 55% | 28% |
+| heidi-1-03 | Auf der Weide | Out with the Goats | 4265 | 84 | 203 | 58% | 38% |
+| heidi-1-04 | Bei der Großmutter | The Visit to Grandmother | 4670 | 62 | 155 | 58% | 50% |
+| heidi-1-05 | Es kommt ein Besuch und dann noch einer, der mehr Folgen hat | Two Visits and What Came of Them | 3669 | 59 | 122 | 73% | 57% |
+| heidi-1-06 | Ein neues Kapitel und lauter neue Dinge | A New Chapter about New Things | 2622 | 53 | 112 | 77% | 77% |
+| heidi-1-07 | Fräulein Rottenmeier hat einen unruhigen Tag | Fraulein Rottenmeier Spends an Uncomfortable Day | 4544 | 114 | 216 | 76% | 57% |
+| heidi-1-08 | Im Hause Sesemann geht's unruhig zu | There is Great Commotion in the Large House | 3368 | 53 | 170 | 49% | 26% |
 | heidi-1-09 | Der Hausherr hört allerlei in seinem Hause, das er noch nicht gehört hat | Herr Sesemann Hears of Things that are New to Him | 1940 | 42 | 78 | 57% | 37% |
 | heidi-1-10 | Eine Großmama | Another Grandmother | 3229 | 60 | 127 | 58% | 57% |
-| heidi-1-11 | Heidi nimmt auf einer Seite zu und auf der anderen ab | Heidi Gains in One Way and Loses in Another | 1836 | 22 | 44 | 64% | 39% |
-| heidi-1-12 | Im Hause Sesemann spukt's | A Ghost in the House | 3689 | 62 | 158 | 65% | 44% |
-| heidi-1-13 | Am Sommerabend die Alm hinan | A Summer Evening on the Mountain | 5712 | 80 | 199 | 55% | 39% |
-| heidi-1-14 | Am Sonntag, wenn's läutet | Sunday Bells | 4736 | 63 | 156 | 60% | 46% |
+| heidi-1-11 | Heidi nimmt auf einer Seite zu und auf der anderen ab | Heidi Gains in One Way and Loses in Another | 1836 | 22 | 44 | 59% | 34% |
+| heidi-1-12 | Im Hause Sesemann spukt's | A Ghost in the House | 3689 | 62 | 159 | 58% | 41% |
+| heidi-1-13 | Am Sommerabend die Alm hinan | A Summer Evening on the Mountain | 5712 | 80 | 207 | 42% | 24% |
+| heidi-1-14 | Am Sonntag, wenn's läutet | Sunday Bells | 4736 | 63 | 160 | 40% | 31% |
 
 ## Method
 
@@ -178,7 +178,7 @@ Part 2 (German #7512, 10 chapters; Edwardes chapters XV to XXIII, 9 chapters) wa
 3. Each group is cut into sentences (quotation marks and abbreviations handled; the 1921 print's speaker-change dash " -- " ends a sentence and is not kept). **Sentence pairs are stored only when both sides have the same number of sentences and every pair has a believable length** (z-score against the text's own ratio at most 3.5, at most 15 % of the pairs further than 2.0, at most 15 % that turn a statement into a question or change the number of quotation marks, and the whole group within 0.65 to 1.55 of the expected length). Otherwise the German sentences are stored with the whole English paragraph(s) of the group (`enPara`); a German paragraph with no English counterpart gets `enPara: null`. No pairing is forced.
 4. If the fine split gives different counts, the same test is made on a coarse split that keeps each quotation in one piece (a speech of three sentences and the words that introduce it become one entry). A group that fails is also tried joined with up to three neighbouring groups, because paragraph breaks sit in different places in the two books.
 5. For the 1921 print two readings of the speech turns are tried: paragraphs as printed, and each speech as its own paragraph (the dash is dropped). The reading with more sentence pairs is kept (the tales where the split won are marked in the detail table).
-6. The copy check: every `de`, `en` and `enPara` string is looked up in the whole source text (Gutenberg file, or the visible text of the wiki page) after removing only the layout marks. Result: 4060 strings checked, 0 not found.
+6. The copy check: every `de`, `en` and `enPara` string is looked up in the whole source text (Gutenberg file, or the visible text of the wiki page) after removing only the layout marks. Result: 4088 strings checked, 0 not found.
 
 What is removed from the sources (all of it layout, none of it words): `[Illustration]` lines; the `~` marks of spaced print in the 1921 print; the `_` marks around italic words in the German Heidi; footnote stars in Hunt (the notes themselves are not in the file) and the `* * * * * * *` divider lines; page numbers in the Wikisource text; wiki tags. Whitespace, including line breaks inside paragraphs and no-break spaces, becomes single spaces. Spelling, punctuation, capitals and quotation marks are untouched (the 1921 print uses » « , Heidi uses straight quotes, Hunt uses curly quotes).
 
@@ -193,31 +193,31 @@ What is removed from the sources (all of it layout, none of it words): `[Illustr
 | grimm-die-scholle | 0.99 | 3.00 | 1-1: 1, 2-1: 1 | 0 | 8 | 0 | 0 |  |
 | grimm-der-suesse-brei | 1.03 | 3.00 | 1-1: 1 | 0 | 0 | 0 | 0 |  |
 | grimm-die-sternthaler | 1.06 | 3.00 | 1-1: 1 | 0 | 0 | 0 | 0 |  |
-| grimm-das-alte-muetterchen | 1.00 | 3.00 | 1-1: 1 | 0 | 0 | 0 | 0 |  |
 | grimm-des-herrn-und-des-teufels-getier | 1.02 | 3.00 | 1-1: 1, 2-1: 1 | 0 | 0 | 0 | 0 |  |
 | grimm-vom-tode-des-huehnchens | 1.02 | 1.00 | 5-1: 1 | 0 | 0 | 0 | 0 | yes |
 | grimm-das-lumpengesindel | 0.97 | 3.00 | 1-1: 2 | 0 | 0 | 0 | 0 |  |
+| grimm-rotkaeppchen | 1.02 | 1.04 | 1-1: 12, 1-2: 2, 1-4: 1, 2-3: 1, 5-9: 1 | 2 | 13 | 0 | 0 | yes |
 | grimm-der-wolf-und-die-sieben-jungen-geisslein | 1.00 | 3.00 | 1-1: 6, 2-1: 1 | 0 | 12 | 0 | 0 |  |
 | grimm-rumpelstilzchen | 0.97 | 3.00 | 1-1: 4, 4-9: 1 | 2 | 1 | 0 | 0 |  |
 | grimm-die-wichtelmaenner | 0.99 | 3.00 | 1-1: 8, 3-1: 1 | 0 | 5 | 0 | 0 |  |
 | grimm-frau-holle | 0.99 | 3.00 | 1-1: 2, 1-6: 1, 1-8: 1, 2-2: 1 | 0 | 1 | 0 | 0 |  |
 | grimm-die-bremer-stadtmusikanten | 0.96 | 3.00 | 1-1: 3, 1-3: 2, 1-2: 1, 1-7: 1, 2-2: 1 | 1 | 0 | 0 | 0 | yes |
-| grimm-der-froschkoenig | 0.98 | 2.97 | 1-1: 5, 2-2: 3, 2-1: 2 | 0 | 10 | 0 | 0 | yes |
-| grimm-haensel-und-gretel | 1.00 | 1.00 | 1-1: 9, 2-1: 3, 4-1: 1, 5-4: 1, 6-4: 1 | 2 | 42 | 0 | 0 | yes |
-| heidi-1-01 | 1.05 | 2.80 | 1-1: 29, 2-2: 5, 1-2: 2, 4-4: 1, 5-5: 1 | 3 | 11 | 0 | 0 |  |
-| heidi-1-02 | 1.05 | 2.29 | 1-1: 24, 1-2: 1, 1-3: 1, 2-2: 1, 2-3: 1, 2-4: 1 | 5 | 3 | 0 | 0 |  |
-| heidi-1-03 | 1.03 | 2.14 | 1-1: 52, 2-2: 2, 5-5: 2, 2-1: 1, 2-3: 1, 3-2: 1 | 9 | 7 | 0 | 0 |  |
-| heidi-1-04 | 0.99 | 4.00 | 1-1: 37, 2-1: 3, 1-2: 2, 1-3: 1, 2-3: 1, 3-3: 1 | 6 | 17 | 0 | 0 |  |
-| heidi-1-05 | 0.98 | 2.25 | 1-1: 42, 2-1: 3, 2-2: 3, 1-2: 1, 4-3: 1 | 5 | 9 | 0 | 0 |  |
-| heidi-1-06 | 0.91 | 1.67 | 1-1: 35, 2-2: 3, 2-1: 1, 3-2: 1, 3-4: 1, 4-3: 1 | 6 | 12 | 0 | 0 |  |
-| heidi-1-07 | 0.95 | 2.64 | 1-1: 69, 2-1: 4, 1-2: 2, 2-2: 2, 3-3: 2, 3-2: 1 | 12 | 25 | 0 | 0 |  |
-| heidi-1-08 | 0.92 | 2.87 | 1-1: 18, 2-2: 5, 2-1: 3, 1-2: 1, 3-4: 1, 3-5: 1 | 8 | 2 | 0 | 0 |  |
-| heidi-1-09 | 0.94 | 2.26 | 1-1: 24, 1-2: 1, 2-2: 1, 3-2: 1, 3-3: 1, 4-1: 1 | 4 | 8 | 0 | 0 |  |
-| heidi-1-10 | 0.92 | 3.28 | 1-1: 31, 2-2: 5, 1-2: 2, 13-12: 1, 4-4: 1 | 9 | 4 | 0 | 0 |  |
-| heidi-1-11 | 0.86 | 3.00 | 1-1: 14, 1-2: 2, 2-1: 2, 2-2: 1 | 1 | 2 | 0 | 0 |  |
-| heidi-1-12 | 0.88 | 1.46 | 1-1: 34, 1-2: 2, 2-1: 2, 2-2: 1, 3-3: 1, 4-4: 1 | 6 | 9 | 0 | 0 |  |
-| heidi-1-13 | 0.88 | 3.89 | 1-1: 47, 2-1: 3, 2-2: 3, 4-4: 2, 3-3: 1, 4-5: 1 | 7 | 9 | 0 | 0 |  |
-| heidi-1-14 | 0.93 | 4.00 | 1-1: 28, 2-1: 5, 2-2: 2, 4-3: 2, 1-2: 1, 2-3: 1 | 6 | 7 | 0 | 0 |  |
+| grimm-der-froschkoenig | 0.98 | 3.00 | 1-1: 4, 2-1: 2, 2-2: 2, 3-3: 1 | 0 | 9 | 0 | 0 | yes |
+| grimm-haensel-und-gretel | 1.00 | 1.00 | 1-1: 9, 2-1: 3, 2-2: 1, 3-2: 1, 4-1: 1, 6-4: 1 | 1 | 34 | 0 | 0 | yes |
+| heidi-1-01 | 1.06 | 1.81 | 1-1: 16, 3-3: 6, 4-4: 2, 1-2: 1, 2-2: 1, 5-6: 1 | 3 | 8 | 0 | 0 |  |
+| heidi-1-02 | 1.05 | 2.29 | 1-1: 24, 1-2: 1, 1-3: 1, 2-2: 1, 2-3: 1, 2-4: 1 | 4 | 3 | 0 | 0 |  |
+| heidi-1-03 | 1.03 | 2.04 | 1-1: 45, 2-2: 4, 3-3: 2, 5-5: 2, 2-1: 1, 2-3: 1 | 6 | 6 | 0 | 0 |  |
+| heidi-1-04 | 1.00 | 2.89 | 1-1: 29, 2-3: 3, 3-3: 3, 1-2: 1, 2-1: 1, 3-2: 1 | 5 | 17 | 0 | 0 |  |
+| heidi-1-05 | 0.97 | 2.28 | 1-1: 41, 2-1: 3, 2-2: 3, 2-3: 1, 4-3: 1 | 4 | 9 | 0 | 0 |  |
+| heidi-1-06 | 0.91 | 1.74 | 1-1: 33, 2-2: 2, 3-2: 2, 3-3: 1, 3-4: 1, 4-3: 1 | 4 | 25 | 0 | 0 |  |
+| heidi-1-07 | 0.95 | 2.57 | 1-1: 65, 3-3: 4, 2-1: 3, 2-2: 3, 1-2: 2, 3-2: 2 | 10 | 25 | 0 | 0 |  |
+| heidi-1-08 | 0.93 | 2.88 | 1-1: 16, 2-1: 2, 2-2: 2, 3-3: 2, 1-2: 1, 3-2: 1 | 6 | 1 | 0 | 0 |  |
+| heidi-1-09 | 0.94 | 2.55 | 1-1: 24, 3-3: 3, 2-3: 1, 3-2: 1, 4-1: 1 | 2 | 8 | 0 | 0 |  |
+| heidi-1-10 | 0.92 | 3.28 | 1-1: 32, 2-2: 3, 1-2: 2, 13-12: 1, 3-3: 1, 4-4: 1 | 6 | 4 | 0 | 0 |  |
+| heidi-1-11 | 0.86 | 3.00 | 1-1: 13, 1-2: 2, 2-1: 1, 2-2: 1, 3-2: 1 | 1 | 2 | 0 | 0 |  |
+| heidi-1-12 | 0.89 | 1.77 | 1-1: 29, 3-3: 4, 1-2: 1, 2-1: 1, 4-4: 1, 7-8: 1 | 5 | 9 | 0 | 0 |  |
+| heidi-1-13 | 0.89 | 3.15 | 1-1: 32, 3-3: 3, 2-2: 2, 16-13: 1, 3-2: 1, 4-5: 1 | 9 | 4 | 0 | 0 |  |
+| heidi-1-14 | 0.94 | 3.57 | 1-1: 22, 2-1: 5, 4-3: 2, 1-2: 1, 2-2: 1, 2-3: 1 | 7 | 0 | 0 | 0 |  |
 
 ## Spot checks
 
@@ -262,25 +262,25 @@ Pairs below are taken from the finished files at even spacing (the same ones eve
 
 **heidi-1-03** (Auf der Weide / Out with the Goats)
 
-- DE: Sehen konnte Peter niemand, denn Heidi saß am Boden hinter einem Hügelchen, das dicht mit duftenden Prünellen besät war; da war die ganze Luft umher so mit Wohlgeruch erfüllt, dass Heidi noch nie so Liebliches eingeatmet hatte.
-  EN: Peter could see no one, for Heidi was seated on the ground at the foot of a small hill thickly overgrown with sweet smelling prunella; the whole air seemed filled with its fragrance, and Heidi thought she had never smelt anything so delicious.
-- DE: Er zögerte noch ein wenig, denn er konnte nicht recht glauben, dass es dem Heidi ernst sei; aber dieses hielt erst fest seine Stücke hin, und da Peter nicht zugriff, legte sie es ihm aufs Knie.
-  EN: He hesitated a moment, for he could not believe that Heidi was in earnest; but the latter kept on holding out the bread and cheese, and as Peter still did not take it, she laid it down on his knees.
-- DE: Aber Heidi fiel ihm in den Arm und rief ganz entrüstet: "Du darfst ihm nichts tun, es tut ihm weh, lass ihn los!"
-  EN: Then Heidi flung herself against him and cried indignantly, "You have no right to touch her, it will hurt her, let her alone!"
-- DE: "Dann will ich gar keine mehr mitnehmen.
-  EN: "Then I will never gather any more.
+- DE: "Da", tönte es von irgendwoher zurück.
+  EN: "Here," called back a voice from somewhere.
+- DE: "Und von wem bekommst du die Milch?", wollte Heidi wissen.
+  EN: "And which do you get your milk from?" inquired Heidi.
+- DE: Als ihn aber Peter hier in Sicherheit hatte, erhob er seine Rute und wollte ihn zur Strafe tüchtig durchprügeln, und der Distelfink wich scheu zurück, denn er merkte, was begegnen sollte.
+  EN: Peter, now he had his goat in safety, lifted his stick in order to give her a good beating as punishment, and Greenfinch seeing what was coming shrank back in fear.
+- DE: "Ist's alle Tage wieder so, alle Tage, wenn wir auf der Weide sind?", fragte Heidi, begierig nach einer bejahenden Versicherung horchend, als es nun neben dem Peter die Alm hinunterstieg.
+  EN: "Is it like that every day, shall we see it every day when we bring the goats up here?" asked Heidi, as she clambered down the mountain at Peter's side; she waited eagerly for his answer, hoping that he would tell her it was so.
 
 **heidi-1-13** (Am Sommerabend die Alm hinan / A Summer Evening on the Mountain)
 
-- DE: Sie erinnerte sich auch noch recht wohl der Worte, die ihr der Öhi mit auf den Weg gegeben hatte, dass sie ihm nie mehr vor die Augen kommen solle, und so das Kind dem Alten einmal bringen und dann nehmen und dann wiederbringen, das schien ihr nicht ganz geraten zu sein.
-  EN: She remembered Uncle's last words, that he never wished to set eyes on her again, and it seemed to her that to take back the child to him, after having left it with him once and then taken it away again, was not a safe or wise thing for her to do.
-- DE: Dann fiel Heidi wieder in sein Sinnen zurück; nur hier und da guckte es einmal in seinen Korb hinein, denn alle die Brötchen der Großmutter auf den Tisch legen war sein Hauptgedanke.
-  EN: Now and then she looked inside the basket, for the thing she looked forward to most was laying all the rolls out on grandmother's table.
-- DE: "Da bin ich ja, Großmutter, da bin ich ja", rief Heidi jetzt und stürzte nach der Ecke und gleich auf seine Knie zu der Großmutter heran, fasste ihren Arm und ihre Hände und legte sich an sie und konnte vor Freude gar nichts mehr sagen.
-  EN: "It's I, I, grandmother," cried Heidi as she ran and flung herself on her knees beside the old woman, and seizing her hands, clung to her, unable to speak for joy.
-- DE: Heidi kam herunter und setzte sich auf seinen hohen Stuhl am alten Platze, und nun erfasste es sein Schüsselchen und trank mit einer Begierde, als wäre etwas so Köstliches noch nie in seinen Bereich gekommen, und als es mit einem tiefen Atemzug das Schüsselchen hinstellte, sagte es: "So gut wie unsere Milch ist doch gar nichts auf der Welt, Großvater."
-  EN: Heidi came down, sat herself on her high stool in the old place, and then taking up her bowl drank her milk eagerly, as if she had never come across anything so delicious, and as she put down her bowl, she exclaimed, "Our milk tastes nicer than anything else in the world, grandfather."
+- DE: "Heim?", wiederholte Heidi tonlos und wurde schneeweiß, und eine kleine Weile konnte es gar keinen Atem mehr holen, so stark wurde sein Herz von dem Eindruck gepackt.
+  EN: "Home," murmured Heidi in a low voice, turning pale; she was so overcome that for a moment or two she could hardly breathe.
+- DE: "So ist es dir schlecht gegangen, dass du schon wieder von so weit her heimkommst?"
+  EN: "Didn't they treat you well down there that you have come back so soon?"
+- DE: "Warum hast du denn dein schönes Röcklein ausgezogen?", fragte die Brigitte.
+  EN: "Why have you taken off that pretty dress?" asked Brigitta.
+- DE: "Nein, morgen nicht, aber übermorgen vielleicht, denn morgen muss ich zur Großmutter."
+  EN: "Not to-morrow, but the day after perhaps, for to-morrow I must go down to grandmother."
 
 ## Problems and notes
 

@@ -39,28 +39,16 @@ def texts():
         yield json.loads((SRC / f"{row['id']}.json").read_text(encoding="utf-8"))
 
 
-def fold(t: str) -> str:
-    t = t.lower().replace("ß", "ss")
-    for a, b in (("ä", "a"), ("ö", "o"), ("ü", "u")):
-        t = t.replace(a, b)
-    return re.sub(r"[^a-z]+", " ", t).strip()
-
-
 def recordings():
-    """LibriVox readings (tools/fetch_librivox.py), matched to texts by title (Grimm) or part and chapter (Heidi)."""
+    """LibriVox readings (tools/fetch_librivox.py), each recorded with the id of the text it reads."""
     path = ROOT / "tools" / "sources" / "librivox.json"
     if not path.exists():
         return lambda text: None
     data = json.loads(path.read_text(encoding="utf-8"))
-    grimm = {fold(r["title"]): r for r in data.get("grimm", [])}
-    heidi = {(r["part"], r["chapter"]): r for r in data.get("heidi", [])}
+    by_text = {r["text"]: r for r in data.get("grimm", []) + data.get("heidi", []) if r.get("text")}
 
     def find(text: dict):
-        m = re.match(r"heidi-(\d+)-(\d+)", text["id"])
-        r = heidi.get((int(m.group(1)), int(m.group(2)))) if m else None
-        if not r and text["id"].startswith("grimm"):
-            t = fold(text["title"])
-            r = grimm.get(t) or next((v for k, v in grimm.items() if k.startswith(t) or t.startswith(k)), None)
+        r = by_text.get(text["id"])
         if not r:
             return None
         return {k: r[k] for k in ("url", "reader", "duration", "book", "librivox") if r.get(k)}
