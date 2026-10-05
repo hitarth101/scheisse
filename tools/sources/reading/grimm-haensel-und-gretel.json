@@ -27,20 +27,48 @@
         "Vor einem großen Walde wohnte ein armer Holzhacker mit seiner Frau und seinen zwei Kindern; das Bübchen hieß Hänsel und das Mädchen Gretel.",
         "Er hatte wenig zu beißen und zu brechen, und einmal, als große Teuerung ins Land kam, konnte er auch das tägliche Brot nicht mehr schaffen.",
         "Wie er sich nun abends im Bette Gedanken machte und sich vor Sorgen herumwälzte, seufzte er und sprach zu seiner Frau: »Was soll aus uns werden?",
-        "Wie können wir unsere armen Kinder ernähren, da wir für uns selbst nichts mehr haben?«",
-        "»Weißt du was, Mann,« antwortete die Frau, »wir wollen morgen in aller Frühe die Kinder hinaus in den Wald führen, wo er am dicksten ist.",
-        "Da machen wir ihnen ein Feuer an und geben jedem noch ein Stückchen Brot, dann gehen wir an unsere Arbeit und lassen sie allein.",
-        "Sie finden den Weg nicht wieder nach Hause und wir sind sie los.«",
-        "»Nein, Frau,« sagte der Mann, »das tue ich nicht; wie sollt ich's übers Herz bringen, meine Kinder im Walde allein zu lassen, die wilden Tiere würden bald kommen und sie zerreißen.«",
-        "»O du Narr,« sagte sie, »dann müssen wir alle viere Hungers sterben, du kannst nur die Bretter für die Särge hobeln,« und ließ ihm keine Ruhe, bis er einwilligte.",
-        "»Aber die armen Kinder dauern mich doch,« sagte der Mann."
+        "Wie können wir unsere armen Kinder ernähren, da wir für uns selbst nichts mehr haben?«"
       ],
       "enPara": "Hard by a great forest dwelt a poor wood-cutter with his wife and his two children. The boy was called Hansel and the girl Grethel. He had little to bite and to break, and once when great scarcity fell on the land, he could no longer procure daily bread. Now when he thought over this by night in his bed, and tossed about in his anxiety, he groaned and said to his wife, “What is to become of us? How are we to feed our poor children, when we no longer have anything even for ourselves?” “I’ll tell you what, husband,” answered the woman, “Early to-morrow morning we will take the children out into the forest to where it is the thickest, there we will light a fire for them, and give each of them one piece of bread more, and then we will go to our work and leave them alone. They will not find the way home again, and we shall be rid of them.” “No, wife,” said the man, “I will not do that; how can I bear to leave my children alone in the forest?—the wild animals would soon come and tear them to pieces.” “O, thou fool!” said she, “Then we must all four die of hunger, thou mayest as well plane the planks for our coffins,” and she left him no peace until he consented. “But I feel very sorry for the poor children, all the same,” said the man."
     },
     {
       "de": [
+        "»Weißt du was, Mann,« antwortete die Frau, »wir wollen morgen in aller Frühe die Kinder hinaus in den Wald führen, wo er am dicksten ist.",
+        "Da machen wir ihnen ein Feuer an und geben jedem noch ein Stückchen Brot, dann gehen wir an unsere Arbeit und lassen sie allein.",
+        "Sie finden den Weg nicht wieder nach Hause und wir sind sie los.«"
+      ],
+      "enPara": "Hard by a great forest dwelt a poor wood-cutter with his wife and his two children. The boy was called Hansel and the girl Grethel. He had little to bite and to break, and once when great scarcity fell on the land, he could no longer procure daily bread. Now when he thought over this by night in his bed, and tossed about in his anxiety, he groaned and said to his wife, “What is to become of us? How are we to feed our poor children, when we no longer have anything even for ourselves?” “I’ll tell you what, husband,” answered the woman, “Early to-morrow morning we will take the children out into the forest to where it is the thickest, there we will light a fire for them, and give each of them one piece of bread more, and then we will go to our work and leave them alone. They will not find the way home again, and we shall be rid of them.” “No, wife,” said the man, “I will not do that; how can I bear to leave my children alone in the forest?—the wild animals would soon come and tear them to pieces.” “O, thou fool!” said she, “Then we must all four die of hunger, thou mayest as well plane the planks for our coffins,” and she left him no peace until he consented. “But I feel very sorry for the poor children, all the same,” said the man."
+    },
+    {
+      "de": [
+        "»Nein, Frau,« sagte der Mann, »das tue ich nicht; wie sollt ich's übers Herz bringen, meine Kinder im Walde allein zu lassen, die wilden Tiere würden bald kommen und sie zerreißen.«"
+      ],
+      "en": [
+        "“No, wife,” said the man, “I will not do that; how can I bear to leave my children alone in the forest?—the wild animals would soon come and tear them to pieces.”"
+      ]
+    },
+    {
+      "de": [
+        "»O du Narr,« sagte sie, »dann müssen wir alle viere Hungers sterben, du kannst nur die Bretter für die Särge hobeln,« und ließ ihm keine Ruhe, bis er einwilligte.",
+        "»Aber die armen Kinder dauern mich doch,« sagte der Mann."
+      ],
+      "en": [
+        "“O, thou fool!” said she, “Then we must all four die of hunger, thou mayest as well plane the planks for our coffins,” and she left him no peace until he consented.",
+        "“But I feel very sorry for the poor children, all the same,” said the man."
+      ]
+    },
+    {
+      "de": [
         "Die zwei Kinder hatten vor Hunger auch nicht einschlafen können und hatten gehört, was die Stiefmutter zum Vater gesagt hatte.",
-        "Gretel weinte bittere Tränen und sprach zu Hänsel: »Nun ist's um uns geschehen.«",
+        "Gretel weinte bittere Tränen und sprach zu Hänsel: »Nun ist's um uns geschehen.«"
+      ],
+      "en": [
+        "The two children had also not been able to sleep for hunger, and had heard what their step-mother had said to their father.",
+        "Grethel wept bitter tears, and said to Hansel, “Now all is over with us.”"
+      ]
+    },
+    {
+      "de": [
         "»Still, Gretel,« sprach Hänsel, »gräme dich nicht, ich will uns schon helfen.«",
         "Und als die Alten eingeschlafen waren, stand er auf, zog sein Röcklein an, machte die Untertüre auf und schlich sich hinaus.",
         "Da schien der Mond ganz helle, und die weißen Kieselsteine, die vor dem Hause lagen, glänzten wie lauter Batzen.",
@@ -48,8 +76,6 @@
         "Dann ging er wieder zurück, sprach zu Gretel: »Sei getrost, liebes Schwesterchen, und schlaf nur ruhig ein, Gott wird uns nicht verlassen,« und legte sich wieder in sein Bett."
       ],
       "en": [
-        "The two children had also not been able to sleep for hunger, and had heard what their step-mother had said to their father.",
-        "Grethel wept bitter tears, and said to Hansel, “Now all is over with us.”",
         "“Be quiet, Grethel,” said Hansel, “do not distress thyself, I will soon find a way to help us.”",
         "And when the old folks had fallen asleep, he got up, put on his little coat, opened the door below, and crept outside.",
         "The moon shone brightly, and the white pebbles which lay in front of the house glittered like real silver pennies.",
@@ -64,22 +90,17 @@
         "Gretel nahm das Brot unter die Schürze, weil Hänsel die Steine in der Tasche hatte.",
         "Danach machten sie sich alle zusammen auf den Weg nach dem Wald.",
         "Als sie ein Weilchen gegangen waren, stand Hänsel still und guckte nach dem Haus zurück und tat das wieder und immer wieder.",
-        "Der Vater sprach: »Hänsel, was guckst du da und bleibst zurück, hab acht und vergiß deine Beine nicht.«",
+        "Der Vater sprach: »Hänsel, was guckst du da und bleibst zurück, hab acht und vergiß deine Beine nicht.«"
+      ],
+      "enPara": "The two children had also not been able to sleep for hunger, and had heard what their step-mother had said to their father. Grethel wept bitter tears, and said to Hansel, “Now all is over with us.” “Be quiet, Grethel,” said Hansel, “do not distress thyself, I will soon find a way to help us.” And when the old folks had fallen asleep, he got up, put on his little coat, opened the door below, and crept outside. The moon shone brightly, and the white pebbles which lay in front of the house glittered like real silver pennies. Hansel stooped and put as many of them in the little pocket of his coat as he could possibly get in. Then he went back and said to Grethel, “Be comforted, dear little sister, and sleep in peace, God will not forsake us,” and he lay down again in his bed. When day dawned, but before the sun had risen, the woman came and awoke the two children, saying “Get up, you sluggards! we are going into the forest to fetch wood.” She gave each a little piece of bread, and said, “There is something for your dinner, but do not eat it up before then, for you will get nothing else.” Grethel took the bread under her apron, as Hansel had the stones in his pocket. Then they all set out together on the way to the forest. When they had walked a short time, Hansel stood still and peeped back at the house, and did so again and again. His father said, “Hansel, what art thou looking at there and staying behind for? Mind what thou art about, and do not forget how to use thy legs.” “Ah, father,” said Hansel, “I am looking at my little white cat, which is sitting up on the roof, and wants to say good-bye to me.” The wife said, “Fool, that is not thy little cat, that is the morning sun which is shining on the chimneys.” Hansel, however, had not been looking back at the cat, but had been constantly throwing one of the white pebble-stones out of his pocket on the road."
+    },
+    {
+      "de": [
         "»Ach, Vater,« sagte Hänsel, »ich sehe nach meinem weißen Kätzchen, das sitzt oben auf dem Dach und will mir Ade sagen.«",
         "Die Frau sprach: »Narr, das ist dein Kätzchen nicht, das ist die Morgensonne, die auf den Schornstein scheint.«",
         "Hänsel aber hatte nicht nach dem Kätzchen gesehen, sondern immer einen von den blanken Kieselsteinen aus seiner Tasche auf den Weg geworfen."
       ],
-      "en": [
-        "When day dawned, but before the sun had risen, the woman came and awoke the two children, saying “Get up, you sluggards! we are going into the forest to fetch wood.”",
-        "She gave each a little piece of bread, and said, “There is something for your dinner, but do not eat it up before then, for you will get nothing else.”",
-        "Grethel took the bread under her apron, as Hansel had the stones in his pocket.",
-        "Then they all set out together on the way to the forest.",
-        "When they had walked a short time, Hansel stood still and peeped back at the house, and did so again and again.",
-        "His father said, “Hansel, what art thou looking at there and staying behind for? Mind what thou art about, and do not forget how to use thy legs.”",
-        "“Ah, father,” said Hansel, “I am looking at my little white cat, which is sitting up on the roof, and wants to say good-bye to me.”",
-        "The wife said, “Fool, that is not thy little cat, that is the morning sun which is shining on the chimneys.”",
-        "Hansel, however, had not been looking back at the cat, but had been constantly throwing one of the white pebble-stones out of his pocket on the road."
-      ]
+      "enPara": "The two children had also not been able to sleep for hunger, and had heard what their step-mother had said to their father. Grethel wept bitter tears, and said to Hansel, “Now all is over with us.” “Be quiet, Grethel,” said Hansel, “do not distress thyself, I will soon find a way to help us.” And when the old folks had fallen asleep, he got up, put on his little coat, opened the door below, and crept outside. The moon shone brightly, and the white pebbles which lay in front of the house glittered like real silver pennies. Hansel stooped and put as many of them in the little pocket of his coat as he could possibly get in. Then he went back and said to Grethel, “Be comforted, dear little sister, and sleep in peace, God will not forsake us,” and he lay down again in his bed. When day dawned, but before the sun had risen, the woman came and awoke the two children, saying “Get up, you sluggards! we are going into the forest to fetch wood.” She gave each a little piece of bread, and said, “There is something for your dinner, but do not eat it up before then, for you will get nothing else.” Grethel took the bread under her apron, as Hansel had the stones in his pocket. Then they all set out together on the way to the forest. When they had walked a short time, Hansel stood still and peeped back at the house, and did so again and again. His father said, “Hansel, what art thou looking at there and staying behind for? Mind what thou art about, and do not forget how to use thy legs.” “Ah, father,” said Hansel, “I am looking at my little white cat, which is sitting up on the roof, and wants to say good-bye to me.” The wife said, “Fool, that is not thy little cat, that is the morning sun which is shining on the chimneys.” Hansel, however, had not been looking back at the cat, but had been constantly throwing one of the white pebble-stones out of his pocket on the road."
     },
     {
       "de": [
@@ -88,12 +109,7 @@
         "Das Reisig ward angezündet, und als die Flamme recht hoch brannte, sagte die Frau: »Nun legt euch ans Feuer, ihr Kinder, und ruht euch aus, wir gehen in den Wald und hauen Holz.",
         "Wenn wir fertig sind, kommen wir wieder und holen euch ab.«"
       ],
-      "en": [
-        "When they had reached the middle of the forest, the father said, “Now, children, pile up some wood, and I will light a fire that you may not be cold.”",
-        "Hansel and Grethel gathered brushwood together, as high as a little hill.",
-        "The brushwood was lighted, and when the flames were burning very high, the woman said, “Now, children, lay yourselves down by the fire and rest, we will go into the forest and cut some wood.",
-        "When we have done, we will come back and fetch you away.”"
-      ]
+      "enPara": "When they had reached the middle of the forest, the father said, “Now, children, pile up some wood, and I will light a fire that you may not be cold.” Hansel and Grethel gathered brushwood together, as high as a little hill. The brushwood was lighted, and when the flames were burning very high, the woman said, “Now, children, lay yourselves down by the fire and rest, we will go into the forest and cut some wood. When we have done, we will come back and fetch you away.”"
     },
     {
       "de": [
@@ -144,16 +160,22 @@
         "Am frühen Morgen kam die Frau und holte die Kinder aus dem Bette.",
         "Sie erhielten ihr Stückchen Brot, das war aber noch kleiner als das vorige Mal.",
         "Auf dem Wege nach dem Wald bröckelte es Hänsel in der Tasche, stand oft still und warf ein Bröcklein auf die Erde.",
-        "»Hänsel, was stehst du und guckst dich um,« sagte der Vater, »geh deiner Wege.«",
-        "»Ich sehe nach meinem Täubchen, das sitzt auf dem Dache und will mir Ade sagen,« antwortete Hänsel.",
-        "»Narr,« sagte die Frau, »das ist dein Täubchen nicht, das ist die Morgensonne, die auf den Schornstein oben scheint.«",
-        "Hänsel aber warf nach und nach alle Bröcklein auf den Weg."
+        "»Hänsel, was stehst du und guckst dich um,« sagte der Vater, »geh deiner Wege.«"
       ],
       "en": [
         "Early in the morning came the woman, and took the children out of their beds.",
         "Their bit of bread was given to them, but it was still smaller than the time before.",
         "On the way into the forest Hansel crumbled his in his pocket, and often stood still and threw a morsel on the ground.",
-        "“Hansel, why dost thou stop and look round?” said the father, “go on.”",
+        "“Hansel, why dost thou stop and look round?” said the father, “go on.”"
+      ]
+    },
+    {
+      "de": [
+        "»Ich sehe nach meinem Täubchen, das sitzt auf dem Dache und will mir Ade sagen,« antwortete Hänsel.",
+        "»Narr,« sagte die Frau, »das ist dein Täubchen nicht, das ist die Morgensonne, die auf den Schornstein oben scheint.«",
+        "Hänsel aber warf nach und nach alle Bröcklein auf den Weg."
+      ],
+      "en": [
         "“I am looking back at my little pigeon which is sitting on the roof, and wants to say good-bye to me,” answered Hansel.",
         "“Simpleton!” said the woman, “that is not thy little pigeon, that is the morning sun that is shining on the chimney.”",
         "Hansel, however, little by little, threw all the crumbs on the path."
@@ -189,8 +211,7 @@
         "Sie fingen wieder an zu gehen, aber sie gerieten immer tiefer in den Wald, und wenn nicht bald Hilfe kam, so mußten sie verschmachten.",
         "Als es Mittag war, sahen sie ein schönes schneeweißes Vöglein auf einem Ast sitzen, das sang so schön, daß sie stehen blieben und ihm zuhörten.",
         "Und als es fertig war, schwang es seine Flügel und flog vor ihnen her, und sie gingen ihm nach, bis sie zu einem Häuschen gelangten, auf dessen Dach es sich setzte, und als sie ganz nah herankamen, so sahen sie, daß das Häuslein aus Brot gebaut war und mit Kuchen gedeckt; aber die Fenster waren von hellem Zucker.",
-        "»Da wollen wir uns dran machen,« sprach Hänsel, »und eine gesegnete Mahlzeit halten.",
-        "Ich will ein Stück vom Dach essen, Gretel, du kannst vom Fenster essen, das schmeckt süß.«",
+        "»Da wollen wir uns dran machen,« sprach Hänsel, »und eine gesegnete Mahlzeit halten. Ich will ein Stück vom Dach essen, Gretel, du kannst vom Fenster essen, das schmeckt süß.«",
         "Hänsel reichte in die Höhe und brach sich ein wenig vom Dach ab, um zu versuchen, wie es schmeckte, und Gretel stellte sich an die Scheiben und knuperte daran.",
         "Da rief eine feine Stimme aus der Stube heraus:"
       ],
@@ -199,8 +220,7 @@
         "They began to walk again, but they always got deeper into the forest, and if help did not come soon, they must die of hunger and weariness.",
         "When it was mid-day, they saw a beautiful snow-white bird sitting on a bough, which sang so delightfully that they stood still and listened to it.",
         "And when it had finished its song, it spread its wings and flew away before them, and they followed it until they reached a little house, on the roof of which it alighted; and when they came quite up to little house they saw that it was built of bread and covered with cakes, but that the windows were of clear sugar.",
-        "“We will set to work on that,” said Hansel, “and have a good meal.",
-        "I will eat a bit of the roof, and thou, Grethel, canst eat some of the window, it will taste sweet.”",
+        "“We will set to work on that,” said Hansel, “and have a good meal. I will eat a bit of the roof, and thou, Grethel, canst eat some of the window, it will taste sweet.”",
         "Hansel reached up above, and broke off a little of the roof to try how it tasted, and Grethel leant against the window and nibbled at the panes.",
         "Then a soft voice cried from the room,"
       ]
@@ -286,7 +306,12 @@
         "»Heda, Gretel,« rief sie dem Mädchen zu, »sei flink und trag Wasser.",
         "Hänsel mag fett oder mager sein, morgen will ich ihn schlachten und kochen.«",
         "Ach, wie jammerte das arme Schwesterchen, als es das Wasser tragen mußte, und wie flossen ihm die Tränen über die Backen herunter!",
-        "»Lieber Gott, hilf uns doch,« rief sie aus, »hätten uns nur die wilden Tiere im Wald gefressen, so wären wir doch zusammen gestorben.«",
+        "»Lieber Gott, hilf uns doch,« rief sie aus, »hätten uns nur die wilden Tiere im Wald gefressen, so wären wir doch zusammen gestorben.«"
+      ],
+      "enPara": "And now the best food was cooked for poor Hansel, but Grethel got nothing but crab-shells. Every morning the woman crept to the little stable, and cried, “Hansel, stretch out thy finger that I may feel if thou wilt soon be fat.” Hansel, however, stretched out a little bone to her, and the old woman, who had dim eyes, could not see it, and thought it was Hansel’s finger, and was astonished that there was no way of fattening him. When four weeks had gone by, and Hansel still continued thin, she was seized with impatience and would not wait any longer. “Hola, Grethel,” she cried to the girl, “be active, and bring some water. Let Hansel be fat or lean, to-morrow I will kill him, and cook him.” Ah, how the poor little sister did lament when she had to fetch the water, and how her tears did flow down over her cheeks! “Dear God, do help us,” she cried. “If the wild beasts in the forest had but devoured us, we should at any rate have died together.” “Just keep thy noise to thyself,” said the old woman, “all that won’t help thee at all.”"
+    },
+    {
+      "de": [
         "»Spar nur dein Geplärre,« sagte die Alte, »es hilft dir alles nichts.«"
       ],
       "enPara": "And now the best food was cooked for poor Hansel, but Grethel got nothing but crab-shells. Every morning the woman crept to the little stable, and cried, “Hansel, stretch out thy finger that I may feel if thou wilt soon be fat.” Hansel, however, stretched out a little bone to her, and the old woman, who had dim eyes, could not see it, and thought it was Hansel’s finger, and was astonished that there was no way of fattening him. When four weeks had gone by, and Hansel still continued thin, she was seized with impatience and would not wait any longer. “Hola, Grethel,” she cried to the girl, “be active, and bring some water. Let Hansel be fat or lean, to-morrow I will kill him, and cook him.” Ah, how the poor little sister did lament when she had to fetch the water, and how her tears did flow down over her cheeks! “Dear God, do help us,” she cried. “If the wild beasts in the forest had but devoured us, we should at any rate have died together.” “Just keep thy noise to thyself,” said the old woman, “all that won’t help thee at all.”"
@@ -298,10 +323,7 @@
         "Sie stieß das arme Gretel hinaus zu dem Backofen, aus dem die Feuerflammen schon herausschlugen.",
         "»Kriech hinein,« sagte die Hexe, »und sieh zu, ob recht eingeheizt ist, damit wir das Brot hineinschießen können.«",
         "Und wenn Gretel darin war, wollte sie den Ofen zumachen, und Gretel sollte darin braten, und dann wollte sie's auch aufessen.",
-        "Aber Gretel merkte, was sie im Sinn hatte und sprach: »Ich weiß nicht, wie ich's machen soll; wie komm ich da hinein?«",
-        "»Dumme Gans,« sagte die Alte, »die Öffnung ist groß genug, siehst du wohl, ich könnte selbst hinein,« krabbelte heran und steckte den Kopf in den Backofen.",
-        "Da gab ihr Gretel einen Stoß, daß sie weit hineinfuhr, machte die eiserne Tür zu und schob den Riegel vor.",
-        "Hu! da fing sie an zu heulen, ganz grauselig; aber Gretel lief fort, und die gottlose Hexe mußte elendiglich verbrennen."
+        "Aber Gretel merkte, was sie im Sinn hatte und sprach: »Ich weiß nicht, wie ich's machen soll; wie komm ich da hinein?«"
       ],
       "en": [
         "Early in the morning, Grethel had to go out and hang up the cauldron with the water, and light the fire.",
@@ -309,7 +331,16 @@
         "She pushed poor Grethel out to the oven, from which flames of fire were already darting.",
         "“Creep in,” said the witch, “and see if it is properly heated, so that we can shut the bread in.”",
         "And when once Grethel was inside, she intended to shut the oven and let her bake in it, and then she would eat her, too.",
-        "But Grethel saw what she had in her mind, and said, “I do not know how I am to do it; how do you get in?”",
+        "But Grethel saw what she had in her mind, and said, “I do not know how I am to do it; how do you get in?”"
+      ]
+    },
+    {
+      "de": [
+        "»Dumme Gans,« sagte die Alte, »die Öffnung ist groß genug, siehst du wohl, ich könnte selbst hinein,« krabbelte heran und steckte den Kopf in den Backofen.",
+        "Da gab ihr Gretel einen Stoß, daß sie weit hineinfuhr, machte die eiserne Tür zu und schob den Riegel vor.",
+        "Hu! da fing sie an zu heulen, ganz grauselig; aber Gretel lief fort, und die gottlose Hexe mußte elendiglich verbrennen."
+      ],
+      "en": [
         "“Silly goose,” said the old woman, “The door is big enough; just look, I can get in myself!” and she crept up and thrust her head into the oven.",
         "Then Grethel gave her a push that drove her far into it, and shut the iron door, and fastened the bolt.",
         "Oh! then she began to howl quite horribly, but Grethel ran away, and the godless witch was miserably burnt to death."
@@ -321,22 +352,34 @@
         "Da sprang Hänsel heraus, wie ein Vogel aus dem Käfig, wenn ihm die Türe aufgemacht wird.",
         "Wie haben sie sich gefreut, sind sich um den Hals gefallen, sind herumgesprungen und haben sich geküßt!",
         "Und weil sie sich nicht mehr zu fürchten brauchten, so gingen sie in das Haus der Hexe hinein, da standen in allen Ecken Kasten mit Perlen und Edelsteinen.",
-        "»Die sind noch besser als Kieselsteine,« sagte Hänsel und steckte in seine Taschen, was hinein wollte, und Gretel sagte: »Ich will auch etwas mit nach Haus bringen,« und füllte sich sein Schürzchen voll.",
-        "»Aber jetzt wollen wir fort,« sagte Hänsel, »damit wir aus dem Hexenwald herauskommen.«",
-        "Als sie aber ein paar Stunden gegangen waren, gelangten sie an ein großes Wasser.",
-        "»Wir können nicht hinüber,« sprach Hänsel, »ich seh keinen Steg und keine Brücke.«",
-        "»Hier fährt auch kein Schiffchen,« antwortete Gretel, »aber da schwimmt eine weiße Ente, wenn ich die bitte, so hilft sie uns hinüber.«",
-        "Da rief sie:"
+        "»Die sind noch besser als Kieselsteine,« sagte Hänsel und steckte in seine Taschen, was hinein wollte, und Gretel sagte: »Ich will auch etwas mit nach Haus bringen,« und füllte sich sein Schürzchen voll."
       ],
       "en": [
         "Grethel, however, ran like lightning to Hansel, opened his little stable, and cried, “Hansel, we are saved! The old witch is dead!”",
         "Then Hansel sprang out like a bird from its cage when the door is opened for it.",
         "How they did rejoice and embrace each other, and dance about and kiss each other!",
         "And as they had no longer any need to fear her, they went into the witch’s house, and in every corner there stood chests full of pearls and jewels.",
-        "“These are far better than pebbles!” said Hansel, and thrust into his pockets whatever could be got in, and Grethel said, “I, too, will take something home with me,” and filled her pinafore full.",
+        "“These are far better than pebbles!” said Hansel, and thrust into his pockets whatever could be got in, and Grethel said, “I, too, will take something home with me,” and filled her pinafore full."
+      ]
+    },
+    {
+      "de": [
+        "»Aber jetzt wollen wir fort,« sagte Hänsel, »damit wir aus dem Hexenwald herauskommen.«",
+        "Als sie aber ein paar Stunden gegangen waren, gelangten sie an ein großes Wasser.",
+        "»Wir können nicht hinüber,« sprach Hänsel, »ich seh keinen Steg und keine Brücke.«"
+      ],
+      "en": [
         "“But now we will go away.” said Hansel, “that we may get out of the witch’s forest.”",
         "When they had walked for two hours, they came to a great piece of water.",
-        "“We cannot get over,” said Hansel, “I see no foot-plank, and no bridge.”",
+        "“We cannot get over,” said Hansel, “I see no foot-plank, and no bridge.”"
+      ]
+    },
+    {
+      "de": [
+        "»Hier fährt auch kein Schiffchen,« antwortete Gretel, »aber da schwimmt eine weiße Ente, wenn ich die bitte, so hilft sie uns hinüber.«",
+        "Da rief sie:"
+      ],
+      "en": [
         "“And no boat crosses either,” answered Grethel, “but a white duck is swimming there; if I ask her, she will help us over.”",
         "Then she cried,"
       ]
@@ -346,10 +389,7 @@
         "»Entchen, Entchen, da steht Gretel und Hänsel.",
         "Kein Steg und keine Brücke, nimm uns auf deinen weißen Rücken.«"
       ],
-      "en": [
-        "“Little duck, little duck, dost thou see, Hansel and Grethel are waiting for thee?",
-        "There’s never a plank, or bridge in sight, Take us across on thy back so white.”"
-      ]
+      "enPara": "Grethel, however, ran like lightning to Hansel, opened his little stable, and cried, “Hansel, we are saved! The old witch is dead!” Then Hansel sprang out like a bird from its cage when the door is opened for it. How they did rejoice and embrace each other, and dance about and kiss each other! And as they had no longer any need to fear her, they went into the witch’s house, and in every corner there stood chests full of pearls and jewels. “These are far better than pebbles!” said Hansel, and thrust into his pockets whatever could be got in, and Grethel said, “I, too, will take something home with me,” and filled her pinafore full. “But now we will go away.” said Hansel, “that we may get out of the witch’s forest.” When they had walked for two hours, they came to a great piece of water. “We cannot get over,” said Hansel, “I see no foot-plank, and no bridge.” “And no boat crosses either,” answered Grethel, “but a white duck is swimming there; if I ask her, she will help us over.” Then she cried, “Little duck, little duck, dost thou see, Hansel and Grethel are waiting for thee? There’s never a plank, or bridge in sight, Take us across on thy back so white.” The duck came to them, and Hansel seated himself on its back, and told his sister to sit by him. “No,” replied Grethel, “that will be too heavy for the little duck; she shall take us across, one after the other.” The good little duck did so, and when they were once safely across and had walked for a short time, the forest seemed to be more and more familiar to them, and at length they saw from afar their father’s house. Then they began to run, rushed into the parlour, and threw themselves into their father’s arms. The man had not known one happy hour since he had left the children in the forest; the woman, however, was dead. Grethel emptied her pinafore until pearls and precious stones ran about the room, and Hansel threw one handful after another out of his pocket to add to them. Then all anxiety was at an end, and they lived together in perfect happiness. My tale is done, there runs a mouse, whosoever catches it, may make himself a big fur cap out of it."
     },
     {
       "de": [

@@ -75,17 +75,13 @@
       "de": [
         "\"Warum muss er am Griffel nagen, Großvater?\", fragte Heidi sogleich mit Wissbegierde."
       ],
-      "en": [
-        "\"Why must he turn to his pen and pencil?\" asked Heidi immediately, full of curiosity."
-      ]
+      "enPara": "\"Why must he turn to his pen and pencil?\" asked Heidi immediately, full of curiosity."
     },
     {
       "de": [
         "\"Im Winter muss er in die Schule gehen\", erklärte der Großvater; \"da lernt man lesen und schreiben, und das geht manchmal schwer, da hilft's ein wenig nach, wenn man am Griffel nagt; ist's nicht wahr, General?\""
       ],
-      "en": [
-        "\"During the winter he must go to school,\" explained her grandfather, \"and learn how to read and write; it's a bit hard, although useful sometimes afterwards. Am I not right, General?\""
-      ]
+      "enPara": "\"During the winter he must go to school,\" explained her grandfather, \"and learn how to read and write; it's a bit hard, although useful sometimes afterwards. Am I not right, General?\""
     },
     {
       "de": [
@@ -172,7 +168,7 @@
         "\"So, nun geh hinein, und wenn es anfängt dunkel zu werden, dann komm wieder heraus und mach dich auf den Weg.\"",
         "Dann kehrte er um mit seinem Schlitten und zog ihn den Berg hinauf."
       ],
-      "enPara": "Heidi opened the door of the hut and stepped into a tiny room that looked very dark, with a fireplace and a few dishes on a wooden shelf; this was the little kitchen. She opened another door, and now found herself in another small room, for the place was not a herdsman's hut like her grandfather's, with one large room on the ground floor and a hay-loft above, but a very old cottage, where everything was narrow and poor and shabby. A table was close to the door, and as Heidi stepped in she saw a woman sitting at it, putting a patch on a waistcoat which Heidi recognised at once as Peter's. In the corner sat an old woman, bent with age, spinning. Heidi was quite sure this was the grandmother, so she went up to the spinning-wheel and said, \"Good-day, grandmother, I have come at last; did you think I was a long time coming?\""
+      "enPara": "The old fir trees were standing now quite silent, their branches covered with the white snow, and they looked so lovely as they glittered and sparkled in the sunlight that Heidi jumped for joy at the sight and kept on calling out, \"Come here, come here, grandfather! The fir trees are all silver and gold!\" The grandfather had gone into the shed and he now came out dragging a large hand-sleigh along with him; inside it was a low seat, and the sleigh could be pushed forward and guided by the feet of the one who sat upon it with the help of a pole that was fastened to the side. After he had been taken round the fir trees by Heidi that he might see their beauty from all sides, he got into the sleigh and lifted the child on to his lap; then he wrapped her up in the sack, that she might keep nice and warm, and put his left arm closely round her, for it was necessary to hold her tight during the coming journey. He now grasped the pole with his right hand and gave the sleigh a push forward with his two feet. The sleigh shot down the mountain side with such rapidity that Heidi thought they were flying through the air like a bird, and shouted aloud with delight. Suddenly they came to a standstill, and there they were at Peter's hut. Her grandfather lifted her out and unwrapped her. \"There you are, now go in, and when it begins to grow dark you must start on your way home again.\" Then he left her and went up the mountain, pulling his sleigh after him."
     },
     {
       "de": [
@@ -239,9 +235,7 @@
       "de": [
         "\"Es ist so fein gegliedert, wie die Adelheid war\", gab sie zur Antwort; \"aber es hat die schwarzen Augen und das krause Haar, wie es der Tobias hatte und auch der Alte droben; ich glaube, es sieht den zweien gleich.\""
       ],
-      "en": [
-        "\"She has Adelaide's slenderness of figure, but her eyes are dark and her hair curly like her father's and the old man's up there: she takes after both of them, I think.\""
-      ]
+      "enPara": "\"There was some truth then perhaps in what Peter used to tell us of Alm-Uncle during the summer, when we thought he must be wrong,\" said grandmother; \"but who would ever have believed that such a thing was possible? I did not think the child would live three weeks up there. What is she like, Brigitta?\" The latter had so thoroughly examined Heidi on all sides that she was well able to describe her to her mother. \"She has Adelaide's slenderness of figure, but her eyes are dark and her hair curly like her father's and the old man's up there: she takes after both of them, I think.\""
     },
     {
       "de": [
@@ -440,12 +434,11 @@
     {
       "de": [
         "Nun sprang Heidi von seinem Stühlchen auf, streckte eilig seine Hand aus und sagte: \"Gut Nacht, Großmutter, ich muss auf der Stelle heim, wenn es dunkel wird\", und hintereinander bot es dem Peter und seiner Mutter die Hand und ging der Tür zu.",
-        "Aber die Großmutter rief besorgt: \"Wart, wart, Heidi; so allein musst du nicht fort, der Peter muss mit dir, hörst du? Und gib Acht auf das Kind, Peterli, dass es nicht umfällt, und steh nicht still mit ihm, dass es nicht friert, hörst du? Hat es auch ein dickes Halstuch an?\""
+        "Aber die Großmutter rief besorgt: \"Wart, wart, Heidi; so allein musst du nicht fort, der Peter muss mit dir, hörst du?",
+        "Und gib Acht auf das Kind, Peterli, dass es nicht umfällt, und steh nicht still mit ihm, dass es nicht friert, hörst du?",
+        "Hat es auch ein dickes Halstuch an?\""
       ],
-      "en": [
-        "Heidi now jumped up from her low chair, and holding out her hand hastily to the grandmother said, \"Good-night, grandmother, if it is getting dark I must go home at once,\" and bidding good-bye to Peter and his mother she went towards the door.",
-        "But the grandmother called out in an anxious voice, \"Wait, wait, Heidi; you must not go alone like that, Peter must go with you; and take care of the child, Peter, that she does not fall, and don't let her stand still for fear she should get frozen, do you hear? Has she got anything warm to put around her throat?\""
-      ]
+      "enPara": "Heidi now jumped up from her low chair, and holding out her hand hastily to the grandmother said, \"Good-night, grandmother, if it is getting dark I must go home at once,\" and bidding good-bye to Peter and his mother she went towards the door. But the grandmother called out in an anxious voice, \"Wait, wait, Heidi; you must not go alone like that, Peter must go with you; and take care of the child, Peter, that she does not fall, and don't let her stand still for fear she should get frozen, do you hear? Has she got anything warm to put around her throat?\""
     },
     {
       "de": [
@@ -536,27 +529,24 @@
     },
     {
       "de": [
-        "Kaum hatte Heidi die Tür aufgemacht und war in die Stube hineingesprungen, so rief schon die Großmutter aus der Ecke: \"Da kommt das Kind! Das ist das Kind!\", und ließ vor Freude den Faden los und das Rädchen stehen und streckte beide Hände nach dem Kinde aus.",
+        "Kaum hatte Heidi die Tür aufgemacht und war in die Stube hineingesprungen, so rief schon die Großmutter aus der Ecke: \"Da kommt das Kind!",
+        "Das ist das Kind!\", und ließ vor Freude den Faden los und das Rädchen stehen und streckte beide Hände nach dem Kinde aus.",
         "Heidi lief zu ihr, rückte gleich das niedere Stühlchen ganz nahe an sie heran, setzte sich darauf und hatte der Großmutter schon wieder eine große Menge von Dingen zu erzählen und von ihr zu erfragen.",
         "Aber auf einmal ertönten so gewaltige Schläge an das Haus, dass die Großmutter vor Schrecken so zusammenfuhr, dass sie fast das Spinnrad umwarf, und zitternd ausrief: \"Ach du mein Gott, jetzt kommt's, es fällt alles zusammen!\"",
         "Aber Heidi hielt sie fest um den Arm und sagte tröstend: \"Nein, nein, Großmutter, erschrick du nur nicht, das ist der Großvater mit dem Hammer, jetzt macht er alles fest, dass es dir nicht mehr angst und bang wird.\""
       ],
-      "en": [
-        "Heidi had hardly opened the door and sprung into the room when the grandmother called out from her corner, \"It's the child again! here she comes!\" and in her delight she let the thread drop from her fingers, and the wheel stood still as she stretched out both her hands in welcome.",
-        "Heidi ran to her, and then quickly drew the little stool close up to the old woman, and seating herself upon it, began to tell and ask her all kinds of things.",
-        "All at once came the sound of heavy blows against the wall of the hut and the grandmother gave such a start of alarm that she nearly upset the spinning-wheel, and cried in a trembling voice, \"Ah, my God, now it is coming, the house is going to fall upon us!\"",
-        "But Heidi caught her by the arm, and said soothingly, \"No, no, grandmother, do not be frightened, it is only grandfather with his hammer; he is mending up everything, so that you shan't have such fear and trouble.\""
-      ]
+      "enPara": "Heidi had hardly opened the door and sprung into the room when the grandmother called out from her corner, \"It's the child again! here she comes!\" and in her delight she let the thread drop from her fingers, and the wheel stood still as she stretched out both her hands in welcome. Heidi ran to her, and then quickly drew the little stool close up to the old woman, and seating herself upon it, began to tell and ask her all kinds of things. All at once came the sound of heavy blows against the wall of the hut and the grandmother gave such a start of alarm that she nearly upset the spinning-wheel, and cried in a trembling voice, \"Ah, my God, now it is coming, the house is going to fall upon us!\" But Heidi caught her by the arm, and said soothingly, \"No, no, grandmother, do not be frightened, it is only grandfather with his hammer; he is mending up everything, so that you shan't have such fear and trouble.\""
     },
     {
       "de": [
-        "\"Ach, ist auch das möglich! Ist auch so etwas möglich! So hat uns doch der liebe Gott nicht ganz vergessen!\", rief die Großmutter aus.",
-        "\"Hast du's gehört, Brigitte, was es ist, hörst du's? Wahrhaftig, es ist ein Hammer! Geh hinaus, Brigitte, und wenn es der Alm-Öhi ist, so sag ihm, er soll doch dann auch einen Augenblick hereinkommen, dass ich ihm auch danken kann.\""
+        "\"Ach, ist auch das möglich!",
+        "Ist auch so etwas möglich!",
+        "So hat uns doch der liebe Gott nicht ganz vergessen!\", rief die Großmutter aus.",
+        "\"Hast du's gehört, Brigitte, was es ist, hörst du's?",
+        "Wahrhaftig, es ist ein Hammer!",
+        "Geh hinaus, Brigitte, und wenn es der Alm-Öhi ist, so sag ihm, er soll doch dann auch einen Augenblick hereinkommen, dass ich ihm auch danken kann.\""
       ],
-      "en": [
-        "\"Is it possible! is it really possible! so the dear God has not forgotten us!\" exclaimed the grandmother.",
-        "\"Do you hear, Brigitta, what that noise is? Did you hear what the child says? Now, as I listen, I can tell it is a hammer; go outside, Brigitta, and if it is Alm-Uncle, tell him he must come inside a moment that I may thank him.\""
-      ]
+      "enPara": "\"Is it possible! is it really possible! so the dear God has not forgotten us!\" exclaimed the grandmother. \"Do you hear, Brigitta, what that noise is? Did you hear what the child says? Now, as I listen, I can tell it is a hammer; go outside, Brigitta, and if it is Alm-Uncle, tell him he must come inside a moment that I may thank him.\""
     },
     {
       "de": [
@@ -579,7 +569,7 @@
         "Unterdessen war auch schon die Dunkelheit hereingebrochen, und kaum war er heruntergestiegen und hatte seinen Schlitten hinter dem Geißenstall hervorgezogen, als auch schon Heidi aus der Tür trat und vom Großvater wie gestern verpackt auf den Arm genommen und der Schlitten nachgezogen wurde, denn allein da drauf sitzend, wäre die ganze Umhüllung vom Heidi abgefallen, und es wäre fast oder ganz erfroren.",
         "Das wusste der Großvater wohl und hielt das Kind ganz warm in seinem Arm."
       ],
-      "enPara": "Brigitta obeyed on the spot, for Uncle had a way with him that made few people care to oppose his will. He went on knocking with his hammer all round the house, and then mounted the narrow steps to the roof, and hammered away there, until he had used up all the nails he had brought with him. Meanwhile it had been growing dark, and he had hardly come down from the roof and dragged the sleigh out from behind the goat-shed when Heidi appeared outside. The grandfather wrapped her up and took her in his arms as he had done the day before, for although he had to drag the sleigh up the mountain after him, he feared that if the child sat in it alone her wrappings would fall off and that she would be nearly if not quite frozen, so he carried her warm and safe in his arms."
+      "enPara": "\"I know what you think of Alm-Uncle without your telling me. Go indoors again, I can find out for myself where the mending is wanted.\" Brigitta obeyed on the spot, for Uncle had a way with him that made few people care to oppose his will. He went on knocking with his hammer all round the house, and then mounted the narrow steps to the roof, and hammered away there, until he had used up all the nails he had brought with him. Meanwhile it had been growing dark, and he had hardly come down from the roof and dragged the sleigh out from behind the goat-shed when Heidi appeared outside. The grandfather wrapped her up and took her in his arms as he had done the day before, for although he had to drag the sleigh up the mountain after him, he feared that if the child sat in it alone her wrappings would fall off and that she would be nearly if not quite frozen, so he carried her warm and safe in his arms."
     },
     {
       "de": [

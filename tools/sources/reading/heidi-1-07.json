@@ -97,10 +97,7 @@
         "Das war eine große Erleichterung für Heidi zu wissen, dass man doch die Fenster öffnen und hinausschauen könne, denn noch war es ganz unter dem Druck des Gefangenseins von seinem Zimmer her.",
         "Klara fing nun an, Heidi zu fragen, wie es bei ihm zu Hause sei, und Heidi erzählte mit Freuden von der Alm und den Geißen und der Weide und allem, was ihm lieb war."
       ],
-      "en": [
-        "It was a great relief to Heidi to know that the windows could be opened and that one could look out, for she still felt as if she was shut up in prison.",
-        "Clara now began to ask her questions about her home, and Heidi was delighted to tell her all about the mountain and the goats, and the flowery meadows which were so dear to her."
-      ]
+      "enPara": "It was a great relief to Heidi to know that the windows could be opened and that one could look out, for she still felt as if she was shut up in prison. Clara now began to ask her questions about her home, and Heidi was delighted to tell her all about the mountain and the goats, and the flowery meadows which were so dear to her."
     },
     {
       "de": [
@@ -143,15 +140,18 @@
         "Klara dagegen verfolgte mit vergnügtem Gesicht die ungewöhnlichen Ereignisse und deren Wirkungen und sagte nun erklärend: \"Ja, Heidi hat's gemacht, aber nicht mit Absicht, es muss gewiss nicht gestraft werden, es war nur so schrecklich eilig, fortzukommen, und riss den Teppich mit, und so fiel alles hintereinander auf den Boden.",
         "Es fuhren viele Wagen hintereinander vorbei, darum ist es so fortgeschossen; es hat vielleicht noch nie eine Kutsche gesehen.\""
       ],
-      "enPara": "The tutor was standing looking down at the havoc in distress; there was certainly only one view to be taken of such a matter as this and that an unfavorable one. Clara meanwhile appeared to find pleasure in such an unusual event and in watching the results. \"Yes, Heidi did it,\" she explained, \"but quite by accident; she must on no account be punished; she jumped up in such violent haste to get away that she dragged the tablecloth along with her, and so everything went over. There were a number of vehicles passing, that is why she rushed off like that; perhaps she has never seen a carriage.\""
+      "enPara": "The tutor was standing looking down at the havoc in distress; there was certainly only one view to be taken of such a matter as this and that an unfavorable one. Clara meanwhile appeared to find pleasure in such an unusual event and in watching the results. \"Yes, Heidi did it,\" she explained, \"but quite by accident; she must on no account be punished; she jumped up in such violent haste to get away that she dragged the tablecloth along with her, and so everything went over. There were a number of vehicles passing, that is why she rushed off like that; perhaps she has never seen a carriage.\" \"Is it not as I said? She has not the smallest notion about anything! not the slightest idea that she ought to sit still and listen while her lessons are going on. But where is the child who has caused all this trouble? Surely she has not run away! What would Herr Sesemann say to me?\" She ran out of the room and down the stairs. There, at the bottom, standing in the open door-way, was Heidi, looking in amazement up and down the street."
     },
     {
       "de": [
-        "\"Da, ist's nicht, wie ich sagte, Herr Kandidat? Nicht einen Urbegriff hat das Wesen! Keine Ahnung davon, was eine Unterrichtsstunde ist, dass man dabei zuzuhören und still zu sitzen hat. Aber wo ist das Unheil bringende Ding hin? Wenn es fortgelaufen wäre! Was würde mir Herr Sesemann--\""
+        "\"Da, ist's nicht, wie ich sagte, Herr Kandidat?",
+        "Nicht einen Urbegriff hat das Wesen!",
+        "Keine Ahnung davon, was eine Unterrichtsstunde ist, dass man dabei zuzuhören und still zu sitzen hat.",
+        "Aber wo ist das Unheil bringende Ding hin?",
+        "Wenn es fortgelaufen wäre!",
+        "Was würde mir Herr Sesemann--\""
       ],
-      "en": [
-        "\"Is it not as I said? She has not the smallest notion about anything! not the slightest idea that she ought to sit still and listen while her lessons are going on. But where is the child who has caused all this trouble? Surely she has not run away! What would Herr Sesemann say to me?\""
-      ]
+      "enPara": "The tutor was standing looking down at the havoc in distress; there was certainly only one view to be taken of such a matter as this and that an unfavorable one. Clara meanwhile appeared to find pleasure in such an unusual event and in watching the results. \"Yes, Heidi did it,\" she explained, \"but quite by accident; she must on no account be punished; she jumped up in such violent haste to get away that she dragged the tablecloth along with her, and so everything went over. There were a number of vehicles passing, that is why she rushed off like that; perhaps she has never seen a carriage.\" \"Is it not as I said? She has not the smallest notion about anything! not the slightest idea that she ought to sit still and listen while her lessons are going on. But where is the child who has caused all this trouble? Surely she has not run away! What would Herr Sesemann say to me?\" She ran out of the room and down the stairs. There, at the bottom, standing in the open door-way, was Heidi, looking in amazement up and down the street."
     },
     {
       "de": [
@@ -195,14 +195,14 @@
         "Kannst du das nicht selbst fertig bringen, so muss ich dich an deinen Stuhl festbinden.",
         "Kannst du das verstehen?\""
       ],
-      "enPara": "\"I excuse you doing this as it is the first time, but do not let me know you doing it a second time,\" said Fraulein Rottenmeier, pointing to the floor. \"During your lesson time you are to sit still and attend. If you cannot do this I shall have to tie you to your chair. Do you understand?\""
+      "enPara": "\"I heard the sound of the fir trees, but I cannot see where they are, and now I cannot hear them any more,\" answered Heidi, looking disappointedly in the direction whence the noise of the passing carriages had reached her, and which to Heidi had seemed like the blowing of the south wind in the trees, so that in great joy of heart she had rushed out to look at them. \"Fir trees! do you suppose we are in a wood? What ridiculous ideas are these? Come upstairs and see the mischief you have done!\" Heidi turned and followed Fraulein Rottenmeier upstairs; she was quite astonished to see the disaster she had caused, for in her joy and haste to get to the fir trees she had been unaware of having dragged everything after her. \"I excuse you doing this as it is the first time, but do not let me know you doing it a second time,\" said Fraulein Rottenmeier, pointing to the floor. \"During your lesson time you are to sit still and attend. If you cannot do this I shall have to tie you to your chair. Do you understand?\" \"Yes,\" replied Heidi, \"but I will certainly not move again,\" for now she understood that it was a rule to sit still while she was being taught."
     },
     {
       "de": [
         "\"Ja\", entgegnete Heidi, \"aber ich will schon festsitzen.\"",
         "Denn jetzt hatte es begriffen, dass es eine Regel ist, in einer Unterrichtsstunde still zu sitzen."
       ],
-      "enPara": "\"Yes,\" replied Heidi, \"but I will certainly not move again,\" for now she understood that it was a rule to sit still while she was being taught."
+      "enPara": "\"I heard the sound of the fir trees, but I cannot see where they are, and now I cannot hear them any more,\" answered Heidi, looking disappointedly in the direction whence the noise of the passing carriages had reached her, and which to Heidi had seemed like the blowing of the south wind in the trees, so that in great joy of heart she had rushed out to look at them. \"Fir trees! do you suppose we are in a wood? What ridiculous ideas are these? Come upstairs and see the mischief you have done!\" Heidi turned and followed Fraulein Rottenmeier upstairs; she was quite astonished to see the disaster she had caused, for in her joy and haste to get to the fir trees she had been unaware of having dragged everything after her. \"I excuse you doing this as it is the first time, but do not let me know you doing it a second time,\" said Fraulein Rottenmeier, pointing to the floor. \"During your lesson time you are to sit still and attend. If you cannot do this I shall have to tie you to your chair. Do you understand?\" \"Yes,\" replied Heidi, \"but I will certainly not move again,\" for now she understood that it was a rule to sit still while she was being taught."
     },
     {
       "de": [
@@ -220,29 +220,19 @@
         "Richtig, nach kurzer Zeit kam Sebastian die Treppe herauf mit dem großen Teebrett auf den Armen, denn er brachte das Silberzeug aus der Küche herauf, um es im Schrank des Esszimmers zu verwahren.",
         "Als er auf der letzten Stufe der Treppe angekommen war, trat Heidi vor ihn hin und sagte mit großer Deutlichkeit: \"Sie oder Er!\""
       ],
-      "en": [
-        "Clara had to rest for a certain time during the afternoon, and during this interval, as Fraulein Rottenmeier informed Heidi, the latter might amuse herself as she liked.",
-        "When Clara had been placed on her couch after dinner, and the lady-housekeeper had retired to her room, Heidi knew that her time had come to choose her own occupation.",
-        "It was just what she was longing for, as there was something she had made up her mind to do; but she would require some help for its accomplishment, and in view of this she took her stand in the hall in front of the dining-room door in order to intercept the person she wanted.",
-        "In a few minutes up came Sebastian from the kitchen with a tray of silver tea-things, which he had to put away in the dining-room cupboard.",
-        "As he reached the top stairs Heidi went up to him and addressed him in the formal manner she had been ordered to use by Fraulein Rottenmeier."
-      ]
+      "enPara": "Clara had to rest for a certain time during the afternoon, and during this interval, as Fraulein Rottenmeier informed Heidi, the latter might amuse herself as she liked. When Clara had been placed on her couch after dinner, and the lady-housekeeper had retired to her room, Heidi knew that her time had come to choose her own occupation. It was just what she was longing for, as there was something she had made up her mind to do; but she would require some help for its accomplishment, and in view of this she took her stand in the hall in front of the dining-room door in order to intercept the person she wanted. In a few minutes up came Sebastian from the kitchen with a tray of silver tea-things, which he had to put away in the dining-room cupboard. As he reached the top stairs Heidi went up to him and addressed him in the formal manner she had been ordered to use by Fraulein Rottenmeier. Sebastian looked surprised and said somewhat curtly, \"What is it you want, miss?\" \"I only wished to ask you something, but it is nothing bad like this morning,\" said Heidi, anxious to conciliate him, for she saw that Sebastian was rather in a cross temper, and quite thought that it was on account of the ink she had spilt on the floor. \"Indeed, and why, I should first like to know, do you address me like that?\" replied Sebastian, evidently still put out. \"Fraulein Rottenmeier told me always to speak to you like that,\" said Heidi."
     },
     {
       "de": [
         "Sebastian riss die Augen so weit auf, als es nur möglich war, und sagte ziemlich barsch: \"Was soll das heißen, Mamsell?\""
       ],
-      "en": [
-        "Sebastian looked surprised and said somewhat curtly, \"What is it you want, miss?\""
-      ]
+      "enPara": "Clara had to rest for a certain time during the afternoon, and during this interval, as Fraulein Rottenmeier informed Heidi, the latter might amuse herself as she liked. When Clara had been placed on her couch after dinner, and the lady-housekeeper had retired to her room, Heidi knew that her time had come to choose her own occupation. It was just what she was longing for, as there was something she had made up her mind to do; but she would require some help for its accomplishment, and in view of this she took her stand in the hall in front of the dining-room door in order to intercept the person she wanted. In a few minutes up came Sebastian from the kitchen with a tray of silver tea-things, which he had to put away in the dining-room cupboard. As he reached the top stairs Heidi went up to him and addressed him in the formal manner she had been ordered to use by Fraulein Rottenmeier. Sebastian looked surprised and said somewhat curtly, \"What is it you want, miss?\" \"I only wished to ask you something, but it is nothing bad like this morning,\" said Heidi, anxious to conciliate him, for she saw that Sebastian was rather in a cross temper, and quite thought that it was on account of the ink she had spilt on the floor. \"Indeed, and why, I should first like to know, do you address me like that?\" replied Sebastian, evidently still put out. \"Fraulein Rottenmeier told me always to speak to you like that,\" said Heidi."
     },
     {
       "de": [
         "\"Ich möchte nur gern etwas fragen, aber es ist gewiss nichts Böses wie heute Morgen\", fügte Heidi beschwichtigend hinzu, denn es merkte, dass Sebastian ein wenig erbittert war, und dachte, es komme noch von der Tinte am Boden her."
       ],
-      "en": [
-        "\"I only wished to ask you something, but it is nothing bad like this morning,\" said Heidi, anxious to conciliate him, for she saw that Sebastian was rather in a cross temper, and quite thought that it was on account of the ink she had spilt on the floor."
-      ]
+      "enPara": "Clara had to rest for a certain time during the afternoon, and during this interval, as Fraulein Rottenmeier informed Heidi, the latter might amuse herself as she liked. When Clara had been placed on her couch after dinner, and the lady-housekeeper had retired to her room, Heidi knew that her time had come to choose her own occupation. It was just what she was longing for, as there was something she had made up her mind to do; but she would require some help for its accomplishment, and in view of this she took her stand in the hall in front of the dining-room door in order to intercept the person she wanted. In a few minutes up came Sebastian from the kitchen with a tray of silver tea-things, which he had to put away in the dining-room cupboard. As he reached the top stairs Heidi went up to him and addressed him in the formal manner she had been ordered to use by Fraulein Rottenmeier. Sebastian looked surprised and said somewhat curtly, \"What is it you want, miss?\" \"I only wished to ask you something, but it is nothing bad like this morning,\" said Heidi, anxious to conciliate him, for she saw that Sebastian was rather in a cross temper, and quite thought that it was on account of the ink she had spilt on the floor. \"Indeed, and why, I should first like to know, do you address me like that?\" replied Sebastian, evidently still put out. \"Fraulein Rottenmeier told me always to speak to you like that,\" said Heidi."
     },
     {
       "de": [
@@ -256,9 +246,7 @@
       "de": [
         "\"Ja, so muss ich jetzt immer sagen\", versicherte Heidi; \"Fräulein Rottenmeier hat es befohlen.\""
       ],
-      "en": [
-        "\"Fraulein Rottenmeier told me always to speak to you like that,\" said Heidi."
-      ]
+      "enPara": "Clara had to rest for a certain time during the afternoon, and during this interval, as Fraulein Rottenmeier informed Heidi, the latter might amuse herself as she liked. When Clara had been placed on her couch after dinner, and the lady-housekeeper had retired to her room, Heidi knew that her time had come to choose her own occupation. It was just what she was longing for, as there was something she had made up her mind to do; but she would require some help for its accomplishment, and in view of this she took her stand in the hall in front of the dining-room door in order to intercept the person she wanted. In a few minutes up came Sebastian from the kitchen with a tray of silver tea-things, which he had to put away in the dining-room cupboard. As he reached the top stairs Heidi went up to him and addressed him in the formal manner she had been ordered to use by Fraulein Rottenmeier. Sebastian looked surprised and said somewhat curtly, \"What is it you want, miss?\" \"I only wished to ask you something, but it is nothing bad like this morning,\" said Heidi, anxious to conciliate him, for she saw that Sebastian was rather in a cross temper, and quite thought that it was on account of the ink she had spilt on the floor. \"Indeed, and why, I should first like to know, do you address me like that?\" replied Sebastian, evidently still put out. \"Fraulein Rottenmeier told me always to speak to you like that,\" said Heidi."
     },
     {
       "de": [
@@ -272,9 +260,7 @@
       "de": [
         "\"Ich heiße gar nicht Mamsell\", sagte nun Heidi seinerseits ein wenig geärgert; \"ich heiße Heidi.\""
       ],
-      "en": [
-        "It was now Heidi's turn to be a little put out, and she said, \"My name is not miss, it is Heidi.\""
-      ]
+      "enPara": "It was now Heidi's turn to be a little put out, and she said, \"My name is not miss, it is Heidi.\" \"Quite so, but the same lady has ordered me to call you miss,\" explained Sebastian."
     },
     {
       "de": [
@@ -623,9 +609,7 @@
       "de": [
         "\"Nein\", entgegnete Heidi, \"ich möchte nur hinaufgehen, dass ich hinuntersehen kann.\""
       ],
-      "en": [
-        "\"No,\" replied Heidi, \"I only wanted to go up that I might look down.\""
-      ]
+      "enPara": "\"No,\" replied Heidi, \"I only wanted to go up that I might look down.\""
     },
     {
       "de": [
@@ -638,7 +622,9 @@
       "de": [
         "Aber Heidi hielt ihn ein wenig am Rockschoß und sagte bittend: \"Nur ein einziges Mal!\""
       ],
-      "enPara": "\"Get along home with you and don't try this trick on me again, or you may not come off so easily a second time,\" and with that he turned and was about to shut the door. But Heidi took hold of his coat and said beseechingly, \"Let me go up, just once.\""
+      "en": [
+        "But Heidi took hold of his coat and said beseechingly, \"Let me go up, just once.\""
+      ]
     },
     {
       "de": [
@@ -814,11 +800,10 @@
     },
     {
       "de": [
-        "\"Wenn ich nur schon eins oder zwei mitnehmen könnte! Eins für mich und eins für Klara, kann ich nicht?\""
+        "\"Wenn ich nur schon eins oder zwei mitnehmen könnte!",
+        "Eins für mich und eins für Klara, kann ich nicht?\""
       ],
-      "en": [
-        "\"If I could just take one or two away with me! one for myself and one for Clara, may I?\""
-      ]
+      "enPara": "\"If I could just take one or two away with me! one for myself and one for Clara, may I?\""
     },
     {
       "de": [
@@ -997,12 +982,10 @@
     },
     {
       "de": [
-        "\"Sebastian\", sagte Klara zu dem Eintretenden, \"Sie müssen uns helfen; Sie müssen ein Nest finden für die Kätzchen, wo Fräulein Rottenmeier sie nicht sieht, denn sie fürchtet sich vor ihnen und will sie forthaben; aber wir wollen die niedlichen Tierchen behalten und sie immer hervorholen, sobald wir allein sind.",
-        "Wo kann man sie hintun?\""
+        "\"Sebastian\", sagte Klara zu dem Eintretenden, \"Sie müssen uns helfen; Sie müssen ein Nest finden für die Kätzchen, wo Fräulein Rottenmeier sie nicht sieht, denn sie fürchtet sich vor ihnen und will sie forthaben; aber wir wollen die niedlichen Tierchen behalten und sie immer hervorholen, sobald wir allein sind. Wo kann man sie hintun?\""
       ],
       "en": [
-        "\"Sebastian,\" exclaimed Clara as he came in, \"you must help us; you must find a bed for the kittens where Fraulein Rottenmeier will not spy them out, for she is so afraid of them that she will send them away at once; but we want to keep them, and have them out whenever we are alone.",
-        "Where can you put them?\""
+        "\"Sebastian,\" exclaimed Clara as he came in, \"you must help us; you must find a bed for the kittens where Fraulein Rottenmeier will not spy them out, for she is so afraid of them that she will send them away at once; but we want to keep them, and have them out whenever we are alone. Where can you put them?\""
       ]
     },
     {
@@ -1010,15 +993,13 @@
         "\"Das will ich schon besorgen, Fräulein Klara\", entgegnete Sebastian bereitwillig; \"ich mache ein schönes Bettchen in einem Korb und stelle den an einen Ort, wo mir die furchtsame Dame nicht dahinter kommt, verlassen Sie sich auf mich.\"",
         "Sebastian ging gleich an die Arbeit und kicherte beständig vor sich hin, denn er dachte: \"Das wird noch was absetzen!\", und der Sebastian sah es nicht ungern, wenn Fräulein Rottenmeier ein wenig in Aufregung geriet."
       ],
-      "enPara": "\"I will see to that,\" answered Sebastian willingly. \"I will make a bed in a basket and put it in some place where the lady is not likely to go; you leave it to me.\" He set about the work at once, sniggling to himself the while, for he guessed there would be a further rumpus about this some day, and Sebastian was not without a certain pleasure in the thought of Fraulein Rottenmeier being a little disturbed."
+      "enPara": "\"Sebastian,\" exclaimed Clara as he came in, \"you must help us; you must find a bed for the kittens where Fraulein Rottenmeier will not spy them out, for she is so afraid of them that she will send them away at once; but we want to keep them, and have them out whenever we are alone. Where can you put them?\" \"I will see to that,\" answered Sebastian willingly. \"I will make a bed in a basket and put it in some place where the lady is not likely to go; you leave it to me.\" He set about the work at once, sniggling to himself the while, for he guessed there would be a further rumpus about this some day, and Sebastian was not without a certain pleasure in the thought of Fraulein Rottenmeier being a little disturbed. Not until some time had elapsed, and it was nearing the hour for going to bed, did Fraulein Rottenmeier venture to open the door a crack and call through, \"Have you taken those dreadful little animals away, Sebastian?\" He assured her twice that he had done so; he had been hanging about the room in anticipation of this question, and now quickly and quietly caught up the kittens from Clara's lap and disappeared with them."
     },
     {
       "de": [
         "Nach längerer Zeit erst, als der Augenblick des Schlafengehens nahte, machte Fräulein Rottenmeier ein ganz klein wenig die Tür auf und rief durch das Spältchen heraus: \"Sind die abscheulichen Tiere fortgeschafft?\""
       ],
-      "en": [
-        "Not until some time had elapsed, and it was nearing the hour for going to bed, did Fraulein Rottenmeier venture to open the door a crack and call through, \"Have you taken those dreadful little animals away, Sebastian?\""
-      ]
+      "enPara": "\"Sebastian,\" exclaimed Clara as he came in, \"you must help us; you must find a bed for the kittens where Fraulein Rottenmeier will not spy them out, for she is so afraid of them that she will send them away at once; but we want to keep them, and have them out whenever we are alone. Where can you put them?\" \"I will see to that,\" answered Sebastian willingly. \"I will make a bed in a basket and put it in some place where the lady is not likely to go; you leave it to me.\" He set about the work at once, sniggling to himself the while, for he guessed there would be a further rumpus about this some day, and Sebastian was not without a certain pleasure in the thought of Fraulein Rottenmeier being a little disturbed. Not until some time had elapsed, and it was nearing the hour for going to bed, did Fraulein Rottenmeier venture to open the door a crack and call through, \"Have you taken those dreadful little animals away, Sebastian?\" He assured her twice that he had done so; he had been hanging about the room in anticipation of this question, and now quickly and quietly caught up the kittens from Clara's lap and disappeared with them."
     },
     {
       "de": [
@@ -1026,7 +1007,7 @@
         "Jawohl!\", gab Sebastian zurück, der sich im Zimmer zu schaffen gemacht hatte in Erwartung dieser Frage.",
         "Schnell und leise fasste er die beiden Kätzchen auf Klaras Schoß und verschwand damit."
       ],
-      "enPara": "He assured her twice that he had done so; he had been hanging about the room in anticipation of this question, and now quickly and quietly caught up the kittens from Clara's lap and disappeared with them."
+      "enPara": "\"Sebastian,\" exclaimed Clara as he came in, \"you must help us; you must find a bed for the kittens where Fraulein Rottenmeier will not spy them out, for she is so afraid of them that she will send them away at once; but we want to keep them, and have them out whenever we are alone. Where can you put them?\" \"I will see to that,\" answered Sebastian willingly. \"I will make a bed in a basket and put it in some place where the lady is not likely to go; you leave it to me.\" He set about the work at once, sniggling to himself the while, for he guessed there would be a further rumpus about this some day, and Sebastian was not without a certain pleasure in the thought of Fraulein Rottenmeier being a little disturbed. Not until some time had elapsed, and it was nearing the hour for going to bed, did Fraulein Rottenmeier venture to open the door a crack and call through, \"Have you taken those dreadful little animals away, Sebastian?\" He assured her twice that he had done so; he had been hanging about the room in anticipation of this question, and now quickly and quietly caught up the kittens from Clara's lap and disappeared with them."
     },
     {
       "de": [

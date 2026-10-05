@@ -124,9 +124,9 @@
     "author": "Brüder Grimm",
     "year": 1921,
     "historicalSpelling": false,
-    "paragraphs": 3,
+    "paragraphs": 5,
     "sentences": 25,
-    "sentenceAligned": 1.0,
+    "sentenceAligned": 0.52,
     "words": 587
   },
   {
@@ -165,7 +165,7 @@
     "historicalSpelling": false,
     "paragraphs": 8,
     "sentences": 42,
-    "sentenceAligned": 0.071,
+    "sentenceAligned": 0.19,
     "words": 1002
   },
   {
@@ -217,7 +217,7 @@
     "historicalSpelling": false,
     "paragraphs": 15,
     "sentences": 51,
-    "sentenceAligned": 0.412,
+    "sentenceAligned": 0.392,
     "words": 1278
   },
   {
@@ -228,9 +228,9 @@
     "author": "Brüder Grimm",
     "year": 1921,
     "historicalSpelling": false,
-    "paragraphs": 20,
-    "sentences": 132,
-    "sentenceAligned": 0.773,
+    "paragraphs": 30,
+    "sentences": 131,
+    "sentenceAligned": 0.679,
     "words": 2664
   },
   {
@@ -242,8 +242,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 50,
-    "sentences": 140,
-    "sentenceAligned": 0.507,
+    "sentences": 141,
+    "sentenceAligned": 0.418,
     "words": 4293
   },
   {
@@ -255,8 +255,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 39,
-    "sentences": 113,
-    "sentenceAligned": 0.522,
+    "sentences": 112,
+    "sentenceAligned": 0.411,
     "words": 2470
   },
   {
@@ -268,8 +268,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 84,
-    "sentences": 199,
-    "sentenceAligned": 0.528,
+    "sentences": 203,
+    "sentenceAligned": 0.399,
     "words": 4265
   },
   {
@@ -281,8 +281,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 62,
-    "sentences": 148,
-    "sentenceAligned": 0.568,
+    "sentences": 155,
+    "sentenceAligned": 0.471,
     "words": 4670
   },
   {
@@ -295,7 +295,7 @@
     "historicalSpelling": false,
     "paragraphs": 59,
     "sentences": 122,
-    "sentenceAligned": 0.689,
+    "sentenceAligned": 0.615,
     "words": 3669
   },
   {
@@ -308,7 +308,7 @@
     "historicalSpelling": false,
     "paragraphs": 53,
     "sentences": 112,
-    "sentenceAligned": 0.83,
+    "sentenceAligned": 0.786,
     "words": 2622
   },
   {
@@ -320,8 +320,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 114,
-    "sentences": 211,
-    "sentenceAligned": 0.649,
+    "sentences": 216,
+    "sentenceAligned": 0.565,
     "words": 4544
   },
   {
@@ -334,7 +334,7 @@
     "historicalSpelling": false,
     "paragraphs": 53,
     "sentences": 170,
-    "sentenceAligned": 0.371,
+    "sentenceAligned": 0.276,
     "words": 3368
   },
   {
@@ -347,7 +347,7 @@
     "historicalSpelling": false,
     "paragraphs": 42,
     "sentences": 78,
-    "sentenceAligned": 0.487,
+    "sentenceAligned": 0.372,
     "words": 1940
   },
   {
@@ -359,8 +359,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 60,
-    "sentences": 124,
-    "sentenceAligned": 0.742,
+    "sentences": 127,
+    "sentenceAligned": 0.575,
     "words": 3229
   },
   {
@@ -373,7 +373,7 @@
     "historicalSpelling": false,
     "paragraphs": 22,
     "sentences": 44,
-    "sentenceAligned": 0.432,
+    "sentenceAligned": 0.386,
     "words": 1836
   },
   {
@@ -386,7 +386,7 @@
     "historicalSpelling": false,
     "paragraphs": 62,
     "sentences": 158,
-    "sentenceAligned": 0.595,
+    "sentenceAligned": 0.437,
     "words": 3689
   },
   {
@@ -398,8 +398,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 80,
-    "sentences": 203,
-    "sentenceAligned": 0.424,
+    "sentences": 199,
+    "sentenceAligned": 0.387,
     "words": 5712
   },
   {
@@ -411,8 +411,8 @@
     "year": 1880,
     "historicalSpelling": false,
     "paragraphs": 63,
-    "sentences": 148,
-    "sentenceAligned": 0.554,
+    "sentences": 156,
+    "sentenceAligned": 0.462,
     "words": 4736
   }
 ]

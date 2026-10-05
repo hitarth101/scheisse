@@ -409,59 +409,84 @@ def align_paragraphs(de_paras: list[str], en_paras: list[str], m: Model) -> list
 # ---------------------------------------------------------------- sentence pairs inside a paragraph group
 # A step is trusted when its length is within Z_MAX of what the text's usual ratio predicts. The variance is measured
 # on the text itself (see calibrate), so a very literal translation is held to a tighter standard than a free one.
-Z_MAX = 4.0             # a step further than this from the usual length ratio is never trusted
-SOFT_Z = 2.5            # ... and no more than SLACK of the steps may be further than this
-SLACK = 0.15            # share of steps that may be far from the usual ratio, turn a statement into a question
-                        # (indirect questions) or change the number of quotation marks (a speech cut or dropped);
-                        # at least one step once a group has two
+# Three signals count against a pair: a length far from the usual (SOFT_Z), a question that is not a question on the
+# other side, a different number of quotation marks. One signal in a few pairs is normal in a translation (SLACK);
+# two signals in one pair, signals in two neighbouring pairs, or neighbouring pairs that are off in opposite
+# directions mean a sentence boundary that sits at a different place in the two books, and the group is not trusted.
+Z_MAX = 3.5             # a step further than this from the usual length ratio is never trusted
+SOFT_Z = 2.0            # a step further than this carries one signal
+SLACK = 0.15            # share of steps that may carry a signal; at least one step once a group has two
+SHIFT_Z = 0.8            # neighbouring pairs off in opposite directions by more than this (and one by more than SOFT_Z) are a shifted boundary
 MAX_MERGED_SHARE = 0.5  # in groups of six or more steps, more merged units than this means the group is not trusted
 MERGED_UNITS = False     # the spec pairs sentences only when the counts are equal; True also allows steps that join sentences
 USE_COARSE = True        # try the coarse split (each quotation in one piece) when the fine split gives different counts
 REPAIR_WIDTHS = (2, 3, 4)  # a failed group is joined with up to this many neighbouring groups and tried again
+MAX_S2 = 4.0             # the variance per character is never taken larger than this (Gale & Church measured 6.8 on other texts)
+FIRST_PASS_S2 = 3.0      # variance for the first pass, before the text has been measured
 
 
-def steps_are_believable(de_sents: list[str], en_sents: list[str], steps: list[tuple[int, int, int, int]], m: Model) -> bool:
-    """True if every step (German sentences i0:i1 against English sentences j0:j1) has a believable length ratio, a
-    question stays a question and a speech stays a speech in nearly all steps, and not too many steps merge sentences.
-    A group of a single step has nothing to be mixed up with (the paragraphs already match), so only its length counts."""
-    parity_breaks = quote_breaks = far = merged = 0
+def judge_steps(de_sents: list[str], en_sents: list[str], steps: list[tuple[int, int, int, int]],
+                m: Model) -> tuple[list[bool], list[bool]]:
+    """For each step (German sentences i0:i1 against English sentences j0:j1): is it bad, and does it carry a signal?
+    Bad: far outside the usual length ratio (Z_MAX), two signals in one pair, a signal next to a signal in the
+    neighbouring pair, or neighbours that are too long and too short (the sentence boundary of one text sits a clause
+    away from the other's, and each pair carries part of its neighbour's translation)."""
+    bad, flagged = [], []
+    prev_z, prev_flag = 0.0, False
     for i0, i1, j0, j1 in steps:
         d = " ".join(de_sents[i0:i1])
         e = " ".join(en_sents[j0:j1])
-        z = abs(z_score(len(d), len(e), m))
-        if z > Z_MAX:
-            return False
-        far += z > SOFT_Z
-        if ends_with_question(de_sents[i1 - 1]) != ends_with_question(en_sents[j1 - 1]):
-            parity_breaks += 1
-        if abs(quote_count(d) - quote_count(e)) >= 2:
-            quote_breaks += 1
-        if (i1 - i0, j1 - j0) != (1, 1):
-            merged += 1
+        signed = z_score(len(d), len(e), m)
+        z = abs(signed)
+        flags = int(z > SOFT_Z)
+        flags += ends_with_question(de_sents[i1 - 1]) != ends_with_question(en_sents[j1 - 1])
+        extra_quotes = quote_count(d) - quote_count(e)          # German marks minus English marks
+        flags += (extra_quotes >= 2) * 2 + (extra_quotes <= -2)  # a speech missing in the English counts double
+        is_bad = (z > Z_MAX or flags >= 2 or (flags > 0 and prev_flag)
+                  or (prev_z * signed < 0 and min(abs(prev_z), z) > SHIFT_Z and max(abs(prev_z), z) > SOFT_Z))
+        if is_bad and flags and prev_flag and bad:
+            bad[-1] = True                 # the neighbour that started the cluster is not trusted either
+        bad.append(is_bad)
+        flagged.append(bool(flags))
+        prev_z, prev_flag = signed, bool(flags)
+    return bad, flagged
+
+
+def steps_are_believable(de_sents: list[str], en_sents: list[str], steps: list[tuple[int, int, int, int]], m: Model) -> bool:
+    """Group-level verdict (used when steps may join sentences): no bad step, few signals, not too many merged steps."""
+    bad, flagged = judge_steps(de_sents, en_sents, steps, m)
     n = len(steps)
-    if n >= 2 and max(parity_breaks, quote_breaks, far) > max(1, int(SLACK * n)):
+    if any(bad) or (n >= 2 and sum(flagged) > max(1, int(SLACK * n))):
         return False
+    merged = sum(1 for i0, i1, j0, j1 in steps if (i1 - i0, j1 - j0) != (1, 1))
     return n < 6 or merged <= MAX_MERGED_SHARE * n
 
 
-def group_is_sane(de_sents: list[str], en_sents: list[str], m: Model) -> bool:
-    """The spec's rule: same number of sentences, believable length ratios, and the whole group in a believable ratio."""
-    if not de_sents or len(de_sents) != len(en_sents):
-        return False
-    steps = [(k, k + 1, k, k + 1) for k in range(len(de_sents))]
-    if not steps_are_believable(de_sents, en_sents, steps, m):
-        return False
+def paragraphs_that_pass(de_sents: list[str], en_sents: list[str], de_para: list[int], n_paras: int, m: Model) -> list[bool]:
+    """The spec's rule for a group whose German and English sentence counts are equal: sentence k is paired with
+    sentence k. The pairs of each German paragraph are kept when none of them is bad and not too many carry a
+    signal; a paragraph next to a doubtful pair gets the whole English paragraph instead (never a forced pairing)."""
     de_len = sum(map(len, de_sents))
-    if de_len < 40:                     # a few words: the per-pair test above is all that can be said
-        return True
-    return 0.65 <= sum(map(len, en_sents)) / (m.c * de_len) <= 1.55
+    if de_len >= 40 and not 0.65 <= sum(map(len, en_sents)) / (m.c * de_len) <= 1.55:
+        return [False] * n_paras
+    steps = [(k, k + 1, k, k + 1) for k in range(len(de_sents))]
+    bad, flagged = judge_steps(de_sents, en_sents, steps, m)
+    passes = []
+    for q in range(n_paras):
+        idx = [k for k, p in enumerate(de_para) if p == q]
+        ok = not any(bad[k] for k in idx)
+        if ok and len(idx) >= 2 and sum(flagged[k] for k in idx) > max(1, int(SLACK * len(idx))):
+            ok = False
+        passes.append(ok)
+    return passes
 
 
 def _units(de_sents, de_para, de_hard, en_sents, en_para, m: Model) -> list[tuple[int, int, int, int]] | None:
-    """Second try when the counts differ: sentence-level Gale-Church inside the group. A step may join up to four
-    sentences of one side, but never across a paragraph break and never across a dropped speaker-change dash.
-    Quotation marks and question marks add to a step's cost, so speeches and questions help to keep the two
-    sides in step. Returns the steps if every step is believable, else None."""
+    """Sentence-level Gale-Church inside a group, where a step may join up to four sentences of one side (never across
+    a paragraph break and never across a dropped speaker-change dash). Quotation marks and question marks add to a
+    step's cost, so speeches and questions help to keep the two sides in step. Returns the steps if the whole
+    alignment is believable, else None. Used to locate English paragraphs, and for the output only with
+    MERGED_UNITS."""
     def cross_ok(side: int, a: int, b: int) -> bool:
         para = de_para if side == 0 else en_para
         if len({para[x] for x in range(a, b)}) > 1:
@@ -498,18 +523,24 @@ class Group:
     """German paragraphs di and English paragraphs ei that were aligned with each other."""
     di: list[int]
     ei: list[int]
-    objects: list[dict] | None = None   # paragraph objects with sentence-level "en", or None if not trustworthy
+    objects: list[dict | None] | None = None   # per German paragraph: object with sentence-level "en", or None; None = no paragraph passed
     exact: bool = False                 # True if the sentence counts were equal (the spec's rule)
     coarse: bool = False                # True if the coarse split (quotations in one piece) was needed
+    enparas: dict[int, str | None] = field(default_factory=dict)   # German paragraph -> English paragraphs located for it
+
+    def failed(self) -> bool:
+        return self.objects is None or any(o is None for o in self.objects)
 
 
 def _try_sentences(g: Group, de_sent, en_sent, m: Model) -> bool:
-    """Tries to give group g sentence-level English. Sets g.objects (one object per German paragraph) and returns
-    True on success. The spec's rule: equal sentence counts and believable lengths. If the sentences do not match
-    one for one, the same test is made on the coarse split, where each quotation stays in one piece. With
-    MERGED_UNITS the programme may also join sentences of one side (off by default)."""
+    """Tries to give the paragraphs of group g sentence-level English. Sets g.objects (one entry per German
+    paragraph; None for a paragraph that did not pass) and returns True if at least one paragraph passed. The spec's
+    rule: equal sentence counts and believable lengths. If the sentences do not match one for one, the same test is
+    made on the coarse split, where each quotation stays in one piece; the split that lets more text through wins.
+    With MERGED_UNITS a step may also join sentences of one side (off by default)."""
     if not g.di or not g.ei:
         return False
+    best = None            # (German characters that passed, objects, exact, coarse)
     for mode in ((0, 1) if USE_COARSE else (0,)):
         de_split = [de_sent[mode][i] for i in g.di]
         en_split = [en_sent[mode][j] for j in g.ei]
@@ -518,25 +549,71 @@ def _try_sentences(g: Group, de_sent, en_sent, m: Model) -> bool:
         de_hard = [h for x in de_split for _, h in x]
         en_sents = [s for x in en_split for s, _ in x]
         en_para = [k for k, x in enumerate(en_split) for _ in x]
-        exact = group_is_sane(de_sents, en_sents, m)
-        if exact:
+        candidates = []
+        if de_sents and len(de_sents) == len(en_sents):
             steps = [(k, k + 1, k, k + 1) for k in range(len(de_sents))]
-        elif MERGED_UNITS and mode == 0:
+            candidates.append((steps, paragraphs_that_pass(de_sents, en_sents, de_para, len(g.di), m), True))
+        if MERGED_UNITS and mode == 0:
             steps = _units(de_sents, de_para, de_hard, en_sents, en_para, m)
-        else:
-            steps = None
+            if steps:
+                candidates.append((steps, [True] * len(g.di), False))
+        for steps, passes, exact in candidates:
+            if not any(passes):
+                continue
+            by_para: dict[int, tuple[list[str], list[str]]] = {}
+            for i0, i1, j0, j1 in steps:               # every step lies inside one German paragraph
+                d_units, e_units = by_para.setdefault(de_para[i0], ([], []))
+                d_units.append(" ".join(de_sents[i0:i1]))
+                e_units.append(" ".join(en_sents[j0:j1]))
+            objects = [{"de": by_para[k][0], "en": by_para[k][1]} if passes[k] else None for k in range(len(g.di))]
+            score = sum(len(" ".join(o["de"])) for o in objects if o)
+            if best is None or score > best[0]:
+                best = (score, objects, exact, mode == 1)
+    if best is None:
+        return False
+    _, g.objects, g.exact, g.coarse = best
+    return True
+
+
+def _locate_fallbacks(groups: list[Group], de_sent, en_sent, en_paras: list[str], m: Model) -> None:
+    """Where paragraph breaks sit at different places in the two books, the English paragraphs of a failed group can
+    start or end a sentence or two off (the English of a neighbouring German paragraph shows up in this one). For each
+    run of groups with failed paragraphs, together with the groups next to it, a sentence-level alignment (steps may
+    join sentences) is made only to find which English paragraphs hold the translation of each German paragraph;
+    the whole English paragraphs are then stored as "enPara". If no believable alignment exists the group's own
+    English paragraphs are kept. No sentence pair comes from this step."""
+    n = len(groups)
+    k = 0
+    while k < n:
+        if not groups[k].failed():
+            k += 1
+            continue
+        a = k
+        while k < n and groups[k].failed():
+            k += 1
+        lo, hi = max(0, a - 1), min(n, k + 1)
+        di = [i for g in groups[lo:hi] for i in g.di]
+        ei = [j for g in groups[lo:hi] for j in g.ei]
+        if not di or not ei:
+            continue
+        de_split = [de_sent[0][i] for i in di]
+        en_split = [en_sent[0][j] for j in ei]
+        de_sents = [t for x in de_split for t, _ in x]
+        de_para = [q for q, x in enumerate(de_split) for _ in x]
+        de_hard = [h for x in de_split for _, h in x]
+        en_sents = [t for x in en_split for t, _ in x]
+        en_para = [q for q, x in enumerate(en_split) for _ in x]
+        steps = _units(de_sents, de_para, de_hard, en_sents, en_para, m)
         if not steps:
             continue
-        by_para: dict[int, tuple[list[str], list[str]]] = {}
-        for i0, i1, j0, j1 in steps:               # every step lies inside one German paragraph
-            d_units, e_units = by_para.setdefault(de_para[i0], ([], []))
-            d_units.append(" ".join(de_sents[i0:i1]))
-            e_units.append(" ".join(en_sents[j0:j1]))
-        g.objects = [{"de": by_para[k][0], "en": by_para[k][1]} for k in range(len(g.di))]
-        g.exact = exact
-        g.coarse = mode == 1
-        return True
-    return False
+        touched: dict[int, set[int]] = {i: set() for i in di}
+        for i0, i1, j0, j1 in steps:
+            touched[di[de_para[i0]]].update(ei[en_para[j]] for j in range(j0, j1))
+        for g in groups[a:k]:
+            for q, i in enumerate(g.di):
+                if g.objects is None or g.objects[q] is None:
+                    js = touched[i]
+                    g.enparas[i] = " ".join(en_paras[j] for j in range(min(js), max(js) + 1)) if js else None
 
 
 @dataclass
@@ -566,9 +643,9 @@ def split_turns(paras: list[str]) -> list[str]:
 
 
 def build_aligned(de_paras: list[str], en_paras: list[str], m: Model, direct: bool = False) -> Built:
-    """Paragraph alignment, then sentence pairs (or whole English paragraphs) for each group. A group that does not
-    pass is joined with its neighbours (up to four groups) when the paragraph breaks of the two texts sit at
-    different places, and tried again; what still does not pass keeps the whole English paragraph(s).
+    """Paragraph alignment, then sentence pairs (or whole English paragraphs) for each group. A group in which no
+    paragraph passes is joined with its neighbours (up to four groups) when the paragraph breaks of the two texts sit
+    at different places, and tried again; what still does not pass keeps the whole English paragraph(s).
     direct=True pairs paragraph i with paragraph i (dialogue turns) instead of aligning them."""
     de_sent = [[split_sentences_ex(p, "de", co) for p in de_paras] for co in (False, True)]
     en_sent = [[split_sentences_ex(p, "en", co) for p in en_paras] for co in (False, True)]
@@ -600,23 +677,26 @@ def build_aligned(de_paras: list[str], en_paras: list[str], m: Model, direct: bo
                     break
             if not done:
                 break
+    if not direct:
+        _locate_fallbacks(groups, de_sent, en_sent, en_paras, m)
     for g in groups:
         built.group_kinds[f"{len(g.di)}-{len(g.ei)}"] += 1
         if not g.di:
             built.unmatched_en += len(g.ei)
-        elif g.objects is not None:
-            built.paragraphs.extend(g.objects)
-            built.paragraphs_aligned += len(g.di)
-            n = sum(len(o["de"]) for o in g.objects)
-            built.units_aligned += n
-            if g.exact:
-                built.exact_units += n
-            if g.coarse:
-                built.coarse_units += n
-        else:
-            en_text = " ".join(en_paras[j] for j in g.ei) if g.ei else None
-            for i in g.di:
-                built.paragraphs.append({"de": [s for s, _ in de_sent[0][i]], "enPara": en_text})
+            continue
+        en_text = " ".join(en_paras[j] for j in g.ei) if g.ei else None
+        for q, i in enumerate(g.di):
+            obj = g.objects[q] if g.objects is not None else None
+            if obj is not None:
+                built.paragraphs.append(obj)
+                built.paragraphs_aligned += 1
+                built.units_aligned += len(obj["de"])
+                if g.exact:
+                    built.exact_units += len(obj["de"])
+                if g.coarse:
+                    built.coarse_units += len(obj["de"])
+            else:
+                built.paragraphs.append({"de": [t for t, _ in de_sent[0][i]], "enPara": g.enparas.get(i, en_text)})
     built.units = sum(len(p["de"]) for p in built.paragraphs)
     return built
 
@@ -624,7 +704,7 @@ def build_aligned(de_paras: list[str], en_paras: list[str], m: Model, direct: bo
 def calibrate(built: Built, default: float = 3.0) -> Model:
     """Measures the length model on the units that were paired: c = English characters per German character (ratio of
     sums, so English material without a German counterpart does not distort it) and a robust estimate (median
-    absolute deviation) of the per-character variance, kept between 1 and the Gale & Church value of 6.8. With fewer
+    absolute deviation) of the per-character variance, kept between 1 and MAX_S2. With fewer
     than 20 pairs the first model is kept and the variance is set to a middle value."""
     m = built.model
     pairs = [(d, e) for p in built.paragraphs if "en" in p for d, e in zip(p["de"], p["en"])]
@@ -633,12 +713,12 @@ def calibrate(built: Built, default: float = 3.0) -> Model:
         return Model(m.c, default)
     c = sum(len(e) for _, e in pairs) / sum(len(d) for d, _ in pairs)
     v = [(len(e) - c * len(d)) / math.sqrt(len(d)) for d, e in long_pairs]
-    return Model(c, min(6.8, max(1.0, (statistics.median(abs(x) for x in v) / 0.6745) ** 2)))
+    return Model(c, min(MAX_S2, max(1.0, (statistics.median(abs(x) for x in v) / 0.6745) ** 2)))
 
 
 def align_text(de_paras: list[str], en_paras: list[str], try_turn_split: bool = False) -> Built:
     """Full alignment of one text: the length ratio c is measured on the whole text; a first pass with the generous
-    Gale & Church variance gives the pairs from which c and the variance of this particular translation are measured;
+    starting variance gives the pairs from which c and the variance of this particular translation are measured;
     a second pass uses them. For the 1921 Grimm print both readings of the speech turns are tried and the better kept."""
     c = sum(map(len, en_paras)) / max(1, sum(map(len, de_paras)))
     variants = [(de_paras, False)]
@@ -648,7 +728,7 @@ def align_text(de_paras: list[str], en_paras: list[str], try_turn_split: bool = 
             variants.append((split, True))
     best: Built | None = None
     for paras, split in variants:
-        first = build_aligned(paras, en_paras, Model(c, 6.8))
+        first = build_aligned(paras, en_paras, Model(c, FIRST_PASS_S2))
         built = build_aligned(paras, en_paras, calibrate(first))
         built.turns_split = split
         if best is None or built.units_aligned > best.units_aligned:

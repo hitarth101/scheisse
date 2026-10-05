@@ -131,24 +131,23 @@
       "de": [
         "Heidi war auf einen Stuhl geklettert und hatte das Buch mit einer dicken Staubwolke heruntergezogen, denn es hatte lange unberührt gelegen da oben; nun wischte es Heidi sauber ab, setzte sich damit auf seinen Schemel zur Großmutter hin und fragte, was es nun lesen solle."
       ],
-      "en": [
-        "Heidi had climbed on to a chair and had already lifted down the book, bringing a cloud of dust with it, for it had lain untouched on the shelf for a long time."
-      ]
+      "enPara": "\"Oh, yes,\" said the grandmother, surprised and delighted; \"but can you really read, child, really?\" Heidi had climbed on to a chair and had already lifted down the book, bringing a cloud of dust with it, for it had lain untouched on the shelf for a long time. Heidi wiped it, sat herself down on a stool beside the old woman, and asked her which hymn she should read."
     },
     {
       "de": [
         "\"Was du willst, Kind, was du willst\", und mit gespannter Erwartung saß die Großmutter da und hatte ihr Spinnrad ein wenig von sich geschoben."
       ],
-      "en": [
-        "Heidi wiped it, sat herself down on a stool beside the old woman, and asked her which hymn she should read."
-      ]
+      "enPara": "\"Oh, yes,\" said the grandmother, surprised and delighted; \"but can you really read, child, really?\" Heidi had climbed on to a chair and had already lifted down the book, bringing a cloud of dust with it, for it had lain untouched on the shelf for a long time. Heidi wiped it, sat herself down on a stool beside the old woman, and asked her which hymn she should read."
     },
     {
       "de": [
         "Heidi blätterte und las leise hier und da eine Linie: \"jetzt kommt etwas von der Sonne, das will ich dir lesen, Großmutter.\"",
         "Und Heidi begann und wurde selbst immer eifriger und immer wärmer, während es las:"
       ],
-      "enPara": "\"What you like, child, what you like,\" and the grandmother pushed her spinning-wheel aside and sat in eager expectation waiting for Heidi to begin. Heidi turned over the leaves and read a line out softly to herself here and there. At last she said,"
+      "en": [
+        "\"What you like, child, what you like,\" and the grandmother pushed her spinning-wheel aside and sat in eager expectation waiting for Heidi to begin.",
+        "Heidi turned over the leaves and read a line out softly to herself here and there."
+      ]
     },
     {
       "de": [
@@ -160,9 +159,7 @@
       "de": [
         "Mein Haupt und Glieder Die lagen darnieder; Aber nun steh ich, Bin munter und fröhlich, Schaue den Himmel mit meinem Gesicht."
       ],
-      "en": [
-        "\"Here is one about the sun, grandmother, I will read you that.\""
-      ]
+      "enPara": "\"Here is one about the sun, grandmother, I will read you that.\" And Heidi began, reading with more and more warmth of expression as she went on,--"
     },
     {
       "de": [
@@ -289,13 +286,15 @@
     },
     {
       "de": [
-        "Heidi jauchzte auf: \"O juhe! Nun muss die Großmutter gar nie mehr hartes, schwarzes Brot essen, und, o Großvater! Nun ist doch alles so schön wie noch gar nie, seit wir leben!\", und Heidi hüpfte hoch auf an der Hand des Großvaters und jauchzte in die Luft hinauf wie die fröhlichen Vögel des Himmels.",
-        "Aber auf einmal wurde es ganz ernsthaft und sagte: \"Oh, wenn nun der liebe Gott gleich auf der Stelle getan hätte, was ich so stark erbetete, dann wäre doch alles nicht so geworden, ich wäre nur gleich wieder heimgekommen und hätte der Großmutter nur wenige Brötchen gebracht und hätte ihr nicht lesen können, was ihr wohl macht; aber der liebe Gott hatte schon alles ausgedacht, so viel schöner, als ich es wusste; die Großmama hat es mir gesagt, und nun ist alles so gekommen. Oh, wie bin ich froh, dass der liebe Gott nicht nachgab, wie ich so bat und jammerte! Aber jetzt will ich immer so beten, wie die Großmama sagte, und dem lieben Gott immer danken, und wenn er etwas nicht tut, das ich erbeten will, dann will ich gleich denken: Es geht gewiss wieder wie in Frankfurt, der liebe Gott denkt gewiss etwas viel Besseres aus. Aber wir wollen auch alle Tage beten, gelt Großvater, und wir wollen es nie mehr vergessen, damit der liebe Gott uns auch nicht vergisst.\""
+        "Heidi jauchzte auf: \"O juhe!",
+        "Nun muss die Großmutter gar nie mehr hartes, schwarzes Brot essen, und, o Großvater!",
+        "Nun ist doch alles so schön wie noch gar nie, seit wir leben!\", und Heidi hüpfte hoch auf an der Hand des Großvaters und jauchzte in die Luft hinauf wie die fröhlichen Vögel des Himmels.",
+        "Aber auf einmal wurde es ganz ernsthaft und sagte: \"Oh, wenn nun der liebe Gott gleich auf der Stelle getan hätte, was ich so stark erbetete, dann wäre doch alles nicht so geworden, ich wäre nur gleich wieder heimgekommen und hätte der Großmutter nur wenige Brötchen gebracht und hätte ihr nicht lesen können, was ihr wohl macht; aber der liebe Gott hatte schon alles ausgedacht, so viel schöner, als ich es wusste; die Großmama hat es mir gesagt, und nun ist alles so gekommen.",
+        "Oh, wie bin ich froh, dass der liebe Gott nicht nachgab, wie ich so bat und jammerte!",
+        "Aber jetzt will ich immer so beten, wie die Großmama sagte, und dem lieben Gott immer danken, und wenn er etwas nicht tut, das ich erbeten will, dann will ich gleich denken: Es geht gewiss wieder wie in Frankfurt, der liebe Gott denkt gewiss etwas viel Besseres aus.",
+        "Aber wir wollen auch alle Tage beten, gelt Großvater, und wir wollen es nie mehr vergessen, damit der liebe Gott uns auch nicht vergisst.\""
       ],
-      "en": [
-        "Heidi shouted for joy at the thought that grandmother would never need any more to eat hard black bread, and \"Oh, grandfather!\" she said, \"everything is happier now than it has ever been in our lives before!\" and she sang and skipped along, holding her grandfather's hand as light-hearted as a bird.",
-        "But all at once she grew quiet and said, \"If God had let me come at once, as I prayed, then everything would have been different, I should only have had a little bread to bring to grandmother, and I should not have been able to read, which is such a comfort to her; but God has arranged it all so much better than I knew how to; everything has happened just as the other grandmother said it would. Oh, how glad I am that God did not let me have at once all I prayed and wept for! And now I shall always pray to God as she told me, and always thank Him, and when He does not do anything I ask for I shall think to myself, It's just like it was in Frankfurt: God, I am sure, is going to do something better still. So we will pray every day, won't we, grandfather, and never forget Him again, or else He may forget us.\""
-      ]
+      "enPara": "Heidi shouted for joy at the thought that grandmother would never need any more to eat hard black bread, and \"Oh, grandfather!\" she said, \"everything is happier now than it has ever been in our lives before!\" and she sang and skipped along, holding her grandfather's hand as light-hearted as a bird. But all at once she grew quiet and said, \"If God had let me come at once, as I prayed, then everything would have been different, I should only have had a little bread to bring to grandmother, and I should not have been able to read, which is such a comfort to her; but God has arranged it all so much better than I knew how to; everything has happened just as the other grandmother said it would. Oh, how glad I am that God did not let me have at once all I prayed and wept for! And now I shall always pray to God as she told me, and always thank Him, and when He does not do anything I ask for I shall think to myself, It's just like it was in Frankfurt: God, I am sure, is going to do something better still. So we will pray every day, won't we, grandfather, and never forget Him again, or else He may forget us.\""
     },
     {
       "de": [
@@ -412,7 +411,7 @@
         "Aber voller Erstaunen blieb Heidi vor seinem Großvater stehen und schaute ihn an.",
         "\"O Großvater, so hab ich dich nie gesehen\", brach es endlich aus, \"und den Rock mit den silbernen Knöpfen hast du noch gar nicht getragen, oh, du bist so schön in deinem schönen Sonntagsrock.\""
       ],
-      "enPara": "Heidi was not long getting ready; it was such an unusual summons from her grandfather that she must make haste. She put on her smart Frankfurt dress and soon went down, but when she saw her grandfather she stood still, gazing at him in astonishment. \"Why, grandfather!\" she exclaimed, \"I never saw you look like that before! and the coat with the silver buttons! Oh, you do look nice in your Sunday coat!\""
+      "enPara": "Heidi was not long getting ready; it was such an unusual summons from her grandfather that she must make haste. She put on her smart Frankfurt dress and soon went down, but when she saw her grandfather she stood still, gazing at him in astonishment. \"Why, grandfather!\" she exclaimed, \"I never saw you look like that before! and the coat with the silver buttons! Oh, you do look nice in your Sunday coat!\" The old man smiled and replied, \"And you too; now come along!\" He took Heidi's hand in his and together they walked down the mountain side. The bells were ringing in every direction now, sounding louder and fuller as they neared the valley, and Heidi listened to them with delight. \"Hark at them, grandfather! it's like a great festival!\""
     },
     {
       "de": [
@@ -431,13 +430,11 @@
     {
       "de": [
         "Unten im Dörfli waren schon alle Leute in der Kirche und fingen eben zu singen an, als der Großvater mit Heidi eintrat und ganz hinten auf der letzten Bank sich niedersetzte.",
-        "Aber mitten im Singen stieß der zunächst Sitzende seinen Nachbar mit dem Ellenbogen an und sagte: \"Hast du das gesehen?",
-        "Der Alm-Öhi ist in der Kirche!\""
+        "Aber mitten im Singen stieß der zunächst Sitzende seinen Nachbar mit dem Ellenbogen an und sagte: \"Hast du das gesehen? Der Alm-Öhi ist in der Kirche!\""
       ],
       "en": [
         "The congregation had already assembled and the singing had begun when Heidi and her grandfather entered the church at Dorfli and sat down at the back.",
-        "But before the hymn was over every one was nudging his neighbor and whispering, \"Do you see?",
-        "Alm-Uncle is in church!\""
+        "But before the hymn was over every one was nudging his neighbor and whispering, \"Do you see? Alm-Uncle is in church!\""
       ]
     },
     {
@@ -453,7 +450,7 @@
         "Seit wann läuft denn ein kleines Kind, das zu essen und zu trinken hat, was es will, und sonst alles Gute, aus alledem weg und heim zu einem Großvater, wenn der bös und wild ist und es sich zu fürchten hat vor ihm?\"",
         "Und es kam eine ganz liebevolle Stimmung gegen den Alm-Öhi auf und nahm überhand, denn jetzt nahten sich auch die Frauen herzu, und diese hatten so manches von der Geißenpeterin und der Großmutter gehört, das den Alm-Öhi ganz anders darstellte, als die allgemeine Meinung war, und das ihnen jetzt auf einmal glaublich schien, dass es mehr und mehr so wurde, als warteten sie alle da, um einen alten Freund zu bewillkommnen, der ihnen lange gemangelt hatte."
       ],
-      "enPara": "Soon everybody in the church knew of Alm-Uncle's presence, and the women kept on turning round to look and quite lost their place in the singing. But everybody became more attentive when the sermon began, for the preacher spoke with such warmth and thankfulness that those present felt the effect of his words, as if some great joy had come to them all. At the close of the service Alm-Uncle took Heidi by the hand, and on leaving the church made his way towards the pastor's house; the rest of the congregation looked curiously after him, some even following to see whether he went inside the pastor's house, which he did. Then they collected in groups and talked over this strange event, keeping their eyes on the pastor's door, watching to see whether Alm-Uncle came out looking angry and quarrelsome, or as if the interview had been a peaceful one, for they could not imagine what had brought the old man down, and what it all meant. Some, however, adopted a new tone and expressed their opinion that Alm- Uncle was not so bad after all as they thought, \"for see how carefully he took the little one by the hand.\" And others responded and said they had always thought people had exaggerated about him, that if he was so downright bad he would be afraid to go inside the pastor's house. Then the miller put in his word, \"Did I not tell you so from the first? What child is there who would run away from where she had plenty to eat and drink and everything of the best, home to a grandfather who was cruel and unkind, and of whom she was afraid?\" And so everybody began to feel quite friendly towards Alm-Uncle, and the women now came up and related all they had been told by Peter and his grandmother, and finally they all stood there like people waiting for an old friend whom they had long missed from among their number."
+      "enPara": "The congregation had already assembled and the singing had begun when Heidi and her grandfather entered the church at Dorfli and sat down at the back. But before the hymn was over every one was nudging his neighbor and whispering, \"Do you see? Alm-Uncle is in church!\" Soon everybody in the church knew of Alm-Uncle's presence, and the women kept on turning round to look and quite lost their place in the singing. But everybody became more attentive when the sermon began, for the preacher spoke with such warmth and thankfulness that those present felt the effect of his words, as if some great joy had come to them all. At the close of the service Alm-Uncle took Heidi by the hand, and on leaving the church made his way towards the pastor's house; the rest of the congregation looked curiously after him, some even following to see whether he went inside the pastor's house, which he did. Then they collected in groups and talked over this strange event, keeping their eyes on the pastor's door, watching to see whether Alm-Uncle came out looking angry and quarrelsome, or as if the interview had been a peaceful one, for they could not imagine what had brought the old man down, and what it all meant. Some, however, adopted a new tone and expressed their opinion that Alm- Uncle was not so bad after all as they thought, \"for see how carefully he took the little one by the hand.\" And others responded and said they had always thought people had exaggerated about him, that if he was so downright bad he would be afraid to go inside the pastor's house. Then the miller put in his word, \"Did I not tell you so from the first? What child is there who would run away from where she had plenty to eat and drink and everything of the best, home to a grandfather who was cruel and unkind, and of whom she was afraid?\" And so everybody began to feel quite friendly towards Alm-Uncle, and the women now came up and related all they had been told by Peter and his grandmother, and finally they all stood there like people waiting for an old friend whom they had long missed from among their number."
     },
     {
       "de": [
@@ -504,20 +501,19 @@
     {
       "de": [
         "\"Du mein Gott, das ist der Öhi!\", rief die Großmutter voll freudiger Überraschung aus.",
-        "\"Dass ich das noch erlebe! Dass ich Euch noch einmal danken kann für alles, das Ihr für uns getan habt, Öhi! Vergelt's Gott! Vergelt's Gott!\""
+        "\"Dass ich das noch erlebe!",
+        "Dass ich Euch noch einmal danken kann für alles, das Ihr für uns getan habt, Öhi!",
+        "Vergelt's Gott!",
+        "Vergelt's Gott!\""
       ],
-      "en": [
-        "\"Dear God, if it is not Uncle!\" cried the grandmother in pleased surprise.",
-        "\"That I should live to see such a thing! and now I can thank you for all that you have done for me. May God reward you! may God reward you!\""
-      ]
+      "enPara": "\"Dear God, if it is not Uncle!\" cried the grandmother in pleased surprise. \"That I should live to see such a thing! and now I can thank you for all that you have done for me. May God reward you! may God reward you!\" She stretched out a trembling hand to him, and when the grandfather shook it warmly, she went on, still holding his, \"And I have something on my heart I want to say, a prayer to make to you! If I have injured you in any way, do not punish me by sending the child away again before I lie under the grass. Oh, you do not know what that child is to me!\" and she clasped the child to her, for Heidi had already taken her usual stand close to the grandmother."
     },
     {
       "de": [
-        "Und mit zitternder Freude streckte die alte Großmutter ihre Hand aus, und als der Angeredete sie herzlich schüttelte, fuhr sie fort, indem sie die seinige fest hielt: \"Und eine Bitte hab ich auch noch auf dem Herzen, Öhi: Wenn ich Euch je etwas zuleid getan habe, so straft mich nicht damit, dass Ihr noch einmal das Heidi fortlasst, bevor ich unten bei der Kirche liege. Oh, Ihr wisst nicht, was mir das Kind ist!\", und sie hielt es fest an sich, denn Heidi hatte sich schon an sie geschmiegt."
+        "Und mit zitternder Freude streckte die alte Großmutter ihre Hand aus, und als der Angeredete sie herzlich schüttelte, fuhr sie fort, indem sie die seinige fest hielt: \"Und eine Bitte hab ich auch noch auf dem Herzen, Öhi: Wenn ich Euch je etwas zuleid getan habe, so straft mich nicht damit, dass Ihr noch einmal das Heidi fortlasst, bevor ich unten bei der Kirche liege.",
+        "Oh, Ihr wisst nicht, was mir das Kind ist!\", und sie hielt es fest an sich, denn Heidi hatte sich schon an sie geschmiegt."
       ],
-      "en": [
-        "She stretched out a trembling hand to him, and when the grandfather shook it warmly, she went on, still holding his, \"And I have something on my heart I want to say, a prayer to make to you! If I have injured you in any way, do not punish me by sending the child away again before I lie under the grass. Oh, you do not know what that child is to me!\" and she clasped the child to her, for Heidi had already taken her usual stand close to the grandmother."
-      ]
+      "enPara": "\"Dear God, if it is not Uncle!\" cried the grandmother in pleased surprise. \"That I should live to see such a thing! and now I can thank you for all that you have done for me. May God reward you! may God reward you!\" She stretched out a trembling hand to him, and when the grandfather shook it warmly, she went on, still holding his, \"And I have something on my heart I want to say, a prayer to make to you! If I have injured you in any way, do not punish me by sending the child away again before I lie under the grass. Oh, you do not know what that child is to me!\" and she clasped the child to her, for Heidi had already taken her usual stand close to the grandmother."
     },
     {
       "de": [
@@ -594,18 +590,13 @@
         "Da gab es nun eine solche Freude und Verwunderung über diese Nachrichten und so viel zu reden und zu fragen, da die große Erwartung alle gleich betraf, dass selbst der Großvater nicht bemerkte, wie spät es schon war, und so vergnügt und fröhlich waren sie alle in der Aussicht auf die kommenden Tage und fast noch mehr in der Freude über das Zusammensein an dem heutigen, dass die Großmutter zuletzt sagte: \"Das Schönste ist doch, wenn so ein alter Freund kommt und uns wieder die Hand gibt, so wie vor langer Zeit; das gibt so ein tröstliches Gefühl ins Herz, dass wir einmal alles wieder finden, was uns lieb ist.",
         "Ihr kommt doch bald wieder, Öhi, und das Kind morgen schon?\""
       ],
-      "en": [
-        "There were exclamations of pleasure and astonishment on hearing all this news, and so much to talk and ask about that even the grandfather did not notice how the time was passing; there was general delight at the thought of the coming days, and even more at the meeting which had taken place on this one, and the grandmother spoke and said, \"The happiest of all things is when an old friend comes and greets us as in former times; the heart is comforted with the assurance that some day everything that we have loved will be given back to us.--You will come soon again, uncle, and you child, to-morrow?\"",
-        "The old man and Heidi promised her faithfully to do so; then it was time to break up the party, and these two went back up the mountain."
-      ]
+      "enPara": "There were exclamations of pleasure and astonishment on hearing all this news, and so much to talk and ask about that even the grandfather did not notice how the time was passing; there was general delight at the thought of the coming days, and even more at the meeting which had taken place on this one, and the grandmother spoke and said, \"The happiest of all things is when an old friend comes and greets us as in former times; the heart is comforted with the assurance that some day everything that we have loved will be given back to us.--You will come soon again, uncle, and you child, to-morrow?\""
     },
     {
       "de": [
         "Das wurde der Großmutter in die Hand hinein versprochen; nun aber war es Zeit zum Aufbruch, und der Großvater wanderte mit Heidi die Alm hinan, und wie am Morgen die hellen Glocken von nah und fern sie heruntergerufen hatten, so begleitete nun aus dem Tale herauf das friedliche Geläut der Abendglocken sie bis hinauf zur sonnigen Almhütte, die ganz sonntäglich im Abendschimmer ihnen entgegenglänzte."
       ],
-      "en": [
-        "As they had been greeted with bells when they made their journey down in the morning, so now they were accompanied by the peaceful evening chimes as they climbed to the hut, which had quite a Sunday-like appearance as it stood bathed in the light of the low evening sun."
-      ]
+      "enPara": "The old man and Heidi promised her faithfully to do so; then it was time to break up the party, and these two went back up the mountain. As they had been greeted with bells when they made their journey down in the morning, so now they were accompanied by the peaceful evening chimes as they climbed to the hut, which had quite a Sunday-like appearance as it stood bathed in the light of the low evening sun."
     },
     {
       "de": [
