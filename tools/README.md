@@ -5,7 +5,12 @@ PC-side scripts that prepare the app's content. Raw downloads live in `tools/raw
 | Script | What it does | Run time |
 |---|---|---|
 | `encode-lectures.sh` | Re-encodes the 50 Language Transfer MP3s to mono 64 kbps into `app/public/audio/` (Git Bash; needs FFmpeg) | ~3 min |
-| `build_content.py` | Goethe A1–B1 word lists + Wiktionary + DeReWo + Tatoeba → `words.json`, `word-forms.json`, `sentences.json`, `manifest.json`; report in `tools/out/content-report.md` | ~1.5 min |
+| `build_content.py` | Goethe A1–B1 word lists + Wiktionary + DeReWo + Tatoeba → `words.json`, `word-forms.json`, `sentences.json` (with fill-in-the-blank positions and each word's Goethe word), `engineering.json` (engineering deck), `manifest.json`; report in `tools/out/content-report.md` | ~1 min |
+| `fetch_nicos_weg.py` | DW Nicos Weg A1–B1 lesson list and grammar topics, plus Grimm Grammar and Schubert-Verlag links per topic → `tools/sources/nicos-weg.json`, `tools/sources/grammar-links.json`; report in `tools/out/nicos-weg-report.md` | minutes (network) |
+| `build_grammar.py` | Nicos Weg data + Wiktionary tables + the Wikibooks prepositions table → `grammar.json` | ~1 min |
+| `build_reading_sources.py` | Wikibooks dialogues, Grimm tales and Heidi (German + public-domain English), aligned → `tools/sources/reading/`; report in `tools/out/reading-report.md` | minutes (network) |
+| `fetch_librivox.py` | LibriVox German readings of the Grimm tales and Heidi (links only) → `tools/sources/librivox.json`; report in `tools/out/librivox-report.md` | minutes (network) |
+| `build_reading.py` | Reading texts + Wiktionary word popups + LibriVox links → `reading/index.json`, `reading/<id>.json` | ~1 min |
 | `extract_transcript.py` | Volunteer Language Transfer transcript → `lt-pairs.json` (English → German pairs per track, for the tick screen); report in `tools/out/transcript-report.md` | ~20 s |
 
 Run from the repo root, for example `py tools/build_content.py`. Python 3 with `pymupdf` is needed.

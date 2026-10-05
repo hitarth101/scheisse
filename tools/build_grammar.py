@@ -231,15 +231,26 @@ def mixed_rows(gut):
 
 
 # ---------------------------------------------------------------- Nicos Weg lessons and topics
-TABLE_FOR = [
-    (r"articles?.*definite|definite article", "definite-articles"),
-    (r"indefinite", "indefinite-articles"),
-    (r"personal pronoun", "personal-pronouns"),
-    (r"possessive", "possessives"),
-    (r"preposition", "prepositions"),
-    (r"adjective (declension|ending)", "adjective-endings"),
-    (r"conjugation|modal verb|present tense|^sein|haben|werden|vowel change", "present-tense"),
-]
+def table_for(title: str) -> str | None:
+    """The reference table a topic links to, by its name (DW's English names for A1/A2, German for B1)."""
+    t = title.lower()
+    if re.search(r"past|perfect|präteritum|perfekt|subjunctive|konjunktiv|pronouns?: (man|es)|indefinite pronoun", t):
+        return None
+    if re.search(r"articles?: indefinite|indefinite article", t):
+        return "indefinite-articles"
+    if re.search(r"articles?: definite|\bdefinite article|^articles?$", t):
+        return "definite-articles"
+    if re.search(r"personal pronoun|personalpronomen", t):
+        return "personal-pronouns"
+    if re.search(r"possessiv", t):
+        return "possessives"
+    if re.search(r"preposition|präposition", t):
+        return "prepositions"
+    if re.search(r"adjective (declension|ending)|adjektivdeklination", t):
+        return "adjective-endings"
+    if "adjective" not in t and re.search(r"modal ?verb|present tense|\b(sein|haben|werden|können|müssen|dürfen|sollen|wollen|mögen)\b", t):
+        return "present-tense"
+    return None
 
 
 def course():
@@ -264,7 +275,7 @@ def course():
                         continue
                     tid = t["id"]
                     if tid not in topics:
-                        table = next((tab for pat, tab in TABLE_FOR if re.search(pat, t["title"], re.I)), None)
+                        table = table_for(t["title"])
                         topics[tid] = {"id": tid, "title": t["title"], "level": t["level"], "lessons": [], "blank": t.get("blank"),
                                        "dw": g.get("url"), "grimm": t.get("grimm"), "schubert": t.get("schubert"), "table": table}
                         if level["level"] == "B1":  # DW's B1 course is in German, topic names included

@@ -133,7 +133,7 @@ export function StatusPage() {
       <Group flush>
         <Row title="Language Transfer" detail={`${lecturesDone} of 50 tracks`} />
         <Row title="Nicos Weg" detail={grammar ? `${grammar.lessons.filter(l => lessons.has(l.id)).length} of ${grammar.lessons.length} lessons` : `${lessons.size} lessons`} />
-        <Row title="Grammar topics" detail={`${Object.values(topics).filter(v => v === 'read').length} read · ${Object.values(topics).filter(v => v === 'practiced').length} practiced`} />
+        <Row title="Grammar topics" detail={`${Object.entries(topics).filter(([id, v]) => v === 'read' && (!grammar || grammar.topics.some(t => t.id === id))).length} read · ${Object.entries(topics).filter(([id, v]) => v === 'practiced' && (!grammar || grammar.topics.some(t => t.id === id))).length} practiced`} />
       </Group>
 
       <SectionHeader left="Backup" />

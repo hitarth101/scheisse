@@ -23,7 +23,7 @@ test('Flashcards opens with one green key and the tabs', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Flashcards' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Study' })).toBeVisible();
   await expect(page.locator('.go')).toHaveCount(1);
-  await expect(page.getByRole('navigation', { name: 'Tabs' }).getByRole('link')).toHaveText(['Flashcards', 'Lectures', 'Status']);
+  await expect(page.getByRole('navigation', { name: 'Tabs' }).getByRole('link')).toHaveText(['Flashcards', 'Lectures', 'Reading', 'Grammar', 'Status']);
   await expect(page.locator('.statusbar-backdrop')).toHaveCount(1);
   await noSidewaysScroll(page);
 });

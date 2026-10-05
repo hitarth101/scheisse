@@ -37,7 +37,7 @@ export function GrammarPage() {
     );
   }
 
-  const read = Object.values(statuses).filter(s => s !== 'none').length;
+  const read = data ? data.topics.filter(t => statuses[t.id] && statuses[t.id] !== 'none').length : 0;
   const sub = !data ? 'Nicos Weg order' : view === 'lessons' ? `Nicos Weg · ${data.lessons.filter(l => done.has(l.id)).length} of ${data.lessons.length} lessons done`
     : view === 'tables' ? 'Reference tables' : `Nicos Weg order · ${read} of ${data.topics.length} topics read`;
 

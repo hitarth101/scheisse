@@ -43,7 +43,7 @@ export function TopicPage({ id }: { id: string }) {
         {lessons.map(l => (
           <Row key={l.id} icon="ext" title="Nicos Weg lesson" sub={<>DW · <span lang="de">{l.title}</span></>} onClick={() => open('the Nicos Weg lesson', l.url)} />
         ))}
-        {topic.grimm && <Row icon="ext" title="Grimm Grammar" sub={`University of Texas at Austin · ${topic.grimm.title}`} onClick={() => open('Grimm Grammar', topic.grimm!.url)} />}
+        {topic.grimm && <Row icon="ext" title="Grimm Grammar" sub={`University of Texas at Austin · ${topic.grimm.title.replace(/^Grimm Grammar\s*:\s*/, '')}`} onClick={() => open('Grimm Grammar', topic.grimm!.url)} />}
         {topic.schubert && <Row icon="ext" title="Exercises" sub={`Schubert-Verlag, online · ${topic.schubert.title}`} onClick={() => open('the exercises', topic.schubert!.url)} />}
         {opened && status === 'none' && (
           <div className="inline">
