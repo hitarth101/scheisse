@@ -33,9 +33,14 @@ export interface Source { source: string; url?: string; license?: string; transl
 export interface TextMeta {
   id: string; stage: number; title: string; titleEn?: string; author: string; year?: number; historicalSpelling?: boolean;
   words: number; lemmas: Record<string, number>; aligned?: number;
+  /** Has a LibriVox reading. */
+  audio?: 1;
 }
+/** A public-domain LibriVox reading of the text (product spec 7), streamed from archive.org. */
+export interface Recording { url: string; reader: string; duration?: string; book?: string; librivox?: string }
 export interface ReadingText extends Omit<TextMeta, 'words' | 'lemmas'> {
   de?: Source; en?: Source;
+  audio?: Recording;
   paragraphs: Paragraph[];
   gloss: Record<string, Gloss>;
 }

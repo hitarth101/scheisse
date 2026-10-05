@@ -47,7 +47,7 @@ export function ReadingPage() {
     const p = pos[t.id];
     const lamp: LampState = p?.done ? 'done' : p ? 'part' : t.id === firstUnread ? 'on' : 'off';
     const length = t.id === 'tatoeba' ? `Tatoeba · ${t.words} words · a new set each day` : [t.author, t.year, `${t.words} words`].filter(Boolean).join(' · ');
-    const extra = [t.historicalSpelling ? 'historical spelling' : null, p?.done ? 'read' : p ? 'position saved' : null].filter(Boolean).join(' · ');
+    const extra = [t.historicalSpelling ? 'historical spelling' : null, t.audio ? 'recording' : null, p?.done ? 'read' : p ? 'position saved' : null].filter(Boolean).join(' · ');
     return (
       <Row key={t.id} lamp={lamp} lampLabel={p?.done ? 'read' : p ? 'in progress' : t.id === firstUnread ? 'suggested next' : 'not started'}
         title={<span lang={t.id === 'tatoeba' ? 'en' : 'de'}>{t.title}</span>} sub={extra ? `${length} · ${extra}` : length}

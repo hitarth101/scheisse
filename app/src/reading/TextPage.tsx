@@ -33,6 +33,7 @@ export function TextPage({ id }: { id: string }) {
   const noteIds = useLiveQuery(async () => new Set(await db.notes.toCollection().primaryKeys()), [], new Set<string>());
   const known = useLiveQuery(knownLemmas, [], new Set<string>());
   const readingRun = useRef(0);
+  const recording = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     let live = true;
@@ -89,12 +90,21 @@ export function TextPage({ id }: { id: string }) {
     return () => { window.clearInterval(t); window.removeEventListener('scroll', touch); window.removeEventListener('pointerdown', touch); };
   }, []);
 
-  useEffect(() => () => { readingRun.current++; stopSpeaking(); }, []);
+  useEffect(() => () => { readingRun.current++; stopSpeaking(); recording.current?.pause(); }, []);
 
   const toggleReading = async () => {
-    if (reading) { readingRun.current++; stopSpeaking(); setReading(false); return; }
+    if (reading) { readingRun.current++; stopSpeaking(); recording.current?.pause(); setReading(false); return; }
     if (!text) return;
     pauseForOtherAudio();
+    // A LibriVox reading, when the text has one; otherwise the iPhone voice.
+    if (text.audio) {
+      const a = recording.current ?? (recording.current = new Audio(text.audio.url));
+      a.onended = () => setReading(false);
+      a.onerror = () => { setReading(false); showToast("Couldn't play the recording. Check your internet connection."); };
+      setReading(true);
+      try { await a.play(); } catch { setReading(false); showToast("Couldn't play the recording. Check your internet connection."); }
+      return;
+    }
     const run = ++readingRun.current;
     setReading(true);
     const start = Number((await getPosition(id))?.p ?? 0);
@@ -114,7 +124,9 @@ export function TextPage({ id }: { id: string }) {
 
   const nav = (
     <NavRow left={<BackButton label="Reading" to={{ name: 'reading' }} />}
-      right={<RKey icon={reading ? 'pause' : 'speaker'} label={reading ? 'Stop reading aloud' : 'Read aloud with the iPhone voice'} onClick={() => void toggleReading()} disabled={!text} />} />
+      right={<RKey icon={reading ? 'pause' : text?.audio ? 'play' : 'speaker'}
+        label={reading ? (text?.audio ? 'Pause the recording' : 'Stop reading aloud') : text?.audio ? `Play the LibriVox recording, read by ${text.audio.reader}` : 'Read aloud with the iPhone voice'}
+        onClick={() => void toggleReading()} disabled={!text} />} />
   );
 
   if (error) {
@@ -178,6 +190,7 @@ export function TextPage({ id }: { id: string }) {
       <Foot>
         {id === TATOEBA_SET ? 'Sentences and translations: Tatoeba (CC BY 2.0 FR). A new set each day.'
           : `German: ${text.de?.source ?? ''}${text.de?.license ? `, ${text.de.license}` : ''}. English: ${[text.en?.translator, text.en?.year, text.en?.source].filter(Boolean).join(', ')}${text.en?.license ? `, ${text.en.license}` : ''}.`}
+        {text.audio ? ` Recording: LibriVox, read by ${text.audio.reader}${text.audio.duration ? `, ${text.audio.duration}` : ''} (public domain); it may follow a slightly different edition.` : ''}
       </Foot>
 
       {popup && <WordSheet popup={popup} text={text} noteIds={noteIds} known={known} onClose={() => setPopup(null)} />}

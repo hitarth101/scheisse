@@ -1,6 +1,7 @@
 """Builds the Reading texts (product spec 4.5) into app/public/data/reading/.
 
 Input:  tools/sources/reading/*.json  aligned German/English texts (tools/build_reading_sources.py)
+        tools/sources/librivox.json  public-domain LibriVox readings, linked (streamed from archive.org), if found
         tools/raw/kaikki-German.jsonl.gz  Wiktionary (CC BY-SA) via kaikki.org, for the word popups
         app/public/data/words.json  the Goethe words, so popups and coverage use the same words as the cards
 Output: reading/index.json  one row per text with its word counts by lemma (for the known-word percentage)
@@ -36,6 +37,34 @@ def texts():
     index = json.loads((SRC / "index.json").read_text(encoding="utf-8"))
     for row in index:
         yield json.loads((SRC / f"{row['id']}.json").read_text(encoding="utf-8"))
+
+
+def fold(t: str) -> str:
+    t = t.lower().replace("ß", "ss")
+    for a, b in (("ä", "a"), ("ö", "o"), ("ü", "u")):
+        t = t.replace(a, b)
+    return re.sub(r"[^a-z]+", " ", t).strip()
+
+
+def recordings():
+    """LibriVox readings (tools/fetch_librivox.py), matched to texts by title (Grimm) or part and chapter (Heidi)."""
+    path = ROOT / "tools" / "sources" / "librivox.json"
+    if not path.exists():
+        return lambda text: None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    grimm = {fold(r["title"]): r for r in data.get("grimm", [])}
+    heidi = {(r["part"], r["chapter"]): r for r in data.get("heidi", [])}
+
+    def find(text: dict):
+        m = re.match(r"heidi-(\d+)-(\d+)", text["id"])
+        r = heidi.get((int(m.group(1)), int(m.group(2)))) if m else None
+        if not r and text["id"].startswith("grimm"):
+            t = fold(text["title"])
+            r = grimm.get(t) or next((v for k, v in grimm.items() if k.startswith(t) or t.startswith(k)), None)
+        if not r:
+            return None
+        return {k: r[k] for k in ("url", "reader", "duration", "book", "librivox") if r.get(k)}
+    return find
 
 
 def verb_forms(e: dict) -> list[str] | None:
@@ -122,6 +151,7 @@ def main():
 
     OUT.mkdir(parents=True, exist_ok=True)
     index, cache = [], {}
+    recording_for = recordings()
     for x in all_texts:
         gloss, counts, total, missing = {}, {}, 0, 0
         for p in x["paragraphs"]:
@@ -141,10 +171,13 @@ def main():
         out = {k: x[k] for k in ("id", "stage", "title", "titleEn", "author", "year", "historicalSpelling", "de", "en") if k in x}
         out["paragraphs"] = x["paragraphs"]
         out["gloss"] = gloss
+        rec = recording_for(x)
+        if rec:
+            out["audio"] = rec
         (OUT / f"{x['id']}.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         aligned = sum(1 for p in x["paragraphs"] if "en" in p) / max(1, len(x["paragraphs"]))
         index.append({**{k: out[k] for k in ("id", "stage", "title", "titleEn", "author", "year", "historicalSpelling") if k in out},
-                      "words": total, "lemmas": counts, "aligned": round(aligned, 2)})
+                      "words": total, "lemmas": counts, "aligned": round(aligned, 2), **({"audio": 1} if rec else {})})
         log(f"{x['id']}: {total} words, {len(counts)} lemmas, {missing} without a dictionary entry, {aligned:.0%} sentence-aligned")
     (OUT / "index.json").write_text(json.dumps({"texts": index}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     log(f"Wrote {len(index)} texts")
