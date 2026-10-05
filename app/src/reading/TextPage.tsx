@@ -41,7 +41,11 @@ export function TextPage({ id }: { id: string }) {
       if (!live) return;
       setText(t);
       const pos = await getPosition(id);
-      if (pos?.p) requestAnimationFrame(() => document.querySelector(`[data-p="${pos.p}"]`)?.scrollIntoView({ block: 'start' }));
+      // Back to the saved paragraph, clear of the status bar.
+      if (pos?.p) requestAnimationFrame(() => {
+        const el = document.querySelector<HTMLElement>(`[data-p="${pos.p}"]`);
+        if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 90);
+      });
     }, () => { if (live) setError(true); });
     return () => { live = false; };
   }, [id, attempt]);

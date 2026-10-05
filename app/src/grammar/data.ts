@@ -9,8 +9,8 @@ import { BUILD_ID } from '../lib/version';
 
 export type Blank = 'article' | 'preposition' | 'verb' | 'adjective';
 export interface Link { url: string; title: string }
-export interface Lesson { id: string; level: string; chapter: string; n: number; title: string; subtitle?: string; url: string; topics: string[]; test?: boolean }
-export interface Topic { id: string; title: string; level: string; lessons: string[]; blank: Blank | null; dw: string | null; grimm: Link | null; schubert: Link | null; table: string | null }
+export interface Lesson { id: string; level: string; chapter: string; n: number; title: string; subtitle?: string; url: string; topics: string[]; test?: boolean; subLang?: 'de'; chapterLang?: 'de' }
+export interface Topic { id: string; title: string; level: string; lessons: string[]; blank: Blank | null; dw: string | null; grimm: Link | null; schubert: Link | null; table: string | null; lang?: 'de' }
 
 /** One block of a reference table: rows (cases or persons) × columns, every German cell copied from the source. */
 export interface RefSection {

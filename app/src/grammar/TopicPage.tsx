@@ -31,7 +31,7 @@ export function TopicPage({ id }: { id: string }) {
   return (
     <>
       {nav}
-      <DetailTitle title={topic.title} sub={first ? <>{first.level} · {first.chapter} · lesson <span lang="de">{first.title}</span></> : topic.level} />
+      <DetailTitle title={topic.title} lang={topic.lang} sub={first ? <>{first.level} · {first.chapter} · lesson <span lang="de">{first.title}</span></> : topic.level} />
       <div style={{ padding: '14px 16px 0' }}>
         <Seg label="Status" value={status} onChange={set}
           options={[{ value: 'none', label: 'Not started' }, { value: 'read', label: 'Read' }, { value: 'practiced', label: 'Practiced' }]} />

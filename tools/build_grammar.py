@@ -267,12 +267,19 @@ def course():
                         table = next((tab for pat, tab in TABLE_FOR if re.search(pat, t["title"], re.I)), None)
                         topics[tid] = {"id": tid, "title": t["title"], "level": t["level"], "lessons": [], "blank": t.get("blank"),
                                        "dw": g.get("url"), "grimm": t.get("grimm"), "schubert": t.get("schubert"), "table": table}
+                        if level["level"] == "B1":  # DW's B1 course is in German, topic names included
+                            topics[tid]["lang"] = "de"
                     if lid not in topics[tid]["lessons"]:
                         topics[tid]["lessons"].append(lid)
                     tids.append(tid)
                 chapter = f"{ch['n']} · {ch['title']}" if ch.get("n") else ch["title"]
-                lessons.append({"id": lid, "level": level["level"], "chapter": chapter, "n": ls["n"], "title": ls["title"],
-                                "subtitle": ls.get("subtitle"), "url": ls["url"], "topics": tids, "test": bool(ls.get("test"))})
+                lesson = {"id": lid, "level": level["level"], "chapter": chapter, "n": ls["n"], "title": ls["title"],
+                          "subtitle": ls.get("subtitle") or ls.get("subtitleDe"), "url": ls["url"], "topics": tids, "test": bool(ls.get("test"))}
+                if not ls.get("subtitle") and ls.get("subtitleDe"):
+                    lesson["subLang"] = "de"
+                if level["level"] == "B1":
+                    lesson["chapterLang"] = "de"
+                lessons.append(lesson)
     return lessons, list(topics.values())
 
 

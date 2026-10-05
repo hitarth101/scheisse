@@ -85,7 +85,7 @@ function Topics({ data, statuses }: { data: GrammarData; statuses: Record<string
             {g.items.map(t => {
               const st = statuses[t.id] ?? 'none';
               return (
-                <Row key={t.id} lamp={topicLamp(st, t.id === next)} done={st === 'practiced'} title={t.title} chevron
+                <Row key={t.id} lamp={topicLamp(st, t.id === next)} done={st === 'practiced'} title={t.title} lang={t.lang} chevron
                   sub={<><span lang="de">{t.lessons.map(id => lessonTitle.get(id)).filter(Boolean).slice(0, 3).join(' · ')}</span>{st !== 'none' ? ` · ${STATUS_TEXT[st]}` : t.id === next ? ' · next' : ''}</>}
                   onClick={() => navigate({ name: 'topic', id: t.id })} />
               );
@@ -119,7 +119,7 @@ function Lessons({ data, done }: { data: GrammarData; done: Set<string> }) {
             {g.items.map(l => (
               <div key={l.id}>
                 <Row lamp={done.has(l.id) ? 'done' : l.id === next ? 'on' : 'off'} done={done.has(l.id)} lang="de" title={l.title} external
-                  sub={<span lang="en">{[l.subtitle, done.has(l.id) ? 'done' : l.id === next ? 'next' : null].filter(Boolean).join(' · ')}</span>}
+                  sub={<><span lang={l.subLang ?? 'en'}>{l.subtitle}</span>{l.subtitle ? ' · ' : ''}{done.has(l.id) ? 'done' : l.id === next ? 'next' : ''}</>}
                   onClick={() => open(l)} label={`${l.title}, opens on DW`} />
                 {asking === l.id && (
                   <div className="inline">
