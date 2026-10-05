@@ -38,7 +38,7 @@ export interface TextMeta {
 }
 /** A public-domain LibriVox reading of the text (product spec 7), streamed from archive.org. */
 export interface Recording { url: string; reader: string; duration?: string; book?: string; librivox?: string }
-export interface ReadingText extends Omit<TextMeta, 'words' | 'lemmas'> {
+export interface ReadingText extends Omit<TextMeta, 'words' | 'lemmas' | 'audio'> {
   de?: Source; en?: Source;
   audio?: Recording;
   paragraphs: Paragraph[];
