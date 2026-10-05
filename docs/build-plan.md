@@ -1,7 +1,7 @@
 # Scheiße — Build Plan
 
-Status: Phase 1 built and tested on the PC; waiting for the owner's OK to publish, then the on-phone checklist (section 4)
-Last updated: 2026-10-04
+Status: restructure (no sessions) and Phases 2–4 built and tested on the PC, published 2026-10-05; next is the owner's on-phone checklist (section 4, "Restructure and Phases 2–4")
+Last updated: 2026-10-05
 
 This plan covers **how** the app is built and shipped. **What** it does is in `docs/product-spec.md`; **how it looks** is in `design/design-spec.md` (being written). If this plan conflicts with the product spec, the product spec wins.
 
@@ -109,14 +109,14 @@ Lectures (player, mini-player or screen-awake fallback per Phase 0, notes, sente
 
 Tests: 27 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 14 Pro size, light and dark). The publishing job runs all of them before every publish. The 50 lectures are re-encoded to mono 64 kbps (184 MB; `tools/encode-lectures.sh`).
 
-**Decisions made during the build** (none changes a feature in the product spec; listed so the owner can object):
+**Decisions made during the build** (none changes a feature in the product spec; listed so the owner can object). Items 1, 4 and 6 were replaced by the restructure (below); 2 and 5 were updated.
 
-1. Only the Today and Lectures tabs are shown until Reading, Grammar and Inbox exist (Phases 2–3), so no tab leads to an empty page.
-2. "New cards per day" counts new items. Each item makes two cards: say it (today) and hear it (from the next day, not counted against the limit), so the two sides never meet in one session.
+1. ~~Only the Today and Lectures tabs are shown until Reading, Grammar and Inbox exist.~~ All five tabs now exist.
+2. "New cards per day" counts new items. Each item makes two cards: say it, and hear it, which is not counted against the limit. *Updated:* hear it now appears from the day after say it is first answered (before, the day after the card was made), so the two sides never meet on the same day.
 3. New items: the next Goethe words by frequency, plus one Tatoeba sentence for every three words once a sentence exists whose words have all been introduced.
-4. Today's plan is fixed the first time the app is opened each day. On a heavy day, reviews are capped so the lecture still fits the daily time.
-5. Time estimates start at 15 s per review and 35 s per new card, and switch to the owner's measured pace after 10 answers. Today says so in its footnote until then.
-6. A card answered during a session comes back within the same session when its next step is due within 20 minutes (FSRS learning steps).
+4. ~~Today's plan is fixed the first time the app is opened each day; reviews are capped on a heavy day.~~ No plan and no cap any more.
+5. Time estimates start at 15 s per review and 35 s per new card, and switch to the owner's measured pace after 10 answers. Flashcards says so in its footnote until then.
+6. ~~A card answered during a session comes back within the same session…~~ A missed card comes back when its few-minute step is up, and up to 20 minutes early when nothing else is left.
 7. The 95% rule counts 5-second stretches actually played, so rewinding and re-listening never counts twice and skipping to the end does not count.
 8. Tick screen wording adds: "where the student and the teacher differ, go by the teacher", because the transcript records the student's wrong attempts too.
 9. The All forms sheet shows Wiktionary's forms exactly as listed (without articles); the mockup showed articles.
@@ -127,7 +127,7 @@ Tests: 27 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 1
 
 **Function words (decided by the owner 2026-10-04, product spec 5.5):** ordering by real-world frequency put function words first (*der, in, und, sein, werden, von, mit…*), some with grammar descriptions as their English. Articles and other article words, pronouns, prepositions and conjunctions now get no word card (99 words); they keep appearing in sentence cards. The first new words are now *sein, werden, haben, nicht, auch, können, aus, so, noch, nur*.
 
-**On-phone checklist (after publishing):**
+**On-phone checklist for Phase 1** (replaced by the checklist under "Restructure and Phases 2–4"; kept for the record):
 
 1. Delete the Phase 0 icon. In Safari open `https://hitarth101.github.io/scheisse/`, Share, Add to Home Screen. Name "Scheiße", Eszett-key icon.
 2. Lectures: scroll the list. No text shows behind the time and battery at the top (check 8).
@@ -144,19 +144,53 @@ Tests: 27 logic tests (Vitest) and 28 screen tests (Playwright, WebKit, iPhone 1
 13. Settings, iPhone voice: German voices listed (no novelty voices); choosing one speaks a sample sentence.
 14. Tomorrow: Today shows due reviews and the "hear it" cards from today's words.
 
-### Phase 2
+### Restructure and Phases 2–4 (built 2026-10-04/05)
 
-Full Today session builder; Capture; Grammar path and reference tables; fill-in-the-blank cards; Status page; dictionary links.
+The owner dropped the session format on 2026-10-04 (product spec 4.1): separate tabs, used at any time. Then Phases 2–4 were built.
 
-### Phase 3
+| Part | What | Where |
+|---|---|---|
+| Restructure | Flashcards tab instead of Today: the one queue (due reviews most likely forgotten first, hear-it cards, then new cards up to the daily allowance, picked cards first), Add 5 more, the pause rule, every card with search and filter, a card page. Study is the old review screen as one continuous queue. Status is a tab. | `app/src/review/queue.ts`, `app/src/flashcards`, `app/src/review/ReviewSession.tsx` |
+| Phase 2 | Capture and Inbox inside Flashcards; full Status (7-day forecast, cards by state, words known, time with outside entries, progress); Dictionaries; Grammar tab (topics in Nicos Weg order with Grimm Grammar and Schubert-Verlag links, the Nicos Weg lessons, reference tables); fill-in-the-blank cards | `app/src/inbox`, `app/src/status`, `app/src/grammar`, `app/src/review/cloze.ts`, `tools/build_grammar.py` |
+| Phase 3 | Reading: library by known-word percentage; stage 1 daily Tatoeba set; 32 texts (3 Wikibooks dialogues; 15 Grimm tales, 12 from a 1921 edition and 3 from the 1857 edition with the Historical spelling chip; Heidi part 1 in 14 chapters), aligned by sentence where German and English agree and by paragraph elsewhere; LibriVox readings for 28 of them; reading view with sentence English, word popups, long-press to add, read-aloud, saved position | `app/src/reading`, `tools/build_reading.py`, `tools/build_reading_sources.py` |
+| Phase 4 | Engineering deck (514 words, off by default); adjective-ending blanks; LibriVox German readings (14 Grimm tales, all 14 Heidi chapters), streamed from archive.org | `tools/build_content.py`, `tools/fetch_librivox.py`, `app/src/review/notes.ts` |
+| Content | Nicos Weg A1–B1 (231 lessons, 147 topics), grammar links, blank positions in the sentence data, the engineering deck | `tools/sources/`, `tools/fetch_nicos_weg.py`, reports in `tools/out/` |
 
-Reading: Tatoeba sets, then Wikibooks dialogues, then Gutenberg books, with coverage estimates.
+Not built: the Today session builder and Swap (dropped by the owner), and IATE (needs the owner's EU Login).
 
-### Phase 4
+Tests: 37 logic tests (Vitest), including the queue rules (allowance, Add 5 more, picked cards first, hear-it timing, the pause rule), Inbox matching and fill-in-the-blank cards; 18 screen tests, each in light and dark (Playwright, WebKit, iPhone 14 Pro size), including the new tabs at phone width and names for VoiceOver on every new page.
 
-Engineering deck, LibriVox audio, IATE (optional), adjective-ending blanks.
+**Decisions made during the build** (listed so the owner can object):
 
-Each phase ends with: all tests passing, a WebKit screen check against the design spec, and a short on-phone checklist for the owner.
+1. Pause rule: a day counts as heavy when its reviews, answered plus still due, would take longer than the set time ("Pause new cards after", which replaces the daily time budget). Measured that way, the pause can't switch on and off while you study.
+2. Order inside the queue: missed cards whose few-minute step is up come before other due reviews, because their timing matters most; other due reviews come most-likely-forgotten first.
+3. Flashcards keeps the Inbox and the + key for Capture (5 tabs is the most a tab bar fits). Capture returns to the page it was opened from.
+4. Leeches and flagged cards moved from Status to Flashcards (filter "Suspended"), with the design's three decisions (return, edit, delete) on the card page.
+5. Grammar has a third view, Lessons, for Nicos Weg progress ("Mark it done?" stays inline until answered). DW's B1 course is in German, so B1 names are German.
+6. Prepositions by case come from the Wikibooks German course's table: Wiktionary's own case categories include regional uses (for example *bei* with the accusative) and would mislead.
+7. Reference tables measure themselves and switch to one block per row whenever the columns don't fit (long forms such as *meinem*), not only at the largest text sizes.
+8. Fill-in-the-blank positions are worked out on the PC from Wiktionary's tags, and checked by hand on samples: an article must stand before a noun, a preposition must be the word itself (not *dazu*), an adjective must stand before a noun (so *lieben* the verb isn't taken for an adjective). Verbs and adjectives show their base form as a hint.
+9. Reading taps work in two steps: first a sentence (its English), then a word in it (its popup). Stage 1 picks sentences from words studied at least once, not only known words (no word is "known" for the first three weeks). Function words count as known in the percentage; names are left out.
+10. Reading time is logged in 15-second steps while the reading page is in use (no input for 2 minutes stops the count).
+11. The engineering deck uses only senses with a specific engineering label and none of the unrelated fields that share Wiktionary's "engineering" label (computing, firearms, aviation, law…); names, brands and Goethe words are left out.
+12. The content version changed (blank positions, word positions for Reading, the engineering deck), so the phone imports the word data once more on first launch (a few seconds).
+13. 44 grammar links cover only part of their topic (for example one of two prepositions); they were kept because each is a verified explanation of that part, and they are listed in `tools/out/nicos-weg-report.md`.
+14. LibriVox readings are linked, not copied: they stream from archive.org. A reading may follow a slightly different edition from the text on screen; the reading view says so.
+
+**On-phone checklist (after publishing):**
+
+1. Open the app from the home screen. It reloads itself once for the new version. Tabs: Flashcards, Lectures, Reading, Grammar, Status.
+2. Flashcards: Reviews and New cards rows with times; green Study key. Tap Study: cards come one after another; the header says how many are left. Close halfway, reopen Study: it continues where it was.
+3. Answer cards until "Nothing due right now"; it says when the next reviews are, and offers "Add 5 more new cards".
+4. Flashcards list: search a word you studied; open it; Suspend, then Return to reviews.
+5. Lectures: open a lecture you finished; "Sentences (N)" opens the tick screen; tick two, Add 2 cards. Flashcards says "2 you picked come first"; Study shows them before other new words.
+6. + on Flashcards: type a phrase heard on TV, save. The Inbox row shows it; open the Inbox: a match shows Review, otherwise "ask your tutor" with Dictionary.
+7. Grammar: Topics in Nicos Weg order; open one, open Grimm Grammar, come back, "Mark this topic read?". Lessons: open one on DW, come back, "Mark it done?". Tables: open each; nothing scrolls sideways.
+8. Mark the topic "Articles: definite" Practiced; after a few more new cards, a "Fill the gap" card appears.
+9. Reading: stage 1 appears once a few words are studied. Open a Grimm tale: tap a sentence (English appears), tap a word in it (popup), hold a sentence (add sheet). The speaker key reads aloud. Leave and reopen: same place.
+10. Status: 7-day forecast, cards by state, Add outside time (TV, 30 min), progress rows. Export backup still works.
+11. Settings: "Pause new cards after", engineering vocabulary switch.
+12. Largest text size and dark mode on Flashcards, a reference table and the reading view.
 
 ## 5. Open decisions
 
@@ -164,3 +198,6 @@ Each phase ends with: all tests passing, a WebKit screen check against the desig
 2. ~~Re-encoding the MP3s.~~ Done 2026-10-03: FFmpeg installed (winget), 50 lectures at mono 64 kbps, durations checked against the originals.
 3. **Repository name** `scheisse` (GitHub addresses can't contain ß). Renaming later changes the app's address, so the app would have to be re-added to the home screen and progress restored from a backup.
 4. ~~Function words as word cards.~~ Decided 2026-10-04: no word cards for them (Phase 1 above).
+5. ~~LibriVox recordings~~ Done 2026-10-05: German readings for 14 Grimm tales and all 14 Heidi chapters, linked from archive.org (public domain).
+6. **IATE** engineering terms need the owner's free EU Login account; nothing is built until then.
+7. **Bigger Inbox lookup**: the Inbox searches only the app's 13,454 sentences. Adding all native-speaker Tatoeba pairs would find more TV phrases but adds several MB.

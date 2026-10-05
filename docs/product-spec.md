@@ -244,7 +244,7 @@ Rule: open-license or public-domain data is **imported**; free but copyrighted m
 | Wikimedia Commons / Lingua Libre | Human word pronunciations | Open licenses | Imported where available | Not yet |
 | Wikibooks German course | A1–A2 dialogues with English; grammar tables | CC BY-SA 3.0 | Imported, attributed | Pages found; not inspected in depth |
 | Project Gutenberg | German originals + public-domain English translations (Grimm, Heidi) | Public domain (US) | Imported | Titles found; not yet downloaded |
-| LibriVox | Public-domain German audiobooks | Public domain | Imported where a matching text exists | Not yet |
+| LibriVox | Public-domain German audiobooks | Public domain | Linked where a matching text exists: streamed from archive.org for 14 Grimm tales and all 14 Heidi chapters | Yes (2026-10-05) |
 | iPhone German voice | Fallback audio | Built into iOS | On device | To test on user's phone |
 | DW Nicos Weg | Course backbone, grammar topic order | Copyrighted, free | **Linked** | Site blocks automated fetch; will read with the built-in browser at build time |
 | Grimm Grammar (UT Austin) | Grammar explanations and exercises | CC BY-NC-ND (no modifications) | **Linked** | Not yet |
@@ -291,7 +291,7 @@ Every imported item keeps a record of its source, so it can be traced and attrib
   - Status page;
   - dictionary links.
 - **Phase 3** (done 2026-10-05): Reading — Tatoeba sets, then Wikibooks dialogues, then Gutenberg books — with coverage estimates.
-- **Phase 4:** engineering deck (done), adjective-ending blanks (done), LibriVox audio, IATE (optional; needs the owner's EU Login).
+- **Phase 4:** engineering deck (done), adjective-ending blanks (done), LibriVox audio (done), IATE (optional; not built, needs the owner's EU Login).
 
 ## 10. Out of scope (version 1)
 
