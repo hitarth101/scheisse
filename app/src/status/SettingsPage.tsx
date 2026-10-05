@@ -34,10 +34,11 @@ export function SettingsPage() {
       <NavRow left={<BackButton label="Status" to={{ name: 'status' }} />} />
       <DetailTitle title="Settings" />
 
-      <SectionHeader left="Session" />
+      <SectionHeader left="Flashcards" />
       <Group flush>
-        <Row title="Daily time" detail={`${s.dailyMinutes} min`} chevron onClick={() => open({ key: 'dailyMinutes', title: 'Daily time', options: DAILY })} />
-        <Row title="New cards per day" detail={s.newPerDay} chevron onClick={() => open({ key: 'newPerDay', title: 'New cards per day', note: 'Fewer are added automatically when reviews already fill most of the daily time.', options: NEW })} />
+        <Row title="New cards per day" detail={s.newPerDay} chevron onClick={() => open({ key: 'newPerDay', title: 'New cards per day', note: 'Cards you pick from lectures, reading and the inbox count toward this and come first. “Add 5 more” on the Flashcards tab raises it for one day.', options: NEW })} />
+        <Row title="Pause new cards after" sub="When a day's reviews take longer, no new cards that day" detail={`${s.dailyMinutes} min`} chevron
+          onClick={() => open({ key: 'dailyMinutes', title: 'Pause new cards after', note: 'When a day’s reviews take longer than this, new cards pause for that day, so the following days don’t grow too. “Add 5 more” still works.', options: DAILY })} />
         <Row title="Target memory rate" sub="How often you should still remember a card when it comes back" detail={`${Math.round(s.retention * 100)}%`} chevron
           onClick={() => open({ key: 'retention', title: 'Target memory rate', note: 'A higher rate brings cards back sooner, which means more reviews each day.', options: RETENTION })} />
       </Group>

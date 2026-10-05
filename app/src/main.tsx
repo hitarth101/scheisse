@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './styles/app.css';
 import './styles/lectures.css';
 import './styles/review.css';
+import './styles/pages.css';
 import { App } from './App';
 import { getMeta, getSettings, setMeta } from './db/settings';
 import { enableActiveStyles, loadHapticsSetting, requestPersistence } from './lib/device';

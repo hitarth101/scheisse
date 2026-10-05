@@ -5,7 +5,7 @@ import { buildBackup, backupToFile, NotABackupError, parseBackup, restoreBackup,
 import { getMeta } from '../db/settings';
 import { backupLine, dateTime, dayKey, minutes, shortDate } from '../lib/format';
 import { navigate } from '../lib/router';
-import { BackButton, Group, Key2, LargeTitle, NavRow, Notice, Pad, Row, SectionHeader, Sheet, showToast } from '../ui/kit';
+import { Group, Key2, LargeTitle, NavRow, Notice, Pad, Row, SectionHeader, Sheet, showToast } from '../ui/kit';
 
 type Problem = 'export' | 'notBackup' | 'restore' | null;
 
@@ -13,10 +13,6 @@ export function StatusPage() {
   const lastBackup = useLiveQuery(() => getMeta<number>('lastBackupAt'), [], undefined);
   const lecturesDone = useLiveQuery(() => db.lectures.filter(r => !!r.done).count(), [], 0);
   const week = useLiveQuery(weekTime, [], null);
-  const suspended = useLiveQuery(async () => {
-    const s = await db.cards.where('suspended').equals(1).toArray();
-    return { leech: s.filter(c => c.suspendReason === 'leech').length, flag: s.filter(c => c.suspendReason === 'flag').length };
-  }, [], { leech: 0, flag: 0 });
   const cardCount = useLiveQuery(() => db.cards.count(), [], 0);
 
   const [problem, setProblem] = useState<Problem>(null);
@@ -75,7 +71,7 @@ export function StatusPage() {
 
   return (
     <>
-      <NavRow left={<BackButton label="Today" to={{ name: 'today' }} />} />
+      <NavRow />
       <LargeTitle title="Status" />
 
       {problem === 'export' && (
@@ -95,12 +91,6 @@ export function StatusPage() {
         <Row icon="restore" title="Restore from backup" sub="Replaces everything on this iPhone" chevron onClick={() => fileInput.current?.click()} />
       </Group>
       <input ref={fileInput} type="file" accept="application/json,.json" hidden onChange={e => void pickFile(e.currentTarget.files?.[0])} data-testid="restore-input" />
-
-      <SectionHeader left="Needs a decision" />
-      <Group>
-        <Row icon="suspend" title="Leeches" sub="Failed 8 times, suspended automatically" detail={suspended.leech} chevron to={{ name: 'suspended', reason: 'leech' }} />
-        <Row icon="flag" title="Flagged cards" sub="Source data marked as wrong" detail={suspended.flag} chevron to={{ name: 'suspended', reason: 'flag' }} />
-      </Group>
 
       <SectionHeader left="Time logged" right="this week" />
       <Group flush>

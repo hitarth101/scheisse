@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 
 // Screen checks in WebKit (Safari's engine) at iPhone 14 Pro size, run in light and dark (playwright.config.ts).
 
-async function fresh(page: Page, hash = '#/today') {
+async function fresh(page: Page, hash = '#/flashcards') {
   await page.goto('./' + hash);
   await page.evaluate(async () => {
     localStorage.clear();
@@ -18,12 +18,12 @@ async function noSidewaysScroll(page: Page) {
   expect(overflow).toBeLessThanOrEqual(0);
 }
 
-test('Today opens with the next lecture and one green key', async ({ page }) => {
+test('Flashcards opens with one green key and the tabs', async ({ page }) => {
   await fresh(page);
-  await expect(page.getByRole('heading', { name: 'Today' })).toBeVisible();
-  await expect(page.getByText('Lecture 01', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Flashcards' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Study' })).toBeVisible();
   await expect(page.locator('.go')).toHaveCount(1);
-  await expect(page.getByRole('navigation', { name: 'Tabs' }).getByRole('link')).toHaveText(['Today', 'Lectures']);
+  await expect(page.getByRole('navigation', { name: 'Tabs' }).getByRole('link')).toHaveText(['Flashcards', 'Lectures', 'Status']);
   await expect(page.locator('.statusbar-backdrop')).toHaveCount(1);
   await noSidewaysScroll(page);
 });
@@ -112,7 +112,7 @@ test('a file that is not a backup changes nothing', async ({ page }, info) => {
 });
 
 test('every key has a name for VoiceOver', async ({ page }) => {
-  for (const hash of ['#/today', '#/lectures', '#/lectures/01', '#/status', '#/status/settings']) {
+  for (const hash of ['#/flashcards', '#/lectures', '#/lectures/01', '#/status', '#/status/settings']) {
     await page.goto('./' + hash);
     await page.waitForTimeout(200);
     const unnamed = await page.evaluate(() => Array.from(document.querySelectorAll('button, a, input'))

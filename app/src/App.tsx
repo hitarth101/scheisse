@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSettings } from './db/settings';
-import { isFocus, tabOf, useRoute, type Route } from './lib/router';
+import { isFocus, tabOf, useRoute, type Route, type Tab } from './lib/router';
 import { usePlayerSheet } from './lib/ui';
 import { onTrackEnded, usePlayer } from './lectures/player';
 import { loadPairs } from './lectures/transcript';
@@ -12,20 +12,21 @@ import { PlayerSheet } from './lectures/PlayerSheet';
 import { LecturesPage } from './lectures/LecturesPage';
 import { TrackPage } from './lectures/TrackPage';
 import { TickScreen } from './lectures/TickScreen';
-import { TodayPage } from './today/TodayPage';
-import { ReviewSession } from './review/ReviewSession';
+import { FlashcardsPage } from './flashcards/FlashcardsPage';
+import { CardPage } from './flashcards/CardPage';
+import { Study } from './review/ReviewSession';
 import { StatusPage } from './status/StatusPage';
 import { SettingsPage } from './status/SettingsPage';
 import { CreditsPage } from './status/CreditsPage';
-import { SuspendedPage } from './status/SuspendedPage';
 import { Icon, type IconName } from './ui/icons';
 import { ToastHost } from './ui/kit';
 import { useEdgeSwipeBack } from './lib/gestures';
 
-// Tabs that exist in this build. Reading, Grammar and Inbox are added in later phases.
-const TABS: { key: 'today' | 'lectures'; label: string; icon: IconName; route: string }[] = [
-  { key: 'today', label: 'Today', icon: 'today', route: '#/today' },
+// Tabs (owner decision 2026-10-04: no sessions, so Today is replaced by Flashcards and Status becomes a tab).
+const TABS: { key: Tab; label: string; icon: IconName; route: string }[] = [
+  { key: 'flashcards', label: 'Flashcards', icon: 'cards', route: '#/flashcards' },
   { key: 'lectures', label: 'Lectures', icon: 'lectures', route: '#/lectures' },
+  { key: 'status', label: 'Status', icon: 'stats', route: '#/status' },
 ];
 
 function TabBar({ route }: { route: Route }) {
@@ -44,15 +45,15 @@ function TabBar({ route }: { route: Route }) {
 
 function Page({ route }: { route: Route }) {
   switch (route.name) {
-    case 'today': return <TodayPage />;
+    case 'flashcards': return <FlashcardsPage />;
+    case 'card': return <CardPage key={route.note} noteId={route.note} />;
     case 'lectures': return <LecturesPage />;
     case 'track': return <TrackPage key={route.track} track={route.track} />;
     case 'tick': return <TickScreen key={route.track} track={route.track} />;
-    case 'review': return <ReviewSession only={route.only} />;
+    case 'study': return <Study />;
     case 'status': return <StatusPage />;
     case 'settings': return <SettingsPage />;
     case 'credits': return <CreditsPage />;
-    case 'suspended': return <SuspendedPage reason={route.reason} />;
   }
 }
 

@@ -6,10 +6,9 @@ import { back, type Route } from './router';
 
 const PARENT: Partial<Record<Route['name'], Route>> = {
   track: { name: 'lectures' },
-  status: { name: 'today' },
+  card: { name: 'flashcards' },
   settings: { name: 'status' },
   credits: { name: 'status' },
-  suspended: { name: 'status' },
 };
 
 export function useEdgeSwipeBack(route: Route) {

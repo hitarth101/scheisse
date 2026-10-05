@@ -8,6 +8,7 @@ const tenLabel = (x: number) => (
 );
 
 const ICONS = {
+  cards: { d: <><rect x="3.5" y="7.5" width="13.5" height="13" rx="2.2" /><path d="M7.5 4.5h10.5a2.5 2.5 0 0 1 2.5 2.5v10" /></> },
   today: { d: <><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></> },
   lectures: { d: <><path d="M4 15.5V12a8 8 0 0 1 16 0v3.5" /><path d="M4 14.5h3.2v6H5.6A1.6 1.6 0 0 1 4 18.9zM20 14.5h-3.2v6h1.6a1.6 1.6 0 0 0 1.6-1.6z" /></> },
   reading: { d: <path d="M12 7c-2.2-1.6-5.2-2.1-8.5-1.6v13c3.3-.5 6.3 0 8.5 1.6 2.2-1.6 5.2-2.1 8.5-1.6v-13C17.2 4.9 14.2 5.4 12 7zM12 7v13" /> },

@@ -2,61 +2,67 @@
 import { useSyncExternalStore } from 'react';
 
 export type Route =
-  | { name: 'today' }
+  | { name: 'flashcards' }
+  | { name: 'card'; note: string }
+  | { name: 'study' }
   | { name: 'lectures' }
   | { name: 'track'; track: number }
   | { name: 'tick'; track: number }
-  | { name: 'review'; only?: 'reviews' }
   | { name: 'status' }
   | { name: 'settings' }
-  | { name: 'credits' }
-  | { name: 'suspended'; reason: 'leech' | 'flag' };
+  | { name: 'credits' };
+
+export type Tab = 'flashcards' | 'lectures' | 'status';
 
 export function parse(hash: string): Route {
-  const [path, query = ''] = hash.replace(/^#\/?/, '').split('?');
+  const [path] = hash.replace(/^#\/?/, '').split('?');
   const parts = path.split('/').filter(Boolean);
-  const q = new URLSearchParams(query);
   const n = (s: string | undefined) => { const v = Number(s); return Number.isInteger(v) && v >= 1 && v <= 50 ? v : null; };
   switch (parts[0]) {
-    case undefined: case 'today': return { name: 'today' };
+    case 'flashcards':
+      if (parts[1]) { try { return { name: 'card', note: decodeURIComponent(parts[1]) }; } catch { /* bad address */ } }
+      return { name: 'flashcards' };
+    case 'study': case 'review': return { name: 'study' };
     case 'lectures': {
       const t = n(parts[1]);
       if (t == null) return { name: 'lectures' };
       return parts[2] === 'sentences' ? { name: 'tick', track: t } : { name: 'track', track: t };
     }
-    case 'review': return q.get('only') === 'reviews' ? { name: 'review', only: 'reviews' } : { name: 'review' };
     case 'status':
       if (parts[1] === 'settings') return { name: 'settings' };
       if (parts[1] === 'credits') return { name: 'credits' };
-      if (parts[1] === 'leeches') return { name: 'suspended', reason: 'leech' };
-      if (parts[1] === 'flagged') return { name: 'suspended', reason: 'flag' };
+      if (parts[1] === 'leeches' || parts[1] === 'flagged') return { name: 'flashcards' };
       return { name: 'status' };
-    default: return { name: 'today' };
+    default: return { name: 'flashcards' };
   }
 }
 
 export function pathOf(r: Route): string {
   switch (r.name) {
-    case 'today': return '/today';
+    case 'flashcards': return '/flashcards';
+    case 'card': return `/flashcards/${encodeURIComponent(r.note)}`;
+    case 'study': return '/study';
     case 'lectures': return '/lectures';
     case 'track': return `/lectures/${String(r.track).padStart(2, '0')}`;
     case 'tick': return `/lectures/${String(r.track).padStart(2, '0')}/sentences`;
-    case 'review': return r.only ? '/review?only=reviews' : '/review';
     case 'status': return '/status';
     case 'settings': return '/status/settings';
     case 'credits': return '/status/credits';
-    case 'suspended': return r.reason === 'leech' ? '/status/leeches' : '/status/flagged';
   }
 }
 
 /** Pages without the tab bar and mini-player (design spec 3). */
 export function isFocus(r: Route): boolean {
-  return r.name === 'review' || r.name === 'tick';
+  return r.name === 'study' || r.name === 'tick';
 }
 
 /** Which tab a page belongs to. */
-export function tabOf(r: Route): 'today' | 'lectures' {
-  return r.name === 'lectures' || r.name === 'track' ? 'lectures' : 'today';
+export function tabOf(r: Route): Tab {
+  switch (r.name) {
+    case 'lectures': case 'track': case 'tick': return 'lectures';
+    case 'status': case 'settings': case 'credits': return 'status';
+    default: return 'flashcards';
+  }
 }
 
 const listeners = new Set<() => void>();
@@ -110,16 +116,16 @@ function remember() {
   try { localStorage.setItem(LAST_KEY, JSON.stringify({ hash: location.hash, at: Date.now() })); } catch { /* storage unavailable */ }
 }
 
-/** At launch: Today, unless the app was last used less than 10 minutes ago. */
+/** At launch: Flashcards, unless the app was last used less than 10 minutes ago. */
 export function launchHash(now = Date.now()): string {
   try {
     const raw = localStorage.getItem(LAST_KEY);
     if (raw) {
       const { hash, at } = JSON.parse(raw) as { hash: string; at: number };
-      if (typeof hash === 'string' && now - at < REOPEN_MS) return hash || '#/today';
+      if (typeof hash === 'string' && now - at < REOPEN_MS) return hash || '#/flashcards';
     }
   } catch { /* storage unavailable */ }
-  return '#/today';
+  return '#/flashcards';
 }
 
 export function initRouter() {

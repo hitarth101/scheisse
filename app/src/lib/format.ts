@@ -64,3 +64,16 @@ export function backupLine(d: Date, now: Date = new Date()): string {
 export function trackNo(n: number): string {
   return String(n).padStart(2, '0');
 }
+
+/** "tomorrow" for the next day, otherwise "Tuesday 6 October" (for "Next reviews: …"). */
+export function dayWord(day: number, now: Date = new Date()): string {
+  const d = new Date(day);
+  if (daysBetween(now, d) <= 1) return 'tomorrow';
+  return `${DAYS[d.getDay()]} ${d.getDate()} ${MONTHS[d.getMonth()]}`;
+}
+
+/** "14:32". */
+export function timeOfDay(ms: number): string {
+  const d = new Date(ms);
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}

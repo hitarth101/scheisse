@@ -1,0 +1,32 @@
+/* Page-specific parts from the mockups' own style blocks (design/mockups 04, 05, 07). */
+
+/* Grammar: reference tables (04-grammar) */
+.rtable td { font-weight: 600; font-size: 1.06rem; }
+.stack .case { padding: 14px 18px; border-bottom: .5px solid var(--sep); }
+.stack .case:last-child { border-bottom: 0; }
+.stack .case .nm { font-size: .882rem; color: var(--label-2); }
+.stack .case .forms { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; margin-top: 6px; }
+.stack .case .forms div { display: flex; justify-content: space-between; gap: 8px; }
+.stack .case .forms span { color: var(--label-2); font-weight: 400; }
+
+/* Reading (05-reading) */
+.text { padding: 6px 22px 0; }
+.text p { margin: 0 0 18px; }
+.s { cursor: pointer; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+.s.on { background: var(--well); border-radius: 6px; box-shadow: 0 0 0 4px var(--well); }
+.en-line { display: block; font-size: .941rem; line-height: 1.45; color: var(--label-2); margin: 10px 0 2px; padding: 0 2px; }
+.w { cursor: pointer; }
+.w-hit { background: var(--select); border-radius: 4px; box-shadow: 0 0 0 2px var(--select); }
+.pct { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 1rem; text-align: right; min-width: 44px; }
+.pct small { display: block; font-size: .765rem; font-weight: 500; color: var(--label-2); }
+.para-en { margin: 0 0 18px; padding: 14px 16px; border-radius: 16px; background: var(--raised); font-size: .941rem; line-height: 1.5; color: var(--label-2); }
+
+/* Status (07-status) */
+.fc { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: end; height: 96px; padding: 0 18px; }
+.fc div { display: flex; flex-direction: column; align-items: center; gap: 4px; justify-content: flex-end; height: 100%; }
+.fc i { width: 100%; max-width: 28px; border-radius: 6px 6px 2px 2px; background: var(--fill-press); display: block; min-height: 2px; }
+.fc i.now { background: var(--label-2); }
+.fc b { font-size: .765rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.fcl { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; padding: 6px 18px 14px; font-size: .765rem; color: var(--label-2); text-align: center; }
+.stepper { display: flex; align-items: center; justify-content: space-between; }
+.stepper .v { font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }

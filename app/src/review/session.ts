@@ -13,18 +13,6 @@ export function startOfDay(now = Date.now()): number {
   return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
 }
 
-/** Cards already learned that are due today, oldest first. */
-export async function dueReviews(now = Date.now()): Promise<CardRow[]> {
-  const rows = await db.cards.where('due').belowOrEqual(endOfDay(now)).toArray();
-  return rows.filter(c => !c.suspended && c.state !== STATE.New).sort((a, b) => a.due - b.due);
-}
-
-/** New cards waiting (made but never reviewed), due today: e.g. ticked lecture pairs, listening siblings. */
-export async function pendingNew(now = Date.now()): Promise<CardRow[]> {
-  const rows = await db.cards.where('due').belowOrEqual(endOfDay(now)).toArray();
-  return rows.filter(c => !c.suspended && c.state === STATE.New).sort((a, b) => a.createdAt - b.createdAt || a.id.localeCompare(b.id));
-}
-
 /**
  * Cards answered today, counted once each. A card belongs to the block where it was first answered
  * today: a new card's second showing (its learning step) still counts as a new card, not a review.
@@ -55,10 +43,10 @@ export async function pace(): Promise<{ review: number; fresh: number; measured:
   };
 }
 
-/** The earliest future due date and how many cards fall on that day (for "Next reviews: tomorrow, 37 cards."). */
+/** The earliest future due date and how many learned cards fall on that day ("Next reviews: tomorrow, 37 cards."). */
 export async function nextReviews(now = Date.now()): Promise<{ day: number; count: number } | null> {
   const after = await db.cards.where('due').above(endOfDay(now)).toArray();
-  const live = after.filter(c => !c.suspended);
+  const live = after.filter(c => !c.suspended && c.state !== STATE.New);
   if (!live.length) return null;
   const first = Math.min(...live.map(c => c.due));
   const day = startOfDay(first);
@@ -93,7 +81,7 @@ export async function setSuspended(cardId: string, reason: CardRow['suspendReaso
   await db.cards.update(cardId, reason ? { suspended: 1, suspendReason: reason } : { suspended: 0, suspendReason: undefined, fails: 0 });
 }
 
-/** Deletes a note and all its cards (from the Leeches / Flagged lists). Review history stays for the pace. */
+/** Deletes a note and all its cards. Review history stays for the pace. */
 export async function deleteNote(noteId: string) {
   await db.transaction('rw', db.notes, db.cards, async () => {
     await db.cards.where('noteId').equals(noteId).delete();

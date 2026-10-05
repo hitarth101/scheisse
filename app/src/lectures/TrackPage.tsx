@@ -34,6 +34,11 @@ export function TrackPage({ track }: { track: number }) {
           {pairs.status === 'ready' ? `Sentences (${pairs.pairs.length})` : 'Sentences'}
         </Key2>
       </div>
+      {!!row.ticked && (
+        <p className="t-sub l2" style={{ margin: '10px 20px 0' }}>
+          {row.ticked} sentence{row.ticked === 1 ? '' : 's'} from this lecture added as cards. They come first among new cards.
+        </p>
+      )}
       <SectionHeader left="Notes" right="written after listening" style={{ paddingTop: 22 }} />
       <Group>
         <NotesField track={track} initial={row.notes} />

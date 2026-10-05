@@ -1,161 +1,93 @@
-// Review (design spec 5.2): a focus mode. Reviews first, then new cards; after the last block the
-// green key leads straight into the lecture.
+// Study (design spec 5.2): a focus mode over the one flashcard queue (review/queue.ts). There are no
+// sessions: cards keep coming until nothing is left, and closing at any point loses nothing, because every
+// grade is saved the moment it is given.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { db, type CardRow, type NoteRow } from '../db/db';
 import { setSetting, useSettings } from '../db/settings';
 import { contentData, ensureContent, useContent } from '../content/load';
 import { tick } from '../lib/device';
-import { minutes, trackNo } from '../lib/format';
-import { back, navigate } from '../lib/router';
-import { openPlayerSheet } from '../lib/ui';
-import { open as openLecture, pauseForOtherAudio } from '../lectures/player';
-import { dayPlan, todayState } from '../today/plan';
+import { dayWord, minutes, timeOfDay } from '../lib/format';
+import { back } from '../lib/router';
+import { pauseForOtherAudio } from '../lectures/player';
 import { Icon } from '../ui/icons';
 import { GoKey, Key2, Lamp, Notice, RKey, Seg, Sheet, showToast, Switch } from '../ui/kit';
 import { stopCardAudio, unlockCardAudio } from './audio';
 import { AllFormsSheet } from './AllFormsSheet';
 import { CardView } from './CardView';
 import { EditNote } from './EditNote';
-import { introduceOnce, introducedToday } from './notes';
+import { introduceOnce } from './notes';
+import { cardsLeft, EXTRA_NEW, grantMore, pickNext, queueState, type QueueState } from './queue';
 import { intervalLabel, previewIntervals, RATING_NAMES, type Rating } from './scheduler';
-import { dueReviews, nextReviews, pendingNew, recordGrade, setSuspended, undoGrade } from './session';
+import { nextReviews, recordGrade, setSuspended, undoGrade } from './session';
 
-type BlockKind = 'reviews' | 'new';
 type Phase =
   | { kind: 'loading' }
   | { kind: 'card' }
-  | { kind: 'summary'; block: BlockKind; next: NextStep }
   | { kind: 'empty'; next: { day: number; count: number } | null }
   | { kind: 'error'; title: string; text: string };
-type NextStep = { kind: 'new'; count: number; secs: number } | { kind: 'lecture'; track: number } | { kind: 'today' };
-
-const LEARN_AHEAD_MS = 20 * 60_000;
 
 function cardLabel(card: CardRow, note: NoteRow): string {
   if (card.type === 'listening') return 'Listening';
   return note.kind === 'word' ? 'Word' : 'Sentence';
 }
 
-function dayWord(day: number): string {
-  const today = new Date(); today.setHours(0, 0, 0, 0);
-  const diff = Math.round((day - today.getTime()) / 86_400_000);
-  if (diff <= 1) return 'tomorrow';
-  return new Date(day).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
-}
-
-export function ReviewSession({ only }: { only?: 'reviews' }) {
+export function Study() {
   const settings = useSettings();
   const content = useContent();
   const [phase, setPhase] = useState<Phase>({ kind: 'loading' });
-  const [block, setBlock] = useState<BlockKind>('reviews');
-  const [current, setCurrent] = useState<{ card: CardRow; note: NoteRow; repeat: boolean } | null>(null);
+  const [q, setQ] = useState<QueueState | null>(null);
+  const [current, setCurrent] = useState<{ card: CardRow; note: NoteRow } | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [typed, setTyped] = useState('');
   const [mode, setMode] = useState<'speak' | 'type' | null>(null);
   const [sheet, setSheet] = useState<'more' | 'forms' | 'edit' | null>(null);
   const [, force] = useState(0);
 
-  const queue = useRef<string[]>([]);
-  const learning = useRef<{ id: string; due: number }[]>([]);
-  const total = useRef(0);
   const graded = useRef(new Map<string, number>());
-  const counts = useRef<Record<Rating, number>>({ 1: 0, 2: 0, 3: 0, 4: 0 });
-  const blockMs = useRef(0);
+  const visitMs = useRef(0);
   const shownAt = useRef(Date.now());
-  const history = useRef<{ logId: number; card: CardRow; rating: Rating; label: string; repeat: boolean }[]>([]);
+  const history = useRef<{ logId: number; card: CardRow; rating: Rating; label: string }[]>([]);
 
   const answerMode = mode ?? settings.answerMode;
 
-  // Starting Review pauses a playing lecture (one audio source at a time).
+  // Studying pauses a playing lecture (one audio source at a time).
   useEffect(() => { pauseForOtherAudio(); return () => stopCardAudio(); }, []);
 
-  const resetBlock = (kind: BlockKind, ids: string[]) => {
-    setBlock(kind);
-    queue.current = ids;
-    learning.current = [];
-    total.current = ids.length;
-    graded.current = new Map();
-    counts.current = { 1: 0, 2: 0, 3: 0, 4: 0 };
-    blockMs.current = 0;
-    history.current = [];
+  const show = (card: CardRow, note: NoteRow) => {
+    setCurrent({ card, note });
+    setRevealed(false);
+    setTyped('');
+    shownAt.current = Date.now();
+    setPhase({ kind: 'card' });
   };
 
-  const showNext = useCallback(async (): Promise<boolean> => {
-    const now = Date.now();
-    learning.current.sort((a, b) => a.due - b.due);
-    let id: string | undefined;
-    if (learning.current.length && learning.current[0].due <= now) id = learning.current.shift()!.id;
-    else if (queue.current.length) id = queue.current.shift();
-    else if (learning.current.length && learning.current[0].due - now <= LEARN_AHEAD_MS) id = learning.current.shift()!.id;
-    while (id) {
-      const card = await db.cards.get(id);
-      const note = card ? await db.notes.get(card.noteId) : undefined;
-      if (card && note && !card.suspended) {
-        setCurrent({ card, note, repeat: graded.current.has(id) });
-        setRevealed(false);
-        setTyped('');
-        shownAt.current = Date.now();
-        setPhase({ kind: 'card' });
-        return true;
+  const showNext = useCallback(async (): Promise<void> => {
+    for (let guard = 0; guard < 20; guard++) {
+      const state = await queueState();
+      setQ(state);
+      let next = pickNext(state);
+      if (next === 'introduce') {
+        await ensureContent();
+        if ((await contentData()).words.length === 0) {
+          setPhase({ kind: 'error', title: "Couldn't load the word data", text: 'Check your internet connection, then try again. Your progress is safe on this iPhone.' });
+          return;
+        }
+        next = (await introduceOnce()) ?? state.soon[0] ?? null;
       }
-      id = queue.current.shift();
-    }
-    setCurrent(null);
-    return false;
-  }, []);
-
-  const loadNewBlock = useCallback(async (): Promise<string[] | 'no-content'> => {
-    const plan = await dayPlan();
-    const wanted = Math.max(0, plan.newPlanned - (await introducedToday()));
-    if (wanted > 0) {
-      await ensureContent();
-      if ((await contentData()).words.length === 0) return 'no-content';
-      await introduceOnce(wanted);
-    }
-    return (await pendingNew()).map(c => c.id);
-  }, []);
-
-  const nextAfter = useCallback(async (kind: BlockKind): Promise<NextStep> => {
-    if (only) return { kind: 'today' };
-    await dayPlan();
-    const s = (await todayState())!;
-    if (kind === 'reviews' && s.fresh.remaining > 0) return { kind: 'new', count: s.fresh.remaining, secs: s.fresh.estSecs };
-    if (s.lecture.track && !s.lecture.done) return { kind: 'lecture', track: s.lecture.track };
-    return { kind: 'today' };
-  }, [only]);
-
-  const startBlock = useCallback(async (kind: BlockKind) => {
-    setPhase({ kind: 'loading' });
-    let ids: string[];
-    if (kind === 'reviews') {
-      const due = await dueReviews();
-      if (!only) await dayPlan();
-      const s = only ? null : await todayState();
-      ids = (only ? due : due.slice(0, s!.reviews.remaining)).map(c => c.id);
-      if (!ids.length && !only) { void startBlock('new'); return; }
-    } else {
-      const r = await loadNewBlock();
-      if (r === 'no-content') {
-        setPhase({ kind: 'error', title: "Couldn't load today's word data", text: 'Check your internet connection, then try again. Your progress is safe on this iPhone.' });
+      if (!next) {
+        setCurrent(null);
+        setPhase({ kind: 'empty', next: await nextReviews() });
         return;
       }
-      ids = r;
+      const note = await db.notes.get(next.noteId);
+      if (note) { show(next, note); return; }
+      await db.cards.delete(next.id); // a card without its note can never be shown
     }
-    if (!ids.length) {
-      setPhase({ kind: 'empty', next: await nextReviews() });
-      return;
-    }
-    resetBlock(kind, ids);
-    await showNext();
-  }, [only, loadNewBlock, showNext]);
+  }, []);
 
   // Start once (React's development mode runs effects twice on purpose).
   const started = useRef(false);
-  useEffect(() => { if (!started.current) { started.current = true; void startBlock('reviews'); } }, [startBlock]);
-
-  const finishBlock = useCallback(async () => {
-    setPhase({ kind: 'summary', block, next: await nextAfter(block) });
-  }, [block, nextAfter]);
+  useEffect(() => { if (!started.current) { started.current = true; void showNext(); } }, [showNext]);
 
   const reveal = () => { unlockCardAudio(); setRevealed(true); };
 
@@ -165,18 +97,13 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
     tick();
     stopCardAudio();
     const ms = Math.min(Date.now() - shownAt.current, 120_000);
-    const { card, note, repeat } = current;
+    const { card, note } = current;
     const { card: after, logId } = await recordGrade(card, rating, ms, answerMode, settings.retention);
-    history.current.push({ logId, card, rating, label: note.kind === 'word' ? note.de : note.de.slice(0, 24), repeat });
+    history.current.push({ logId, card, rating, label: note.kind === 'word' ? note.de : note.de.slice(0, 24) });
     graded.current.set(card.id, (graded.current.get(card.id) ?? 0) + 1);
-    if (!repeat) counts.current[rating]++; // each card counts once, by its first answer
-    blockMs.current += ms;
-    if (after.suspended && after.suspendReason === 'leech') {
-      showToast('Failed 8 times, suspended automatically');
-    } else if (after.due - Date.now() < LEARN_AHEAD_MS) {
-      learning.current.push({ id: after.id, due: after.due });
-    }
-    if (!(await showNext())) await finishBlock();
+    visitMs.current += ms;
+    if (after.suspended && after.suspendReason === 'leech') showToast('Failed 8 times, suspended automatically');
+    await showNext();
   };
 
   const undo = async () => {
@@ -184,20 +111,11 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
     if (!last) return;
     const restored = await undoGrade(last.logId);
     if (!restored) return;
-    learning.current = learning.current.filter(l => l.id !== last.card.id);
-    if (current && !queue.current.includes(current.card.id) && current.card.id !== last.card.id) queue.current.unshift(current.card.id);
-    if (!last.repeat) counts.current[last.rating]--;
     const n = (graded.current.get(last.card.id) ?? 1) - 1;
     if (n <= 0) graded.current.delete(last.card.id); else graded.current.set(last.card.id, n);
     const note = await db.notes.get(restored.noteId);
-    if (note) {
-      setCurrent({ card: restored, note, repeat: last.repeat });
-      setRevealed(false);
-      setTyped('');
-      shownAt.current = Date.now();
-      setPhase({ kind: 'card' });
-    }
     setSheet(null);
+    if (note) { setQ(await queueState()); show(restored, note); }
   };
 
   const suspend = async (reason: 'manual' | 'flag') => {
@@ -205,20 +123,25 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
     const id = current.card.id;
     await setSuspended(id, reason);
     setSheet(null);
-    total.current = Math.max(graded.current.size, total.current - (graded.current.has(id) ? 0 : 1));
-    showToast(reason === 'flag' ? 'Flagged and suspended. It is listed in Status.' : 'Card suspended', {
+    showToast(reason === 'flag' ? 'Flagged and suspended. It is listed under Suspended.' : 'Card suspended', {
       label: 'Undo',
-      run: () => { void setSuspended(id, null).then(() => { queue.current.unshift(id); total.current++; void showNext(); }); },
+      run: () => { void setSuspended(id, null).then(showNext); },
     });
-    if (!(await showNext())) await finishBlock();
+    await showNext();
   };
 
-  const close = () => { stopCardAudio(); back({ name: 'today' }); };
+  const more = async () => {
+    await grantMore();
+    setPhase({ kind: 'loading' });
+    await showNext();
+  };
+
+  const close = () => { stopCardAudio(); back({ name: 'flashcards' }); };
 
   // ---- render ----
   const top = (title: React.ReactNode, withMore = true) => (
     <div className="rv-top">
-      <RKey icon="close" label="Close review" onClick={close} />
+      <RKey icon="close" label="Close flashcards" onClick={close} />
       <span className="t" aria-live="polite">{title}</span>
       {withMore ? <RKey icon="more" label="More" onClick={() => setSheet('more')} /> : <span style={{ width: 42 }} />}
     </div>
@@ -227,7 +150,7 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
   if (phase.kind === 'loading') {
     return (
       <div className="rv">
-        {top('Review', false)}
+        {top('Flashcards', false)}
         {content.state === 'loading' && <p className="foot" style={{ paddingTop: 16 }}>Loading word data · {content.done} of {content.total} files</p>}
         <div className="card rv-card"><div className="skel" style={{ width: '50%', height: 28 }} /><div className="skel" style={{ width: '70%', marginTop: 12 }} /></div>
       </div>
@@ -237,75 +160,54 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
   if (phase.kind === 'error') {
     return (
       <div className="rv">
-        {top('Review', false)}
+        {top('Flashcards', false)}
         <div style={{ padding: '24px 16px 0' }}><Notice kind="err" title={phase.title}>{phase.text}</Notice></div>
         <div className="spacer" />
-        <div className="rv-bottom"><Key2 onClick={() => void startBlock(block)}>Try again</Key2></div>
+        <div className="rv-bottom"><Key2 onClick={() => { setPhase({ kind: 'loading' }); void showNext(); }}>Try again</Key2></div>
       </div>
     );
   }
 
   if (phase.kind === 'empty') {
+    const n = graded.current.size;
+    const lines: string[] = [];
+    if (phase.next) lines.push(`Next reviews: ${dayWord(phase.next.day)}, ${phase.next.count} card${phase.next.count === 1 ? '' : 's'}.`);
+    if (q?.laterAt) lines.push(`Missed cards come back at ${timeOfDay(q.laterAt)}.`);
+    if (q && q.newLeft === 0 && (q.newDone > 0 || q.paused)) {
+      lines.push(q.paused && q.newDone < settings.newPerDay
+        ? `New cards are paused today: today's reviews take about ${minutes(q.daySecs)}.`
+        : "Today's new cards are done.");
+    }
     return (
       <div className="rv">
-        {top('Reviews', false)}
-        <div className="card rv-card" style={{ marginTop: 24 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}><Lamp state="off" label="nothing due" /><h2 className="t-title3">Nothing due right now</h2></div>
-          <p className="t-body l2" style={{ margin: '8px 0 0' }}>
-            {phase.next ? `Next reviews: ${dayWord(phase.next.day)}, ${phase.next.count} card${phase.next.count === 1 ? '' : 's'}.` : 'No cards yet.'}
-          </p>
-        </div>
-        <div className="spacer" />
-        <div className="rv-bottom"><Key2 onClick={close}>Back to Today</Key2></div>
-      </div>
-    );
-  }
-
-  if (phase.kind === 'summary') {
-    const n = counts.current[1] + counts.current[2] + counts.current[3] + counts.current[4];
-    const what = phase.block === 'reviews' ? 'review' : 'new card';
-    const next = phase.next;
-    const goOn = () => {
-      if (next.kind === 'new') void startBlock('new');
-      else if (next.kind === 'lecture') { navigate({ name: 'today' }, { replace: true }); openLecture(next.track, { autoplay: true }); openPlayerSheet(); }
-      else close();
-    };
-    return (
-      <div className="rv">
-        {top(phase.block === 'reviews' ? 'Reviews done' : 'New cards done', false)}
+        {top('Flashcards', false)}
         <div className="card rv-card" style={{ marginTop: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <Lamp state="done" />
-            <h2 className="t-title3 num">{n} {what}{n === 1 ? '' : 's'} · {minutes(blockMs.current / 1000)}</h2>
+            <Lamp state={n ? 'done' : 'off'} label={n ? 'done' : 'nothing due'} />
+            <h2 className="t-title3">Nothing due right now</h2>
           </div>
-          <div className="grp flush sum-rows" style={{ margin: '12px -20px 0', background: 'transparent', borderRadius: 0 }}>
-            {([1, 2, 3, 4] as Rating[]).map(r => (
-              <div className="cl" key={r}><div className="ct"><b>{RATING_NAMES[r]}</b></div><span className="det">{counts.current[r]}</span></div>
-            ))}
-          </div>
+          {lines.map(l => <p key={l} className="t-body l2" style={{ margin: '8px 0 0' }}>{l}</p>)}
+          {n > 0 && <p className="t-sub l2 num" style={{ margin: '12px 0 0' }}>This visit: {n} card{n === 1 ? '' : 's'} · {minutes(visitMs.current / 1000)}</p>}
         </div>
         <div className="spacer" />
-        <div className="rv-bottom">
-          {next.kind === 'new' && <p className="t-sub l2" style={{ textAlign: 'center', margin: '0 0 10px' }}>Next: {next.count} new card{next.count === 1 ? '' : 's'}, about {minutes(next.secs)}</p>}
-          {next.kind === 'lecture' && <p className="t-sub l2" style={{ textAlign: 'center', margin: '0 0 10px' }}>Next: Lecture {trackNo(next.track)}</p>}
-          {next.kind === 'today'
-            ? <Key2 onClick={goOn}>Back to Today</Key2>
-            : <GoKey icon="play" onClick={goOn}>{next.kind === 'lecture' ? `Continue: Lecture ${trackNo(next.track)}` : 'Continue'}</GoKey>}
+        <div className="rv-bottom" style={{ display: 'grid', gap: 10 }}>
+          <Key2 icon="plus" onClick={() => void more()}>Add {EXTRA_NEW} more new cards</Key2>
+          <Key2 onClick={close}>Close</Key2>
         </div>
       </div>
     );
   }
 
   if (!current) return null;
-  const { card, note, repeat } = current;
-  const position = Math.min(total.current, graded.current.size + (repeat ? 0 : 1));
-  const pct = total.current ? (graded.current.size / total.current) * 100 : 0;
+  const { card, note } = current;
+  const left = q ? Math.max(1, cardsLeft(q)) : 1;
+  const pct = (graded.current.size / (graded.current.size + left)) * 100;
   const iv = revealed ? previewIntervals(card, Date.now(), settings.retention) : null;
   const lastUndo = history.current[history.current.length - 1];
 
   return (
     <div className="rv">
-      {top(<>{position} of {total.current} <span>· {cardLabel(card, note)}</span></>)}
+      {top(<>{left} left <span>· {cardLabel(card, note)}</span></>)}
       <div className="bar rv-bar" aria-hidden="true"><i style={{ width: `${pct}%` }} /></div>
       <div className="rv-seg">
         <Seg label="Answer mode" value={answerMode} onChange={m => { setMode(m); void setSetting('answerMode', m); }}
@@ -354,7 +256,7 @@ export function ReviewSession({ only }: { only?: 'reviews' }) {
           setSheet(null);
           if (saved) {
             const fresh = await db.notes.get(note.id);
-            if (fresh) setCurrent({ card, note: fresh, repeat });
+            if (fresh) setCurrent({ card, note: fresh });
             showToast('Card edited');
             force(x => x + 1);
           }

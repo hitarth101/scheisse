@@ -1,7 +1,5 @@
 // Making notes and cards from imported content (product spec 5).
 import { db, type AudioRef, type CardRow, type NoteRow, type SentenceRow, type WordRow } from '../db/db';
-import { getMeta, setMeta } from '../db/settings';
-import { dayKey } from '../lib/format';
 import { newCard } from './scheduler';
 import { contentData } from '../content/load';
 
@@ -36,8 +34,8 @@ export function lecturePairNote(track: number, index: number, pair: { de: string
 }
 
 /**
- * Saves a note with its two cards: the production card is due now; the listening card the next day,
- * so the two sides of the same item never meet in one session.
+ * Saves a note with its two cards. The listening ("hear it") card waits until the day after its production
+ * ("say it") card is first answered (see queue.ts), so the two sides of an item never meet on the same day.
  */
 export async function addNote(note: NoteRow, now: number): Promise<CardRow[]> {
   const cards = [newCard(note.id, 'production', now), newCard(note.id, 'listening', now, now + DAY)];
@@ -49,11 +47,6 @@ export async function addNote(note: NoteRow, now: number): Promise<CardRow[]> {
     added = true;
   });
   return added ? cards : [];
-}
-
-/** How many new notes the app introduced today (not counting ticked lecture pairs). */
-export async function introducedToday(now = Date.now()): Promise<number> {
-  return (await getMeta<number>(`introduced:${dayKey(new Date(now))}`)) ?? 0;
 }
 
 /**
@@ -68,49 +61,40 @@ export function isFunctionWord(w: Pick<WordRow, 'pos' | 'lemma'>): boolean {
 }
 
 /**
- * Introduces up to `count` new notes: the next words in learning order (Goethe A1 → B1, by frequency,
- * function words left out), with one Tatoeba sentence for every three words once a sentence exists whose
- * words have all been introduced or are function words (product spec 5.5).
+ * Makes the next new note, one at a time, when the queue needs a new card: the next word in learning order
+ * (Goethe A1 → B1, by frequency, function words left out), and one Tatoeba sentence for every three words
+ * once a sentence exists whose words have all been introduced or are function words (product spec 5.5).
+ * Returns the note's "say it" card, or null when there is nothing left to introduce.
  */
-export async function introduce(count: number, now = Date.now()): Promise<NoteRow[]> {
-  if (count <= 0) return [];
-  const existing = new Set(await db.notes.toCollection().primaryKeys());
-  const introducedWords = new Set([...existing].filter(id => id.startsWith('w:')).map(id => id.slice(2)));
-
-  const wantSentences = Math.floor(count / 3);
-  const data = await contentData();
-  const functionWords = new Set(data.words.filter(isFunctionWord).map(w => w.id));
-  const words: WordRow[] = [];
-  for (const w of data.words) {
-    if (words.length >= count) break;
-    if (!existing.has(`w:${w.id}`) && !functionWords.has(w.id)) words.push(w);
-  }
-
-  const picked: NoteRow[] = [];
-  const known = new Set(introducedWords);
-  const sentencesOut: SentenceRow[] = [];
-  if (wantSentences > 0 && known.size >= 5) {
-    const all = data.sentences;
-    const eligible = all
-      .filter(s => !existing.has(`s:${s.id}`) && s.w.length > 0 && s.w.every(id => known.has(id) || functionWords.has(id))
-        && s.w.some(id => known.has(id)))
-      .sort((a, b) => a.de.length - b.de.length);
-    sentencesOut.push(...eligible.slice(0, wantSentences));
-  }
-  const wordCount = count - sentencesOut.length;
-  for (const w of words.slice(0, wordCount)) picked.push(wordNote(w, now));
-  for (const s of sentencesOut) picked.push(sentenceNote(s, now));
-
-  const made: NoteRow[] = [];
-  for (const n of picked) if ((await addNote(n, now)).length) made.push(n);
-  const key = `introduced:${dayKey(new Date(now))}`;
-  await setMeta(key, ((await getMeta<number>(key)) ?? 0) + made.length);
-  return made;
+export async function introduceNext(now = Date.now()): Promise<CardRow | null> {
+  const note = await nextNote(now);
+  if (!note) return null;
+  const cards = await addNote(note, now);
+  return cards.find(c => c.type === 'production') ?? (await db.cards.get(`${note.id}#production`)) ?? null;
 }
 
-let introducing: Promise<NoteRow[]> | null = null;
-/** introduce(), but never twice at the same time (a second caller waits for the first). */
-export function introduceOnce(count: number): Promise<NoteRow[]> {
-  if (!introducing) introducing = introduce(count).finally(() => { introducing = null; });
+async function nextNote(now: number): Promise<NoteRow | null> {
+  const existing = new Set(await db.notes.toCollection().primaryKeys());
+  const data = await contentData();
+  const functionWords = new Set(data.words.filter(isFunctionWord).map(w => w.id));
+  const introduced = new Set([...existing].filter(id => id.startsWith('w:')).map(id => id.slice(2)));
+  const sentenceCount = [...existing].filter(id => id.startsWith('s:')).length;
+
+  if (introduced.size >= 5 && sentenceCount * 3 < introduced.size) {
+    let best: SentenceRow | null = null;
+    for (const s of data.sentences) {
+      if (existing.has(`s:${s.id}`) || !s.w.length || (best && s.de.length >= best.de.length)) continue;
+      if (s.w.every(id => introduced.has(id) || functionWords.has(id)) && s.w.some(id => introduced.has(id))) best = s;
+    }
+    if (best) return sentenceNote(best, now);
+  }
+  const word = data.words.find(w => !existing.has(`w:${w.id}`) && !functionWords.has(w.id));
+  return word ? wordNote(word, now) : null;
+}
+
+let introducing: Promise<CardRow | null> | null = null;
+/** introduceNext(), but never twice at the same time (a second caller waits for the first). */
+export function introduceOnce(): Promise<CardRow | null> {
+  if (!introducing) introducing = introduceNext().finally(() => { introducing = null; });
   return introducing;
 }
