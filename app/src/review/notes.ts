@@ -2,6 +2,7 @@
 import { db, type AudioRef, type CardRow, type NoteRow, type SentenceRow, type WordRow } from '../db/db';
 import { newCard } from './scheduler';
 import { contentData } from '../content/load';
+import { getSetting } from '../db/settings';
 import { unlockedBlanks, type Blank } from '../grammar/data';
 import { blankIn, clozeNote } from './cloze';
 
@@ -16,6 +17,14 @@ export function wordNote(w: WordRow, now: number): NoteRow {
     plural: w.plural ?? null, pluralOnly: w.pluralOnly, hy: w.hy, hint: w.hint, forms: w.forms, example: w.example,
     audio: w.audio ? { url: w.audio, kind: 'wiktionary' } : undefined,
     source: `Goethe ${w.level} · Wiktionary`, sourceRef: w.id, level: w.level, createdAt: now,
+  };
+}
+
+/** An engineering-deck word (product spec 5.4): Wiktionary's technical meaning only. */
+export function engineeringNote(w: WordRow, now: number): NoteRow {
+  return {
+    id: `e:${w.id}`, kind: 'word', de: w.lemma, en: w.en, pos: w.pos, gender: w.gender, plural: w.plural ?? null,
+    forms: w.forms, source: 'Wiktionary · engineering deck', sourceRef: w.id, createdAt: now,
   };
 }
 
@@ -112,6 +121,13 @@ async function nextNote(now: number): Promise<NoteRow | null> {
       if (note) return note;
     }
   }
+  // Engineering deck, when turned on in Settings: one engineering word for every three words.
+  if ((await getSetting('engineering')) && introduced.size >= 5) {
+    const engCount = [...existing].filter(id => id.startsWith('e:')).length;
+    const eng = engCount * 3 < introduced.size ? data.engineering.find(w => !existing.has(`e:${w.id}`)) : undefined;
+    if (eng) return engineeringNote(eng, now);
+  }
+
   const word = data.words.find(w => !existing.has(`w:${w.id}`) && !functionWords.has(w.id));
   return word ? wordNote(word, now) : null;
 }

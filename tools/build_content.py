@@ -11,6 +11,8 @@ Outputs (published with the app, in app/public/data/):
   word-forms.json   full declension and conjugation tables for the "All forms" sheet
   sentences.json    Tatoeba sentence pairs made of Goethe A1-B1 words, with the positions of words that
                     fill-in-the-blank cards may remove (product spec 5.3)
+  engineering.json  the engineering deck (product spec 5.4): Wiktionary words whose senses carry an
+                    engineering-related topic label, most frequent first (DeReWo), Goethe words left out
   manifest.json     content version and counts
 Report for the owner: tools/out/content-report.md
 
@@ -361,6 +363,68 @@ def blank_forms(entries: list[dict], pos: str, lemma: str) -> set[str]:
     return out
 
 
+# ---------------------------------------------------------------- Engineering deck (product spec 5.4)
+# Wiktionary's topic labels nest ("computing" and "firearms" senses also carry "engineering"), so a sense
+# counts when it has an engineering label and none of the unrelated fields that share it.
+ENGINEERING_TOPICS = {
+    "engineering", "mechanical-engineering", "electrical-engineering", "civil-engineering", "manufacturing",
+    "construction", "tools", "technical", "electronics", "electricity", "electromagnetism", "energy",
+    "physics", "mechanics", "metalworking", "materials-science", "hydraulics", "machinery",
+}
+NOT_ENGINEERING = {
+    "computing", "software", "programming", "mathematics", "firearms", "weaponry", "military", "war", "aviation",
+    "aeronautics", "aerospace", "nautical", "law", "fashion", "textiles", "clothing", "sports", "automotive",
+    "vehicles", "government", "politics", "arts", "design", "medicine", "anatomy", "media", "entertainment",
+}
+ENGINEERING_SIZE = 600
+
+
+def engineering_words(goethe_lemmas: set[str], ranks: dict[str, int]) -> list[dict]:
+    """German nouns, verbs and adjectives with at least one engineering-labelled sense. The English comes
+    from those senses only, so a word appears with its technical meaning."""
+    found: dict[tuple[str, str], dict] = {}
+    with gzip.open(RAW / "kaikki-German.jsonl.gz", "rt", encoding="utf-8") as f:
+        for line in f:
+            if '"topics"' not in line:
+                continue
+            e = json.loads(line)
+            word, pos = e.get("word", ""), e.get("pos")
+            if e.get("lang_code") != "de" or pos not in ("noun", "verb", "adj") or " " in word or word in goethe_lemmas:
+                continue
+            senses = [x for x in e.get("senses", []) if set(x.get("topics", [])) & ENGINEERING_TOPICS
+                      and not set(x.get("topics", [])) & NOT_ENGINEERING and not set(x.get("tags", [])) & SKIP_SENSE_TAGS
+                      and not (x.get("glosses") or ["A"])[0][:1].isupper()]
+            if not senses or not re.fullmatch(r"[A-Za-zÄÖÜäöüß]+", word):
+                continue
+            en = glosses([{**e, "senses": senses}])
+            if not en:
+                continue
+            key = (word, pos)
+            item = found.get(key) or {"lemma": word, "pos": POS_LABEL[pos], "en": []}
+            item["en"] = (item["en"] + [g for g in en if g not in item["en"]])[:4]
+            if pos == "noun" and "gender" not in item:
+                g = sorted(noun_genders(e) - {"pl"})
+                if not g:
+                    continue
+                item["gender"] = g[0]
+                pl = head_forms(e, {"plural"})
+                item["plural"] = pl[0] if pl else None
+            if pos == "verb" and "forms" not in item:
+                pres = head_forms(e, {"present", "singular", "third-person"})
+                past = head_forms(e, {"past"})
+                pp = head_forms(e, {"participle", "past"})
+                if pres and past and pp:
+                    aux = "ist" if "sein" in head_forms(e, {"auxiliary"}) else "hat"
+                    item["forms"] = [pres[0], past[0], f"{aux} {pp[0]}"]
+            found[key] = item
+    ranked = sorted(found.values(), key=lambda x: (ranks.get(x["lemma"], 10**7), x["lemma"]))
+    out = [x for x in ranked if x["lemma"] in ranks][:ENGINEERING_SIZE]
+    for i, x in enumerate(out):
+        x["id"] = f"{x['lemma']}|{x['gender']}" if x["pos"] == "noun" else x["lemma"]
+        x["order"] = i
+    return out
+
+
 # ---------------------------------------------------------------- DeReWo
 def derewo_ranks() -> dict[str, int]:
     path = next((RAW / "derewo").glob("derewo-v-ww-bll-*.txt"))
@@ -615,12 +679,13 @@ def main():
         toks = TOKEN.findall(text)
         if not 2 <= len(toks) <= 14 or len(text) > 120:
             continue
-        w_ids, unk = [], 0
+        w_ids, unk, tok_word = [], 0, []
         for k, t in enumerate(toks):
             ids = ids_for(t, k == 0)
             if ids:
                 if ids[0] not in w_ids:
                     w_ids.append(ids[0])
+                tok_word.append(w_ids.index(ids[0]))
             else:
                 unk += 1
         if unk > 1:
@@ -628,7 +693,8 @@ def main():
         if unk or not 3 <= len(toks) <= 10:
             continue
         en_id = en_ids[0]
-        s = {"id": sid, "de": text, "en": eng[en_id], "enId": en_id, "w": w_ids}
+        # k: for each word of the sentence (in TOKEN order), its position in w, so Reading can show it.
+        s = {"id": sid, "de": text, "en": eng[en_id], "enId": en_id, "w": w_ids, "k": tok_word}
         c = blanks(toks)
         if c:
             s["c"] = c
@@ -672,12 +738,16 @@ def main():
             s = min(lst, key=rank)
             x["example"] = {"id": s["id"], "de": s["de"], "en": s["en"]}
 
+    eng = engineering_words({x["lemma"] for x in out_words}, ranks)
+    log(f"Engineering deck: {len(eng)} words")
+
     # ---------------- write
     OUT.mkdir(parents=True, exist_ok=True)
     files = {
         "words.json": {"source": "Goethe-Institut word lists A1-B1; Wiktionary (CC BY-SA 4.0) via kaikki.org; order: DeReWo (IDS Mannheim, CC BY-NC 3.0)", "words": out_words},
         "word-forms.json": {"source": "Wiktionary (CC BY-SA 4.0) via kaikki.org", "forms": forms_out},
         "sentences.json": {"source": "Tatoeba (CC BY 2.0 FR); recordings CC BY 4.0 or CC BY-NC 4.0 by the named speaker", "sentences": sentences},
+        "engineering.json": {"source": "Wiktionary (CC BY-SA 4.0) via kaikki.org, senses labelled with engineering-related topics; order: DeReWo", "words": eng},
     }
     digest = hashlib.sha256()
     sizes = {}
@@ -688,7 +758,7 @@ def main():
         sizes[name] = len(text.encode("utf-8"))
     version = digest.hexdigest()[:12]
     manifest = {"version": version, "files": list(files), "counts": {
-        "words": len(out_words), "sentences": len(sentences),
+        "words": len(out_words), "sentences": len(sentences), "engineering": len(eng),
         "wordsByLevel": dict(collections.Counter(x["level"] for x in out_words)),
     }}
     (OUT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -734,6 +804,11 @@ def main():
         "",
         f"- Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: {candidates}. Kept for the app (shortest 6 per word, recordings first): {len(sentences)}.",
         f"- Of these, with an open-licence recording: {sum(1 for s in sentences if 'a' in s)}.",
+        "",
+        "## Engineering deck",
+        "",
+        f"- {len(eng)} words (the most frequent by DeReWo) with a Wiktionary sense labelled with one of: {', '.join(sorted(ENGINEERING_TOPICS))}; and none of: {', '.join(sorted(NOT_ENGINEERING))}. Senses whose English starts with a capital (names, brands) are left out. Goethe words are left out because the main deck has them.",
+        "- First 30: " + ", ".join(x["lemma"] for x in eng[:30]) + ".",
         "- Words a fill-in-the-blank card may remove: " + ", ".join(
             f"{name} {sum(1 for s in sentences if k in s.get('c', {}))}" for k, name in
             (("a", "article"), ("p", "preposition"), ("v", "conjugated verb"), ("j", "adjective ending"))) + ".",

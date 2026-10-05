@@ -130,6 +130,8 @@ export interface SentenceRow {
   enId: number;
   w: string[];
   a?: { id: number; by: string; lic: string };
+  /** For each word of the sentence, its position in w (Reading's word popups). */
+  k?: number[];
   /** Words a fill-in-the-blank card may remove: token index (verbs and adjectives: with the word id). */
   c?: { a?: number; p?: number; v?: [number, string]; j?: [number, string] };
 }

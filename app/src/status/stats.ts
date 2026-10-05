@@ -33,7 +33,7 @@ export async function cardsByState() {
 /** Known words (product spec 6): a word card with a review gap of 21 days or more, or marked known in Reading. */
 export async function wordsKnown() {
   const cards = await db.cards.where('state').equals(STATE.Review).toArray();
-  const fromReviews = new Set(cards.filter(c => c.type === 'production' && c.noteId.startsWith('w:') && c.scheduled_days >= 21).map(c => c.noteId)).size;
+  const fromReviews = new Set(cards.filter(c => c.type === 'production' && /^[we]:/.test(c.noteId) && c.scheduled_days >= 21).map(c => c.noteId)).size;
   const marked = await db.meta.where('key').startsWith('known:').count();
   return { fromReviews, marked };
 }

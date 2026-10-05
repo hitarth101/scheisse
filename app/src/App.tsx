@@ -19,6 +19,8 @@ import { InboxPage } from './inbox/InboxPage';
 import { CapturePage } from './inbox/CapturePage';
 import { DictionariesPage } from './status/DictionariesPage';
 import { GrammarPage } from './grammar/GrammarPage';
+import { ReadingPage } from './reading/ReadingPage';
+import { TextPage } from './reading/TextPage';
 import { TopicPage } from './grammar/TopicPage';
 import { TablePage } from './grammar/TablePage';
 import { StatusPage } from './status/StatusPage';
@@ -32,6 +34,7 @@ import { useEdgeSwipeBack } from './lib/gestures';
 const TABS: { key: Tab; label: string; icon: IconName; route: string }[] = [
   { key: 'flashcards', label: 'Flashcards', icon: 'cards', route: '#/flashcards' },
   { key: 'lectures', label: 'Lectures', icon: 'lectures', route: '#/lectures' },
+  { key: 'reading', label: 'Reading', icon: 'reading', route: '#/reading' },
   { key: 'grammar', label: 'Grammar', icon: 'grammar', route: '#/grammar' },
   { key: 'status', label: 'Status', icon: 'stats', route: '#/status' },
 ];
@@ -61,6 +64,8 @@ function Page({ route }: { route: Route }) {
     case 'inbox': return <InboxPage />;
     case 'capture': return <CapturePage />;
     case 'dictionaries': return <DictionariesPage />;
+    case 'reading': return <ReadingPage />;
+    case 'text': return <TextPage key={route.id} id={route.id} />;
     case 'grammar': return <GrammarPage />;
     case 'topic': return <TopicPage key={route.id} id={route.id} />;
     case 'table': return <TablePage key={route.id} id={route.id} />;

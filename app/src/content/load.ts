@@ -50,13 +50,16 @@ async function load() {
   if (have === manifest.version) { set({ state: 'ready', version: have }); return; }
 
   try {
-    set({ state: 'loading', done: 0, total: 2 });
+    set({ state: 'loading', done: 0, total: 3 });
     const words = await getJson<{ words: WordRow[] }>('words.json', manifest.version);
-    set({ state: 'loading', done: 1, total: 2 });
+    set({ state: 'loading', done: 1, total: 3 });
     const sentences = await getJson<{ sentences: SentenceRow[] }>('sentences.json', manifest.version);
+    set({ state: 'loading', done: 2, total: 3 });
+    const engineering = await getJson<{ words: WordRow[] }>('engineering.json', manifest.version);
     await db.content.bulkPut([
       { key: 'words', value: words.words },
       { key: 'sentences', value: sentences.sentences },
+      { key: 'engineering', value: engineering.words },
     ]);
     cached = null;
     // Recorded after the import, so an interrupted import simply runs again next time.
@@ -82,7 +85,7 @@ export function loadForms(): Promise<Record<string, NounTable | VerbTable>> {
 }
 
 // ---- The imported lists, read once from the phone's database and kept in memory ----
-interface Loaded { words: WordRow[]; byLemma: Map<string, WordRow[]>; sentences: SentenceRow[] }
+interface Loaded { words: WordRow[]; byLemma: Map<string, WordRow[]>; sentences: SentenceRow[]; engineering: WordRow[] }
 let cached: Promise<Loaded> | null = null;
 
 /** Drops the in-memory copy, so the next read takes the lists from the database again (after a test resets it). */
@@ -92,11 +95,11 @@ export function forgetContent() { cached = null; }
 export function contentData(): Promise<Loaded> {
   if (!cached) {
     cached = (async () => {
-      const [w, s] = await db.content.bulkGet(['words', 'sentences']);
+      const [w, s, e] = await db.content.bulkGet(['words', 'sentences', 'engineering']);
       const words = ((w?.value as WordRow[] | undefined) ?? []).slice().sort((a, b) => a.order - b.order);
       const byLemma = new Map<string, WordRow[]>();
       for (const x of words) byLemma.set(x.lemma, [...(byLemma.get(x.lemma) ?? []), x]);
-      const loaded = { words, byLemma, sentences: (s?.value as SentenceRow[] | undefined) ?? [] };
+      const loaded = { words, byLemma, sentences: (s?.value as SentenceRow[] | undefined) ?? [], engineering: (e?.value as WordRow[] | undefined) ?? [] };
       if (!words.length) cached = null; // nothing imported yet: look again next time
       return loaded;
     })();

@@ -13,6 +13,8 @@ export const DEFAULTS = {
   voice: null as string | null,
   voiceRate: 1,
   genderColours: true,
+  /** The engineering deck (product spec 5.4), off until turned on. */
+  engineering: false,
   haptics: true,
   lectureRate: 1,
 };

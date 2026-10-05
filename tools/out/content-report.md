@@ -1,6 +1,6 @@
 # Content report
 
-Built 2026-10-04 23:51 by `tools/build_content.py`. Content version `99e068ca6672`.
+Built 2026-10-05 00:03 by `tools/build_content.py`. Content version `4e8f822f61d0`.
 
 ## Words
 
@@ -103,4 +103,9 @@ Plural differs or comes from Goethe only (62):
 
 - Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: 132733. Kept for the app (shortest 6 per word, recordings first): 13454.
 - Of these, with an open-licence recording: 4338.
+
+## Engineering deck
+
+- 514 words (the most frequent by DeReWo) with a Wiktionary sense labelled with one of: civil-engineering, construction, electrical-engineering, electricity, electromagnetism, electronics, energy, engineering, hydraulics, machinery, manufacturing, materials-science, mechanical-engineering, mechanics, metalworking, physics, technical, tools; and none of: aeronautics, aerospace, anatomy, arts, automotive, aviation, clothing, computing, design, entertainment, fashion, firearms, government, law, mathematics, media, medicine, military, nautical, politics, programming, software, sports, textiles, vehicles, war, weaponry. Senses whose English starts with a capital (names, brands) are left out. Goethe words are left out because the main deck has them.
+- First 30: Widerstand, Sanierung, Schwerpunkt, Niveau, Seele, Phase, Masse, Atmosphäre, Einstellung, Kern, sanieren, neutral, Moderator, Impuls, Verbreitung, anregen, Sparte, plan, Box, Lenker, Anbau, Schiene, schwingen, ausstrahlen, Durchführung, einlassen, Chip, Materie, physikalisch, auflegen.
 - Words a fill-in-the-blank card may remove: article 3851, preposition 2256, conjugated verb 9311, adjective ending 843.

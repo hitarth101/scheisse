@@ -54,6 +54,8 @@ export function SettingsPage() {
 
       <SectionHeader left="Content and display" />
       <Group flush>
+        <Row title="Engineering vocabulary" sub="Off until you turn it on; suggested after A2. One engineering word joins every three new words."
+          trailing={<Switch label="Engineering vocabulary" checked={s.engineering} onChange={v => setSetting('engineering', v)} />} />
         <Row title="Colour articles by gender" sub="der, die, das" trailing={<Switch label="Colour articles by gender" checked={s.genderColours} onChange={v => setSetting('genderColours', v)} />} />
         <Row title="Light tap feedback" trailing={<Switch label="Light tap feedback" checked={s.haptics} onChange={v => { setHapticsEnabled(v); void setSetting('haptics', v); }} />} />
       </Group>
