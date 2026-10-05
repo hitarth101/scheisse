@@ -69,5 +69,5 @@ export function rowDetail(item: Item, now = new Date()): string {
 
 export function kindLabel(note: NoteRow): string {
   if (note.kind === 'word') return note.pos ? `Word · ${note.pos}` : 'Word';
-  return 'Sentence';
+  return note.kind === 'cloze' ? 'Fill-in-the-blank' : 'Sentence';
 }

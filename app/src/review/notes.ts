@@ -2,6 +2,8 @@
 import { db, type AudioRef, type CardRow, type NoteRow, type SentenceRow, type WordRow } from '../db/db';
 import { newCard } from './scheduler';
 import { contentData } from '../content/load';
+import { unlockedBlanks, type Blank } from '../grammar/data';
+import { blankIn, clozeNote } from './cloze';
 
 const DAY = 86_400_000;
 
@@ -38,7 +40,8 @@ export function lecturePairNote(track: number, index: number, pair: { de: string
  * ("say it") card is first answered (see queue.ts), so the two sides of an item never meet on the same day.
  */
 export async function addNote(note: NoteRow, now: number): Promise<CardRow[]> {
-  const cards = [newCard(note.id, 'production', now), newCard(note.id, 'listening', now, now + DAY)];
+  // A fill-in-the-blank note has only the one card.
+  const cards = note.kind === 'cloze' ? [newCard(note.id, 'production', now)] : [newCard(note.id, 'production', now), newCard(note.id, 'listening', now, now + DAY)];
   let added = false;
   await db.transaction('rw', db.notes, db.cards, async () => {
     if (await db.notes.get(note.id)) return;
@@ -64,6 +67,8 @@ export function isFunctionWord(w: Pick<WordRow, 'pos' | 'lemma'>): boolean {
  * Makes the next new note, one at a time, when the queue needs a new card: the next word in learning order
  * (Goethe A1 → B1, by frequency, function words left out), and one Tatoeba sentence for every three words
  * once a sentence exists whose words have all been introduced or are function words (product spec 5.5).
+ * Once a grammar topic with a blank type is marked practiced, also one fill-in-the-blank card for every
+ * three words, from such a sentence (product spec 5.3).
  * Returns the note's "say it" card, or null when there is nothing left to introduce.
  */
 export async function introduceNext(now = Date.now()): Promise<CardRow | null> {
@@ -79,14 +84,33 @@ async function nextNote(now: number): Promise<NoteRow | null> {
   const functionWords = new Set(data.words.filter(isFunctionWord).map(w => w.id));
   const introduced = new Set([...existing].filter(id => id.startsWith('w:')).map(id => id.slice(2)));
   const sentenceCount = [...existing].filter(id => id.startsWith('s:')).length;
+  const clozeIds = [...existing].filter(id => id.startsWith('c:'));
+  const learned = (s: SentenceRow) => s.w.length > 0 && s.w.every(id => introduced.has(id) || functionWords.has(id)) && s.w.some(id => introduced.has(id));
 
   if (introduced.size >= 5 && sentenceCount * 3 < introduced.size) {
     let best: SentenceRow | null = null;
     for (const s of data.sentences) {
-      if (existing.has(`s:${s.id}`) || !s.w.length || (best && s.de.length >= best.de.length)) continue;
-      if (s.w.every(id => introduced.has(id) || functionWords.has(id)) && s.w.some(id => introduced.has(id))) best = s;
+      if (existing.has(`s:${s.id}`) || (best && s.de.length >= best.de.length)) continue;
+      if (learned(s)) best = s;
     }
     if (best) return sentenceNote(best, now);
+  }
+
+  const blanks = await unlockedBlanks();
+  if (blanks.size && introduced.size >= 5 && clozeIds.length * 3 < introduced.size) {
+    // The unlocked type with the fewest cards so far, from the shortest sentence of learned words.
+    const count = (t: Blank) => clozeIds.filter(id => id.endsWith(`:${t}`)).length;
+    const types = [...blanks].sort((a, b) => count(a) - count(b));
+    const byId = new Map(data.words.map(w => [w.id, w]));
+    for (const type of types) {
+      let best: SentenceRow | null = null;
+      for (const s of data.sentences) {
+        if (existing.has(`c:${s.id}:${type}`) || (best && s.de.length >= best.de.length) || !blankIn(s, type)) continue;
+        if (learned(s)) best = s;
+      }
+      const note = best && clozeNote(best, type, byId, now);
+      if (note) return note;
+    }
   }
   const word = data.words.find(w => !existing.has(`w:${w.id}`) && !functionWords.has(w.id));
   return word ? wordNote(word, now) : null;

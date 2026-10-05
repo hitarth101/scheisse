@@ -1,6 +1,6 @@
 # Content report
 
-Built 2026-10-04 13:42 by `tools/build_content.py`. Content version `4c11e3d4449f`.
+Built 2026-10-04 23:51 by `tools/build_content.py`. Content version `99e068ca6672`.
 
 ## Words
 
@@ -103,3 +103,4 @@ Plural differs or comes from Goethe only (62):
 
 - Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: 132733. Kept for the app (shortest 6 per word, recordings first): 13454.
 - Of these, with an open-licence recording: 4338.
+- Words a fill-in-the-blank card may remove: article 3851, preposition 2256, conjugated verb 9311, adjective ending 843.

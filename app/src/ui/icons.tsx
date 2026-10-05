@@ -29,6 +29,7 @@ const ICONS = {
   keyboard: { d: <><rect x="2.5" y="6" width="19" height="12" rx="2.2" /><path d="M6.5 10h.5M10 10h.5M13.5 10h.5M17 10h.5M8 14h8" /></> },
   check: { d: <path d="M5 12.5l4.5 4.5L19 7.5" />, sw: 2.4 },
   plus: { d: <path d="M12 5v14M5 12h14" />, sw: 2.2 },
+  minus: { d: <path d="M5 12h14" />, sw: 2.2 },
   edit: { d: <><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z" /><path d="M13.5 6.5l4 4" /></> },
   flag: { d: <path d="M5 21V4.5M5 4.5h11l-2 4 2 4H5" /> },
   suspend: { d: <><circle cx="12" cy="12" r="8.5" /><path d="M10 9v6M14 9v6" /></> },

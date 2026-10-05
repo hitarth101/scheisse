@@ -7,11 +7,12 @@ import { getMeta, useSettings } from '../db/settings';
 import { timeOnDay } from '../db/time';
 import { dayWord, daysAgo, minutes, timeOfDay } from '../lib/format';
 import { navigate } from '../lib/router';
+import { inboxItems } from '../inbox/inbox';
 import { cardsLeft, EXTRA_NEW, grantMore, queueState } from '../review/queue';
 import { nextReviews } from '../review/session';
 import { NounHead } from '../ui/German';
 import { Icon } from '../ui/icons';
-import { Foot, GoKey, Group, Key2, Lamp, LargeTitle, NavRow, Notice, Pad, Row, SectionHeader, Sheet, showToast } from '../ui/kit';
+import { Foot, GoKey, Group, Key2, Lamp, LargeTitle, NavRow, Notice, Pad, RKey, Row, SectionHeader, Sheet, showToast } from '../ui/kit';
 import { allItems, FILTERS, matches, rowDetail, type Filter } from './cards';
 
 const PAGE = 50;
@@ -30,11 +31,13 @@ export function FlashcardsPage() {
   const next = useLiveQuery(() => nextReviews(), [minute], null);
   const timeToday = useLiveQuery(() => timeOnDay(), [minute], 0);
   const lastBackup = useLiveQuery(() => getMeta<number>('lastBackupAt'), [], undefined);
+  const inbox = useLiveQuery(async () => (await inboxItems()).filter(i => i.state !== 'done').length, [], 0);
+  const nav = <NavRow right={<RKey icon="plus" label="Capture a phrase" onClick={() => navigate({ name: 'capture' })} />} />;
 
   if (!q) {
     return (
       <>
-        <NavRow />
+        {nav}
         <LargeTitle title="Flashcards" />
         <SectionHeader left="Now" />
         <Group>
@@ -65,7 +68,7 @@ export function FlashcardsPage() {
 
   return (
     <>
-      <NavRow />
+      {nav}
       <LargeTitle title="Flashcards" />
 
       <SectionHeader left="Now" right={left ? approx(q.dueSecs + q.newSecs) : undefined} />
@@ -87,7 +90,9 @@ export function FlashcardsPage() {
       )}
       <Group style={{ marginTop: 16 }}>
         <Row icon="plus" title={`Add ${EXTRA_NEW} more new cards today`}
-          sub={q.paused ? 'New cards are paused today because reviews take longer than the daily time' : undefined} onClick={() => void more()} />
+          sub={q.paused ? 'New cards are paused today because reviews take longer than the set time' : undefined} onClick={() => void more()} />
+        <Row icon="inbox" title="Inbox" sub={inbox ? `${inbox} phrase${inbox === 1 ? '' : 's'} heard on TV to check` : 'Phrases heard on TV'} detail={inbox || undefined} chevron
+          onClick={() => navigate({ name: 'inbox' })} />
       </Group>
 
       {firstRun && !lastBackup && (

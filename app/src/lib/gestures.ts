@@ -7,6 +7,11 @@ import { back, type Route } from './router';
 const PARENT: Partial<Record<Route['name'], Route>> = {
   track: { name: 'lectures' },
   card: { name: 'flashcards' },
+  inbox: { name: 'flashcards' },
+  text: { name: 'reading' },
+  topic: { name: 'grammar' },
+  table: { name: 'grammar' },
+  dictionaries: { name: 'status' },
   settings: { name: 'status' },
   credits: { name: 'status' },
 };

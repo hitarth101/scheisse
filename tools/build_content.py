@@ -9,7 +9,8 @@ Sources (in tools/raw/, never uploaded):
 Outputs (published with the app, in app/public/data/):
   words.json        one entry per word, in learning order
   word-forms.json   full declension and conjugation tables for the "All forms" sheet
-  sentences.json    Tatoeba sentence pairs made of Goethe A1-B1 words
+  sentences.json    Tatoeba sentence pairs made of Goethe A1-B1 words, with the positions of words that
+                    fill-in-the-blank cards may remove (product spec 5.3)
   manifest.json     content version and counts
 Report for the owner: tools/out/content-report.md
 
@@ -338,6 +339,28 @@ def all_forms(entries: list[dict]) -> set[str]:
     return out
 
 
+# Closed list of article forms for article blanks (product spec 5.3).
+ARTICLES = {"der", "die", "das", "den", "dem", "des", "ein", "eine", "einen", "einem", "einer", "eines"}
+
+
+def blank_forms(entries: list[dict], pos: str, lemma: str) -> set[str]:
+    """Forms a blank may remove, by Wiktionary's tags: finite verb forms (present or past, with a person)
+    other than the infinitive; declined adjective forms (strong, weak or mixed endings)."""
+    out = set()
+    for e in entries:
+        for f in e.get("forms", []):
+            tags = set(f.get("tags", []))
+            form = f.get("form", "")
+            if not re.fullmatch(r"[A-Za-zÄÖÜäöüß]+", form) or form == lemma:
+                continue
+            if pos == "verb" and tags & {"present", "past"} and tags & {"first-person", "second-person", "third-person"} \
+                    and not tags & {"subjunctive-i", "subjunctive-ii", "imperative", "participle", "dependent"}:
+                out.add(form)
+            if pos == "adj" and tags & {"strong", "weak", "mixed"} and not tags & {"comparative", "superlative", "includes-article", "predicative"}:
+                out.add(form)
+    return out
+
+
 # ---------------------------------------------------------------- DeReWo
 def derewo_ranks() -> dict[str, int]:
     path = next((RAW / "derewo").glob("derewo-v-ww-bll-*.txt"))
@@ -412,6 +435,7 @@ def main():
     out_words: list[dict] = []
     forms_out: dict[str, dict] = {}
     form_map: dict[str, list[str]] = collections.defaultdict(list)
+    blankable: dict[str, dict[str, str]] = {"verb": {}, "adj": {}}
     no_entry, no_english, plural_notes, gender_notes = [], [], [], []
 
     for w in words.values():
@@ -526,6 +550,9 @@ def main():
         for f in all_forms(chosen):
             if w["id"] not in form_map[f]:
                 form_map[f].append(w["id"])
+        if pos in blankable:
+            for f in blank_forms(primary, pos, lemma):
+                blankable[pos].setdefault(f, w["id"])
 
     # Learning order: level, then real-world frequency (DeReWo); product spec 5.5.
     out_words.sort(key=lambda x: (LEVELS.index(x["level"]), x["rank"], x["lemma"]))
@@ -555,6 +582,31 @@ def main():
             ids = [i for i in form_map.get(tok.lower(), []) if i in word_ids]
         return ids
 
+    pos_of = {x["id"]: x["pos"] for x in out_words}
+    prep_lemmas = {x["lemma"] for x in out_words if x["pos"] == "preposition"}
+
+    def blanks(toks: list[str]) -> dict:
+        """Token positions (in TOKEN order) a fill-in-the-blank card may remove: a = article before a noun,
+        p = preposition itself (not a split-off verb prefix at the end, not "zu" before a verb), v = conjugated verb,
+        j = adjective with an ending, before a noun. The first of each kind is used; verbs and adjectives
+        also carry their word id, so the card can show the base form as a hint."""
+        out: dict[str, int] = {}
+        for k, t in enumerate(toks):
+            low = t.lower()
+            nxt = ids_for(toks[k + 1], False) if k + 1 < len(toks) else []
+            if "a" not in out and low in ARTICLES and any(pos_of.get(i) == "noun" for i in nxt):
+                out["a"] = k
+            if "p" not in out and k + 1 < len(toks) and low in prep_lemmas \
+                    and not (low == "zu" and any(pos_of.get(i) == "verb" for i in nxt)):
+                out["p"] = k
+            verb = blankable["verb"].get(t if k else low, blankable["verb"].get(t))
+            if "v" not in out and verb in word_ids:
+                out["v"] = [k, verb]
+            adj = blankable["adj"].get(low)
+            if "j" not in out and adj in word_ids and any(pos_of.get(i) == "noun" for i in nxt):
+                out["j"] = [k, adj]
+        return out
+
     sentences = []
     for sid, text in deu.items():
         en_ids = [e for e in links.get(sid, []) if e in eng]
@@ -577,6 +629,9 @@ def main():
             continue
         en_id = en_ids[0]
         s = {"id": sid, "de": text, "en": eng[en_id], "enId": en_id, "w": w_ids}
+        c = blanks(toks)
+        if c:
+            s["c"] = c
         if sid in audio:
             s["a"] = audio[sid]
         sentences.append(s)
@@ -679,6 +734,9 @@ def main():
         "",
         f"- Native-speaker German sentences with an English translation, 3-10 words, every word from the A1-B1 lists: {candidates}. Kept for the app (shortest 6 per word, recordings first): {len(sentences)}.",
         f"- Of these, with an open-licence recording: {sum(1 for s in sentences if 'a' in s)}.",
+        "- Words a fill-in-the-blank card may remove: " + ", ".join(
+            f"{name} {sum(1 for s in sentences if k in s.get('c', {}))}" for k, name in
+            (("a", "article"), ("p", "preposition"), ("v", "conjugated verb"), ("j", "adjective ending"))) + ".",
         "",
     ]
     REPORT.parent.mkdir(parents=True, exist_ok=True)

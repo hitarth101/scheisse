@@ -5,14 +5,22 @@ export type Route =
   | { name: 'flashcards' }
   | { name: 'card'; note: string }
   | { name: 'study' }
+  | { name: 'inbox' }
+  | { name: 'capture' }
   | { name: 'lectures' }
   | { name: 'track'; track: number }
   | { name: 'tick'; track: number }
+  | { name: 'reading' }
+  | { name: 'text'; id: string }
+  | { name: 'grammar' }
+  | { name: 'topic'; id: string }
+  | { name: 'table'; id: string }
   | { name: 'status' }
   | { name: 'settings' }
-  | { name: 'credits' };
+  | { name: 'credits' }
+  | { name: 'dictionaries' };
 
-export type Tab = 'flashcards' | 'lectures' | 'status';
+export type Tab = 'flashcards' | 'lectures' | 'reading' | 'grammar' | 'status';
 
 export function parse(hash: string): Route {
   const [path] = hash.replace(/^#\/?/, '').split('?');
@@ -20,8 +28,14 @@ export function parse(hash: string): Route {
   const n = (s: string | undefined) => { const v = Number(s); return Number.isInteger(v) && v >= 1 && v <= 50 ? v : null; };
   switch (parts[0]) {
     case 'flashcards':
+      if (parts[1] === 'inbox') return parts[2] === 'capture' ? { name: 'capture' } : { name: 'inbox' };
       if (parts[1]) { try { return { name: 'card', note: decodeURIComponent(parts[1]) }; } catch { /* bad address */ } }
       return { name: 'flashcards' };
+    case 'reading': return parts[1] ? { name: 'text', id: parts[1] } : { name: 'reading' };
+    case 'grammar':
+      if (parts[1] === 'topics' && parts[2]) return { name: 'topic', id: parts[2] };
+      if (parts[1] === 'tables' && parts[2]) return { name: 'table', id: parts[2] };
+      return { name: 'grammar' };
     case 'study': case 'review': return { name: 'study' };
     case 'lectures': {
       const t = n(parts[1]);
@@ -31,6 +45,7 @@ export function parse(hash: string): Route {
     case 'status':
       if (parts[1] === 'settings') return { name: 'settings' };
       if (parts[1] === 'credits') return { name: 'credits' };
+      if (parts[1] === 'dictionaries') return { name: 'dictionaries' };
       if (parts[1] === 'leeches' || parts[1] === 'flagged') return { name: 'flashcards' };
       return { name: 'status' };
     default: return { name: 'flashcards' };
@@ -42,25 +57,35 @@ export function pathOf(r: Route): string {
     case 'flashcards': return '/flashcards';
     case 'card': return `/flashcards/${encodeURIComponent(r.note)}`;
     case 'study': return '/study';
+    case 'inbox': return '/flashcards/inbox';
+    case 'capture': return '/flashcards/inbox/capture';
+    case 'reading': return '/reading';
+    case 'text': return `/reading/${r.id}`;
+    case 'grammar': return '/grammar';
+    case 'topic': return `/grammar/topics/${r.id}`;
+    case 'table': return `/grammar/tables/${r.id}`;
     case 'lectures': return '/lectures';
     case 'track': return `/lectures/${String(r.track).padStart(2, '0')}`;
     case 'tick': return `/lectures/${String(r.track).padStart(2, '0')}/sentences`;
     case 'status': return '/status';
     case 'settings': return '/status/settings';
     case 'credits': return '/status/credits';
+    case 'dictionaries': return '/status/dictionaries';
   }
 }
 
 /** Pages without the tab bar and mini-player (design spec 3). */
 export function isFocus(r: Route): boolean {
-  return r.name === 'study' || r.name === 'tick';
+  return r.name === 'study' || r.name === 'tick' || r.name === 'capture';
 }
 
 /** Which tab a page belongs to. */
 export function tabOf(r: Route): Tab {
   switch (r.name) {
     case 'lectures': case 'track': case 'tick': return 'lectures';
-    case 'status': case 'settings': case 'credits': return 'status';
+    case 'reading': case 'text': return 'reading';
+    case 'grammar': case 'topic': case 'table': return 'grammar';
+    case 'status': case 'settings': case 'credits': case 'dictionaries': return 'status';
     default: return 'flashcards';
   }
 }

@@ -35,7 +35,8 @@ export interface AudioRef { url: string; kind: 'wiktionary' | 'tatoeba'; by?: st
  *  content update never changes a card silently, and is never written by the app. */
 export interface NoteRow {
   id: string;
-  kind: 'word' | 'sentence';
+  /** cloze: a fill-in-the-blank card, a real sentence with one word removed (product spec 5.3). */
+  kind: 'word' | 'sentence' | 'cloze';
   /** German: the word (lemma) or the sentence. */
   de: string;
   /** English meanings, most common first (sentences: one translation). */
@@ -58,6 +59,8 @@ export interface NoteRow {
   /** Word id in words.json, Tatoeba sentence number, or the lecture track. */
   sourceRef?: string;
   level?: string;
+  /** Fill-in-the-blank: which word is removed (character offsets in de), and its base form as a hint. */
+  blank?: { type: 'article' | 'preposition' | 'verb' | 'adjective'; start: number; end: number; base?: string };
   createdAt: number;
   edited?: 0 | 1;
   original?: { de: string; en: string[]; gender?: Gender; plural?: string | null };
@@ -127,6 +130,8 @@ export interface SentenceRow {
   enId: number;
   w: string[];
   a?: { id: number; by: string; lic: string };
+  /** Words a fill-in-the-blank card may remove: token index (verbs and adjectives: with the word id). */
+  c?: { a?: number; p?: number; v?: [number, string]; j?: [number, string] };
 }
 
 export class ScheisseDB extends Dexie {

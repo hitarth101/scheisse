@@ -13,6 +13,7 @@ import { BackButton, Chip, DetailTitle, Foot, Group, Key2, NavRow, Pad, RKey, Ro
 import { cardStatus, kindLabel } from './cards';
 
 const SIDE = { production: { title: 'Say it', sub: 'English → German' }, listening: { title: 'Hear it', sub: 'German audio → English' } };
+const GAP = { title: 'Fill the gap', sub: 'the sentence with one word removed' };
 
 export function CardPage({ noteId }: { noteId: string }) {
   const settings = useSettings();
@@ -65,7 +66,7 @@ export function CardPage({ noteId }: { noteId: string }) {
       <SectionHeader left="Cards" right={kindLabel(note)} style={{ paddingTop: 24 }} />
       <Group flush>
         {cards.map(c => (
-          <Row key={c.id} title={SIDE[c.type].title} sub={`${SIDE[c.type].sub} · ${cardStatus(c, sayIt)}`}
+          <Row key={c.id} title={(note.kind === 'cloze' ? GAP : SIDE[c.type]).title} sub={`${(note.kind === 'cloze' ? GAP : SIDE[c.type]).sub} · ${cardStatus(c, sayIt)}`}
             trailing={c.suspended
               ? <Chip onClick={() => { void setSuspended(c.id, null); showToast('Returned to reviews'); }}>Return to reviews</Chip>
               : <Chip onClick={() => { void setSuspended(c.id, 'manual'); showToast('Card suspended'); }}>Suspend</Chip>} />
@@ -78,10 +79,10 @@ export function CardPage({ noteId }: { noteId: string }) {
       </Group>
 
       <Pad top={24} style={{ display: 'grid', gap: 10 }}>
-        <Key2 icon="edit" onClick={() => setEditing(true)}>Edit card</Key2>
+        {note.kind !== 'cloze' && <Key2 icon="edit" onClick={() => setEditing(true)}>Edit card</Key2>}
         <Key2 danger onClick={() => void remove()}>Delete card</Key2>
       </Pad>
-      <Foot>Deleting removes both sides of the card. Your review history stays.</Foot>
+      <Foot>{note.kind === 'cloze' ? 'Fill-in-the-blank cards keep the source sentence exactly, so they can be suspended or deleted but not edited.' : 'Deleting removes both sides of the card.'} Your review history stays.</Foot>
 
       {editing && <EditNote note={note} onDone={saved => { setEditing(false); if (saved) showToast('Card edited'); }} />}
     </>

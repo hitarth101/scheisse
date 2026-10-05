@@ -3,8 +3,10 @@ import { launchHash, parse, pathOf } from '../src/lib/router';
 
 describe('router', () => {
   it('parses and prints every page', () => {
-    for (const h of ['#/flashcards', '#/flashcards/w%3ATisch%7Cm', '#/study', '#/lectures', '#/lectures/09', '#/lectures/50/sentences',
-      '#/status', '#/status/settings', '#/status/credits']) {
+    for (const h of ['#/flashcards', '#/flashcards/w%3ATisch%7Cm', '#/study', '#/flashcards/inbox', '#/flashcards/inbox/capture',
+      '#/lectures', '#/lectures/09', '#/lectures/50/sentences', '#/reading', '#/reading/grimm-der-suesse-brei',
+      '#/grammar', '#/grammar/topics/a1-articles-definite', '#/grammar/tables/definite-articles',
+      '#/status', '#/status/settings', '#/status/credits', '#/status/dictionaries']) {
       expect('#' + pathOf(parse(h))).toBe(h);
     }
   });

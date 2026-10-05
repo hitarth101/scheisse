@@ -15,6 +15,12 @@ import { TickScreen } from './lectures/TickScreen';
 import { FlashcardsPage } from './flashcards/FlashcardsPage';
 import { CardPage } from './flashcards/CardPage';
 import { Study } from './review/ReviewSession';
+import { InboxPage } from './inbox/InboxPage';
+import { CapturePage } from './inbox/CapturePage';
+import { DictionariesPage } from './status/DictionariesPage';
+import { GrammarPage } from './grammar/GrammarPage';
+import { TopicPage } from './grammar/TopicPage';
+import { TablePage } from './grammar/TablePage';
 import { StatusPage } from './status/StatusPage';
 import { SettingsPage } from './status/SettingsPage';
 import { CreditsPage } from './status/CreditsPage';
@@ -26,6 +32,7 @@ import { useEdgeSwipeBack } from './lib/gestures';
 const TABS: { key: Tab; label: string; icon: IconName; route: string }[] = [
   { key: 'flashcards', label: 'Flashcards', icon: 'cards', route: '#/flashcards' },
   { key: 'lectures', label: 'Lectures', icon: 'lectures', route: '#/lectures' },
+  { key: 'grammar', label: 'Grammar', icon: 'grammar', route: '#/grammar' },
   { key: 'status', label: 'Status', icon: 'stats', route: '#/status' },
 ];
 
@@ -51,6 +58,12 @@ function Page({ route }: { route: Route }) {
     case 'track': return <TrackPage key={route.track} track={route.track} />;
     case 'tick': return <TickScreen key={route.track} track={route.track} />;
     case 'study': return <Study />;
+    case 'inbox': return <InboxPage />;
+    case 'capture': return <CapturePage />;
+    case 'dictionaries': return <DictionariesPage />;
+    case 'grammar': return <GrammarPage />;
+    case 'topic': return <TopicPage key={route.id} id={route.id} />;
+    case 'table': return <TablePage key={route.id} id={route.id} />;
     case 'status': return <StatusPage />;
     case 'settings': return <SettingsPage />;
     case 'credits': return <CreditsPage />;

@@ -4,6 +4,7 @@ import { setSetting } from '../src/db/settings';
 import { introduceNext, isFunctionWord, lecturePairNote, addNote } from '../src/review/notes';
 import { grantMore, pickNext, queueState } from '../src/review/queue';
 import { recordGrade } from '../src/review/session';
+import { forgetContent } from '../src/content/load';
 
 // Word ids and lemmas mimic words.json; meanings are placeholders, not shown anywhere.
 const w = (lemma: string, pos: string, order: number): WordRow =>
@@ -26,6 +27,7 @@ const HOUR = 3_600_000;
 async function reset() {
   await Promise.all(db.tables.map(t => t.clear()));
   await db.content.bulkPut([{ key: 'words', value: WORDS }, { key: 'sentences', value: SENTENCES }]);
+  forgetContent();
 }
 
 describe('introducing new cards (product spec 5.5)', () => {
@@ -98,5 +100,34 @@ describe('the flashcard queue (owner decision 2026-10-04)', () => {
     expect(q.newLeft).toBe(0);
     await grantMore(5, DAY1 + 24 * HOUR);
     expect((await queueState(DAY1 + 24 * HOUR)).newLeft).toBe(5);
+  });
+});
+
+describe('fill-in-the-blank cards (product spec 5.3)', () => {
+  beforeEach(reset);
+
+  it('finds the removed word from the token position worked out on the PC', async () => {
+    const { blankIn, clozeParts, clozeNote } = await import('../src/review/cloze');
+    const s: SentenceRow = { id: 9, de: '(x) Tisch, (y)!', en: '(en)', enId: 19, w: ['Tisch'], c: { a: 0, v: [2, 'gehen'] } };
+    expect(blankIn(s, 'article')).toEqual({ start: 1, end: 2, base: undefined });
+    expect(blankIn(s, 'preposition')).toBeNull();
+    const note = clozeNote(s, 'verb', new Map(WORDS.map(x => [x.id, x])), DAY1)!;
+    expect(note.id).toBe('c:9:verb');
+    expect(note.blank?.base).toBe('gehen');
+    expect(clozeParts(note)).toEqual({ before: '(x) Tisch, (', answer: 'y', after: ')!' });
+  });
+
+  it('adds them only after the grammar topic is marked practiced', async () => {
+    await db.content.put({ key: 'sentences', value: [...SENTENCES, { id: 4, de: '(dd)', en: '(d)', enId: 14, w: ['der', 'Tisch', 'sein'], c: { a: 0 } }] });
+    forgetContent();
+    const { setMeta } = await import('../src/db/settings');
+    const made: string[] = [];
+    for (let i = 0; i < 6; i++) made.push((await introduceNext(DAY1 + i))!.noteId);
+    expect(made.some(id => id.startsWith('c:'))).toBe(false);
+    await setMeta('blankTopics', { 'a1-articles-definite': 'article' });
+    await setMeta('topic:a1-articles-definite', 'practiced');
+    for (let i = 0; i < 4; i++) made.push((await introduceNext(DAY1 + 10 + i))!.noteId);
+    expect(made).toContain('c:4:article');
+    expect(await db.cards.where('noteId').equals('c:4:article').count()).toBe(1); // no "hear it" side
   });
 });

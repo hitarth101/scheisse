@@ -85,6 +85,9 @@ export function loadForms(): Promise<Record<string, NounTable | VerbTable>> {
 interface Loaded { words: WordRow[]; byLemma: Map<string, WordRow[]>; sentences: SentenceRow[] }
 let cached: Promise<Loaded> | null = null;
 
+/** Drops the in-memory copy, so the next read takes the lists from the database again (after a test resets it). */
+export function forgetContent() { cached = null; }
+
 /** Words in learning order, and Tatoeba sentences. Empty until the first import has finished. */
 export function contentData(): Promise<Loaded> {
   if (!cached) {

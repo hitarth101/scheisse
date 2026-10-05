@@ -9,6 +9,7 @@ import { askFor, NounHead, pluralText, wordAnswer } from '../ui/German';
 import { GermanKeys } from '../ui/GermanKeys';
 import { audioLabel, playNote } from './audio';
 import { compareAnswer, type Comparison } from './compare';
+import { BLANK_PROMPT, clozeParts } from './cloze';
 
 export interface CardViewProps {
   card: CardRow;
@@ -24,6 +25,7 @@ export interface CardViewProps {
 
 /** The German the learner is asked to produce or hear. */
 export function expected(note: NoteRow): string {
+  if (note.kind === 'cloze') return clozeParts(note).answer;
   return note.kind === 'word' ? wordAnswer(note) : note.de;
 }
 
@@ -79,6 +81,7 @@ export function CardView(p: CardViewProps) {
   }, [revealed, card.id]);
 
   if (card.type === 'listening') return <ListeningCard {...p} audio={audio} />;
+  if (note.kind === 'cloze') return <ClozeCard {...p} audio={audio} />;
   const isWord = note.kind === 'word';
   const comparison: Comparison | null = mode === 'type' && revealed && p.typed.trim() ? compareAnswer(p.typed, expected(note)) : null;
 
@@ -205,6 +208,44 @@ function SentenceNouns({ de }: { de: string }) {
       ))}
       <div className="src" style={{ marginTop: 8 }}>Wiktionary</div>
     </div>
+  );
+}
+
+/** Fill-in-the-blank (design spec 5.2): the real sentence with a drawn gap; the English is the hint. */
+function ClozeCard(p: CardViewProps & { audio: ReturnType<typeof useCardAudio> }) {
+  const { note, card, mode, revealed, audio, settings } = p;
+  const { before, answer, after } = clozeParts(note);
+  const b = note.blank!;
+  const comparison: Comparison | null = mode === 'type' && revealed && p.typed.trim() ? compareAnswer(p.typed, answer) : null;
+  return (
+    <>
+      <div className="card rv-card">
+        <div className="win-row" style={{ alignItems: 'flex-start' }}>
+          <div className="de-sent" lang="de">
+            {before}{revealed ? <span className="w-hit">{answer}</span> : <span className="gap" role="img" aria-label="missing word">&nbsp;</span>}{after}
+          </div>
+          {revealed && <RKey icon="speaker" label="Play the German" onClick={() => audio.play()} className="lg" />}
+        </div>
+        <div className="t-sub l2" style={{ marginTop: 12 }}>
+          {BLANK_PROMPT[b.type]}{b.base ? <> Base form: <span lang="de">{b.base}</span>.</> : null} {note.en[0]}
+        </div>
+        {revealed && (
+          <div className="reveal-in">
+            {comparison && (
+              <div className="typed diff" lang="de" style={{ marginTop: 12 }}>
+                <span className="t-sub l2" lang="en" style={{ fontWeight: 400, marginRight: 8 }}>You typed</span>
+                {comparison.segments.map((s, i) => s.kind === 'ok' ? <span key={i}>{s.text}</span> : <span key={i} className={s.kind}>{s.text}</span>)}
+              </div>
+            )}
+            {comparison?.notes.map(n => <div className="note" key={n.kind}><Icon name="info" /><span>{n.text}</span></div>)}
+            {comparison?.exact && <div className="note"><Icon name="check" /><span>Same as the answer.</span></div>}
+            {audio.failed && <AudioError onRetry={() => audio.play()} onVoice={audio.useVoice} />}
+          </div>
+        )}
+        <div className="src" style={{ marginTop: 12 }}>{revealed ? `${audioLabel(note, settings.voice, audio.voiceOnly)} · ` : ''}Tatoeba {note.sourceRef} · one word removed</div>
+      </div>
+      {!revealed && mode === 'type' && <TypeField value={p.typed} onChange={p.onTyped} onCheck={p.onCheck} cardId={card.id} />}
+    </>
   );
 }
 

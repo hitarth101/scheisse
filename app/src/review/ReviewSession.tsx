@@ -28,6 +28,7 @@ type Phase =
 
 function cardLabel(card: CardRow, note: NoteRow): string {
   if (card.type === 'listening') return 'Listening';
+  if (note.kind === 'cloze') return 'Fill the gap';
   return note.kind === 'word' ? 'Word' : 'Sentence';
 }
 
@@ -240,7 +241,7 @@ export function Study() {
             <button type="button" className="a" onClick={() => void undo()} disabled={!lastUndo}>
               <Icon name="undo" />Undo last grade{lastUndo && <span className="r" lang="de">{RATING_NAMES[lastUndo.rating]} · {lastUndo.label}</span>}
             </button>
-            <button type="button" className="a" onClick={() => setSheet('edit')}><Icon name="edit" />Edit card</button>
+            {note.kind !== 'cloze' && <button type="button" className="a" onClick={() => setSheet('edit')}><Icon name="edit" />Edit card</button>}
             <button type="button" className="a" onClick={() => void suspend('manual')}><Icon name="suspend" />Suspend card</button>
             <button type="button" className="a" onClick={() => void suspend('flag')}><Icon name="flag" />Flag: source data looks wrong</button>
             <div className="a"><Icon name="speaker" />Play audio automatically
