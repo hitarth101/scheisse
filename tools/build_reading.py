@@ -170,6 +170,10 @@ def main():
                       "words": total, "lemmas": counts, "aligned": round(aligned, 2), **({"audio": 1} if rec else {})})
         log(f"{x['id']}: {total} words, {len(counts)} lemmas, {missing} without a dictionary entry, {aligned:.0%} sentence-aligned")
     (OUT / "index.json").write_text(json.dumps({"texts": index}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    keep = {f"{t['id']}.json" for t in index} | {"index.json"}
+    for f in OUT.glob("*.json"):
+        if f.name not in keep:
+            f.unlink()  # a text no longer in the sources
     log(f"Wrote {len(index)} texts")
 
 
