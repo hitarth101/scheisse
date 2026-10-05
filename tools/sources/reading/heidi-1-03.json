@@ -1,0 +1,811 @@
+{
+  "id": "heidi-1-03",
+  "stage": 4,
+  "title": "Auf der Weide",
+  "titleEn": "Out with the Goats",
+  "author": "Johanna Spyri",
+  "year": 1880,
+  "historicalSpelling": false,
+  "book": "Heidis Lehr- und Wanderjahre",
+  "bookEn": "Heidi",
+  "part": 1,
+  "chapter": 3,
+  "de": {
+    "source": "Project Gutenberg #7500",
+    "edition": "Heidis Lehr- und Wanderjahre (Gutenberg Projekt-DE text, modernised spelling)",
+    "url": "https://www.gutenberg.org/ebooks/7500",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #1448",
+    "edition": "Heidi",
+    "translator": "Marian Edwardes (listed there as Marion Edwards)",
+    "year": 1910,
+    "url": "https://www.gutenberg.org/ebooks/1448",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Heidi erwachte am frühen Morgen an einem lauten Pfiff, und als es die Augen aufschlug, kam ein goldener Schein durch das runde Loch hereingeflossen auf sein Lager und auf das Heu daneben, dass alles golden leuchtete ringsherum.",
+        "Heidi schaute erstaunt um sich und wusste durchaus nicht, wo es war.",
+        "Aber nun hörte es draußen des Großvaters tiefe Stimme, und jetzt kam ihm alles in den Sinn: Woher es gekommen war und dass es nun auf der Alm beim Großvater sei, nicht mehr bei der alten Ursel, die fast nichts mehr hörte und meistens fror, so dass sie immer am Küchenfenster oder am Stubenofen gesessen hatte, wo dann auch Heidi hatte verweilen müssen oder doch ganz in der Nähe, damit die Alte sehen konnte, wo es war, weil sie es nicht hören konnte.",
+        "Da war es dem Heidi manchmal zu eng drinnen, und es wäre lieber hinausgelaufen.",
+        "So war es sehr froh, als es in der neuen Behausung erwachte und sich erinnerte, wie viel Neues es gestern gesehen hatte und was es heute wieder alles sehen könnte, vor allem das Schwänli und das Bärli.",
+        "Heidi sprang eilig aus seinem Bett und hatte in wenig Minuten alles wieder angelegt, was es gestern getragen hatte, denn es war sehr wenig.",
+        "Nun stieg es die Leiter hinunter und sprang vor die Hütte hinaus.",
+        "Da stand schon der Geißenpeter mit seiner Schar, und der Großvater brachte eben Schwänli und Bärli aus dem Stall herbei, dass sie sich der Gesellschaft anschlossen.",
+        "Heidi lief ihm entgegen, um ihm und den Geißen guten Tag zu sagen."
+      ],
+      "enPara": "Heidi was awakened early the next morning by a loud whistle; the sun was shining through the round window and falling in golden rays on her bed and on the large heap of hay, and as she opened her eyes everything in the loft seemed gleaming with gold. She looked around her in astonishment and could not imagine for a while where she was. But her grandfather's deep voice was now heard outside, and then Heidi began to recall all that had happened: how she had come away from her former home and was now on the mountain with her grandfather instead of with old Ursula. The latter was nearly stone deaf and always felt cold, so that she sat all day either by the hearth in the kitchen or by the sitting-room stove, and Heidi had been obliged to stay close to her, for the old woman was so deaf that she could not tell where the child was if out of her sight. And Heidi, shut up within the four walls, had often longed to be out of doors. So she felt very happy this morning as she woke up in her new home and remembered all the many new things that she had seen the day before and which she would see again that day, and above all she thought with delight of the two dear goats. Heidi jumped quickly out of bed and a very few minutes sufficed her to put on the clothes which she had taken off the night before, for there were not many of them. Then she climbed down the ladder and ran outside the hut. There stood Peter already with his flock of goats, and the grandfather was just bringing his two out of the shed to join the others. Heidi ran forward to wish good-morning to him and the goats."
+    },
+    {
+      "de": [
+        "\"Willst mit auf die Weide?\", fragte der Großvater.",
+        "Das war dem Heidi eben recht, es hüpfte hoch auf vor Freude."
+      ],
+      "en": [
+        "\"Do you want to go with them on to the mountain?\" asked her grandfather.",
+        "Nothing could have pleased Heidi better, and she jumped for joy in answer."
+      ]
+    },
+    {
+      "de": [
+        "\"Aber erst waschen und sauber sein, sonst lacht einen die Sonne aus, wenn sie so schön glänzt da droben und sieht, dass du schwarz bist; sieh, dort ist's für dich gerichtet.\"",
+        "Der Großvater zeigte auf einen großen Zuber voll Wasser, der vor der Tür in der Sonne stand.",
+        "Heidi sprang hin und patschte und rieb, bis es ganz glänzend war.",
+        "Unterdessen ging der Großvater in die Hütte hinein und rief dem Peter zu: \"Komm hierher, Geißengeneral, und bring deinen Habersack mit.\"",
+        "Verwundert folgte Peter dem Ruf und streckte sein Säcklein hin, in dem er sein mageres Mittagessen bei sich trug."
+      ],
+      "enPara": "\"But you must first wash and make yourself tidy. The sun that shines so brightly overhead will else laugh at you for being dirty; see, I have put everything ready for you,\" and her grandfather pointed as he spoke to a large tub full of water, which stood in the sun before the door. Heidi ran to it and began splashing and rubbing, till she quite glistened with cleanliness. The grandfather meanwhile went inside the hut, calling to Peter to follow him and bring in his wallet. Peter obeyed with astonishment, and laid down the little bag which held his meagre dinner."
+    },
+    {
+      "de": [
+        "\"Mach auf\", befahl der Alte und steckte nun ein großes Stück Brot und ein ebenso großes Stück Käse hinein.",
+        "Der Peter machte vor Erstaunen seine runden Augen so weit auf als nur möglich, denn die beiden Stücke waren wohl doppelt so groß wie die zwei, die er als eignes Mittagsmahl drinnen hatte."
+      ],
+      "enPara": "\"Open it,\" said the old man, and inside it he put a large piece of bread and an equally large piece of cheese, which made Peter open his eyes, for each was twice the size of the two portions which he had for his own dinner. \"There, now there is only the little bowl to add,\" continued the grandfather, \"for the child cannot drink her milk as you do from the goat; she is not accustomed to that. You must milk two bowlfuls for her when she has her dinner, for she is going with you and will remain with you till you return this evening; but take care she does not fall over any of the rocks, do you hear?\""
+    },
+    {
+      "de": [
+        "\"So, nun kommt noch das Schüsselchen hinein\", fuhr der Öhi fort, \"denn das Kind kann nicht trinken wie du, nur so von der Geiß weg, es kennt das nicht.",
+        "Du melkst ihm zwei Schüsselchen voll zu Mittag, denn das Kind geht mit dir und bleibt bei dir, bis du wieder herunterkommst; gib Acht, dass es nicht über die Felsen hinunterfällt, hörst du?\"--"
+      ],
+      "enPara": "\"Open it,\" said the old man, and inside it he put a large piece of bread and an equally large piece of cheese, which made Peter open his eyes, for each was twice the size of the two portions which he had for his own dinner. \"There, now there is only the little bowl to add,\" continued the grandfather, \"for the child cannot drink her milk as you do from the goat; she is not accustomed to that. You must milk two bowlfuls for her when she has her dinner, for she is going with you and will remain with you till you return this evening; but take care she does not fall over any of the rocks, do you hear?\""
+    },
+    {
+      "de": [
+        "Nun kam Heidi hereingelaufen.",
+        "\"Kann mich die Sonne jetzt nicht auslachen, Großvater?\", fragte es angelegentlich.",
+        "Es hatte sich mit dem groben Tuch, das der Großvater neben dem Wasserzuber aufgehängt hatte, Gesicht, Hals und Arme in seinem Schrecken vor der Sonne so erstaunlich gerieben, dass es krebsrot vor dem Großvater stand.",
+        "Er lachte ein wenig."
+      ],
+      "en": [
+        "Heidi now came running in.",
+        "\"Will the sun laugh at me now, grandfather?\" she asked anxiously.",
+        "Her grandfather had left a coarse towel hanging up for her near the tub, and with this she had so thoroughly scrubbed her face, arms, and neck, for fear of the sun, that as she stood there she was as red all over as a lobster.",
+        "He gave a little laugh."
+      ]
+    },
+    {
+      "de": [
+        "\"Nein, nun hat sie nichts zu lachen\", bestätigte er.",
+        "\"Aber weißt was? Am Abend, wenn du heimkommst, da gehst du noch ganz hinein in den Zuber, wie ein Fisch; denn wenn man geht wie die Geißen, da bekommt man schwarze Füße. Jetzt könnt ihr ausziehen.\""
+      ],
+      "en": [
+        "\"No, there is nothing for him to laugh at now,\" he assured her.",
+        "\"But I tell you what--when you come home this evening, you will have to get right into the tub, like a fish, for if you run about like the goats you will get your feet dirty. Now you can be off.\""
+      ]
+    },
+    {
+      "de": [
+        "Nun ging es lustig die Alm hinan.",
+        "Der Wind hatte in der Nacht das letzte Wölkchen weggeblasen; dunkelblau schaute der Himmel von allen Seiten hernieder, und mittendrauf stand die leuchtende Sonne und schimmerte auf die grüne Alp, und alle die blauen und gelben Blümchen darauf machten ihre Kelche auf und schauten ihr fröhlich entgegen.",
+        "Heidi sprang hierhin und dorthin und jauchzte vor Freude, denn da waren ganze Trüppchen feiner, roter Himmelsschlüsselchen beieinander, und dort schimmerte es ganz blau von den schönen Enzianen, und überall lachten und nickten die zartblätterigen, goldenen Cystusröschen in der Sonne.",
+        "Vor Entzücken über all die flimmernden winkenden Blümchen vergaß Heidi sogar die Geißen und auch den Peter.",
+        "Es sprang ganze Strecken voran und dann auf die Seite, denn dort funkelte es rot und da gelb und lockte Heidi auf alle Seiten.",
+        "Und überall brach Heidi ganze Scharen von den Blumen und packte sie in sein Schürzchen ein, denn es wollte sie alle mit heimnehmen und ins Heu stecken in seiner Schlafkammer, dass es dort werde wie hier draußen.",
+        "So hatte der Peter heut nach allen Seiten zu gucken, und seine kugelrunden Augen, die nicht besonders schnell hin und her gingen, hatten mehr Arbeit, als der Peter gut bewältigen konnte, denn die Geißen machten es wie das Heidi: Sie liefen auch dahin und dorthin, und er musste überallhin pfeifen und rufen und seine Rute schwingen, um wieder alle die Verlaufenen zusammenzutreiben."
+      ],
+      "en": [
+        "She started joyfully for the mountain.",
+        "During the night the wind had blown away all the clouds; the dark blue sky was spreading overhead, and in its midst was the bright sun shining down on the green slopes of the mountain, where the flowers opened their little blue and yellow cups, and looked up to him smiling.",
+        "Heidi went running hither and thither and shouting with delight, for here were whole patches of delicate red primroses, and there the blue gleam of the lovely gentian, while above them all laughed and nodded the tender-leaved golden cistus.",
+        "Enchanted with all this waving field of brightly-colored flowers, Heidi forgot even Peter and the goats.",
+        "She ran on in front and then off to the side, tempted first one way and then the other, as she caught sight of some bright spot of glowing red or yellow.",
+        "And all the while she was plucking whole handfuls of the flowers which she put into her little apron, for she wanted to take them all home and stick them in the hay, so that she might make her bedroom look just like the meadows outside.",
+        "Peter had therefore to be on the alert, and his round eyes, which did not move very quickly, had more work than they could well manage, for the goats were as lively as Heidi; they ran in all directions, and Peter had to follow whistling and calling and swinging his stick to get all the runaways together again."
+      ]
+    },
+    {
+      "de": [
+        "\"Wo bist du schon wieder, Heidi?\", rief er jetzt mit ziemlich grimmiger Stimme."
+      ],
+      "en": [
+        "\"Where have you got to now, Heidi?\" he called out somewhat crossly."
+      ]
+    },
+    {
+      "de": [
+        "\"Da\", tönte es von irgendwoher zurück.",
+        "Sehen konnte Peter niemand, denn Heidi saß am Boden hinter einem Hügelchen, das dicht mit duftenden Prünellen besät war; da war die ganze Luft umher so mit Wohlgeruch erfüllt, dass Heidi noch nie so Liebliches eingeatmet hatte.",
+        "Es setzte sich in die Blumen hinein und zog den Duft in vollen Zügen ein."
+      ],
+      "en": [
+        "\"Here,\" called back a voice from somewhere.",
+        "Peter could see no one, for Heidi was seated on the ground at the foot of a small hill thickly overgrown with sweet smelling prunella; the whole air seemed filled with its fragrance, and Heidi thought she had never smelt anything so delicious.",
+        "She sat surrounded by the flowers, drawing in deep breaths of the scented air."
+      ]
+    },
+    {
+      "de": [
+        "\"Komm nach!\", rief der Peter wieder.",
+        "\"Du musst nicht über die Felsen hinunterfallen, der Öhi hat's verboten.\""
+      ],
+      "en": [
+        "\"Come along here!\" called Peter again.",
+        "\"You are not to fall over the rocks, your grandfather gave orders that you were not to do so.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Wo sind die Felsen?\", fragte Heidi zurück, bewegte sich aber nicht von der Stelle, denn der süße Duft strömte mit jedem Windhauch dem Kinde lieblicher entgegen."
+      ],
+      "enPara": "\"Where are the rocks?\" asked Heidi, answering him back. But she did not move from her seat, for the scent of the flowers seemed sweeter to her with every breath of wind that wafted it towards her."
+    },
+    {
+      "de": [
+        "\"Dort oben, ganz oben, wir haben noch weit, drum komm jetzt! Und oben am höchsten sitzt der alte Raubvogel und krächzt.\""
+      ],
+      "en": [
+        "\"Up above, right up above. We have a long way to go yet, so come along! And on the topmost peak of all the old bird of prey sits and croaks.\""
+      ]
+    },
+    {
+      "de": [
+        "Das half.",
+        "Augenblicklich sprang Heidi in die Höhe und rannte mit seiner Schürze voller Blumen dem Peter zu."
+      ],
+      "en": [
+        "That did it.",
+        "Heidi immediately sprang to her feet and ran up to Peter with her apron full of flowers."
+      ]
+    },
+    {
+      "de": [
+        "\"Jetzt hast genug\", sagte dieser, als sie wieder zusammen weiterkletterten; \"sonst bleibst du immer stecken, und wenn du alle nimmst, hat's morgen keine mehr.\"",
+        "Der letzte Grund leuchtete Heidi ein, und dann hatte es die Schürze schon so angefüllt, dass da wenig Platz mehr gewesen wäre, und morgen mussten auch noch da sein.",
+        "So zog es nun mit dem Peter weiter, und die Geißen gingen nun alle geregelter, denn sie rochen die guten Kräuter von dem hohen Weideplatz schon von fern und strebten nun ohne Aufenthalt dahin.",
+        "Der Weideplatz, wo Peter gewöhnlich Halt machte mit seinen Geißen und sein Quartier für den Tag aufschlug, lag am Fuße der hohen Felsen, die, erst noch von Gebüsch und Tannen bedeckt, zuletzt ganz kahl und schroff zum Himmel hinaufragen.",
+        "An der einen Seite der Alp ziehen sich Felsenklüfte weit hinunter und der Großvater hatte Recht, davor zu warnen.",
+        "Als nun dieser Punkt der Höhe erreicht war, nahm Peter seinen Sack ab und legte ihn sorgfältig in eine kleine Vertiefung des Bodens hinein, denn der Wind kam manchmal in starken Stößen dahergefahren, und den kannte Peter und wollte seine kostbare Habe nicht den Berg hinunterrollen sehen; dann streckte er sich lang und breit auf den sonnigen Weideboden hin, denn er musste sich nun von der Anstrengung des Steigens erholen."
+      ],
+      "enPara": "\"You have got enough now,\" said the boy as they began climbing up again together. \"You will stay here forever if you go on picking, and if you gather all the flowers now there will be none for to-morrow.\" This last argument seemed a convincing one to Heidi, and moreover her apron was already so full that there was hardly room for another flower, and it would never do to leave nothing to pick for another day. So she now kept with Peter, and the goats also became more orderly in their behavior, for they were beginning to smell the plants they loved that grew on the higher slopes and clambered up now without pause in their anxiety to reach them. The spot where Peter generally halted for his goats to pasture and where he took up his quarters for the day lay at the foot of the high rocks, which were covered for some distance up by bushes and fir trees, beyond which rose their bare and rugged summits. On one side of the mountain the rock was split into deep clefts, and the grandfather had reason to warn Peter of danger. Having climbed as far as the halting-place, Peter unslung his wallet and put it carefully in a little hollow of the ground, for he knew what the wind was like up there and did not want to see his precious belongings sent rolling down the mountain by a sudden gust. Then be threw himself at full length on the warm ground, for he was tired after all his exertions."
+    },
+    {
+      "de": [
+        "Heidi hatte unterdessen sein Schürzchen losgemacht und schön fest zusammengerollt mit den Blumen darin zum Proviantsack in die Vertiefung hineingelegt, und nun setzte es sich neben den ausgestreckten Peter hin und schaute um sich.",
+        "Das Tal lag weit unten im vollen Morgenglanz; vor sich sah Heidi ein großes, weites Schneefeld sich erheben, hoch in den dunkelblauen Himmel hinauf, und links davon stand eine ungeheure Felsenmasse, und zu jeder Seite derselben ragte ein hoher Felsenturm kahl und zackig in die Bläue hinauf und schaute von dort oben ganz ernsthaft auf das Heidi nieder.",
+        "Das Kind saß mäuschenstill da und schaute ringsum, und weit umher war eine große, tiefe Stille; nur ganz sanft und leise ging der Wind über die zarten, blauen Glockenblümchen und die goldnen, strahlenden Cystusröschen, die überall herumstanden auf ihren dünnen Stängelchen und leise und fröhlich hin und her nickten.",
+        "Der Peter war entschlafen nach seiner Anstrengung, und die Geißen kletterten oben an den Büschen umher.",
+        "Dem Heidi war es so schön zumute, wie in seinem Leben noch nie.",
+        "Es trank das goldene Sonnenlicht, die frischen Lüfte, den zarten Blumenduft in sich ein und begehrte gar nichts mehr, als so dazubleiben immerzu.",
+        "So verging eine gute Zeit und Heidi hatte so oft und so lange zu den hohen Bergstöcken drüben aufgeschaut, dass es nun war, als hätten sie alle auch Gesichter bekommen und schauten ganz bekannt zu ihm hernieder, so wie gute Freunde."
+      ],
+      "enPara": "Heidi meanwhile had unfastened her apron and rolling it carefully round the flowers laid it beside Peter's wallet inside the hollow; she then sat down beside his outstretched figure and looked about her. The valley lay far below bathed in the morning sun. In front of her rose a broad snow-field, high against the dark-blue sky, while to the left was a huge pile of rocks on either side of which a bare lofty peak, that seemed to pierce the blue, looked frowningly down upon, her. The child sat without moving, her eyes taking in the whole scene, and all around was a great stillness, only broken by soft, light puffs of wind that swayed the light bells of the blue flowers, and the shining gold heads of the cistus, and set them nodding merrily on their slender stems. Peter had fallen asleep after his fatigue and the goats were climbing about among the bushes overhead. Heidi had never felt so happy in her life before. She drank in the golden sunlight, the fresh air, the sweet smell of the flowers, and wished for nothing better than to remain there forever. So the time went on, while to Heidi, who had so often looked up from the valley at the mountains above, these seemed now to have faces, and to be looking down at her like old friends. Suddenly she heard a loud harsh cry overhead and lifting her eyes she saw a bird, larger than any she had ever seen before, with great, spreading wings, wheeling round and round in wide circles, and uttering a piercing, croaking kind of sound above her."
+    },
+    {
+      "de": [
+        "Jetzt hörte Heidi über sich ein lautes, scharfes Geschrei und Krächzen ertönen, und wie es aufschaute, kreiste über ihm ein so großer Vogel, wie es nie in seinem Leben gesehen hatte, mit weit ausgebreiteten Schwingen in der Luft umher, und in großen Bogen kehrte er immer wieder zurück und krächzte laut und durchdringend über Heidis Kopf."
+      ],
+      "enPara": "Heidi meanwhile had unfastened her apron and rolling it carefully round the flowers laid it beside Peter's wallet inside the hollow; she then sat down beside his outstretched figure and looked about her. The valley lay far below bathed in the morning sun. In front of her rose a broad snow-field, high against the dark-blue sky, while to the left was a huge pile of rocks on either side of which a bare lofty peak, that seemed to pierce the blue, looked frowningly down upon, her. The child sat without moving, her eyes taking in the whole scene, and all around was a great stillness, only broken by soft, light puffs of wind that swayed the light bells of the blue flowers, and the shining gold heads of the cistus, and set them nodding merrily on their slender stems. Peter had fallen asleep after his fatigue and the goats were climbing about among the bushes overhead. Heidi had never felt so happy in her life before. She drank in the golden sunlight, the fresh air, the sweet smell of the flowers, and wished for nothing better than to remain there forever. So the time went on, while to Heidi, who had so often looked up from the valley at the mountains above, these seemed now to have faces, and to be looking down at her like old friends. Suddenly she heard a loud harsh cry overhead and lifting her eyes she saw a bird, larger than any she had ever seen before, with great, spreading wings, wheeling round and round in wide circles, and uttering a piercing, croaking kind of sound above her."
+    },
+    {
+      "de": [
+        "\"Peter! Peter! Erwache!\", rief Heidi laut.",
+        "\"Sieh, der Raubvogel ist da, sieh! Sieh!\""
+      ],
+      "en": [
+        "\"Peter, Peter, wake up!\" called out Heidi.",
+        "\"See, the great bird is there--look, look!\""
+      ]
+    },
+    {
+      "de": [
+        "Peter erhob sich auf den Ruf und schaute mit Heidi dem Vogel nach, der sich nun höher und höher hinaufschwang ins Himmelsblau und endlich über grauen Felsen verschwand."
+      ],
+      "en": [
+        "Peter got up on hearing her call, and together they sat and watched the bird, which rose higher and higher in the blue air till it disappeared behind the grey mountain-tops."
+      ]
+    },
+    {
+      "de": [
+        "\"Wo ist er jetzt hin?\", fragte Heidi, das mit gespannter Aufmerksamkeit den Vogel verfolgt hatte."
+      ],
+      "en": [
+        "\"Where has it gone to?\" asked Heidi, who had followed the bird's movements with intense interest."
+      ]
+    },
+    {
+      "de": [
+        "\"Heim ins Nest\", war Peters Antwort."
+      ],
+      "en": [
+        "\"Home to its nest,\" said Peter."
+      ]
+    },
+    {
+      "de": [
+        "\"Ist er dort oben daheim? Oh, wie schön so hoch oben! Warum schreit er so?\", fragte Heidi weiter."
+      ],
+      "en": [
+        "\"Is his home right up there? Oh, how nice to be up so high! why does he make that noise?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Weil er muss\", erklärte Peter."
+      ],
+      "en": [
+        "\"Because he can't help it,\" explained Peter."
+      ]
+    },
+    {
+      "de": [
+        "\"Wir wollen doch dort hinaufklettern und sehen, wo er daheim ist\", schlug Heidi vor."
+      ],
+      "en": [
+        "\"Let us climb up there and see where his nest is,\" proposed Heidi."
+      ]
+    },
+    {
+      "de": [
+        "\"Oh! oh! oh!\", brach der Peter aus, jeden Ausruf mit verstärkter Missbilligung hervorstoßend; \"wenn keine Geiß mehr dorthin kann und der Öhi gesagt hat, du dürfest nicht über die Felsen hinunterfallen.\""
+      ],
+      "en": [
+        "\"Oh! oh! oh!\" exclaimed Peter, his disapproval of Heidi's suggestion becoming more marked with each ejaculation, \"why even the goats cannot climb as high as that, besides didn't Uncle say that you were not to fall over the rocks?\""
+      ]
+    },
+    {
+      "de": [
+        "Jetzt begann der Peter mit einem Mal ein so gewaltiges Pfeifen und Rufen anzustimmen, dass Heidi gar nicht wusste, was begegnen sollte; aber die Geißen mussten die Töne verstehen, denn eine nach der anderen kam heruntergesprungen, und nun war die ganze Schar auf der grünen Halde versammelt, die einen fortnagend an den würzigen Halmen, die anderen hin und her rennend und die Dritten ein wenig gegeneinander stoßend mit ihren Hörnern zum Zeitvertreib.",
+        "Heidi war aufgesprungen und rannte mitten unter den Geißen umher, denn das war ihm ein neuer, unbeschreiblich vergnüglicher Anblick, wie die Tierlein durcheinander sprangen und sich lustig machten, und Heidi sprang von einem zum anderen und machte mit jedem ganz persönliche Bekanntschaft, denn jedes war eine ganz besondere Erscheinung für sich und hatte seine eigenen Manieren.",
+        "Unterdessen hatte Peter den Sack herbeigeholt und alle vier Stücke, die drin waren, schön auf den Boden hingelegt in ein Viereck, die großen Stücke auf Heidis Seite und die kleinen auf die seinige hin, denn er wusste genau, wie er sie erhalten hatte.",
+        "Dann nahm er das Schüsselchen und melkte schöne, frische Milch hinein vom Schwänli und stellte das Schüsselchen mitten ins Viereck.",
+        "Dann rief er Heidi herbei, musste aber länger rufen als nach den Geißen, denn das Kind war so in Eifer und Freude über die mannigfaltigen Sprünge und Erlustigungen seiner neuen Spielkameraden, dass es nichts sah und nichts hörte außer diesen.",
+        "Aber Peter wusste sich verständlich zu machen, er rief, dass es bis in die Felsen hinaufdröhnte, und nun erschien Heidi und die gedeckte Tafel sah so einladend aus, dass es um sie herumhüpfte vor Wohlgefallen."
+      ],
+      "en": [
+        "Peter now began suddenly whistling and calling in such a loud manner that Heidi could not think what was happening; but the goats evidently understood his voice, for one after the other they came springing down the rocks until they were all assembled on the green plateau, some continuing to nibble at the juicy stems, others skipping about here and there or pushing at each other with their horns for pastime.",
+        "Heidi jumped up and ran in and out among them, for it was new to her to see the goats playing together like this and her delight was beyond words as she joined in their frolics; she made personal acquaintance with them all in turn, for they were like separate individuals to her, each single goat having a particular way of behavior of its own.",
+        "Meanwhile Peter had taken the wallet out of the hollow and placed the pieces of bread and cheese on the ground in the shape of a square, the larger two on Heidi's side and the smaller on his own, for he knew exactly which were hers and which his.",
+        "Then he took the little bowl and milked some delicious fresh milk into it from the white goat, and afterwards set the bowl in the middle of the square.",
+        "Now he called Heidi to come, but she wanted more calling than the goats, for the child was so excited and amused at the capers and lively games of her new playfellows that she saw and heard nothing else.",
+        "But Peter knew how to make himself heard, for he shouted till the very rocks above echoed his voice, and at last Heidi appeared, and when she saw the inviting repast spread out upon the ground she went skipping round it for joy."
+      ]
+    },
+    {
+      "de": [
+        "\"Hör auf zu hopsen, es ist Zeit zum Essen\", sagte Peter, \"jetzt sitz und fang an.\""
+      ],
+      "en": [
+        "\"Leave off jumping about, it is time for dinner,\" said Peter; \"sit down now and begin.\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi setzte sich hin.",
+        "\"Ist die Milch mein?\", fragte es, nochmals das schöne Viereck und den Hauptpunkt in der Mitte mit Wohlgefallen betrachtend."
+      ],
+      "en": [
+        "Heidi sat down.",
+        "\"Is the milk for me?\" she asked, giving another look of delight at the beautifully arranged square with the bowl as a chief ornament in the centre."
+      ]
+    },
+    {
+      "de": [
+        "\"Ja\", erwiderte Peter, \"und die zwei großen Stücke zum Essen sind auch dein, und wenn du ausgetrunken hast, bekommst du noch ein Schüsselchen vom Schwänli und dann komm ich.\""
+      ],
+      "en": [
+        "\"Yes,\" replied Peter, \"and the two large pieces of bread and cheese are yours also, and when you have drunk up that milk, you are to have another bowlful from the white goat, and then it will be my turn.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Und von wem bekommst du die Milch?\", wollte Heidi wissen."
+      ],
+      "en": [
+        "\"And which do you get your milk from?\" inquired Heidi."
+      ]
+    },
+    {
+      "de": [
+        "\"Von meiner Geiß, von der Schnecke. Fang einmal zu essen an\", mahnte Peter wieder.",
+        "Heidi fing bei seiner Milch an, und sowie es sein leeres Schüsselchen hinstellte, stand Peter auf und holte ein zweites herbei.",
+        "Dazu brach Heidi ein Stück von seinem Brot ab, und das ganze übrige Stück, das immer noch größer war, als Peters eigenes Stück gewesen, das nun schon samt Zubehör fast zu Ende war, reichte es diesem hinüber mit dem ganzen großen Brocken Käse und sagte: \"Das kannst du haben, ich habe nun genug.\""
+      ],
+      "en": [
+        "\"From my own goat, the piebald one. But go on now with your dinner,\" said Peter, again reminding her it was time to eat.",
+        "Heidi now took up the bowl and drank her milk, and as soon as she had put it down empty Peter rose and filled it again for her.",
+        "Then she broke off a piece of her bread and held out the remainder, which was still larger than Peter's own piece, together with the whole big slice of cheese to her companion, saying, \"You can have that, I have plenty.\""
+      ]
+    },
+    {
+      "de": [
+        "Peter schaute das Heidi mit sprachloser Verwunderung an, denn noch nie in seinem Leben hätte er so sagen und etwas weggeben können.",
+        "Er zögerte noch ein wenig, denn er konnte nicht recht glauben, dass es dem Heidi ernst sei; aber dieses hielt erst fest seine Stücke hin, und da Peter nicht zugriff, legte sie es ihm aufs Knie.",
+        "Nun sah er, dass es ernst gemeint sei; er erfasste sein Geschenk, nickte in Dank und Zustimmung und hielt nun ein so reichliches Mittagsmahl wie noch nie in seinem Leben als Geißbub.",
+        "Heidi schaute derweilen nach den Geißen aus.",
+        "\"Wie heißen sie alle, Peter?\", fragte es."
+      ],
+      "en": [
+        "Peter looked at Heidi, unable to speak for astonishment, for never in all his life could he have said and done like that with anything he had.",
+        "He hesitated a moment, for he could not believe that Heidi was in earnest; but the latter kept on holding out the bread and cheese, and as Peter still did not take it, she laid it down on his knees.",
+        "He saw then that she really meant it; he seized the food, nodded his thanks and acceptance of her present, and then made a more splendid meal than he had known ever since he was a goat-herd.",
+        "Heidi the while still continued to watch the goats.",
+        "\"Tell me all their names,\" she said."
+      ]
+    },
+    {
+      "de": [
+        "Das wusste dieser nun ganz genau und konnte es umso besser in seinem Kopf behalten, da er daneben wenig darin aufzubewahren hatte.",
+        "Er fing also an und nannte ohne Anstoß eine nach der anderen, immer je mit dem Finger die betreffende bezeichnend.",
+        "Heidi hörte mit gespannter Aufmerksamkeit der Unterweisung zu, und es währte gar nicht lange, so konnte es sie alle voneinander unterscheiden und jede bei ihrem Namen nennen, denn es hatte eine jede ihre Besonderheiten, die einem gleich im Sinne bleiben mussten; man musste nur allen genau zusehen, und das tat Heidi.",
+        "Da war der große Türk mit den starken Hörnern, der wollte mit diesen immer gegen alle anderen stoßen, und die meisten liefen davon, wenn er kam, und wollten nichts von dem groben Kameraden wissen.",
+        "Nur der kecke Distelfink, das schlanke, behände Geißchen, wich ihm nicht aus, sondern rannte von sich aus manchmal drei-, viermal hintereinander so rasch und tüchtig gegen ihn an, dass der große Türk öfters ganz erstaunt dastand und nicht mehr angriff, denn der Distelfink stand ganz kriegslustig vor ihm und hatte scharfe Hörnchen.",
+        "Da war das kleine, weiße Schneehöppli, das immer so eindringlich und flehentlich meckerte, dass Heidi schon mehrmals zu ihm hingelaufen war und es tröstend beim Kopf genommen hatte.",
+        "Auch jetzt sprang das Kind wieder hin, denn die junge, jammernde Stimme hatte eben wieder flehentlich gerufen.",
+        "Heidi legte seinen Arm um den Hals des Geißleins und fragte ganz teilnehmend: \"Was hast du, Schneehöppli?",
+        "Warum rufst du so um Hilfe?\"",
+        "Das Geißlein schmiegte sich nahe und vertrauensvoll an Heidi an und war jetzt ganz still.",
+        "Peter rief von seinem Sitz aus, mit einigen Unterbrechungen, denn er hatte immer noch zu beißen und zu schlucken: \"Es tut so, weil die Alte nicht mehr mitkommt, sie haben sie verkauft nach Maienfeld vorgestern, nun kommt sie nicht mehr auf die Alm.\""
+      ],
+      "enPara": "Peter knew these by heart, for having very little else to carry in his head he had no difficulty in remembering them. So he began, telling Heidi the name of each goat in turn as he pointed it out to her. Heidi listened with great attention, and it was not long before she could herself distinguish the goats from one another and could call each by name, for every goat had its own peculiarities which could not easily be mistaken; only one had to watch them closely, and this Heidi did. There was the great Turk with his big horns, who was always wanting to butt the others, so that most of them ran away when they saw him coming and would have nothing to do with their rough companion. Only Greenfinch, the slender nimble little goat, was brave enough to face him, and would make a rush at him, three or four times in succession, with such agility and dexterity, that the great Turk often stood still quite astounded not venturing to attack her again, for Greenfinch was fronting him, prepared for more warlike action, and her horns were sharp. Then there was little White Snowflake, who bleated in such a plaintive and beseeching manner that Heidi already had several times run to it and taken its head in her hands to comfort it. Just at this moment the pleading young cry was heard again, and Heidi jumped up running and, putting her arms round the little creature's neck, asked in a sympathetic voice, \"What is it, little Snowflake? Why do you call like that as if in trouble?\" The goat pressed closer to Heidi in a confiding way and left off bleating. Peter called out from where he was sitting--for he had not yet got to the end of his bread and cheese, \"She cries like that because the old goat is not with her; she was sold at Mayenfeld the day before yesterday, and so will not come up the mountain any more.\""
+    },
+    {
+      "de": [
+        "\"Wer ist die Alte?\", fragte Heidi zurück."
+      ],
+      "en": [
+        "\"Who is the old goat?\" called Heidi back."
+      ]
+    },
+    {
+      "de": [
+        "\"Pah, seine Mutter\", war die Antwort."
+      ],
+      "en": [
+        "\"Why, her mother, of course,\" was the answer."
+      ]
+    },
+    {
+      "de": [
+        "\"Wo ist die Großmutter?\", rief Heidi wieder."
+      ],
+      "en": [
+        "\"Where is the grandmother?\" called Heidi again."
+      ]
+    },
+    {
+      "de": [
+        "\"Hat keine.\""
+      ],
+      "en": [
+        "\"She has none.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Und der Großvater?\""
+      ],
+      "en": [
+        "\"And the grandfather?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Hat keinen.\""
+      ],
+      "en": [
+        "\"She has none.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Du armes Schneehöppli du\", sagte Heidi und drückte das Tierlein zärtlich an sich.",
+        "\"Aber jammere jetzt nur nicht mehr so; siehst du, ich komme nun jeden Tag mit dir, dann bist du nicht mehr so verlassen, und wenn dir etwas fehlt, kannst du nur zu mir kommen.\""
+      ],
+      "enPara": "\"Oh, you poor little Snowflake!\" exclaimed Heidi, clasping the animal gently to her, \"but do not cry like that any more; see now, I shall come up here with you every day, so that you will not be alone any more, and if you want anything you have only to come to me.\""
+    },
+    {
+      "de": [
+        "Das Schneehöppli rieb ganz vergnügt seinen Kopf an Heidis Schulter und meckerte nicht mehr kläglich.",
+        "Unterdessen hatte Peter sein Mittagsmahl beendet und kam nun auch wieder zu seiner Herde und zu Heidi heran, das schon wieder allerlei Betrachtungen angestellt hatte."
+      ],
+      "en": [
+        "The young animal rubbed its head contentedly against Heidi's shoulder, and no longer gave such plaintive bleats.",
+        "Peter now having finished his meal joined Heidi and the goats, Heidi having by this time found out a great many things about these."
+      ]
+    },
+    {
+      "de": [
+        "Weitaus die zwei schönsten und saubersten Geißen der ganzen Schar waren Schwänli und Bärli, die sich auch mit einer gewissen Vornehmheit betrugen, meistens ihre eigenen Wege gingen und besonders dem zudringlichen Türk abweisend und verächtlich begegneten.--"
+      ],
+      "en": [
+        "She had decided that by far the handsomest and best-behaved of the goats were undoubtedly the two belonging to her grandfather; they carried themselves with a certain air of distinction and generally went their own way, and as to the great Turk they treated him with indifference and contempt."
+      ]
+    },
+    {
+      "de": [
+        "Die Tierchen hatten nun wieder begonnen, nach den Büschen hinaufzuklettern, und jedes hatte seine eigene Weise dabei, die einen leichtfertig über alles weg hüpfend, die anderen bedächtlich die guten Kräutlein suchend unterwegs, der Türk hier und da seine Angriffe probierend.",
+        "Schwänli und Bärli kletterten hübsch und leicht hinan und fanden oben sogleich die schönsten Büsche, stellten sich geschickt daran auf und nagten sie zierlich ab.",
+        "Heidi stand mit den Händen auf dem Rücken und schaute dem allen mit der größten Aufmerksamkeit zu."
+      ],
+      "en": [
+        "The goats were now beginning to climb the rocks again, each seeking for the plants it liked in its own fashion, some jumping over everything they met till they found what they wanted, others going more carefully and cropping all the nice leaves by the way, the Turk still now and then giving the others a poke with his horns.",
+        "Little Swan and Little Bear clambered lightly up and never failed to find the best bushes, and then they would stand gracefully poised on their pretty legs, delicately nibbling at the leaves.",
+        "Heidi stood with her hands behind her back, carefully noting all they did."
+      ]
+    },
+    {
+      "de": [
+        "\"Peter\", bemerkte es jetzt zu dem wieder auf dem Boden Liegenden, \"die schönsten von allen sind das Schwänli und das Bärli.\""
+      ],
+      "en": [
+        "\"Peter,\" she said to the boy who had again thrown himself down on the ground, \"the prettiest of all the goats are Little Swan and Little Bear.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Weiß schon\", war die Antwort.",
+        "\"Der Alm-Öhi putzt und wäscht sie und gibt ihnen Salz und hat den schönsten Stall.\""
+      ],
+      "en": [
+        "\"Yes, I know they are,\" was the answer.",
+        "\"Alm-Uncle brushes them down and washes them and gives them salt, and he has the nicest shed for them.\""
+      ]
+    },
+    {
+      "de": [
+        "Aber auf einmal sprang Peter auf und setzte in großen Sprüngen den Geißen nach, und das Heidi lief hintendrein; da musste etwas begegnet sein, es konnte da nicht zurückbleiben.",
+        "Der Peter sprang durch den Geißenrudel durch der Seite der Alm zu, wo die Felsen schroff und kahl weit hinabstiegen und ein unbesonnenes Geißlein, wenn es dorthin ging, leicht hinunterstürzen und alle Beine brechen konnte.",
+        "Er hatte gesehen, wie der vorwitzige Distelfink nach jener Seite hin gehüpft war, und kam noch gerade recht, denn eben sprang das Geißlein dem Rande des Abgrundes zu.",
+        "Peter wollte es eben packen, da stürzte er auf den Boden und konnte nur noch im Sturze ein Bein des Tierleins erwischen und es daran festhalten.",
+        "Der Distelfink meckerte voller Zorn und Überraschung, dass er so am Bein festgehalten und am Fortsetzen seines fröhlichen Streifzuges gehindert war, und strebte eigensinnig vorwärts.",
+        "Der Peter schrie nach Heidi, dass es ihm beistehe, denn er konnte nicht aufstehen und riss dem Distelfink fast das Bein aus.",
+        "Heidi war schon da und erkannte gleich die schlimme Lage der beiden.",
+        "Es riss schnell einige wohlduftende Kräuter aus dem Boden und hielt sie dem Distelfink unter die Nase und sagte begütigend:"
+      ],
+      "enPara": "All of a sudden Peter leaped to his feet and ran hastily after the goats. Heidi followed him as fast as she could, for she was too eager to know what had happened to stay behind. Peter dashed through the middle of the flock towards that side of the mountain where the rocks fell perpendicularly to a great depth below, and where any thoughtless goat, if it went too near, might fall over and break all its legs. He had caught sight of the inquisitive Greenfinch taking leaps in that direction, and he was only just in time, for the animal had already sprung to the edge of the abyss. All Peter could do was to throw himself down and seize one of her hind legs. Greenfinch, thus taken by surprise, began bleating furiously, angry at being held so fast and prevented from continuing her voyage of discovery. She struggled to get loose, and endeavored so obstinately to leap forward that Peter shouted to Heidi to come and help him, for he could not get up and was afraid of pulling out the goat's leg altogether. Heidi had already run up and she saw at once the danger both Peter and the animal were in. She quickly gathered a bunch of sweet-smelling leaves, and then, holding them under Greenfinch's nose, said coaxingly, \"Come, come, Greenfinch, you must not be naughty! Look, you might fall down there and break your leg, and that would give you dreadful pain!\""
+    },
+    {
+      "de": [
+        "\"Komm, komm, Distelfink, du musst auch vernünftig sein!",
+        "Sieh, da kannst du hinabfallen und ein Bein brechen, das tut dir furchtbar weh.\""
+      ],
+      "enPara": "All of a sudden Peter leaped to his feet and ran hastily after the goats. Heidi followed him as fast as she could, for she was too eager to know what had happened to stay behind. Peter dashed through the middle of the flock towards that side of the mountain where the rocks fell perpendicularly to a great depth below, and where any thoughtless goat, if it went too near, might fall over and break all its legs. He had caught sight of the inquisitive Greenfinch taking leaps in that direction, and he was only just in time, for the animal had already sprung to the edge of the abyss. All Peter could do was to throw himself down and seize one of her hind legs. Greenfinch, thus taken by surprise, began bleating furiously, angry at being held so fast and prevented from continuing her voyage of discovery. She struggled to get loose, and endeavored so obstinately to leap forward that Peter shouted to Heidi to come and help him, for he could not get up and was afraid of pulling out the goat's leg altogether. Heidi had already run up and she saw at once the danger both Peter and the animal were in. She quickly gathered a bunch of sweet-smelling leaves, and then, holding them under Greenfinch's nose, said coaxingly, \"Come, come, Greenfinch, you must not be naughty! Look, you might fall down there and break your leg, and that would give you dreadful pain!\""
+    },
+    {
+      "de": [
+        "Das Geißlein hatte sich schnell umgewandt und dem Heidi vergnüglich die Kräuter aus der Hand gefressen.",
+        "Derweilen war der Peter auf seine Füße gekommen und hatte den Distelfink an der Schnur erfasst, an welcher sein Glöckchen um den Hals gebunden war, und Heidi erfasste diese von der anderen Seite, und so führten die beiden den Ausreißer zu der friedlich weidenden Herde zurück.",
+        "Als ihn aber Peter hier in Sicherheit hatte, erhob er seine Rute und wollte ihn zur Strafe tüchtig durchprügeln, und der Distelfink wich scheu zurück, denn er merkte, was begegnen sollte.",
+        "Aber Heidi schrie laut auf: \"Nein, Peter, nein, du musst ihn nicht schlagen, sieh, wie er sich fürchtet!\""
+      ],
+      "en": [
+        "The young animal turned quickly, and began contentedly eating the leaves out of Heidi's hand.",
+        "Meanwhile Peter got on to his feet again and took hold of Greenfinch by the band round her neck from which her bell was hung, and Heidi taking hold of her in the same way on the other side, they led the wanderer back to the rest of the flock that had remained peacefully feeding.",
+        "Peter, now he had his goat in safety, lifted his stick in order to give her a good beating as punishment, and Greenfinch seeing what was coming shrank back in fear.",
+        "But Heidi cried out, \"No, no, Peter, you must not strike her; see how frightened she is!\""
+      ]
+    },
+    {
+      "de": [
+        "\"Er verdient's\", schnurrte Peter und wollte zuschlagen.",
+        "Aber Heidi fiel ihm in den Arm und rief ganz entrüstet: \"Du darfst ihm nichts tun, es tut ihm weh, lass ihn los!\""
+      ],
+      "en": [
+        "\"She deserves it,\" growled Peter, and again lifted his stick.",
+        "Then Heidi flung herself against him and cried indignantly, \"You have no right to touch her, it will hurt her, let her alone!\""
+      ]
+    },
+    {
+      "de": [
+        "Peter schaute erstaunt auf das gebietende Heidi, dessen schwarze Augen ihn so anfunkelten, dass er unwillkürlich seine Rute niederhielt.",
+        "\"So kann er gehen, wenn du mir morgen wieder von deinem Käse gibst\", sagte dann der Peter nachgebend, denn eine Entschädigung wollte er haben für den Schrecken."
+      ],
+      "en": [
+        "Peter looked with surprise at the commanding little figure, whose dark eyes were flashing, and reluctantly he let his stick drop.",
+        "\"Well I will let her off if you will give me some more of your cheese to-morrow,\" he said, for he was determined to have something to make up to him for his fright."
+      ]
+    },
+    {
+      "de": [
+        "\"Allen kannst du haben, das ganze Stück morgen und alle Tage, ich brauche ihn gar nicht\", sagte Heidi zustimmend, \"und Brot gebe ich dir auch ganz viel, wie heute; aber dann darfst du den Distelfink nie, gar nie schlagen und auch das Schneehöppli nie und gar keine Geiß.\""
+      ],
+      "enPara": "\"You shall have it all, to-morrow and every day, I do not want it,\" replied Heidi, giving ready consent to his demand. \"And I will give you bread as well, a large piece like you had to-day; but then you must promise never to beat Greenfinch, or Snowflake, or any of the goats.\""
+    },
+    {
+      "de": [
+        "\"Es ist mir gleich\", bemerkte Peter, und das war bei ihm soviel als eine Zusage.",
+        "Jetzt ließ er den Schuldigen los, und der fröhliche Distelfink sprang in hohen Sprüngen auf und davon in die Herde hinein.--"
+      ],
+      "en": [
+        "\"All right,\" said Peter, \"I don't care,\" which meant that he would agree to the bargain.",
+        "He now let go of Greenfinch, who joyfully sprang to join her companions."
+      ]
+    },
+    {
+      "de": [
+        "So war unvermerkt der Tag vergangen, und schon war die Sonne im Begriff, weit drüben hinter den Bergen hinabzugehen.",
+        "Heidi saß wieder am Boden und schaute ganz still auf die Blauglöckchen und die Cystusröschen, die im goldenen Abendschein leuchteten, und alles Gras wurde wie golden angehaucht und die Felsen droben fingen an zu schimmern und zu funkeln, und auf einmal sprang Heidi auf und schrie: \"Peter!",
+        "Peter!",
+        "Es brennt!",
+        "Es brennt!",
+        "Alle Berge brennen und der große Schnee drüben brennt und der Himmel.",
+        "O sieh!",
+        "Sieh!",
+        "Der hohe Felsenberg ist ganz glühend!",
+        "Oh, der schöne, feurige Schnee!",
+        "Peter, sieh auf, sieh, das Feuer ist auch beim Raubvogel!",
+        "Sieh doch die Felsen!",
+        "Sieh die Tannen!",
+        "Alles, alles ist im Feuer!\""
+      ],
+      "enPara": "And thus imperceptibly the day had crept on to its close, and now the sun was on the point of sinking out of sight behind the high mountains. Heidi was again sitting on the ground, silently gazing at the blue bell-shaped flowers, as they glistened in the evening sun, for a golden light lay on the grass and flowers, and the rocks above were beginning to shine and glow. All at once she sprang to her feet, \"Peter! Peter! everything is on fire! All the rocks are burning, and the great snow mountain and the sky! O look, look! the high rock up there is red with flame! O the beautiful, fiery snow! Stand up, Peter! See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees! Everything, everything is on fire!\""
+    },
+    {
+      "de": [
+        "\"Es war immer so\", sagte jetzt der Peter gemütlich und schälte an seiner Rute fort, \"aber es ist kein Feuer.\""
+      ],
+      "en": [
+        "\"It is always like that,\" said Peter composedly, continuing to peel his stick; \"but it is not really fire.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Was ist es denn?\", rief Heidi und sprang hierhin und dorthin, dass es überallhin sehe, denn es konnte gar nicht genug bekommen, so schön war's auf allen Seiten.",
+        "\"Was ist es, Peter, was ist es?\", rief Heidi wieder."
+      ],
+      "en": [
+        "\"What is it then?\" cried Heidi, as she ran backwards and forwards to look first one side and then the other, for she felt she could not have enough of such a beautiful sight.",
+        "\"What is it, Peter, what is it?\" she repeated."
+      ]
+    },
+    {
+      "de": [
+        "\"Es kommt von selbst so\", erklärte Peter."
+      ],
+      "en": [
+        "\"It gets like that of itself,\" explained Peter."
+      ]
+    },
+    {
+      "de": [
+        "\"O sieh, sieh\", rief Heidi in großer Aufregung, \"auf einmal werden sie rosenrot!",
+        "Sieh den mit dem Schnee und den mit den hohen, spitzigen Felsen!",
+        "Wie heißen sie, Peter?\""
+      ],
+      "en": [
+        "\"Look, look!\" cried Heidi in fresh excitement, \"now they have turned all rose color!",
+        "Look at that one covered with snow, and that with the high, pointed rocks!",
+        "What do you call them?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Berge heißen nicht\", erwiderte dieser."
+      ],
+      "en": [
+        "\"Mountains have not any names,\" he answered."
+      ]
+    },
+    {
+      "de": [
+        "\"O wie schön, sieh den rosenroten Schnee! Oh, und an den Felsen oben sind viele, viele Rosen! Oh, nun werden sie grau! Oh! Oh! Nun ist alles ausgelöscht! Nun ist alles aus, Peter!\"",
+        "Und Heidi setzte sich auf den Boden und sah so verstört aus, als ginge wirklich alles zu Ende."
+      ],
+      "en": [
+        "\"O how beautiful, look at the crimson snow! And up there on the rocks there are ever so many roses! Oh! now they are turning grey! Oh! oh! now all the color has died away! it's all gone, Peter.\"",
+        "And Heidi sat down on the ground looking as full of distress as if everything had really come to an end."
+      ]
+    },
+    {
+      "de": [
+        "\"Es ist morgen wieder so\", erklärte Peter.",
+        "\"Steh auf, nun müssen wir heim.\""
+      ],
+      "en": [
+        "\"It will come again to-morrow,\" said Peter.",
+        "\"Get up, we must go home now.\""
+      ]
+    },
+    {
+      "de": [
+        "Die Geißen wurden herbeigepfiffen und -gerufen und die Heimfahrt angetreten."
+      ],
+      "en": [
+        "He whistled to his goats and together they all started on their homeward way."
+      ]
+    },
+    {
+      "de": [
+        "\"Ist's alle Tage wieder so, alle Tage, wenn wir auf der Weide sind?\", fragte Heidi, begierig nach einer bejahenden Versicherung horchend, als es nun neben dem Peter die Alm hinunterstieg."
+      ],
+      "en": [
+        "\"Is it like that every day, shall we see it every day when we bring the goats up here?\" asked Heidi, as she clambered down the mountain at Peter's side; she waited eagerly for his answer, hoping that he would tell her it was so."
+      ]
+    },
+    {
+      "de": [
+        "\"Meistens\", gab dieser zur Antwort."
+      ],
+      "en": [
+        "\"It is like that most days,\" he replied."
+      ]
+    },
+    {
+      "de": [
+        "\"Aber gewiss morgen wieder?\", wollte es noch wissen."
+      ],
+      "enPara": "\"But will it be like that to-morrow for certain?\" Heidi persisted."
+    },
+    {
+      "de": [
+        "\"Ja, ja, morgen schon!\", versicherte Peter."
+      ],
+      "en": [
+        "\"Yes, yes, to-morrow for certain,\" Peter assured her in answer."
+      ]
+    },
+    {
+      "de": [
+        "Nun war Heidi wieder froh und es hatte so viele Eindrücke in sich aufgenommen und so viele Dinge gingen ihm im Sinn herum, dass es nun ganz stillschwieg, bis es bei der Almhütte ankam und den Großvater unter den Tannen sitzen sah, wo er auch eine Bank angebracht hatte und am Abend seine Geißen erwartete, die von dieser Seite herunterkämen.",
+        "Heidi sprang gleich auf ihn zu und Schwänli und Bärli hinter ihm drein, denn die Geißen kannten ihren Herrn und ihren Stall.",
+        "Der Peter rief dem Heidi nach: \"Komm dann morgen wieder!",
+        "Gute Nacht!\"",
+        "Denn es war ihm sehr daran gelegen, dass das Heidi wiederkomme."
+      ],
+      "enPara": "Heidi now felt quite happy again, and her little brain was so full of new impressions and new thoughts that she did not speak any more until they had reached the hut. The grandfather was sitting under the fir trees, where he had also put up a seat, waiting as usual for his goats which returned down the mountain on this side. Heidi ran up to him followed by the white and brown goats, for they knew their own master and stall. Peter called out after her, \"Come with me again to-morrow! Good-night!\" For he was anxious for more than one reason that Heidi should go with him the next day."
+    },
+    {
+      "de": [
+        "Da rannte das Heidi schnell wieder zurück und gab dem Peter die Hand und versicherte ihm, dass es wieder mitkomme, und dann sprang es mitten in die davonziehende Herde hinein und fasste noch einmal das Schneehöppli um den Hals und sagte vertraulich: \"Schlaf wohl, Schneehöppli, und denk dran, dass ich morgen wiederkomme und dass du nie mehr so jämmerlich meckern musst.\""
+      ],
+      "enPara": "Heidi ran back quickly and gave Peter her hand, promising to go with him, and then making her way through the goats she once more clasped Snowflake round the neck, saying in a gentle soothing voice, \"Sleep well, Snowflake, and remember that I shall be with you again to-morrow, so you must not bleat so sadly any more.\" Snowflake gave her a friendly and grateful look, and then went leaping joyfully after the other goats."
+    },
+    {
+      "de": [
+        "Das Schneehöppli schaute ganz freundlich und dankbar zu Heidi auf und sprang dann fröhlich der Herde nach."
+      ],
+      "enPara": "Heidi returned to the fir-trees. \"O grandfather,\" she cried, even before she had come up to him, \"it was so beautiful. The fire, and the roses on the rocks, and the blue and yellow flowers, and look what I have brought you!\" And opening the apron that held her flowers she shook them all out at her grandfather's feet. But the poor flowers, how changed they were! Heidi hardly knew them again. They looked like dry bits of hay, not a single little flower cup stood open. \"O grandfather, what is the matter with them?\" exclaimed Heidi in shocked surprise, \"they were not like that this morning, why do they look so now?\""
+    },
+    {
+      "de": [
+        "Heidi kam unter die Tannen zurück."
+      ],
+      "enPara": "Heidi returned to the fir-trees. \"O grandfather,\" she cried, even before she had come up to him, \"it was so beautiful. The fire, and the roses on the rocks, and the blue and yellow flowers, and look what I have brought you!\" And opening the apron that held her flowers she shook them all out at her grandfather's feet. But the poor flowers, how changed they were! Heidi hardly knew them again. They looked like dry bits of hay, not a single little flower cup stood open. \"O grandfather, what is the matter with them?\" exclaimed Heidi in shocked surprise, \"they were not like that this morning, why do they look so now?\""
+    },
+    {
+      "de": [
+        "\"O Großvater, das war so schön!\", rief es, noch bevor es bei ihm war.",
+        "\"Das Feuer und die Rosen am Felsen und die blauen und gelben Blumen, und sieh, was ich hier bringe!\"",
+        "Und damit schüttete Heidi seinen ganzen Blumenreichtum aus dem gefalteten Schürzchen vor den Großvater hin.",
+        "Aber wie sahen die armen Blümchen aus!",
+        "Heidi erkannte sie nicht mehr.",
+        "Es war alles wie Heu, und kein einziges Kelchlein stand mehr offen."
+      ],
+      "enPara": "Heidi returned to the fir-trees. \"O grandfather,\" she cried, even before she had come up to him, \"it was so beautiful. The fire, and the roses on the rocks, and the blue and yellow flowers, and look what I have brought you!\" And opening the apron that held her flowers she shook them all out at her grandfather's feet. But the poor flowers, how changed they were! Heidi hardly knew them again. They looked like dry bits of hay, not a single little flower cup stood open. \"O grandfather, what is the matter with them?\" exclaimed Heidi in shocked surprise, \"they were not like that this morning, why do they look so now?\""
+    },
+    {
+      "de": [
+        "\"O Großvater, was haben sie?\", rief Heidi ganz erschrocken aus.",
+        "\"So waren sie nicht, warum sehen sie so aus?\""
+      ],
+      "enPara": "Heidi returned to the fir-trees. \"O grandfather,\" she cried, even before she had come up to him, \"it was so beautiful. The fire, and the roses on the rocks, and the blue and yellow flowers, and look what I have brought you!\" And opening the apron that held her flowers she shook them all out at her grandfather's feet. But the poor flowers, how changed they were! Heidi hardly knew them again. They looked like dry bits of hay, not a single little flower cup stood open. \"O grandfather, what is the matter with them?\" exclaimed Heidi in shocked surprise, \"they were not like that this morning, why do they look so now?\""
+    },
+    {
+      "de": [
+        "\"Die wollen draußen stehen in der Sonne und nicht ins Schürzchen hinein\", sagte der Großvater."
+      ],
+      "en": [
+        "\"They like to stand out there in the sun and not to be shut up in an apron,\" said her grandfather."
+      ]
+    },
+    {
+      "de": [
+        "\"Dann will ich gar keine mehr mitnehmen.",
+        "Aber, Großvater, warum hat der Raubvogel so gekrächzt?\", fragte Heidi nun angelegentlich."
+      ],
+      "en": [
+        "\"Then I will never gather any more.",
+        "But, grandfather, why did the great bird go on croaking so?\" she continued in an eager tone of inquiry."
+      ]
+    },
+    {
+      "de": [
+        "\"Jetzt gehst du ins Wasser und ich in den Stall und hole Milch, und nachher kommen wir hinein zusammen in die Hütte und essen zu Nacht, dann sag ich dir's.\""
+      ],
+      "en": [
+        "\"Go along now and get into your bath while I go and get some milk; when we are together at supper I will tell you all about it.\""
+      ]
+    },
+    {
+      "de": [
+        "So wurde getan, und wie nun später Heidi auf seinem hohen Stuhl saß vor seinem Milchschüsselchen und der Großvater neben ihm, da kam das Kind gleich wieder mit seiner Frage: \"Warum krächzt der Raubvogel so und schreit immer so herunter, Großvater?\""
+      ],
+      "en": [
+        "Heidi obeyed, and when later she was sitting on her high stool before her milk bowl with her grandfather beside her, she repeated her question, \"Why does the great bird go on croaking and screaming down at us, grandfather?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Der höhnt die Leute aus dort unten, dass sie so viele zusammensitzen in den Dörfern und einander bös machen.",
+        "Da höhnt er hinunter: 'Würdet ihr auseinander gehen und jedes seinen Weg und auf eine Höhe steigen wie ich, so wär's euch wohler!'\"",
+        "Der Großvater sagte diese Worte fast wild, so dass dem Heidi das Gekrächz des Raubvogels dadurch noch eindrücklicher wurde in der Erinnerung."
+      ],
+      "en": [
+        "\"He is mocking at the people who live down below in the villages, because they all go huddling and gossiping together, and encourage one another in evil talking and deeds.",
+        "He calls out, 'If you would separate and each go your own way and come up here and live on a height as I do, it would be better for you!'\"",
+        "There was almost a wildness in the old man's voice as he spoke, so that Heidi seemed to hear the croaking of the bird again even more distinctly."
+      ]
+    },
+    {
+      "de": [
+        "\"Warum haben die Berge keinen Namen, Großvater?\", fragte Heidi wieder."
+      ],
+      "enPara": "\"Why haven't the mountains any names?\" Heidi went on."
+    },
+    {
+      "de": [
+        "\"Die haben Namen\", erwiderte dieser, \"und wenn du mir einen so beschreiben kannst, dass ich ihn kenne, so sage ich dir, wie er heißt.\""
+      ],
+      "en": [
+        "\"They have names,\" answered her grandfather, \"and if you can describe one of them to me that I know I will tell you what it is called.\""
+      ]
+    },
+    {
+      "de": [
+        "Nun beschrieb Heidi den Felsenberg mit den zwei hohen Türmen genau so, wie es ihn gesehen hatte, und der Großvater sagte wohlgefällig: \"Recht so, den kenn ich, der heißt Falknis.",
+        "Hast du noch einen gesehen?\""
+      ],
+      "enPara": "Heidi then described to him the rocky mountain with the two high peaks so exactly that the grandfather was delighted. \"Just so, I know it,\" and he told her its name. \"Did you see any other?\""
+    },
+    {
+      "de": [
+        "Nun beschrieb Heidi den Berg mit dem großen Schneefeld, auf dem der ganze Schnee im Feuer gestanden hatte und dann rosenrot geworden war und dann auf einmal ganz bleich und erloschen dastand."
+      ],
+      "en": [
+        "Then Heidi told him of the mountain with the great snow-field, and how it had been on fire, and had turned rosy-red and then all of a sudden had grown quite pale again and all the color had disappeared."
+      ]
+    },
+    {
+      "de": [
+        "\"Den erkenn ich auch\", sagte der Großvater, \"das ist die Schesaplana; so hat es dir gefallen auf der Weide?\""
+      ],
+      "enPara": "\"I know that one too,\" he said, giving her its name. \"So you enjoyed being out with the goats?\""
+    },
+    {
+      "de": [
+        "Nun erzählte Heidi alles vom ganzen Tage, wie schön es gewesen, und besonders von dem Feuer am Abend, und nun sollte der Großvater auch sagen, woher es gekommen war, denn der Peter hätte nichts davon gewusst."
+      ],
+      "enPara": "Then Heidi went on to give him an account of the whole day, and of how delightful it had all been, and particularly described the fire that had burst out everywhere in the evening. And then nothing would do but her grandfather must tell how it came, for Peter knew nothing about it."
+    },
+    {
+      "de": [
+        "\"Siehst du\", erklärte der Großvater, \"das macht die Sonne, wenn sie den Bergen gute Nacht sagt, dann wirft sie ihnen noch ihre schönsten Strahlen zu, dass sie sie nicht vergessen, bis sie am Morgen wiederkommt.\""
+      ],
+      "enPara": "The grandfather explained to her that it was the sun that did it. \"When he says good-night to the mountains he throws his most beautiful colors over them, so that they may not forget him before he comes again the next day.\""
+    },
+    {
+      "de": [
+        "Das gefiel dem Heidi und es konnte fast nicht erwarten, dass wieder ein Tag komme, da es hinaufkonnte auf die Weide und wieder sehen, wie die Sonne den Bergen gute Nacht sagte.",
+        "Aber erst musste es nun schlafen gehen, und es schlief auch die ganze Nacht herrlich auf seinem Heulager, und träumte von lauter schimmernden Bergen und roten Rosen darauf und mittendrin das Schneehöppli in fröhlichen Sprüngen."
+      ],
+      "en": [
+        "Heidi was delighted with this explanation, and could hardly bear to wait for another day to come that she might once more climb up with the goats and see how the sun bid good-night to the mountains.",
+        "But she had to go to bed first, and all night she slept soundly on her bed of hay, dreaming of nothing but of shining mountains with red roses all over them, among which happy little Snowflake went leaping in and out."
+      ]
+    }
+  ]
+}

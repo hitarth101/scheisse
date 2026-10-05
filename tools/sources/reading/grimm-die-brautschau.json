@@ -1,0 +1,42 @@
+{
+  "id": "grimm-die-brautschau",
+  "stage": 3,
+  "title": "Die Brautschau",
+  "titleEn": "Brides On Their Trial",
+  "author": "Brüder Grimm",
+  "year": 1921,
+  "historicalSpelling": false,
+  "khm": "155",
+  "de": {
+    "source": "Project Gutenberg #77905",
+    "edition": "Deutsche Märchen gesammelt durch die Brüder Grimm, ed. M. Thilo-Luyken, Ebenhausen: Wilhelm Langewiesche-Brandt, 1921",
+    "url": "https://www.gutenberg.org/ebooks/77905",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Es war ein junger Hirt, der wollte gern heiraten und kannte drei Schwestern, davon war eine so schön wie die andere, daß ihm die Wahl schwer wurde und er sich nicht entschließen konnte, einer davon den Vorzug zu geben.",
+        "Da fragte er seine Mutter um Rat, die sprach: »Lad alle drei ein und setz ihnen Käs vor und hab acht, wie sie ihn abschneiden.«",
+        "Das tat der Jüngling, die erste aber verschlang den Käs mit der Rinde; die zweite schnitt in der Hast die Rinde vom Käs ab, weil sie aber so hastig war, ließ sie noch viel Gutes daran und warf das mit weg; die dritte schälte ordentlich die Rinde ab, nicht zu viel und nicht zu wenig.",
+        "Der Hirt erzählte das alles seiner Mutter; da sprach sie: »Nimm die dritte zu deiner Frau.«",
+        "Das tat er und lebte zufrieden und glücklich mit ihr."
+      ],
+      "en": [
+        "There was once a young shepherd who wished much to marry, and was acquainted with three sisters who were all equally pretty, so that it was difficult to him to make a choice, and he could not decide to give the preference to any one of them.",
+        "Then he asked his mother for advice, and she said, “Invite all three, and set some cheese before them, and watch how they eat it.”",
+        "The youth did so; the first, however, swallowed the cheese with the rind on; the second hastily cut the rind off the cheese, but she cut it so quickly that she left much good cheese with it, and threw that away also; the third peeled the rind off carefully, and cut neither too much nor too little.",
+        "The shepherd told all this to his mother, who said, “Take the third for thy wife.”",
+        "This he did, and lived contentedly and happily with her."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "grimm-des-herrn-und-des-teufels-getier",
+  "stage": 3,
+  "title": "Des Herrn und des Teufels Getier",
+  "titleEn": "The Lord’s Animals and the Devil’s",
+  "author": "Brüder Grimm",
+  "year": 1921,
+  "historicalSpelling": false,
+  "khm": "148",
+  "de": {
+    "source": "Project Gutenberg #77905",
+    "edition": "Deutsche Märchen gesammelt durch die Brüder Grimm, ed. M. Thilo-Luyken, Ebenhausen: Wilhelm Langewiesche-Brandt, 1921",
+    "url": "https://www.gutenberg.org/ebooks/77905",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Gott der Herr hatte alle Tiere erschaffen und sich die Wölfe zu seinen Hunden auserwählet; bloß der Geiß hatte er vergessen.",
+        "Da richtete sich der Teufel an, wollte auch schaffen und machte die Geißen mit feinen, langen Schwänzen.",
+        "Wenn sie nun zur Weide gingen, blieben sie gewöhnlich mit ihren Schwänzen in den Dornhecken hängen, da mußte der Teufel hineingehen und sie mit vieler Mühe losknüpfen.",
+        "Das verdroß ihn zuletzt, war her und biß jeder Geiß den Schwanz ab, wie noch heut des Tags an den Stümpfen zu sehen ist."
+      ],
+      "en": [
+        "The Lord God had created all animals, and had chosen out the wolf to be his dog, but he had forgotten the goat.",
+        "Then the Devil made ready and began to create also, and created goats with fine long tails.",
+        "Now when they went to pasture, they generally remained caught in the hedges by their tails, then the Devil had to go there and disentangle them, with a great deal of trouble.",
+        "This enraged him at last, and he went and bit off the tail of every goat, as may be seen to this day by the stump."
+      ]
+    },
+    {
+      "de": [
+        "Nun ließ er sie zwar allein weiden, aber es geschah, daß Gott der Herr zusah, wie sie bald einen fruchtbaren Baum benagten, bald die edlen Reben beschädigten, bald andere zarte Pflanzen verderbten.",
+        "Das jammerte ihn, so daß er aus Güte und Gnaden seine Wölfe dran hetzte, welche die Geißen, die da gingen, bald zerrissen.",
+        "Wie der Teufel das vernahm, trat er vor den Herrn und sprach: »Dein Geschöpf hat mir das meine zerrissen.«",
+        "Der Herr antwortete: »Was hattest du es zu Schaden erschaffen!«",
+        "Der Teufel sagte: »Ich mußte das; gleichwie selbst mein Sinn auf Schaden geht, konnte, was ich erschaffen, keine andere Natur haben, und mußt mir's teuer zahlen.«",
+        "»Ich zahl dir's, sobald das Eichenlaub abfällt, dann komm, dein Geld ist schon gezählt.«",
+        "Als das Eichenlaub abgefallen war, kam der Teufel und forderte seine Schuld.",
+        "Der Herr aber sprach: »In der Kirche zu Konstantinopel steht eine hohe Eiche, die hat noch alles ihr Laub.«",
+        "Mit Toben und Fluchen entwich der Teufel und wollte die Eiche suchen, irrte sechs Monate in der Wüstenei, ehe er sie fand, und als er wiederkam, waren derweil wieder alle anderen Eichen voll grüner Blätter.",
+        "Da mußte er seine Schuld fahren lassen, stach im Zorn allen übrigen Geißen die Augen aus und setzte seine eigenen ein."
+      ],
+      "en": [
+        "Then he let them go to pasture alone, but it came to pass that the Lord God perceived how at one time they gnawed away at a fruitful tree, at another injured the noble vines, or destroyed other tender plants.",
+        "This distressed him, so that in his goodness and mercy he summoned his wolves, who soon tore in pieces the goats that went there.",
+        "When the devil observed this, he went before the Lord and said, “Thy creatures have destroyed mine.”",
+        "The Lord answered, “Why didst thou create things to do harm?”",
+        "The Devil said, “I was compelled to do it: inasmuch as my thoughts run on evil, what I create can have no other nature, and thou must pay me heavy damages.”",
+        "“I will pay thee as soon as the oak leaves fall; come then, thy money will then be ready counted out.”",
+        "When the oak-leaves had fallen, the Devil came and demanded what was due to him.",
+        "But the Lord said, “In the church of Constantinople stands a tall oak-tree which still has all its leaves.”",
+        "With raging and curses, the Devil departed, and went to seek the oak, wandered in the wilderness for six months before he found it, and when he returned, all the oaks had in the meantime covered themselves again with green leaves.",
+        "Then he had to forfeit his indemnity, and in his rage he put out the eyes of all the remaining goats, and put his own in instead."
+      ]
+    },
+    {
+      "de": [
+        "Darum haben alle Geißen Teufelsaugen und abgebissene Schwänze, und er nimmt gern ihre Gestalt an."
+      ],
+      "en": [
+        "This is why all goats have devil’s eyes, and their tails bitten off, and why he likes to assume their shape."
+      ]
+    }
+  ]
+}

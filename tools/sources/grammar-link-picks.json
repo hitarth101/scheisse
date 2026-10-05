@@ -1,0 +1,622 @@
+{
+ "_about": "Hand-made picks read by tools/fetch_nicos_weg.py (step links). Per topic id: 'grimm' = Grimm Grammar page, 'schubert' = Schubert-Verlag exercise page, 'weak' = which of the two covers only part of the topic or matches by a section or passage rather than by the page title. Every URL is re-fetched and checked on each run; topics not listed have no link.",
+ "a1-informal-and-formal": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a1-personal-pronouns-ich-du": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_02.html"
+ },
+ "a1-conjugation-present-tense": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/v_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg01_03.htm"
+ },
+ "a1-personal-pronouns-er-sie": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_02.html"
+ },
+ "a1-w-questions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg01_04.htm"
+ },
+ "a1-nouns-gender": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/no_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap3_artikel.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-vowel-change-e-to-i": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vi_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_06.htm",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a1-simple-past-sein": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsp_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_haben_sein.htm"
+ },
+ "a1-questions-and-statements": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_06.html"
+ },
+ "a1-conjugation-sprechen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vi_12.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_06.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-articles-definite": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/det_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg02_04.htm"
+ },
+ "a1-articles-indefinite": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/det_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg02_05.htm"
+ },
+ "a1-sentence-construction-subject": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_02.html"
+ },
+ "a1-adjectives-following-sein": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_01.html"
+ },
+ "a1-articles": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/det_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap3_artikel.htm"
+ },
+ "a1-negatives-nicht": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap2_verneinung.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-possessive-determiners": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/det_04.html"
+ },
+ "a1-time-12-hour-clock": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg05_07.htm"
+ },
+ "a1-separable-verbs": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/v_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap5_tagesablauf2.htm"
+ },
+ "a1-prepositions-of-time-an": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg04_12.htm",
+  "weak": [
+   "grimm",
+   "schubert"
+  ]
+ },
+ "a1-adverbs-sequence": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_03.html"
+ },
+ "a1-time-specification-24-hour-clock": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg05_07.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-ordinal-numbers": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_06.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a1-conjugation-koennen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k04_koennen.htm"
+ },
+ "a1-simple-past-haben": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsp_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_haben_sein.htm"
+ },
+ "a1-word-formation-professions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html"
+ },
+ "a1-modal-verbs": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_07.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-the-dative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_09.htm"
+ },
+ "a1-modal-verbs-wollen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html"
+ },
+ "a1-prepositions-bei-von": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap2_praepositionen.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-prepositions-of-place": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-prepositions-mit": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k07_verkehrsmittel.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-two-case-prepositions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm"
+ },
+ "a1-negation-nicht-kein": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap2_verneinung.htm"
+ },
+ "a1-comparative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm"
+ },
+ "a1-comparison-wie-als": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm"
+ },
+ "a1-prepositions-in-auf": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-question-words-wie-viel": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html"
+ },
+ "a1-instructions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vimp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k10_gesund.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a1-present-perfect-with-haben": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm"
+ },
+ "a1-comparison": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm"
+ },
+ "a1-present-perfect-with-sein": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm"
+ },
+ "a1-pronouns-es": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_02.html"
+ },
+ "a1-adjective-declension": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg08_11.htm"
+ },
+ "a1-question-words-welch": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html"
+ },
+ "a1-verbs-with-a-dative-object": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap8_tagesablauf.htm"
+ },
+ "a1-personal-pronouns-accusative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_03.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_personalpronomen.htm"
+ },
+ "a1-the-possessive-determiner": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/det_04.html"
+ },
+ "a1-modal-verbs-sollen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_08.htm"
+ },
+ "a1-time-specification-wann": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_01.html"
+ },
+ "a1-imperative-informal": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vimp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k10_gesund.htm"
+ },
+ "a1-muessen-or-sollen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html"
+ },
+ "a1-modal-verbs-duerfen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg08_04.htm"
+ },
+ "a1-present-perfect": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm"
+ },
+ "a1-prepositions-vor-nach": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg04_12.htm",
+  "weak": [
+   "grimm",
+   "schubert"
+  ]
+ },
+ "a1-personal-pronouns-dative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_10.htm"
+ },
+ "a1-subjunctive-wishes": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm"
+ },
+ "a2-prepositions-vor-seit": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg05_12.htm",
+  "weak": [
+   "grimm",
+   "schubert"
+  ]
+ },
+ "a2-compound-conjunctions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a2-subordinate-clauses-dass": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k03_gut_finden.htm"
+ },
+ "a2-indirect-interrogatives": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-subordinate-clauses": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-nouns-ending-in-ung": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k09_wortbildung.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-verbs-preposition": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vphr_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap4_praepositionen1.htm"
+ },
+ "a2-conjunctions-aber": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html"
+ },
+ "a2-conjunctions-oder": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html"
+ },
+ "a2-reflexive-verbs": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vrf_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_07.htm"
+ },
+ "a2-adjective-preposition": {
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k10_gefuehle.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-reflexive-pronouns": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vrf_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_reflexivpronomen.htm"
+ },
+ "a2-time-specification-wie-oft": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_01.html"
+ },
+ "a2-indirect-questions-ob": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_subjunktionen.htm"
+ },
+ "a2-indirect-questions": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-relative-clauses-nominative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-relative-clauses-interruptive": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html"
+ },
+ "a2-relative-clauses-accusative": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-linked-relative-clauses": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html"
+ },
+ "a2-adverbs-gradable": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_01.html"
+ },
+ "a2-simple-past-muessen-duerfen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k12_modalverben.htm"
+ },
+ "a2-impersonal-verbs": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a2-simple-past-koennen-wollen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k12_modalverben.htm"
+ },
+ "a2-simple-past-regular-verbs": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg07_04.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-conjunctions-denn": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap3_nebensaetze.htm"
+ },
+ "a2-subjunctive-polite-requests": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k09_fragen.htm"
+ },
+ "a2-question-words-case": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html"
+ },
+ "a2-subordinate-clauses-wenn": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap3_nebensaetze.htm"
+ },
+ "a2-verbs-with-two-objects": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap8_tagesablauf.htm",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "a2-sentence-construction-pronouns": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_06.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg03_11.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-relative-clauses": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm"
+ },
+ "a2-genitive": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k02_superlative.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-relative-clauses-preposition": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k11_pronomen.htm"
+ },
+ "a2-adjectives-preposition": {
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k10_gefuehle.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "a2-passive": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vpass_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k08_passiv.htm"
+ },
+ "a2-final-clauses-um-zu": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg11_01.htm"
+ },
+ "b1-indirekte-fragesaetze-ob": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_subjunktionen.htm"
+ },
+ "b1-modalverben": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap2_modalverben.htm"
+ },
+ "b1-nominalisierung": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k11_nomen-verb.htm",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "b1-nebensaetze-waehrend": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html"
+ },
+ "b1-indirekte-rede": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsub_04.html"
+ },
+ "b1-praeteritum-unregelmaessig": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsp_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap8_praeteritum.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "b1-praeteritum-oder-perfekt": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k03_vergangenheitsformen.htm",
+  "weak": [
+   "grimm",
+   "schubert"
+  ]
+ },
+ "b1-satzbau-hauptsaetze": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_06.html"
+ },
+ "b1-adverbien-gruende": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_03.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k12_gruende.htm"
+ },
+ "b1-konjunktiv-ii-tipps": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k06_relativpronomen2.htm"
+ },
+ "b1-doppelkonjunktionen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "b1-finalsaetze-um-zu": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg11_01.htm"
+ },
+ "b1-wortbildung-adjektive": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg07_11.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "b1-kausale-verbindungen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k06_kausalsaetze.htm",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "b1-nebensaetze-obwohl": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_subjunktionen.htm"
+ },
+ "b1-konzessive-verbindungen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adv_03.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k12_gruende.htm"
+ },
+ "b1-nebensaetze-zu-infinitiv": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap2_zu.htm"
+ },
+ "b1-konjunktionen-sondern": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html"
+ },
+ "b1-praeteritum": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsp_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap8_praeteritum.htm"
+ },
+ "b1-nebensaetze-wenn": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_subjunktionen.htm"
+ },
+ "b1-ordnungszahlen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_06.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "b1-konjunktiv-ii-praesens": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm"
+ },
+ "b1-fragewoerter-wo-r": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vphr_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg08_10.htm"
+ },
+ "b1-praepositionen-wegen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_08.html"
+ },
+ "b1-futur-i": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vf_01.html"
+ },
+ "b1-modalverben-sollen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg06_08.htm"
+ },
+ "b1-partizip-i": {
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg12_01.htm"
+ },
+ "b1-plusquamperfekt": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vpp_01.html"
+ },
+ "b1-nebensaetze-seit": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html"
+ },
+ "b1-nebensaetze-bevor": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_04.html"
+ },
+ "b1-genitiv": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k02_superlative.htm",
+  "weak": [
+   "schubert"
+  ]
+ },
+ "b1-brauchen-zu-infinitiv": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vinf_01.html"
+ },
+ "b1-nomen-auf-heit-keit": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg08_13.htm"
+ },
+ "b1-passiv": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vpass_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/xg/xg09_08.htm"
+ },
+ "b1-nomen-auf-chen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/mis_02.html"
+ },
+ "b1-praepositionen-waehrend": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/cas_08.html"
+ },
+ "b1-vergleiche-wie-als": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap4_komparation.htm"
+ },
+ "b1-temporale-praepositionen": {
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap1_praepositionen2.htm"
+ },
+ "b1-relativsaetze-genitiv": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap4_relativpronomen.htm"
+ },
+ "b1-adversative-verbindungen": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/con_03.html",
+  "weak": [
+   "grimm"
+  ]
+ },
+ "b1-n-deklination": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/no_04.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_nomen.htm"
+ },
+ "b1-wuensche-ausdruecken": {
+  "grimm": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+  "schubert": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm",
+  "weak": [
+   "grimm"
+  ]
+ }
+}

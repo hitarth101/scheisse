@@ -1,0 +1,91 @@
+{
+  "id": "wikibooks-wie-heisst-du-1",
+  "stage": 2,
+  "title": "Wie heißt du? (1. Teil)",
+  "titleEn": "What's your name? (1st Part)",
+  "author": "Wikibooks contributors",
+  "year": 2026,
+  "historicalSpelling": false,
+  "lesson": "I.1",
+  "lessonTitle": "Wie heißt du? (1. Teil)",
+  "de": {
+    "source": "Wikibooks, German course, Level I lesson 1",
+    "url": "https://en.wikibooks.org/w/index.php?title=German/Level_I/Wie_hei%C3%9Ft_du&oldid=4669202",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Wikibooks contributors; page history https://en.wikibooks.org/w/index.php?title=German/Level_I/Wie_hei%C3%9Ft_du&action=history"
+  },
+  "en": {
+    "source": "Wikibooks, German course, Level I lesson 1",
+    "url": "https://en.wikibooks.org/w/index.php?title=German/Level_I/Wie_hei%C3%9Ft_du&oldid=4669202",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Wikibooks contributors; page history https://en.wikibooks.org/w/index.php?title=German/Level_I/Wie_hei%C3%9Ft_du&action=history",
+    "translator": "Wikibooks contributors",
+    "year": 2026
+  },
+  "paragraphs": [
+    {
+      "speaker": "Franz",
+      "de": [
+        "Hallo, ich bin Franz.",
+        "Wie heißt du?"
+      ],
+      "en": [
+        "Hello, I am Franz.",
+        "What is your name?"
+      ]
+    },
+    {
+      "speaker": "Greta",
+      "de": [
+        "Hallo, Franz.",
+        "Ich heiße Greta.",
+        "Wie geht's?"
+      ],
+      "en": [
+        "Hello, Franz.",
+        "My name is Greta.",
+        "How is it going?"
+      ]
+    },
+    {
+      "speaker": "Franz",
+      "de": [
+        "Es geht mir gut.",
+        "Kennst du den Lehrer?"
+      ],
+      "en": [
+        "I'm good.",
+        "Do you know the teacher?"
+      ]
+    },
+    {
+      "speaker": "Greta",
+      "de": [
+        "Ja, er heißt Herr Weiß."
+      ],
+      "en": [
+        "Yes, his name is Mr. Weiß."
+      ]
+    },
+    {
+      "speaker": "Franz",
+      "de": [
+        "Oh, danke, Greta.",
+        "Bis dann!"
+      ],
+      "en": [
+        "Oh, thanks, Greta.",
+        "See you!"
+      ]
+    },
+    {
+      "speaker": "Greta",
+      "de": [
+        "Wiedersehen!"
+      ],
+      "en": [
+        "Goodbye!"
+      ]
+    }
+  ]
+}

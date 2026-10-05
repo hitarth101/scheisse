@@ -1,0 +1,563 @@
+{
+  "id": "heidi-1-08",
+  "stage": 4,
+  "title": "Im Hause Sesemann geht's unruhig zu",
+  "titleEn": "There is Great Commotion in the Large House",
+  "author": "Johanna Spyri",
+  "year": 1880,
+  "historicalSpelling": false,
+  "book": "Heidis Lehr- und Wanderjahre",
+  "bookEn": "Heidi",
+  "part": 1,
+  "chapter": 8,
+  "de": {
+    "source": "Project Gutenberg #7500",
+    "edition": "Heidis Lehr- und Wanderjahre (Gutenberg Projekt-DE text, modernised spelling)",
+    "url": "https://www.gutenberg.org/ebooks/7500",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #1448",
+    "edition": "Heidi",
+    "translator": "Marian Edwardes (listed there as Marion Edwards)",
+    "year": 1910,
+    "url": "https://www.gutenberg.org/ebooks/1448",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Als Sebastian am folgenden Morgen dem Herrn Kandidaten die Haustür geöffnet und ihn zum Studierzimmer geführt hatte, zog schon wieder jemand die Hausglocke an, aber mit solcher Gewalt, dass Sebastian die Treppe völlig hinunterschoss, denn er dachte: \"So schellt nur der Herr Sesemann selbst, er muss unerwartet nach Hause gekommen sein.\"",
+        "Er riss die Tür auf--ein zerlumpter Junge mit einer Drehorgel auf dem Rücken stand vor ihm."
+      ],
+      "enPara": "Sebastian had just shown the tutor into the study on the following morning when there came another and very loud ring at the bell, which Sebastian ran quickly to answer. \"Only Herr Sesemann rings like that,\" he said to himself; \"he must have returned home unexpectedly.\" He pulled open the door, and there in front of him he saw a ragged little boy carrying a hand-organ on his back."
+    },
+    {
+      "de": [
+        "\"Was soll das heißen?\", fuhr ihn Sebastian an.",
+        "\"Ich will dich lehren, Glocken herunterzureißen!",
+        "Was hast du hier zu tun?\""
+      ],
+      "en": [
+        "\"What's the meaning of this?\" said Sebastian angrily.",
+        "\"I'll teach you to ring bells like that!",
+        "What do you want here?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ich muss zur Klara\", war die Antwort."
+      ],
+      "en": [
+        "\"I want to see Clara,\" the boy answered."
+      ]
+    },
+    {
+      "de": [
+        "\"Du ungewaschener Straßenkäfer du; kannst du nicht sagen 'Fräulein Klara', wie unsereins tut?",
+        "Was hast du bei Fräulein Klara zu tun?\", fragte Sebastian barsch."
+      ],
+      "en": [
+        "\"You dirty, good-for-nothing little rascal, can't you be polite enough to say 'Miss Clara'?",
+        "What do you want with her?\" continued Sebastian roughly."
+      ]
+    },
+    {
+      "de": [
+        "\"Sie ist mir vierzig Pfennige schuldig\", erklärte der Junge."
+      ],
+      "en": [
+        "\"She owes me fourpence,\" explained the boy."
+      ]
+    },
+    {
+      "de": [
+        "\"Du bist, denk ich, nicht recht im Kopf!",
+        "Wie weißt du überhaupt, dass ein Fräulein Klara hier ist?\""
+      ],
+      "en": [
+        "\"You must be out of your mind!",
+        "And how do you know that any young lady of that name lives here?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Gestern habe ich ihr den Weg gezeigt, macht zwanzig, und dann wieder zurück den Weg gezeigt, macht vierzig.\""
+      ],
+      "en": [
+        "\"She owes me twopence for showing her the way there, and twopence for showing her the way back.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Da siehst du, was für Zeug du zusammenflunkerst; Fräulein Klara geht niemals aus, kann gar nicht gehen, mach, dass du dahin kommst, wo du hingehörst, bevor ich dir dazu verhelfe!\""
+      ],
+      "en": [
+        "\"See what a pack of lies you are telling! The young lady never goes out, cannot even walk; be off and get back to where you came from, before I have to help you along.\""
+      ]
+    },
+    {
+      "de": [
+        "Aber der Junge ließ sich nicht einschüchtern; er blieb unbeweglich stehen und sagte trocken: \"Ich habe sie doch gesehen auf der Straße, ich kann sie beschreiben: Sie hat kurzes, krauses Haar, das ist schwarz, und die Augen sind schwarz und der Rock ist braun, und sie kann nicht reden wie wir.\""
+      ],
+      "en": [
+        "But the boy was not to be frightened away; he remained standing, and said in a determined voice, \"But I saw her in the street, and can describe her to you; she has short, curly black hair, and black eyes, and wears a brown dress, and does not talk quite like we do.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Oho\", dachte jetzt Sebastian und kicherte in sich hinein, \"das ist die kleine Mamsell, die hat wieder etwas angestellt.\"",
+        "Dann sagte er, den Jungen hereinziehend: \"'s ist schon recht, komm mir nur nach und warte vor der Tür, bis ich wieder herauskomme.",
+        "Wenn ich dich dann einlasse, kannst du gleich etwas spielen; das Fräulein hört es gern.\""
+      ],
+      "en": [
+        "\"Oho!\" thought Sebastian, laughing to himself, \"the little miss has evidently been up to more mischief.\"",
+        "Then, drawing the boy inside he said aloud, \"I understand now, come with me and wait outside the door till I tell you to go in.",
+        "Be sure you begin playing your organ the instant you get inside the room; the lady is very fond of music.\""
+      ]
+    },
+    {
+      "de": [
+        "Oben klopfte er am Studierzimmer und wurde hereingerufen."
+      ],
+      "en": [
+        "Sebastian knocked at the study door, and a voice said, \"Come in.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Es ist ein Junge da, der durchaus an Fräulein Klara selbst etwas zu bestellen hat\", berichtete Sebastian."
+      ],
+      "en": [
+        "\"There is a boy outside who says he must speak to Miss Clara herself,\" Sebastian announced."
+      ]
+    },
+    {
+      "de": [
+        "Klara war sehr erfreut über das außergewöhnliche Ereignis."
+      ],
+      "en": [
+        "Clara was delighted at such an extraordinary and unexpected message."
+      ]
+    },
+    {
+      "de": [
+        "\"Er soll nur gleich hereinkommen\", sagte sie, \"nicht wahr, Herr Kandidat, wenn er doch mit mir selbst sprechen muss.\""
+      ],
+      "en": [
+        "\"Let him come in at once,\" replied Clara; \"he must come in, must he not,\" she added, turning to her tutor, \"if he wishes so particularly to see me?\""
+      ]
+    },
+    {
+      "de": [
+        "Der Junge war schon eingetreten, und nach Anweisung fing er sofort seine Orgel zu drehen an.",
+        "Fräulein Rottenmeier hatte, um dem Abc auszuweichen, sich im Esszimmer allerlei zu schaffen gemacht.",
+        "Auf einmal horchte sie auf.--Kamen die Töne von der Straße her?",
+        "Aber so nahe?",
+        "Wie konnte vom Studierzimmer her eine Drehorgel ertönen?",
+        "Und dennoch--wahrhaftig--sie stürzte durch das lange Esszimmer und riss die Tür auf.",
+        "Da--unglaublich--da stand mitten im Studierzimmer ein zerlumpter Orgelspieler und drehte sein Instrument mit größter Emsigkeit.",
+        "Der Herr Kandidat schien immerfort etwas sagen zu wollen, aber es wurde nichts vernommen.",
+        "Klara und Heidi hörten mit ganz erfreuten Gesichtern der Musik zu."
+      ],
+      "enPara": "The boy was already inside the room, and according to Sebastian's directions immediately began to play his organ. Fraulein Rottenmeier, wishing to escape the A B C, had retired with her work to the dining-room. All at once she stopped and listened. Did those sounds come up from the street? And yet they seemed so near! But how could there be an organ playing in the study? And yet--it surely was so. She rushed to the other end of the long dining-room and tore open the door. She could hardly believe her eyes. There, in the middle of the study, stood a ragged boy turning away at his organ in the most energetic manner. The tutor appeared to be making efforts to speak, but his voice could not be heard. Both children were listening delightedly to the music. \"Leave off! leave off at once!\" screamed Fraulein Rottenmeier. But her voice was drowned by the music. She was making a dash for the boy, when she saw something on the ground crawling towards her feet--a dreadful dark object--a tortoise. At this sight she jumped higher than she had for many long years before, shrieking with all her might, \"Sebastian! Sebastian!\""
+    },
+    {
+      "de": [
+        "\"Aufhören!",
+        "Sofort aufhören!\", rief Fräulein Rottenmeier ins Zimmer hinein.",
+        "Ihre Stimme wurde übertönt von der Musik.",
+        "Jetzt lief sie auf den Jungen zu--aber auf einmal hatte sie etwas zwischen den Füßen, sie sah auf den Boden: ein grausiges, schwarzes Tier kroch ihr zwischen den Füßen durch--eine Schildkröte.",
+        "Jetzt tat Fräulein Rottenmeier einen Sprung in die Höhe, wie sie seit vielen Jahren keinen getan hatte, dann schrie sie aus Leibeskräften: \"Sebastian!",
+        "Sebastian!\""
+      ],
+      "enPara": "The boy was already inside the room, and according to Sebastian's directions immediately began to play his organ. Fraulein Rottenmeier, wishing to escape the A B C, had retired with her work to the dining-room. All at once she stopped and listened. Did those sounds come up from the street? And yet they seemed so near! But how could there be an organ playing in the study? And yet--it surely was so. She rushed to the other end of the long dining-room and tore open the door. She could hardly believe her eyes. There, in the middle of the study, stood a ragged boy turning away at his organ in the most energetic manner. The tutor appeared to be making efforts to speak, but his voice could not be heard. Both children were listening delightedly to the music. \"Leave off! leave off at once!\" screamed Fraulein Rottenmeier. But her voice was drowned by the music. She was making a dash for the boy, when she saw something on the ground crawling towards her feet--a dreadful dark object--a tortoise. At this sight she jumped higher than she had for many long years before, shrieking with all her might, \"Sebastian! Sebastian!\""
+    },
+    {
+      "de": [
+        "Plötzlich hielt der Orgelspieler inne, denn diesmal hatte die Stimme die Musik übertönt.",
+        "Sebastian stand draußen vor der halb offenen Tür und krümmte sich vor Lachen, denn er hatte zugesehen, wie der Sprung vor sich ging.",
+        "Endlich kam er herein.",
+        "Fräulein Rottenmeier war auf einen Stuhl niedergesunken."
+      ],
+      "enPara": "The organ-player suddenly stopped, for this time her voice had risen louder than the music. Sebastian was standing outside bent double with laughter, for he had been peeping to see what was going on. By the time he entered the room Fraulein Rottenmeier had sunk into a chair."
+    },
+    {
+      "de": [
+        "\"Fort mit allem, Mensch und Tier!",
+        "Schaffen Sie sie weg, Sebastian, sofort!\", rief sie ihm entgegen.",
+        "Sebastian gehorchte bereitwillig, zog den Jungen hinaus, der schnell seine Schildkröte erfasst hatte, drückte ihm draußen etwas in die Hand und sagte: \"Vierzig für Fräulein Klara, und vierzig fürs Spielen, das hast du gut gemacht\"; damit schloss er hinter ihm die Haustür.",
+        "Im Studierzimmer war es wieder ruhig geworden; die Studien wurden wieder fortgesetzt, und Fräulein Rottenmeier hatte sich nun auch festgesetzt in dem Zimmer, um durch ihre Gegenwart ähnliche Gräuel zu verhüten.",
+        "Den Vorfall wollte sie nach den Unterrichtsstunden untersuchen und den Schuldigen so bestrafen, dass er daran denken würde."
+      ],
+      "enPara": "\"Take them all out, boy and animal! Get them away at once!\" she commanded him. Sebastian pulled the boy away, the latter having quickly caught up the tortoise, and when he had got him outside he put something into his hand. \"There is the fourpence from Miss Clara, and another fourpence for the music. You did it all quite right!\" and with that he shut the front door upon him. Quietness reigned again in the study, and lessons began once more; Fraulein Rottenmeier now took up her station in the study in order by her presence to prevent any further dreadful goings-on."
+    },
+    {
+      "de": [
+        "Schon wieder klopfte es an die Tür, und herein trat abermals Sebastian mit der Nachricht, es sei ein großer Korb gebracht worden, der sogleich an Fräulein Klara selbst abzugeben sei."
+      ],
+      "en": [
+        "But soon another knock came to the door, and Sebastian again stepped in, this time to say that some one had brought a large basket with orders that it was to be given at once to Miss Clara."
+      ]
+    },
+    {
+      "de": [
+        "\"An mich?\", fragte Klara erstaunt und äußerst neugierig, was das sein möchte; \"zeigen Sie doch gleich einmal her, wie er aussieht.\""
+      ],
+      "en": [
+        "\"For me?\" said Clara in astonishment, her curiosity very much excited, \"bring it in at once that I may see what it is like.\""
+      ]
+    },
+    {
+      "de": [
+        "Sebastian brachte einen bedeckten Korb herein und entfernte sich dann eilig wieder."
+      ],
+      "en": [
+        "Sebastian carried in a large covered basket and retired."
+      ]
+    },
+    {
+      "de": [
+        "\"Ich denke, erst wird der Unterricht beendet, dann der Korb ausgepackt\", bemerkte Fräulein Rottenmeier."
+      ],
+      "en": [
+        "\"I think the lessons had better be finished first before the basket is unpacked,\" said Fraulein Rottenmeier."
+      ]
+    },
+    {
+      "de": [
+        "Klara konnte sich nicht vorstellen, was man ihr gebracht hatte; sie schaute sehr verlangend nach dem Korb."
+      ],
+      "en": [
+        "Clara could not conceive what was in it, and cast longing glances towards it."
+      ]
+    },
+    {
+      "de": [
+        "\"Herr Kandidat\", sagte sie, sich selbst in ihrem Deklinieren unterbrechend, \"könnte ich nicht nur einmal schnell hineinsehen, um zu wissen, was drin ist, und dann gleich wieder fortfahren?\""
+      ],
+      "en": [
+        "In the middle of one of her declensions she suddenly broke off and said to the tutor, \"Mayn't I just give one peep inside to see what is in it before I go on?\""
+      ]
+    },
+    {
+      "de": [
+        "\"In einer Hinsicht könnte man dafür, in einer anderen dawider sein\", entgegnete der Herr Kandidat; \"dafür spräche der Grund, dass, wenn nun Ihre ganze Aufmerksamkeit auf diesen Gegenstand gerichtet ist--\"; die Rede konnte nicht beendigt werden.",
+        "Der Deckel des Korbes saß nur lose darauf, und nun sprangen mit einem Mal ein, zwei drei und wieder zwei und immer noch mehr junge Kätzchen darunter hervor und ins Zimmer hinaus, und mit einer so unbegreiflichen Schnelligkeit fuhren sie überall herum, dass es war, als wäre das ganze Zimmer voll solcher Tierchen.",
+        "Sie sprangen über die Stiefel des Herrn Kandidaten, bissen an seinen Beinkleidern, kletterten am Kleid von Fräulein Rottenmeier empor, krabbelten um ihre Füße herum, sprangen an Klaras Sessel hinauf, kratzten, krabbelten, miauten; es war ein arges Gewirre.",
+        "Klara rief immerfort voller Entzücken: \"Oh, die niedlichen Tierchen!",
+        "Die lustigen Sprünge!",
+        "Sieh!",
+        "Sieh!",
+        "Heidi, hier, dort, sieh dieses!\"",
+        "Heidi schoss ihnen vor Freude in alle Winkel nach.",
+        "Der Herr Kandidat stand sehr verlegen am Tisch und zog bald den einen, bald den andern Fuß in die Höhe, um ihn dem unheimlichen Gekrabbel zu entziehen.",
+        "Fräulein Rottenmeier saß erst sprachlos vor Entsetzen in ihrem Sessel, dann fing sie an aus Leibeskräften zu schreien: \"Tinette!",
+        "Tinette!",
+        "Sebastian!",
+        "Sebastian!\", denn vom Sessel aufzustehen konnte sie unmöglich wagen, da konnten ja mit einem Mal alle die kleinen Scheusale an ihr emporspringen."
+      ],
+      "enPara": "\"On some considerations I am for it, on others against it,\" he began in answer; \"for it, on the ground that if your whole attention is directed to the basket--\" but the speech remained unfinished. The cover of the basket was loose, and at this moment one, two, three, and then two more, and again more kittens came suddenly tumbling on to the floor and racing about the room in every direction, and with such indescribable rapidity that it seemed as if the whole room was full of them. They jumped over the tutor's boots, bit at his trousers, climbed up Fraulein Rottenmeier's dress, rolled about her feet, sprang up on to Clara's couch, scratching, scrambling, and mewing: it was a sad scene of confusion. Clara, meanwhile, pleased with their gambols, kept on exclaiming, \"Oh, the dear little things! how pretty they are! Look, Heidi, at this one; look, look, at that one over there!\" And Heidi in her delight kept running after them first into one corner and then into the other. The tutor stood up by the table not knowing what to do, lifting first his right foot and then his left to get it away from the scrambling, scratching kittens. Fraulein Rottenmeier was unable at first to speak at all, so overcome was she with horror, and she did not dare rise from her chair for fear that all the dreadful little animals should jump upon her at once. At last she found voice to call loudly, \"Tinette! Tinette! Sebastian! Sebastian!\" They came in answer to her summons and gathered up the kittens, by degrees they got them all inside the basket again and then carried them off to put with the other two."
+    },
+    {
+      "de": [
+        "Endlich kamen Sebastian und Tinette auf die wiederholten Hilferufe herbei, und jener packte gleich eins nach dem andern der kleinen Geschöpfe in den Korb hinein und trug sie auf den Estrich zu dem Katzenlager, das er für die zwei von gestern bereitet hatte."
+      ],
+      "enPara": "\"On some considerations I am for it, on others against it,\" he began in answer; \"for it, on the ground that if your whole attention is directed to the basket--\" but the speech remained unfinished. The cover of the basket was loose, and at this moment one, two, three, and then two more, and again more kittens came suddenly tumbling on to the floor and racing about the room in every direction, and with such indescribable rapidity that it seemed as if the whole room was full of them. They jumped over the tutor's boots, bit at his trousers, climbed up Fraulein Rottenmeier's dress, rolled about her feet, sprang up on to Clara's couch, scratching, scrambling, and mewing: it was a sad scene of confusion. Clara, meanwhile, pleased with their gambols, kept on exclaiming, \"Oh, the dear little things! how pretty they are! Look, Heidi, at this one; look, look, at that one over there!\" And Heidi in her delight kept running after them first into one corner and then into the other. The tutor stood up by the table not knowing what to do, lifting first his right foot and then his left to get it away from the scrambling, scratching kittens. Fraulein Rottenmeier was unable at first to speak at all, so overcome was she with horror, and she did not dare rise from her chair for fear that all the dreadful little animals should jump upon her at once. At last she found voice to call loudly, \"Tinette! Tinette! Sebastian! Sebastian!\" They came in answer to her summons and gathered up the kittens, by degrees they got them all inside the basket again and then carried them off to put with the other two."
+    },
+    {
+      "de": [
+        "Auch am heutigen Tage hatte kein Gähnen während der Unterrichtsstunden stattgefunden.",
+        "Am späten Abend, als Fräulein Rottenmeier sich von den Aufregungen des Morgens wieder hinlänglich erholt hatte, berief sie Sebastian und Tinette ins Studierzimmer herauf, um hier eine gründliche Untersuchung über die strafwürdigen Vorgänge anzustellen.",
+        "Nun kam es denn heraus, dass Heidi auf seinem gestrigen Ausflug die sämtlichen Ereignisse vorbereitet und herbeigeführt hatte.",
+        "Fräulein Rottenmeier saß weiß vor Entrüstung da und konnte erst keine Worte für ihre Empfindungen finden.",
+        "Sie winkte mit der Hand, dass Sebastian und Tinette sich entfernen sollten.",
+        "Jetzt wandte sie sich an Heidi, das neben Klaras Sessel stand und nicht recht begriff, was es verbrochen hatte."
+      ],
+      "enPara": "To-day again there had been no opportunity for gaping. Late that evening, when Fraulein Rottenmeier had somewhat recovered from the excitement of the morning, she sent for the two servants, and examined them closely concerning the events of the morning. And then it came out that Heidi was at the bottom of them, everything being the result of her excursion of the day before. Fraulein Rottenmeier sat pale with indignation and did not know at first how to express her anger. Then she made a sign to Tinette and Sebastian to withdraw, and turning to Heidi, who was standing by Clara's couch, quite unable to understand of what sin she had been guilty, began in a severe voice,--"
+    },
+    {
+      "de": [
+        "\"Adelheid\", begann sie mit strengem Ton, \"ich weiß nur eine Strafe, die dir empfindlich sein könnte, denn du bist eine Barbarin; aber wir wollen sehen, ob du unten im dunklen Keller bei Molchen und Ratten nicht zahm wirst, dass du dir keine solchen Dinge mehr einfallen lässt.\""
+      ],
+      "en": [
+        "\"Adelaide, I know of only one punishment which will perhaps make you alive to your ill conduct, for you are an utter little barbarian, but we will see if we cannot tame you so that you shall not be guilty of such deeds again, by putting you in a dark cellar with the rats and black beetles.\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi hörte still und verwundert sein Urteil an, denn in einem schreckhaften Keller war es noch nie gewesen, der anstoßende Raum in der Almhütte, den der Großvater Keller nannte, wo immer die fertigen Käse lagen und die frische Milch stand, war eher ein anmutiger und einladender Ort, und Ratten und Molche hatte es noch keine gesehen."
+      ],
+      "en": [
+        "Heidi listened in silence and surprise to her sentence, for she had never seen a cellar such as was now described; the place known at her grandfather's as the cellar, where the fresh made cheeses and the new milk were kept, was a pleasant and inviting place; neither did she know at all what rats and black beetles were like."
+      ]
+    },
+    {
+      "de": [
+        "Aber Klara erhob einen lauten Jammer: \"Nein, nein, Fräulein Rottenmeier, man muss warten, bis der Papa da ist; er hat ja geschrieben, er komme nun bald, und dann will ich ihm alles erzählen, und er sagt dann schon, was mit Heidi geschehen soll.\""
+      ],
+      "enPara": "But now Clara interrupted in great distress. \"No, no, Fraulein Rottenmeier, you must wait till papa comes; he has written to say that he will soon be home, and then I will tell him everything, and he will say what is to be done with Heidi.\""
+    },
+    {
+      "de": [
+        "Gegen diesen Oberrichter durfte Fräulein Rottenmeier nichts einwenden, umso weniger, da er wirklich in Bälde zu erwarten war.",
+        "Sie stand auf und sagte etwas grimmig: \"Gut, Klara, aber auch ich werde ein Wort mit Herrn Sesemann sprechen.\"",
+        "Damit verließ sie das Zimmer."
+      ],
+      "en": [
+        "Fraulein Rottenmeier could not do anything against this superior authority, especially as the father was really expected very shortly.",
+        "She rose and said with some displeasure, \"As you will, Clara, but I too shall have something to say to Herr Sesemann.\"",
+        "And with that she left the room."
+      ]
+    },
+    {
+      "de": [
+        "Es verflossen nun ein paar ungestörte Tage, aber Fräulein Rottenmeier kam nicht mehr aus der Aufregung heraus, stündlich trat ihr die Täuschung vor Augen, die sie in Heidis Persönlichkeit erlebt hatte, und es war ihr, als sei seit seiner Erscheinung im Hause Sesemann alles aus den Fugen gekommen und komme nicht wieder hinein.",
+        "Klara war sehr vergnügt; sie langweilte sich nie mehr, denn in den Unterrichtsstunden machte Heidi die kurzweiligsten Sachen; die Buchstaben machte es immer alle durcheinander und konnte sie nie kennen lernen, und wenn der Herr Kandidat mitten im Erklären und Beschreiben ihrer Formen war, um sie ihm anschaulicher zu machen und als Vergleichung etwa von einem Hörnchen oder einem Schnabel sprach dabei, rief es auf einmal in aller Freude aus: \"Es ist eine Geiß!\", oder: \"Es ist ein Raubvogel!\"",
+        "Denn die Beschreibungen weckten in seinem Gehirn allerlei Vorstellungen, nur keine Buchstaben.",
+        "In den späteren Nachmittagsstunden saß Heidi wieder bei Klara und erzählte ihr immer wieder von der Alm und dem Leben dort, so viel und so lange, bis das Verlangen darnach in ihm so brennend wurde, dass es immer zum Schluss versicherte: \"Nun muss ich gewiss wieder heim!",
+        "Morgen muss ich gewiss gehen!\"",
+        "Aber Klara beschwichtigte immer wieder diese Anfälle und bewies Heidi, dass es doch sicher dableiben müsse, bis der Papa komme; dann werde man schon sehen, wie es weitergehe.",
+        "Wenn Heidi alsdann immer wieder nachgab und gleich wieder zufrieden war, so half ihm eine fröhliche Aussicht dazu, die es im Stillen hatte, dass mit jedem Tage, den es noch dablieb, sein Häuflein Brötchen für die Großmutter wieder um zwei größer würde, denn mittags und abends lag immer ein schönes Weißbrötchen bei seinem Teller; das steckte es gleich ein, denn es hätte das Brötchen nie essen können beim Gedanken, dass die Großmutter nie eines habe und das harte, schwarze Brot fast nicht mehr essen konnte.",
+        "Nach Tisch saß Heidi jeden Tag ein paar Stunden lang ganz allein in seinem Zimmer und regte sich nicht, denn dass es in Frankfurt verboten war, nur so hinauszulaufen, wie es auf der Alm getan, das hatte es nun begriffen und tat es nie mehr.",
+        "Mit Sebastian drüben im Esszimmer ein Gespräch führen durfte es auch nicht, das hatte Fräulein Rottenmeier auch verboten, und mit Tinette eine Unterhaltung zu probieren, daran kam ihm kein Sinn; es ging ihr immer scheu aus dem Wege, denn sie redete nur in höhnischem Ton mit ihm und spöttelte es fortwährend an, und Heidi verstand ihre Art ganz gut, und dass sie es nur immer ausspottete.",
+        "So saß Heidi täglich da und hatte alle Zeit, sich auszudenken, wie nun die Alm wieder grün war und wie die gelben Blümchen im Sonnenschein glitzerten und wie alles leuchtete rings um die Sonne, der Schnee und die Berge und das ganze weite Tal, und Heidi konnte es manchmal fast nicht mehr aushalten vor Verlangen, wieder dort zu sein.",
+        "Die Base hatte ja auch gesagt, es könne wieder heimgehen, wann es wolle.",
+        "So kam es, dass Heidi eines Tages es nicht mehr aushielt; es packte in aller Eile seine Brötchen in das große rote Halstuch zusammen, setzte sein Strohhütchen auf und zog aus.",
+        "Aber schon unter der Haustür traf es auf ein großes Reisehindernis, auf Fräulein Rottenmeier selbst, die eben von einem Ausgang zurückkehrte.",
+        "Sie stand still und schaute in starrem Erstaunen Heidi von oben bis unten an, und ihr Blick blieb vorzüglich auf dem gefüllten roten Halstuch haften.",
+        "Jetzt brach sie los."
+      ],
+      "enPara": "Two days now went by without further disturbance. Fraulein Rottenmeier, however, could not recover her equanimity; she was perpetually reminded by Heidi's presence of the deception that had been played upon her, and it seemed to her that ever since the child had come into the house everything had been topsy-turvy, and she could not bring things into proper order again. Clara had grown much more cheerful; she no longer found time hang heavy during the lesson hours, for Heidi was continually making a diversion of some kind or other. She jumbled all her letters up together and seemed quite unable to learn them, and when the tutor tried to draw her attention to their different shapes, and to help her by showing her that this was like a little horn, or that like a bird's bill, she would suddenly exclaim in a joyful voice, \"That is a goat!\" \"That is a bird of prey!\" For the tutor's descriptions suggested all kinds of pictures to her mind, but left her still incapable of the alphabet. In the later afternoons Heidi always sat with Clara, and then she would give the latter many and long descriptions of the mountain and of her life upon it, and the burning longing to return would become so overpowering that she always finished with the words, \"Now I must go home! to-morrow I must really go!\" But Clara would try to quiet her, and tell Heidi that she must wait till her father returned, and then they would see what was to be done. And if Heidi gave in each time and seemed quickly to regain her good spirits, it was because of a secret delight she had in the thought that every day added two more white rolls to the number she was collecting for grandmother; for she always pocketed the roll placed beside her plate at dinner and supper, feeling that she could not bear to eat them, knowing that grandmother had no white bread and could hardly eat the black bread which was so hard. After dinner Heidi had to sit alone in her room for a couple of hours, for she understood now that she might not run about outside at Frankfurt as she did on the mountain, and so she did not attempt it. Any conversation with Sebastian in the dining-room was also forbidden her, and as to Tinette, she kept out of her way, and never thought of speaking to her, for Heidi was quite aware that the maid looked scornfully at her and always spoke to her in a mocking voice. So Heidi had plenty of time from day to day to sit and picture how everything at home was now turning green, and how the yellow flowers were shining in the sun, and how all around lay bright in the warm sunshine, the snow and the rocks, and the whole wide valley, and Heidi at times could hardly contain herself for the longing to be back home again. And Dete had told her that she could go home whenever she liked. So it came about one day that Heidi felt she could not bear it any longer, and in haste she tied all the rolls up in her red shawl, put on her straw hat, and went downstairs. But just as she reached the hall-door she met Fraulein Rottenmeier herself, just returning from a walk, which put a stop to Heidi's journey. Fraulein Rottenmeier stood still a moment, looking at her from top to toe in blank astonishment, her eye resting particularly on the red bundle. Then she broke out,--"
+    },
+    {
+      "de": [
+        "\"Was ist das für ein Aufzug?",
+        "Was heißt das überhaupt?",
+        "Habe ich dir nicht streng verboten, je wieder herumzustreichen?",
+        "Nun probierst du's doch wieder und dazu noch völlig aussehend wie eine Landstreicherin.\""
+      ],
+      "en": [
+        "\"What have you dressed yourself like that for?",
+        "What do you mean by this?",
+        "Have I not strictly forbidden you to go running about in the streets?",
+        "And here you are ready to start off again, and going out looking like a beggar.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ich wollte nicht herumstreichen, ich wollte nur heimgehen\", entgegnete Heidi erschrocken."
+      ],
+      "en": [
+        "\"I was not going to run about, I was going home,\" said Heidi, frightened."
+      ]
+    },
+    {
+      "de": [
+        "\"Wie?",
+        "Was?",
+        "Heimgehen?",
+        "Heimgehen wolltest du?\"",
+        "Fräulein Rottenmeier schlug die Hände zusammen vor Aufregung.",
+        "\"Fortlaufen!",
+        "Wenn das Herr Sesemann wüsste!",
+        "Fortlaufen aus seinem Hause!",
+        "Mach nicht, dass er das je erfährt!",
+        "Und was ist dir denn nicht recht in seinem Hause?",
+        "Wirst du nicht viel besser behandelt, als du verdienst?",
+        "Fehlt es dir an irgendetwas?",
+        "Hast du je in deinem ganzen Leben eine Wohnung oder einen Tisch oder eine Bedienung gehabt, wie du hier hast?",
+        "Sag!\""
+      ],
+      "enPara": "\"What are you talking about! Going home! You want to go home?\" exclaimed Fraulein Rottenmeier, her anger rising. \"To run away like that! What would Herr Sesemann say if he knew! Take care that he never hears of this! And what is the matter with his house, I should like to know! Have you not been better treated than you deserved? Have you wanted for a thing? Have you ever in your life before had such a house to live in, such a table, or so many to wait upon you? Have you?\""
+    },
+    {
+      "de": [
+        "\"Nein\", entgegnete Heidi."
+      ],
+      "en": [
+        "\"No,\" replied Heidi."
+      ]
+    },
+    {
+      "de": [
+        "\"Das weiß ich wohl!\", fuhr die Dame eifrig fort.",
+        "\"Nichts fehlt dir, gar nichts, du bist ein ganz unglaublich undankbares Kind, und vor lauter Wohlsein weißt du nicht, was du noch alles anstellen willst!\""
+      ],
+      "en": [
+        "\"I should think not indeed!\" continued the exasperated lady.",
+        "\"You have everything you can possibly want here, and you are an ungrateful little thing; it's because you are too well off and comfortable that you have nothing to do but think what naughty thing you can do next!\""
+      ]
+    },
+    {
+      "de": [
+        "Aber jetzt kam dem Heidi alles obenauf, was in ihm war, und brach hervor: \"Ich will ja nur heim, und wenn ich so lang nicht komme, so muss das Schneehöppli immer klagen, und die Großmutter erwartet mich, und der Distelfink bekommt die Rute, wenn der Geißenpeter keinen Käse bekommt, und hier kann man gar nie sehen, wie die Sonne gute Nacht sagt zu den Bergen; und wenn der Raubvogel in Frankfurt obenüber fliegen würde, so würde er noch viel lauter krächzen, dass so viele Menschen beieinander sitzen und einander bös machen und nicht auf den Felsen gehen, wo es einem wohl ist.\""
+      ],
+      "enPara": "Then Heidi's feelings got the better of her, and she poured forth her trouble. \"Indeed I only want to go home, for if I stay so long away Snowflake will begin crying again, and grandmother is waiting for me, and Greenfinch will get beaten, because I am not there to give Peter any cheese, and I can never see how the sun says good-night to the mountains; and if the great bird were to fly over Frankfurt he would croak louder than ever about people huddling all together and teaching each other bad things, and not going to live up on the rocks, where it is so much better.\""
+    },
+    {
+      "de": [
+        "\"Barmherzigkeit, das Kind ist übergeschnappt!\", rief Fräulein Rottenmeier aus und stürzte mit Schrecken die Treppe hinauf, wo sie sehr unsanft gegen den Sebastian rannte, der eben hinunter wollte.",
+        "\"Holen Sie auf der Stelle das unglückliche Wesen herauf!\", rief sie ihm zu, indem sie sich den Kopf rieb, denn sie war hart angestoßen."
+      ],
+      "en": [
+        "\"Heaven have mercy on us, the child is out of her mind!\" cried Fraulein Rottenmeier, and she turned in terror and went quickly up the steps, running violently against Sebastian in her hurry.",
+        "\"Go and bring that unhappy little creature in at once,\" she ordered him, putting her hand to her forehead which she had bumped against his."
+      ]
+    },
+    {
+      "de": [
+        "\"Ja, ja, schon recht, danke schön\", gab Sebastian zurück und rieb sich den seinen, denn er war noch härter angefahren."
+      ],
+      "en": [
+        "Sebastian did as he was told, rubbing his own head as he went, for he had received a still harder blow."
+      ]
+    },
+    {
+      "de": [
+        "Heidi stand mit flammenden Augen noch auf derselben Stelle fest und zitterte vor innerer Erregung am ganzen Körper."
+      ],
+      "en": [
+        "Heidi had not moved, she stood with her eyes aflame and trembling all over with inward agitation."
+      ]
+    },
+    {
+      "de": [
+        "\"Na, schon wieder was angestellt?\", fragte Sebastian lustig; als er aber Heidi, das sich nicht rührte, recht ansah, klopfte er ihm freundlich auf die Schulter und sagte tröstend: \"Pah!",
+        "Pah!",
+        "Das muss sich das Mamsellchen nicht so zu Herzen nehmen, nur lustig, das ist die Hauptsache!",
+        "Sie hat mir eben jetzt auch fast ein Loch in den Kopf gerannt; aber nur nicht einschüchtern lassen!",
+        "Na?",
+        "Immer noch auf demselben Fleck?",
+        "Wir müssen hinauf, sie hat's befohlen.\""
+      ],
+      "enPara": "\"What, got into trouble again?\" said Sebastian in a cheerful voice; but when he looked more closely at Heidi and saw that she did not move, he put his hand kindly on her shoulder, and said, trying to comfort her, \"There, there, don't take it to heart so much; keep up your spirits, that is the great thing! She has nearly made a hole in my head, but don't you let her bully you.\" Then seeing that Heidi still did not stir, \"We must go; she ordered me to take you in.\""
+    },
+    {
+      "de": [
+        "Heidi ging nun die Treppe hinauf, aber langsam und leise und gar nicht, wie sonst seine Art war.",
+        "Das tat dem Sebastian Leid zu sehen; er ging hinter dem Heidi her und sprach ermutigende Worte zu ihm: \"Nur nicht abgeben!",
+        "Nur nicht traurig werden!",
+        "Nur immer tapfer darauf zu!",
+        "Wir haben ja ein ganz vernünftiges Mamsellchen, hat noch gar nie geweint, seit es bei uns ist; sonst weinen sie ja zwölfmal im Tag in dem Alter, das kennt man.",
+        "Die Kätzchen sind auch lustig droben, die springen auf dem ganzen Estrich herum und tun wie närrisch.",
+        "Nachher gehen wir mal zusammen hinauf und schauen ihnen zu, wenn die Dame drinnen weg ist, ja?\""
+      ],
+      "en": [
+        "Heidi now began mounting the stairs, but with a slow, crawling step, very unlike her usual manner.",
+        "Sebastian felt quite sad as he watched her, and as he followed her up he kept trying to encourage her.",
+        "\"Don't you give in! don't let her make you unhappy!",
+        "You keep up your courage!",
+        "Why we've got such a sensible little miss that she has never cried once since she was here; many at that age cry a good dozen times a day.",
+        "The kittens are enjoying themselves very much up in their home; they jump about all over the place and behave as if they were little mad things.",
+        "Later we will go up and see them, when Fraulein is out of the way, shall we?\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi nickte ein wenig mit dem Kopf, aber so freudlos, dass es dem Sebastian recht zu Herzen ging und er ganz teilnehmend dem Heidi nachschaute, wie es nach seinem Zimmer hin schlich."
+      ],
+      "en": [
+        "Heidi gave a little nod of assent, but in such a joyless manner that it went to Sebastian's heart, and he followed her with sympathetic eyes as she crept away to her room."
+      ]
+    },
+    {
+      "de": [
+        "Am Abendessen heute sagte Fräulein Rottenmeier kein Wort, aber fortwährend warf sie sonderbar wachsame Blicke zu Heidi hinüber, so als erwartete sie, es könnte plötzlich etwas Unerhörtes unternehmen; aber Heidi saß mäuschenstill am Tisch und rührte sich nicht, es aß nicht und trank nicht; nur sein Brötchen hatte es schnell in die Tasche gesteckt."
+      ],
+      "en": [
+        "At supper that evening Fraulein Rottenmeier did not speak, but she cast watchful looks towards Heidi as if expecting her at any minute to break out in some extraordinary way; but Heidi sat without moving or eating; all that she did was to hastily hide her roll in her pocket."
+      ]
+    },
+    {
+      "de": [
+        "Am folgenden Morgen, als der Herr Kandidat die Treppe heraufkam, winkte ihn Fräulein Rottenmeier geheimnisvoll ins Esszimmer herein, und hier teilte sie ihm in großer Aufregung ihre Besorgnis mit, die Luftveränderung, die neue Lebensart und die ungewohnten Eindrücke hätten das Kind um den Verstand gebracht, und sie erzählte ihm von Heidis Fluchtversuch und wiederholte ihm von seinen sonderbaren Reden, was sie noch wusste.",
+        "Aber der Herr Kandidat besänftigte und beruhigte Fräulein Rottenmeier, indem er sie versicherte, dass er die Wahrnehmung gemacht habe, die Adelheid sei zwar einerseits allerdings eher exzentrisch, aber anderseits doch wieder bei richtigem Verstand, so dass sich nach und nach bei einer allseitig erwogenen Behandlung das nötige Gleichgewicht einstellen könne, was er im Auge habe; er finde den Umstand wichtiger, dass er durchaus nicht über das Abc hinauskomme mit ihr, indem sie die Buchstaben nicht zu fassen imstande sei."
+      ],
+      "enPara": "When the tutor arrived next morning, Fraulein Rottenmeier drew him privately aside, and confided her fear to him that the change of air and the new mode of life and unaccustomed surroundings had turned Heidi's head; then she told him of the incident of the day before, and of Heidi's strange speech. But the tutor assured her she need not be in alarm; he had already become aware that the child was somewhat eccentric, but otherwise quite right in her mind, and he was sure that, with careful treatment and education, the right balance would be restored, and it was this he was striving after. He was the more convinced of this by what he now heard, and by the fact that he had so far failed to teach her the alphabet, Heidi seeming unable to understand the letters."
+    },
+    {
+      "de": [
+        "Fräulein Rottenmeier fühlte sich beruhigter und entließ den Herrn Kandidaten zu seiner Arbeit.",
+        "Am späteren Nachmittag stieg ihr die Erinnerung an Heidis Aufzug bei seiner vorgehabten Abreise auf, und sie beschloss, die Gewandung des Kindes durch verschiedene Kleidungsstücke der Klara in den nötigen Stand zu setzen, bevor Herr Sesemann erscheinen würde.",
+        "Sie teilte ihre Gedanken darüber an Klara mit, und da diese mit allem einverstanden war und dem Heidi eine Menge Kleider und Tücher und Hüte schenken wollte, verfügte sich die Dame in Heidis Zimmer, um seinen Kleiderschrank zu besehen und zu untersuchen, was da von dem Vorhandenen bleiben und was entfernt werden solle.",
+        "Aber in wenig Minuten kam sie wieder zurück mit Gebärden des Abscheus.",
+        "\"Was muss ich entdecken, Adelheid!\", rief sie aus.",
+        "\"Es ist nie dagewesen!",
+        "In deinem Kleiderschrank, einem Schrank für Kleider, Adelheid, im Fuß dieses Schrankes, was finde ich?",
+        "Einen Haufen kleiner Brote!",
+        "Brot, sage ich, Klara, im Kleiderschrank!",
+        "Und einen solchen Haufen aufspeichern!\"--\"Tinette\", rief sie jetzt ins Esszimmer hinaus, \"schaffen Sie mir das alte Brot fort aus dem Schrank der Adelheid und den zerdrückten Strohhut auf dem Tisch!\""
+      ],
+      "enPara": "Fraulein Rottenmeier was considerably relieved by his words, and released the tutor to his work. In the course of the afternoon the remembrance of Heidi's appearance the day before, as she was starting out on her travels, suddenly returned to the lady, and she made up her mind that she would supplement the child's clothing with various garments from Clara's wardrobe, so as to give her a decent appearance when Herr Sesemann returned. She confided her intention to Clara, who was quite willing to make over any number of dresses and hats to Heidi; so the lady went upstairs to overhaul the child's belongings and see what was to be kept and what thrown away. She returned, however, in the course of a few minutes with an expression of horror upon her face. \"What is this, Adelaide, that I find in your wardrobe!\" she exclaimed. \"I never heard of any one doing such a thing before! In a cupboard meant for clothes, Adelaide, what do I see at the bottom but a heap of rolls! Will you believe it, Clara, bread in a wardrobe! a whole pile of bread! Tinette,\" she called to that young woman, who was in the dining-room, \"go upstairs and take away all those rolls out of Adelaide's cupboard and the old straw hat on the table.\""
+    },
+    {
+      "de": [
+        "\"Nein!",
+        "Nein!\", schrie Heidi auf; \"ich muss den Hut haben, und die Brötchen sind für die Großmutter\", und Heidi wollte der Tinette nachstürzen, aber es wurde von Fräulein Rottenmeier festgehalten."
+      ],
+      "enPara": "\"No! no!\" screamed Heidi. \"I must keep the hat, and the rolls are for grandmother,\" and she was rushing to stop Tinette when Fraulein Rottenmeier took hold of her. \"You will stop here, and all that bread and rubbish shall be taken to the place they belong to,\" she said in a determined tone as she kept her hand on the child to prevent her running forward. Then Heidi in despair flung herself down on Clara's couch and broke into a wild fit of weeping, her crying becoming louder and more full of distress, every minute, while she kept on sobbing out at intervals, \"Now grandmother's' bread is all gone! They were all for grandmother, and now they are taken away, and grandmother won't have one,\" and she wept as if her heart would break. Fraulein Rottenmeier ran out of the room. Clara was distressed and alarmed at the child's crying. \"Heidi, Heidi,\" she said imploringly, \"pray do not cry so! listen to me; don't be so unhappy; look now, I promise you that you shall have just as many rolls, or more, all fresh and new to take to grandmother when you go home; yours would have been hard and stale by then. Come, Heidi, do not cry any more!\""
+    },
+    {
+      "de": [
+        "\"Du bleibst hier und der Kram wird hingebracht, wo er hingehört\", sagte sie bestimmt und hielt das Kind zurück.",
+        "Aber nun warf sich Heidi an Klaras Sessel nieder und fing ganz verzweiflungsvoll zu weinen an, immer lauter und schmerzlicher, und schluchzte ein Mal ums andere in seinem Jammer auf: \"Nun hat die Großmutter keine Brötchen mehr.",
+        "Sie waren für die Großmutter, nun sind sie alle fort und die Großmutter bekommt keine!\", und Heidi weinte auf, als wollte ihm das Herz zerspringen.",
+        "Fräulein Rottenmeier lief hinaus.",
+        "Klara wurde es angst und bange bei dem Jammer.",
+        "\"Heidi, Heidi, weine nur nicht so\", sagte sie bittend, \"hör mich nur!",
+        "Jammere nur nicht so, sieh, ich verspreche dir, ich gebe dir gerade so viel Brötchen für die Großmutter, oder noch mehr, wenn du einmal heimgehst, und dann sind diese frisch und weich, und die deinen wären ja ganz hart geworden und waren es schon.",
+        "Komm, Heidi, weine nur nicht mehr so!\""
+      ],
+      "enPara": "\"No! no!\" screamed Heidi. \"I must keep the hat, and the rolls are for grandmother,\" and she was rushing to stop Tinette when Fraulein Rottenmeier took hold of her. \"You will stop here, and all that bread and rubbish shall be taken to the place they belong to,\" she said in a determined tone as she kept her hand on the child to prevent her running forward. Then Heidi in despair flung herself down on Clara's couch and broke into a wild fit of weeping, her crying becoming louder and more full of distress, every minute, while she kept on sobbing out at intervals, \"Now grandmother's' bread is all gone! They were all for grandmother, and now they are taken away, and grandmother won't have one,\" and she wept as if her heart would break. Fraulein Rottenmeier ran out of the room. Clara was distressed and alarmed at the child's crying. \"Heidi, Heidi,\" she said imploringly, \"pray do not cry so! listen to me; don't be so unhappy; look now, I promise you that you shall have just as many rolls, or more, all fresh and new to take to grandmother when you go home; yours would have been hard and stale by then. Come, Heidi, do not cry any more!\""
+    },
+    {
+      "de": [
+        "Heidi konnte noch lange nicht aus seinem Schluchzen herauskommen; aber es verstand Klaras Trost und hielt sich daran, sonst hätte es gar nicht mehr zu weinen aufhören können.",
+        "Es musste auch noch mehrere Male seiner Hoffnung gewiss werden und Klara, durch die letzten Anfälle von Schluchzen unterbrochen, fragen: \"Gibst du mir so viele, viele, wie ich hatte, für die Großmutter?\""
+      ],
+      "en": [
+        "Heidi could not get over her sobs for a long time; she would never have been able to leave off crying at all if it had not been for Clara's promise, which comforted her.",
+        "But to make sure that she could depend upon it she kept on saying to Clara, her voice broken with her gradually subsiding sobs, \"Will you give me as many, quite as many, as I had, for grandmother?\""
+      ]
+    },
+    {
+      "de": [
+        "Und Klara versicherte immer wieder: \"Gewiss, ganz gewiss, noch mehr, sei nur wieder froh!\""
+      ],
+      "en": [
+        "And Clara assured her each time that she would give her as many, \"or more,\" she added, \"only be happy again.\""
+      ]
+    },
+    {
+      "de": [
+        "Noch zum Abendtisch kam Heidi mit den rot verweinten Augen, und als es sein Brötchen erblickte, musste es gleich noch einmal aufschluchzen.",
+        "Aber es bezwang sich jetzt mit Gewalt, denn es verstand, dass es sich am Tisch ruhig verhalten musste.",
+        "Sebastian machte heute jedes Mal die merkwürdigsten Gebärden, wenn er in Heidis Nähe kam; er deutete bald auf seinen, bald auf Heidis Kopf, dann nickte er wieder und kniff die Augen zu, so als wollte er sagen: \"Nur getrost!",
+        "Ich hab's schon gemerkt und besorgt.\""
+      ],
+      "en": [
+        "Heidi appeared at supper with her eyes red with weeping, and when she saw her roll she could not suppress a sob.",
+        "But she made an effort to control herself, for she knew she must sit quietly at table.",
+        "Whenever Sebastian could catch her eye this evening he made all sorts of strange signs, pointing to his own head and then to hers, and giving little nods as much as to say, \"Don't you be unhappy!",
+        "I have got it all safe for you.\""
+      ]
+    },
+    {
+      "de": [
+        "Als Heidi später in sein Zimmer kam und in sein Bett steigen wollte, lag sein zerdrücktes Strohhütchen unter der Decke versteckt.",
+        "Mit Entzücken zog es den alten Hut hervor, zerdrückte ihn vor lauter Freude noch ein wenig mehr und versteckte ihn dann, in ein Taschentüchlein eingewickelt, in die allerhinterste Ecke seines Schrankes.",
+        "Das Hütchen hatte der Sebastian unter die Decke gesteckt; er war zu gleicher Zeit mit Tinette im Esszimmer gewesen, als diese gerufen wurde, und hatte Heidis Jammerruf vernommen.",
+        "Dann war er Tinette nachgegangen, und als sie aus Heidis Zimmer heraustrat mit ihrer Brotlast und dem Hütchen oben darauf, hatte er schnell dieses weggenommen und ihr zugerufen: \"Das will ich schon forttun.\"",
+        "Darauf hatte er es in aller Freude für Heidi gerettet, was er ihm beim Abendessen zur Erheiterung andeuten wollte."
+      ],
+      "en": [
+        "When Heidi was going to get into bed that night she found her old straw hat lying under the counterpane.",
+        "She snatched it up with delight, made it more out of shape still in her joy, and then, after wrapping a handkerchief round it, she stuck it in a corner of the cupboard as far back as she could.",
+        "It was Sebastian who had hidden it there for her; he had been in the dining-room when Tinette was called, and had heard all that went on with the child and the latter's loud weeping.",
+        "So he followed Tinette, and when she came out of Heidi's room carrying the rolls and the hat, he caught up the hat and said, \"I will see to this old thing.\"",
+        "He was genuinely glad to have been able to save it for Heidi, and that was the meaning of his encouraging signs to her at supper."
+      ]
+    }
+  ]
+}

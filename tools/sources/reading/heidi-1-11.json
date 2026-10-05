@@ -1,0 +1,218 @@
+{
+  "id": "heidi-1-11",
+  "stage": 4,
+  "title": "Heidi nimmt auf einer Seite zu und auf der anderen ab",
+  "titleEn": "Heidi Gains in One Way and Loses in Another",
+  "author": "Johanna Spyri",
+  "year": 1880,
+  "historicalSpelling": false,
+  "book": "Heidis Lehr- und Wanderjahre",
+  "bookEn": "Heidi",
+  "part": 1,
+  "chapter": 11,
+  "de": {
+    "source": "Project Gutenberg #7500",
+    "edition": "Heidis Lehr- und Wanderjahre (Gutenberg Projekt-DE text, modernised spelling)",
+    "url": "https://www.gutenberg.org/ebooks/7500",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #1448",
+    "edition": "Heidi",
+    "translator": "Marian Edwardes (listed there as Marion Edwards)",
+    "year": 1910,
+    "url": "https://www.gutenberg.org/ebooks/1448",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Die Großmama hatte während der ganzen Zeit ihres Aufenthalts jeden Nachmittag, wenn Klara sich hinlegte und Fräulein Rottenmeier, wahrscheinlich der Ruhe bedürftig, geheimnisvoll verschwand, sich einen Augenblick neben Klara hingesetzt; aber schon nach fünf Minuten war sie wieder auf den Füßen und hatte dann immer Heidi auf ihre Stube berufen, sich mit ihm besprochen und es auf allerlei Weise beschäftigt und unterhalten.",
+        "Die Großmama hatte hübsche kleine Puppen und zeigte dem Heidi, wie man ihnen Kleider und Schürzchen macht, und ganz unvermerkt hatte Heidi das Nähen erlernt und machte den kleinen Frauenzimmern die schönsten Röcke und Mäntelchen, denn die Großmama hatte immer Zeugstücke von den prächtigsten Farben.",
+        "Nun Heidi lesen konnte, durfte es auch immer wieder der Großmama seine Geschichten vorlesen; das machte ihm die größte Freude, denn je mehr es seine Geschichten las, desto lieber wurden sie ihm, denn Heidi lebte alles ganz mit durch, was die Leute alle zu erleben hatten, und so hatte es zu ihnen allen ein sehr nahes Verhältnis und freute sich immer wieder, bei ihnen zu sein.",
+        "Aber so recht froh sah Heidi nie aus, und seine lustigen Augen waren nie mehr zu sehen."
+      ],
+      "enPara": "Every afternoon during her visit the grandmother went and sat down for a few minutes beside Clara after dinner, when the latter was resting, and Fraulein Rottenmeier, probably for the same reason, had disappeared inside her room; but five minutes sufficed her, and then she was up again, and Heidi was sent for to her room, and there she would talk to the child and employ and amuse her in all sorts of ways. The grandmother had a lot of pretty dolls, and she showed Heidi how to make dresses and pinafores for them, so that Heidi learnt how to sew and to make all sorts of beautiful clothes for the little people out of a wonderful collection of pieces that grandmother had by her of every describable and lovely color. And then grandmother liked to hear her read aloud, and the oftener Heidi read her tales the fonder she grew of them. She entered into the lives of all the people she read about so that they became like dear friends to her, and it delighted her more and more to be with them. But still Heidi never looked really happy, and her bright eyes were no longer to be seen. It was the last week of the grandmother's visit. She called Heidi into her room as usual one day after dinner, and the child came with her book under her arm. The grandmother called her to come close, and then laying the book aside, said, \"Now, child, tell me why you are not happy? Have you still the same trouble at heart?\""
+    },
+    {
+      "de": [
+        "Es war die letzte Woche, welche die Großmama in Frankfurt zubringen wollte.",
+        "Sie hatte eben nach Heidi gerufen, dass es auf ihre Stube komme; es war die Zeit, da Klara schlief.",
+        "Als Heidi eintrat mit seinem großen Buch unter dem Arm, winkte ihm die Großmama, dass es ganz nahe zu ihr herankomme, legte das Buch weg und sagte: \"Nun komm, Kind, und sag mir, warum bist du nicht fröhlich?",
+        "Hast du immer noch denselben Kummer im Herzen?\""
+      ],
+      "enPara": "Every afternoon during her visit the grandmother went and sat down for a few minutes beside Clara after dinner, when the latter was resting, and Fraulein Rottenmeier, probably for the same reason, had disappeared inside her room; but five minutes sufficed her, and then she was up again, and Heidi was sent for to her room, and there she would talk to the child and employ and amuse her in all sorts of ways. The grandmother had a lot of pretty dolls, and she showed Heidi how to make dresses and pinafores for them, so that Heidi learnt how to sew and to make all sorts of beautiful clothes for the little people out of a wonderful collection of pieces that grandmother had by her of every describable and lovely color. And then grandmother liked to hear her read aloud, and the oftener Heidi read her tales the fonder she grew of them. She entered into the lives of all the people she read about so that they became like dear friends to her, and it delighted her more and more to be with them. But still Heidi never looked really happy, and her bright eyes were no longer to be seen. It was the last week of the grandmother's visit. She called Heidi into her room as usual one day after dinner, and the child came with her book under her arm. The grandmother called her to come close, and then laying the book aside, said, \"Now, child, tell me why you are not happy? Have you still the same trouble at heart?\""
+    },
+    {
+      "de": [
+        "\"Ja\", nickte Heidi."
+      ],
+      "en": [
+        "Heidi nodded in reply."
+      ]
+    },
+    {
+      "de": [
+        "\"Hast du ihn dem lieben Gott geklagt?\""
+      ],
+      "en": [
+        "\"Have you told God about it?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ja.\""
+      ],
+      "en": [
+        "\"Yes.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Und betest du nun alle Tage, dass alles gut werde und er dich froh mache?\""
+      ],
+      "en": [
+        "\"And do you pray every day that He will make things right and that you may be happy again?\""
+      ]
+    },
+    {
+      "de": [
+        "\"O nein, ich bete jetzt gar nie mehr.\""
+      ],
+      "en": [
+        "\"No, I have left off praying.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Was sagst du mir, Heidi? Was muss ich hören? Warum betest du denn nicht mehr?\""
+      ],
+      "en": [
+        "\"Do not tell me that, Heidi! Why have you left off praying?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Es nützt nichts, der liebe Gott hat nicht zugehört, und ich glaube es auch wohl\", fuhr Heidi in einiger Aufregung weiter, \"wenn nun am Abend so viele, viele Leute in Frankfurt alle miteinander beten, so kann der liebe Gott ja nicht auf alle Acht geben, und mich hat er gewiss gar nicht gehört.\""
+      ],
+      "en": [
+        "\"It is of no use, God does not listen,\" Heidi went on in an agitated voice, \"and I can understand that when there are so many, many people in Frankfurt praying to Him every evening that He cannot attend to them all, and He certainly has not heard what I said to Him.\""
+      ]
+    },
+    {
+      "de": [
+        "\"So, wie weißt du denn das so sicher, Heidi?\""
+      ],
+      "en": [
+        "\"And why are you so sure of that, Heidi?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ich habe alle Tage das Gleiche gebetet, manche Woche lang, und der liebe Gott hat es nie getan.\""
+      ],
+      "en": [
+        "\"Because I have prayed for the same thing every day for weeks, and yet God has not done what I asked.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ja, so geht's nicht zu, Heidi! Das musst du nicht meinen! Siehst du, der liebe Gott ist für uns alle ein guter Vater, der immer weiß, was gut für uns ist, wenn wir es gar nicht wissen. Wenn wir aber nun etwas von ihm haben wollen, das nicht gut für uns ist, so gibt er uns das nicht, sondern etwas viel Besseres, wenn wir fortfahren, so recht herzlich zu ihm zu beten, aber nicht gleich weglaufen und alles Vertrauen zu ihm verlieren. Siehst du, was du nun von ihm erbitten wolltest, das war in diesem Augenblick nicht gut für dich; der liebe Gott hat dich schon gehört, er kann alle Menschen auf einmal anhören und übersehen, siehst du, dafür ist er der liebe Gott und nicht ein Mensch wie du und ich. Und weil er nun wohl wusste, was für dich gut ist, dachte er bei sich: 'Ja, das Heidi soll schon einmal haben, wofür es bittet, aber erst dann, wenn es ihm gut ist, und so wie es darüber recht froh werden kann. Denn wenn ich jetzt tue, was es will, und es merkt nachher, dass es doch besser gewesen wäre, ich hätte ihm seinen Willen nicht getan, dann weint es nachher und sagt: Hätte mir doch der liebe Gott nur nicht gegeben, wofür ich bat, es ist gar nicht so gut, wie ich gemeint habe.' Und während nun der liebe Gott auf dich niedersah, ob du ihm auch recht vertrautest und täglich zu ihm kommest und betest und immer zu ihm aufsehest, wenn dir etwas fehlt, da bist du weggelaufen ohne alles Vertrauen, hast nie mehr gebetet und hast den lieben Gott ganz vergessen. Aber siehst du, wenn einer es so macht und der liebe Gott hört seine Stimme gar nie mehr unter den Betenden, so vergisst er ihn auch und lässt ihn gehen, wohin er will. Wenn es ihm dabei aber schlecht geht und er jammert: 'Mir hilft aber auch gar niemand!', dann hat keiner Mitleiden mit ihm, sondern jeder sagt zu ihm: 'Du bist ja selbst vom lieben Gott weggelaufen, der dir helfen konnte!' Willst du's so haben, Heidi, oder willst du gleich wieder zum lieben Gott gehen und ihn um Verzeihung bitten, dass du so von ihm weggelaufen bist, und dann alle Tage zu ihm beten und ihm vertrauen, dass er alles gut für dich machen werde, so dass du auch wieder ein frohes Herz bekommen kannst?\""
+      ],
+      "en": [
+        "\"You are wrong, Heidi; you must not think of Him like that. God is a good father to us all, and knows better than we do what is good for us. If we ask Him for something that is not good for us, He does not give it, but something better still, if only we will continue to pray earnestly and do not run away and lose our trust in Him. God did not think what you have been praying for was good for you just now; but be sure He heard you, for He can hear and see every one at the same time, because He is a God and not a human being like you and me. And because He thought it was better for you not to have at once what you wanted, He said to Himself: Yes, Heidi shall have what she asks for, but not until the right time comes, so that she may be quite happy. If I do what she wants now, and then one day she sees that it would have been better for her not to have had her own way, she will cry and say, 'If only God had not given me what I asked for! it is not so good as I expected!' And while God is watching over you, and looking to see if you will trust Him and go on praying to Him every day, and turn to Him for everything you want, you run away and leave off saying your prayers, and forget all about Him. And when God no longer hears the voice of one He knew among those who pray to Him, He lets that person go his own way, that he may learn how foolish he is. And then this one gets into trouble, and cries, 'Save me, God, for there is none other to help me,' and God says, 'Why did you go from Me; I could not help you when you ran away.' And you would not like to grieve God, would you Heidi, when He only wants to be kind to you? So will you not go and ask Him to forgive you, and continue to pray and to trust Him, for you may be sure that He will make everything right and happy for you, and then you will be glad and lighthearted again.\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi hatte sehr aufmerksam zugehört; jedes Wort der Großmama fiel in sein Herz, denn zu ihr hatte das Kind ein unbedingtes Vertrauen."
+      ],
+      "en": [
+        "Heidi had perfect confidence in the grandmother, and every word she said sunk into her heart."
+      ]
+    },
+    {
+      "de": [
+        "\"Ich will jetzt gleich auf der Stelle gehen und den lieben Gott um Verzeihung bitten, und ich will ihn nie mehr vergessen\", sagte Heidi reumütig."
+      ],
+      "en": [
+        "\"I will go at once and ask God to forgive me, and I will never forget Him again,\" she replied repentantly."
+      ]
+    },
+    {
+      "de": [
+        "\"So ist's recht, Kind, er wird dir auch helfen zur rechten Zeit, sei nur getrost!\", ermunterte die Großmama, und Heidi lief sofort in sein Zimmer hinüber und betete ernstlich und reuig zum lieben Gott und bat ihn, dass er es doch nicht vergessen und auch wieder zu ihm niederschauen möge.--"
+      ],
+      "enPara": "\"That is right, dear child,\" and anxious to cheer her, added, \"Don't be unhappy, for He will do everything you wish in good time.\" And Heidi ran away and prayed that she might always remember God, and that He would go on thinking about her."
+    },
+    {
+      "de": [
+        "Der Tag der Abreise war gekommen, es war für Klara und Heidi ein trauriger Tag; aber die Großmama wusste es so einzurichten, dass sie gar nicht zum Bewusstsein kamen, dass es eigentlich ein trauriger Tag sei, sondern es war eher wie ein Festtag, bis die gute Großmama im Wagen davonfuhr.",
+        "Da trat eine Leere und Stille im Hause ein, als wäre alles vorüber, und solange noch der Tag währte, saßen Klara und Heidi wie verloren da und wussten gar nicht, wie es nun weiter kommen sollte."
+      ],
+      "enPara": "The day came for grandmother's departure--a sad one for Clara and Heidi. But the grandmother was determined to make it as much like a holiday as possible and not to let them mope, and she kept them so lively and amused that they had no time to think about their sorrow at her going until she really drove away. Then the house seemed so silent and empty that Heidi and Clara did not know what to do with themselves, and sat during the remainder of the day like two lost children."
+    },
+    {
+      "de": [
+        "Am folgenden Tag, als die Unterrichtsstunden vorbei und die Zeit da war, da die Kinder gewöhnlich zusammensaßen, trat Heidi mit seinem Buch unter dem Arm herein und sagte: \"Ich will dir nun immer, immer vorlesen; willst du, Klara?\""
+      ],
+      "en": [
+        "The next day, when the hour came for Clara and Heidi to be together, the latter walked in with her book and proposed that she should go on reading aloud every afternoon to Clara, if the latter liked it."
+      ]
+    },
+    {
+      "de": [
+        "Der Klara war der Vorschlag recht für einmal, und Heidi machte sich mit Eifer an seine Tätigkeit.",
+        "Aber es ging nicht lange, so hörte schon wieder alles auf, denn kaum hatte Heidi eine Geschichte zu lesen begonnen, die von einer sterbenden Großmutter handelte, als es auf einmal laut aufschrie: \"Oh, nun ist die Großmutter tot!\", und in ein jammervolles Weinen ausbrach, denn alles, was es las, war dem Heidi volle Gegenwart, und es glaubte nicht anders, als nun sei die Großmutter auf der Alm gestorben, und es klagte in immer lauterem Weinen: \"Nun ist die Großmutter tot, und ich kann nie mehr zu ihr gehen, und sie hat nicht ein einziges Brötchen mehr bekommen!\""
+      ],
+      "en": [
+        "Clara agreed, and thought anyhow it would be nice for that day, so Heidi began with her usual enthusiasm.",
+        "But the reading did not last long, for Heidi had hardly begun a tale about a dying grandmother before she cried out, \"O! then grandmother is dead!\" and burst into tears; for everything she read was so real to her that she quite thought it was the grandmother at home who had died, and she kept on exclaiming as her sobs increased, \"She is dead, and I shall never see her again, and she never had one of the white rolls!\""
+      ]
+    },
+    {
+      "de": [
+        "Klara suchte immerfort dem Heidi zu erklären, dass es ja nicht die Großmutter auf der Alm sei, sondern eine ganz andere, von der diese Geschichte handle; aber auch, als sie endlich dazu gekommen war, dem aufgeregten Heidi diese Verwechslung klar zu machen, konnte es sich doch nicht beruhigen und weinte immer noch untröstlich weiter, denn der Gedanke war ihm nun im Herzen erwacht, die Großmutter könne ja sterben, während es so weit weg sei, und der Großvater auch noch, und wenn es dann nach einiger Zeit wieder heimkomme, so sei alles still und tot auf der Alm und es stehe ganz allein da und könne niemals mehr die sehen, die ihm lieb waren."
+      ],
+      "en": [
+        "Clara did all she could to explain to Heidi that the story was about quite a different grandmother; but even when at last she had been able to convince Heidi of this, the latter continued to weep inconsolably, for now she had awakened to the thought that perhaps the grandmother, and even the grandfather also, might die while she was so far away, and that if she did not go home for a long time she would find everything there all silent and dead, and there she would be all alone, and would never be able to see the dear ones she loved any more."
+      ]
+    },
+    {
+      "de": [
+        "Währenddessen war Fräulein Rottenmeier ins Zimmer getreten und hatte noch Klaras Bemühungen, Heidi über seinen Irrtum aufzuklären, mit angehört.",
+        "Als das Kind aber immer noch nicht aufhören konnte zu schluchzen, trat sie mit sichtlichen Zeichen der Ungeduld zu den Kindern heran und sagte mit bestimmtem Ton: \"Adelheid, nun ist des grundlosen Geschreis genug!",
+        "Ich will dir eines sagen: Wenn du noch ein einziges Mal beim Lesen deiner Geschichten solchen Ausbrüchen den Lauf lässt, so nehme ich das Buch aus deinen Händen und für immer!\""
+      ],
+      "en": [
+        "Fraulein Rottenmeier had meanwhile come into the room, and Clara explained to her what had happened.",
+        "As Heidi continued her weeping, the lady, who was evidently getting impatient with her, went up to Heidi and said with decision, \"Now, Adelaide, that is enough of all this causeless lamentation.",
+        "I will tell you once for all, if there are any more scenes like this while you are reading, I shall take the book away from you and shall not let you have it again.\""
+      ]
+    },
+    {
+      "de": [
+        "Das machte Eindruck.",
+        "Heidi wurde ganz weiß vor Schrecken, das Buch war sein höchster Schatz.",
+        "Es trocknete in größter Eile seine Tränen und schluckte und würgte sein Schluchzen mit Gewalt hinunter, so dass kein Tönchen mehr laut wurde.",
+        "Das Mittel hatte geholfen, Heidi weinte nie mehr, was es auch lesen mochte; aber manchmal hatte es solche Anstrengungen zu machen, um sich zu überwinden und nicht aufzuschreien, dass Klara öfter ganz erstaunt sagte: \"Heidi, du machst so schreckliche Grimassen, wie ich noch nie gesehen habe.\"",
+        "Aber die Grimassen machten keinen Lärm und fielen der Dame Rottenmeier nicht auf, und wenn Heidi seinen Anfall von verzweiflungsvoller Traurigkeit niedergerungen hatte, kam alles wieder ins Geleise für einige Zeit und war tonlos vorübergegangen.",
+        "Aber seinen Appetit verlor Heidi so sehr und sah so mager und bleich aus, dass der Sebastian fast nicht ertragen konnte, das so mit anzusehen und Zeuge sein zu müssen, wie Heidi bei Tisch die schönsten Gerichte an sich vorübergehen ließ und nichts essen wollte.",
+        "Er flüsterte ihm auch öfter ermunternd zu, wenn er ihm eine Schüssel hinhielt: \"Nehmen von dem, Mamsellchen, 's ist vortrefflich.",
+        "Nicht so!",
+        "Einen rechten Löffel voll, noch einen!\", und dergleichen väterlicher Räte mehr; aber es half nichts: Heidi aß fast gar nicht mehr, und wenn es sich am Abend auf sein Kissen legte, so hatte es augenblicklich alles vor Augen, was daheim war, und nur ganz leise weinte es dann vor Sehnsucht in sein Kissen hinein, so dass es gar niemand hören konnte."
+      ],
+      "enPara": "Her words had immediate effect on Heidi, who turned pale with fear. The book was her one great treasure. She quickly dried her tears and swallowed her sobs as best she could, so that no further sound of them should be heard. The threat did its work, for Heidi never cried aloud again whatever she might be reading, but she had often to struggle hard to keep back her tears, so that Clara would look at her and say, \"What faces you are making, Heidi, I never saw anything like it!\" But the faces made no noise and did not offend Fraulein Rottenmeier, and Heidi, having overcome her fit of despairing misery, would go quietly on for a while, and no one perceived her sorrow. But she lost all her appetite, and looked so pale and thin that Sebastian was quite unhappy when he looked at her, and could not bear to see her refusing all the nice dishes he handed her. He would whisper to her sometimes, in quite a kind, fatherly manner, \"Take a little; you don't know how nice it is! There, a good spoonful, now another.\" But it was of no use, Heidi hardly ate anything at all, and as soon as she laid her head down at night the picture of home would rise before her eyes, and she would weep, burying her face in the pillow that her crying might not be heard."
+    },
+    {
+      "de": [
+        "So ging eine lange Zeit dahin.",
+        "Heidi wusste gar nie, ob es Sommer oder Winter sei, denn die Mauern und Fenster, die es aus allen Fenstern des Hauses Sesemann erblickte, sahen immer gleich aus, und hinaus kam es nur, wenn es Klara besonders gut ging und eine Ausfahrt im Wagen mit ihr gemacht werden konnte, die aber immer sehr kurz war, denn Klara konnte nicht vertragen, lang zu fahren.",
+        "So kam man kaum aus den Mauern und Steinstraßen heraus, sondern kehrte gewöhnlich vorher wieder um und fuhr immerfort durch große, schöne Straßen, wo Häuser und Menschen in Fülle zu sehen waren, aber nicht Gras und Blumen, keine Tannen und keine Berge, und Heidis Verlangen nach dem Anblick der schönen gewohnten Dinge steigerte sich mit jedem Tage mehr, so dass es jetzt nur den Namen eines dieser Erinnerung weckenden Worte zu lesen brauchte, so war schon ein Ausbruch des Schmerzes nahe, und Heidi hatte mit aller Gewalt dagegen zu ringen.",
+        "So waren Herbst und Winter vergangen, und schon blendete die Sonne wieder so stark auf die weißen Mauern am Hause gegenüber, dass Heidi ahnte, nun sei die Zeit nahe, da der Peter wieder zur Alm führe mit den Geißen, da die goldenen Cystusröschen glitzerten droben im Sonnenschein und allabendlich ringsum alle Berge im Feuer ständen.",
+        "Heidi setzte sich in seinem einsamen Zimmer in einen Winkel und hielt sich mit beiden Händen die Augen zu, dass es den Sonnenschein drüben an der Mauer nicht sehe; und so saß es regungslos, sein brennendes Heimweh lautlos niederkämpfend, bis Klara wieder nach ihm rief."
+      ],
+      "enPara": "And so many weeks passed away. Heidi did not know it is was winter or summer, for the walls and windows she looked out upon showed no change, and she never went beyond the house except on rare occasions when Clara was well enough to drive out, and then they only went a very little way, as Clara could not bear the movement for long. So that on these occasions they generally only saw more fine streets and large houses and crowds of people; they seldom got anywhere beyond them, and grass and flowers, fir trees and mountains, were still far away. Heidi's longing for the old familiar and beautiful things grew daily stronger, so that now only to read a word that recalled them to her remembrance brought her to the verge of tears, which with difficulty she suppressed. So the autumn and winter passed, and again the sun came shining down on the white walls of the opposite houses, and Heidi would think to herself that now the time had come for Peter to go out again with the goats, to where the golden flowers of the cistus were glowing in the sunlight, and all the rocks around turned to fire at sunset. Heidi would go and sit in a corner of her lonely room and put her hands up to her eyes that she might not see the sun shining on the opposite wall; and then she would remain without moving, battling silently with her terrible homesickness until Clara sent for her again."
+    }
+  ]
+}

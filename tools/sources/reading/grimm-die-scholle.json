@@ -1,0 +1,66 @@
+{
+  "id": "grimm-die-scholle",
+  "stage": 3,
+  "title": "Die Scholle",
+  "titleEn": "The Sole",
+  "author": "Brüder Grimm",
+  "year": 1921,
+  "historicalSpelling": false,
+  "khm": "172",
+  "de": {
+    "source": "Project Gutenberg #77905",
+    "edition": "Deutsche Märchen gesammelt durch die Brüder Grimm, ed. M. Thilo-Luyken, Ebenhausen: Wilhelm Langewiesche-Brandt, 1921",
+    "url": "https://www.gutenberg.org/ebooks/77905",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Die Fische waren schon lange unzufrieden, daß keine Ordnung in ihrem Reich herrschte.",
+        "Keiner kehrte sich an den andern, schwamm rechts und links, wie es ihm einfiel, fuhr zwischen denen durch, die zusammenbleiben wollten, oder sperrte ihnen den Weg, und der stärkere gab dem schwächeren einen Schlag mit dem Schwanz, daß er weit weg fuhr, oder er verschlang ihn ohne weiteres.",
+        "»Wie schön wäre es, wenn wir einen König hätten, der Recht und Gerechtigkeit bei uns übte,« sagten sie und vereinigten sich, den zu ihrem Herrn zu wählen, der am schnellsten die Fluten durchstreichen und dem Schwachen Hilfe bringen könnte."
+      ],
+      "en": [
+        "The fishes had for a long time been discontented because no order prevailed in their kingdom.",
+        "None of them turned aside for the others, but all swam to the right or the left as they fancied, or darted between those who wanted to stay together, or got into their way; and a strong one gave a weak one a blow with its tail, which drove it away, or else swallowed it up without more ado.",
+        "“How delightful it would be,” said they, “if we had a king who enforced law and justice among us!” and they met together to choose for their ruler, the one who could cleave through the water most quickly, and give help to the weak ones."
+      ]
+    },
+    {
+      "de": [
+        "Sie stellten sich also am Ufer in Reihe und Glied auf, und der Hecht gab mit dem Schwanz ein Zeichen, worauf sie alle zusammen aufbrachen.",
+        "Wie ein Pfeil schoß der Hecht dahin und mit ihm der Hering, der Gründling, der Barsch, der Karpfen und wie sie alle heißen.",
+        "Auch die Scholle schwamm mit und hoffte das Ziel zu erreichen."
+      ],
+      "en": [
+        "They placed themselves in rank and file by the shore, and the pike gave the signal with his tail, on which they all started.",
+        "Like an arrow, the pike darted away, and with him the herring, the gudgeon, the perch, the carp, and all the rest of them.",
+        "Even the sole swam with them, and hoped to reach the winning-place."
+      ]
+    },
+    {
+      "de": [
+        "Auf einmal ertönte der Ruf: »Der Hering ist vor! Der Hering ist vor!«",
+        "»Wen is vör?« schrie verdrießlich die platte mißgünstige Scholle, die weit zurückgeblieben war, »wen is vör?«",
+        "»Der Hering, der Hering,« war die Antwort.",
+        "»De nackte Hiering?« rief die neidische, »de nackte Hiering?«",
+        "Seit der Zeit steht der Scholle zur Strafe das Maul schief."
+      ],
+      "en": [
+        "All at once, the cry was heard, “The herring is first!”",
+        "“Who is first?” screamed angrily the flat envious sole, who had been left far behind, “who is first?”",
+        "“The herring! The herring,” was the answer.",
+        "“The naked herring?” cried the jealous creature, “the naked herring?”",
+        "Since that time the sole’s mouth has been at one side for a punishment."
+      ]
+    }
+  ]
+}

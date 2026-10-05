@@ -1,0 +1,94 @@
+{
+  "id": "grimm-vom-tode-des-huehnchens",
+  "stage": 3,
+  "title": "Vom Tode des Hühnchens",
+  "titleEn": "The Death of the Little Hen",
+  "author": "Brüder Grimm",
+  "year": 1921,
+  "historicalSpelling": false,
+  "khm": "80",
+  "de": {
+    "source": "Project Gutenberg #77905",
+    "edition": "Deutsche Märchen gesammelt durch die Brüder Grimm, ed. M. Thilo-Luyken, Ebenhausen: Wilhelm Langewiesche-Brandt, 1921",
+    "url": "https://www.gutenberg.org/ebooks/77905",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Auf eine Zeit ging das Hühnchen mit dem Hähnchen in den Nußberg, und sie machten miteinander aus, wer einen Nußkern fände, sollte ihn mit dem andern teilen.",
+        "Nun fand das Hühnchen eine große, große Nuß, sagte aber nichts davon und wollte den Kern allein essen.",
+        "Der Kern war aber so dick, daß es ihn nicht hinunterschlucken konnte und er ihm im Hals stecken blieb, daß ihm angst wurde, es müsse ersticken.",
+        "Da schrie das Hühnchen: »Hähnchen, ich bitte dich, lauf, was du kannst und hol mir Wasser, sonst erstick ich.«",
+        "Das Hähnchen lief, was es konnte, zum Brunnen und sprach: »Born, du sollst mir Wasser geben; das Hühnchen liegt auf dem Nußberg, hat einen großen Nußkern geschluckt und will ersticken.«",
+        "Der Brunnen antwortete: »Lauf erst hin zur Braut und laß dir rote Seide geben.«",
+        "Das Hähnchen lief zur Braut: »Braut, du sollst mir rote Seide geben: rote Seide will ich dem Brunnen geben, der Brunnen soll mir Wasser geben, das Wasser will ich dem Hühnchen bringen, das liegt auf dem Nußberg, hat einen großen Nußkern geschluckt und will daran ersticken.«",
+        "Die Braut antwortete: »Lauf erst und hol mir mein Kränzlein, das blieb an einer Weide hängen.«",
+        "Da lief das Hähnchen zur Weide und zog das Kränzlein von dem Ast und brachte es der Braut, und die Braut gab ihm rote Seide dafür, die brachte es dem Brunnen, der gab ihm Wasser dafür.",
+        "Da brachte das Hähnchen das Wasser zum Hühnchen; wie es aber hinkam, war dieweil das Hühnchen erstickt und lag da tot und regte sich nicht.",
+        "Da war das Hähnchen so traurig, daß es laut schrie und kamen alle Tiere und beklagten das Hühnchen; und sechs Mäuse bauten einen kleinen Wagen, das Hühnchen darin zum Grabe zu fahren; und als der Wagen fertig war, spannten sie sich davor und das Hähnchen fuhr.",
+        "Auf dem Wege aber kam der Fuchs, »wo willst du hin, Hähnchen?«",
+        "»Ich will mein Hühnchen begraben.«",
+        "»Darf ich mitfahren?«"
+      ],
+      "en": [
+        "Once upon a time the little hen went with the little cock to the nut-hill, and they agreed together that whichsoever of them found a kernel of a nut should share it with the other.",
+        "Then the hen found a large, large nut, but said nothing about it, intending to eat the kernel herself.",
+        "The kernel, however, was so large that she could not swallow it, and it remained sticking in her throat, so that she was alarmed lest she should be choked.",
+        "Then she cried, “Cock, I entreat thee to run as fast thou canst, and fetch me some water, or I shall choke.”",
+        "The little cock did run as fast as he could to the spring, and said, “Stream, thou art to give me some water; the little hen is lying on the nut-hill, and she has swallowed a large nut, and is choking.”",
+        "The well answered, “First run to the bride, and get her to give thee some red silk.”",
+        "The little cock ran to the bride and said, “Bride, you are to give me some red silk; I want to give red silk to the well, the well is to give me some water, I am to take the water to the little hen who is lying on the nut-hill and has swallowed a great nut-kernel, and is choking with it.”",
+        "The bride answered, “First run and bring me my little wreath which is hanging to a willow.”",
+        "So the little cock ran to the willow, and drew the wreath from the branch and took it to the bride, and the bride gave him some water for it.",
+        "Then the little cock took the water to the hen, but when he got there the hen had choked in the meantime, and lay there dead and motionless.",
+        "Then the cock was so distressed that he cried aloud, and every animal came to lament the little hen, and six mice built a little carriage to carry her to her grave, and when the carriage was ready they harnessed themselves to it, and the cock drove.",
+        "On the way, however, they met the fox, who said, “Where art thou going, little cock?”",
+        "“I am going to bury my little hen.”",
+        "“May I drive with thee?”"
+      ]
+    },
+    {
+      "de": [
+        "»Ja, aber setz dich hinten auf den Wagen, vorn können's meine Pferdchen nicht vertragen.«"
+      ],
+      "en": [
+        "“Yes, but seat thyself at the back of the carriage, for in the front my little horses could not drag thee.”"
+      ]
+    },
+    {
+      "de": [
+        "Da setzte sich der Fuchs hinten auf, dann der Wolf, der Bär, der Hirsch, der Löwe und alle Tiere in dem Wald.",
+        "So ging die Fahrt fort, da kamen sie an einen Bach.",
+        "»Wie sollen wir nun hinüber?« sagte das Hähnchen.",
+        "Da lag ein Strohhalm am Bach, der sagte: »Ich will mich quer drüber legen, so könnt ihr über mich fahren.«",
+        "Wie aber die sechs Mäuse auf die Brücke kamen, rutschte der Strohhalm und fiel ins Wasser, und die sechs Mäuse fielen alle hinein und ertranken.",
+        "Da ging die Not von neuem an und kam eine Kohle und sagte: »Ich bin groß genug, ich will mich darüber legen und ihr sollt über mich fahren.«",
+        "Die Kohle legte sich auch an das Wasser, aber sie berührte es unglücklicherweise ein wenig, da zischte sie, verlöschte und war tot.",
+        "Wie das ein Stein sah, erbarmte er sich und wollte dem Hähnchen helfen und legte sich über das Wasser.",
+        "Da zog nun das Hähnchen den Wagen selber; wie es ihn aber bald drüben hatte, und war mit dem toten Hühnchen auf dem Land und wollte die andern, die hinten aufsaßen, auch heranziehen, da waren ihrer zuviel geworden, und der Wagen fiel zurück, und alles fiel miteinander in das Wasser und ertrank.",
+        "Da war das Hähnchen noch allein mit dem toten Hühnchen und grub ihm ein Grab und legte es hinein und machte einen Hügel darüber, auf den setzte es sich und grämte sich so lang, bis es auch starb; und da war alles tot."
+      ],
+      "en": [
+        "Then the fox seated himself at the back, and after that the wolf, the bear, the stag, the lion, and all the beasts of the forest did the same.",
+        "Then the procession went onwards, and they reached the stream.",
+        "“How are we to get over?” said the little cock.",
+        "A straw was lying by the stream, and it said, “I will lay myself across, and you shall drive over me.”",
+        "But when the six mice came to the bridge, the straw slipped and fell into the water, and the six mice all fell in and were drowned.",
+        "Then they were again in difficulty, and a coal came and said, “I am large enough, I will lay myself across and you shall drive over me.”",
+        "So the coal also laid itself across the water, but unhappily just touched it, on which the coal hissed, was extinguished and died.",
+        "When a stone saw that, it took pity on the little cock, wished to help him, and laid itself over the water.",
+        "Then the cock drew the carriage himself, but when he got it over and reached the other shore with the dead hen, and was about to draw over the others who were sitting behind as well, there were too many of them, the carriage ran back, and they all fell into the water together, and were drowned.",
+        "Then the little cock was left alone with the dead hen, and dug a grave for her and laid her in it, and made a mound above it, on which he sat down and fretted until he died too, and then every one was dead."
+      ]
+    }
+  ]
+}

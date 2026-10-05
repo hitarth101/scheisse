@@ -1,0 +1,2564 @@
+{
+  "fetched": "2026-10-05",
+  "topics": [
+    {
+      "id": "a1-informal-and-formal",
+      "title": "Informal and formal",
+      "level": "A1",
+      "firstLesson": "A1-1",
+      "lessons": [
+        "A1-1",
+        "A1-3"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+        "title": "Grimm Grammar : nominative pronouns : Personalpronomen im Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-personal-pronouns-ich-du",
+      "title": "Personal pronouns: ich, du",
+      "level": "A1",
+      "firstLesson": "A1-5",
+      "lessons": [
+        "A1-5"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+        "title": "Grimm Grammar : nominative pronouns : Personalpronomen im Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-conjugation-present-tense",
+      "title": "Conjugation: present tense",
+      "level": "A1",
+      "firstLesson": "A1-7",
+      "lessons": [
+        "A1-7"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/v_02.html",
+        "title": "Grimm Grammar : present regular verbs : Das Präsens - Regelmäßige Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg01_03.htm",
+        "title": "Welche Verbform ist richtig?",
+        "detail": "regelmäßige Verben im Präsens"
+      }
+    },
+    {
+      "id": "a1-personal-pronouns-er-sie",
+      "title": "Personal pronouns: er, sie",
+      "level": "A1",
+      "firstLesson": "A1-8",
+      "lessons": [
+        "A1-8"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+        "title": "Grimm Grammar : nominative pronouns : Personalpronomen im Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-numbers-from-11-to-19",
+      "title": "Numbers from 11 to 19",
+      "level": "A1",
+      "firstLesson": "A1-9",
+      "lessons": [
+        "A1-9"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a1-w-questions",
+      "title": "W-questions",
+      "level": "A1",
+      "firstLesson": "A1-11",
+      "lessons": [
+        "A1-11"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg01_04.htm",
+        "title": "Wie heißt das richtige Fragewort?",
+        "detail": "Übung zur Verwendung von Fragewörtern"
+      }
+    },
+    {
+      "id": "a1-numbers-over-100",
+      "title": "Numbers over 100",
+      "level": "A1",
+      "firstLesson": "A1-12",
+      "lessons": [
+        "A1-12"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a1-nouns-gender",
+      "title": "Nouns: gender",
+      "level": "A1",
+      "firstLesson": "A1-14",
+      "lessons": [
+        "A1-14"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/no_02.html",
+        "title": "Grimm Grammar : nouns gender : Genus der Substantive"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap3_artikel.htm",
+        "title": "Welcher Artikel ist richtig?",
+        "detail": "Wählen Sie aus."
+      }
+    },
+    {
+      "id": "a1-vowel-change-e-to-i",
+      "title": "Vowel change: e to i",
+      "level": "A1",
+      "firstLesson": "A1-15",
+      "lessons": [
+        "A1-15"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vi_01.html",
+        "title": "Grimm Grammar : essen : Essen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_06.htm",
+        "title": "Wie heißt die richtige Verbform?",
+        "detail": "unregelmäßige Verben"
+      }
+    },
+    {
+      "id": "a1-simple-past-sein",
+      "title": "Simple past: sein",
+      "level": "A1",
+      "firstLesson": "A1-17",
+      "lessons": [
+        "A1-17"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsp_05.html",
+        "title": "Grimm Grammar : simple past - sein : Das Imperfekt - Sein"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_haben_sein.htm",
+        "title": "Präteritum von haben und sein",
+        "detail": "Wählen Sie die richtige Form."
+      }
+    },
+    {
+      "id": "a1-questions-and-statements",
+      "title": "Questions and statements",
+      "level": "A1",
+      "firstLesson": "A1-18",
+      "lessons": [
+        "A1-18"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_06.html",
+        "title": "Grimm Grammar : word order : Wortstellung"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-indefinite-pronouns-man",
+      "title": "Indefinite pronouns: man",
+      "level": "A1",
+      "firstLesson": "A1-19",
+      "lessons": [
+        "A1-19"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a1-conjugation-sprechen",
+      "title": "Conjugation: sprechen",
+      "level": "A1",
+      "firstLesson": "A1-20",
+      "lessons": [
+        "A1-20"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vi_12.html",
+        "title": "Grimm Grammar : sprechen : Sprechen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_06.htm",
+        "title": "Wie heißt die richtige Verbform?",
+        "detail": "unregelmäßige Verben"
+      }
+    },
+    {
+      "id": "a1-articles-definite",
+      "title": "Articles: definite",
+      "level": "A1",
+      "firstLesson": "A1-21",
+      "lessons": [
+        "A1-21"
+      ],
+      "blank": "article",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/det_01.html",
+        "title": "Grimm Grammar : articles : Bestimmte und Unbestimmte Artikel"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg02_04.htm",
+        "title": "Hier fehlt der bestimmte Artikel!",
+        "detail": "Übung zum bestimmten Artikel"
+      }
+    },
+    {
+      "id": "a1-articles-indefinite",
+      "title": "Articles: indefinite",
+      "level": "A1",
+      "firstLesson": "A1-22",
+      "lessons": [
+        "A1-22"
+      ],
+      "blank": "article",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/det_01.html",
+        "title": "Grimm Grammar : articles : Bestimmte und Unbestimmte Artikel"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg02_05.htm",
+        "title": "Welcher Artikel ist richtig?",
+        "detail": "Übung zum unbestimmten Artikel"
+      }
+    },
+    {
+      "id": "a1-sentence-construction-subject",
+      "title": "Sentence construction: subject",
+      "level": "A1",
+      "firstLesson": "A1-23",
+      "lessons": [
+        "A1-23"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_02.html",
+        "title": "Grimm Grammar : nominative case : Der Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-adjectives-following-sein",
+      "title": "Adjectives following \"sein\"",
+      "level": "A1",
+      "firstLesson": "A1-24",
+      "lessons": [
+        "A1-24"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_01.html",
+        "title": "Grimm Grammar : adjectives overview, adjective endings : Adjektive"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-articles",
+      "title": "Articles",
+      "level": "A1",
+      "firstLesson": "A1-25",
+      "lessons": [
+        "A1-25"
+      ],
+      "blank": "article",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/det_01.html",
+        "title": "Grimm Grammar : articles : Bestimmte und Unbestimmte Artikel"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap3_artikel.htm",
+        "title": "Welcher Artikel ist richtig?",
+        "detail": "Wählen Sie aus."
+      }
+    },
+    {
+      "id": "a1-negatives-nicht",
+      "title": "Negatives: nicht",
+      "level": "A1",
+      "firstLesson": "A1-26",
+      "lessons": [
+        "A1-26"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_02.html",
+        "title": "Grimm Grammar : negation : Negation"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap2_verneinung.htm",
+        "title": "Ein schlechter Tag",
+        "detail": "Wählen Sie das richtige Verneinungswort aus."
+      }
+    },
+    {
+      "id": "a1-zu-adjective",
+      "title": "zu + adjective",
+      "level": "A1",
+      "firstLesson": "A1-27",
+      "lessons": [
+        "A1-27"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a1-possessive-determiners",
+      "title": "Possessive determiners",
+      "level": "A1",
+      "firstLesson": "A1-28",
+      "lessons": [
+        "A1-28",
+        "A2-9"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/det_04.html",
+        "title": "Grimm Grammar : possessive determiners nominative : Possessivpronomen Als Artikel - Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-time-12-hour-clock",
+      "title": "Time: 12-hour clock",
+      "level": "A1",
+      "firstLesson": "A1-29",
+      "lessons": [
+        "A1-29"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_04.html",
+        "title": "Grimm Grammar : telling time : Die Uhrzeiten"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg05_07.htm",
+        "title": "Wie spät ist es?",
+        "detail": "Wortschatzübung"
+      }
+    },
+    {
+      "id": "a1-separable-verbs",
+      "title": "Separable verbs",
+      "level": "A1",
+      "firstLesson": "A1-30",
+      "lessons": [
+        "A1-30",
+        "A2-19"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/v_04.html",
+        "title": "Grimm Grammar : separable prefix verbs : Präsens - Trennbare Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap5_tagesablauf2.htm",
+        "title": "Tagesablauf [2]",
+        "detail": "Bilden Sie Fragen. Achten Sie auf die Verben (trennbar/untrennbar)."
+      }
+    },
+    {
+      "id": "a1-prepositions-of-time-an",
+      "title": "Prepositions of time: an",
+      "level": "A1",
+      "firstLesson": "A1-31",
+      "lessons": [
+        "A1-31"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_05.html",
+        "title": "Grimm Grammar : days of the week : Die Tage der Woche"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg04_12.htm",
+        "title": "Die richtige Präposition",
+        "detail": "Präpositionen mit und ohne Artikel"
+      }
+    },
+    {
+      "id": "a1-adverbs-sequence",
+      "title": "Adverbs: sequence",
+      "level": "A1",
+      "firstLesson": "A1-32",
+      "lessons": [
+        "A1-32"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_03.html",
+        "title": "Grimm Grammar : adverbs of narration : Das Adverb - Narration"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-time-specification-24-hour-clock",
+      "title": "Time specification: 24-hour clock",
+      "level": "A1",
+      "firstLesson": "A1-33",
+      "lessons": [
+        "A1-33"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_04.html",
+        "title": "Grimm Grammar : telling time : Die Uhrzeiten"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg05_07.htm",
+        "title": "Wie spät ist es?",
+        "detail": "Wortschatzübung"
+      }
+    },
+    {
+      "id": "a1-ordinal-numbers",
+      "title": "Ordinal numbers",
+      "level": "A1",
+      "firstLesson": "A1-34",
+      "lessons": [
+        "A1-34"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_06.html",
+        "title": "Grimm Grammar : months and seasons : Monate und die Jahreszeiten"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-conjugation-koennen",
+      "title": "Conjugation: können",
+      "level": "A1",
+      "firstLesson": "A1-35",
+      "lessons": [
+        "A1-35"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k04_koennen.htm",
+        "title": "Ich kann leider nicht",
+        "detail": "Bilden Sie Sätze mit können in der richtigen Form."
+      }
+    },
+    {
+      "id": "a1-simple-past-haben",
+      "title": "Simple past: haben",
+      "level": "A1",
+      "firstLesson": "A1-36",
+      "lessons": [
+        "A1-36"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsp_04.html",
+        "title": "Grimm Grammar : simple past - haben : Das Imperfekt - Haben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_haben_sein.htm",
+        "title": "Präteritum von haben und sein",
+        "detail": "Wählen Sie die richtige Form."
+      }
+    },
+    {
+      "id": "a1-word-formation-professions",
+      "title": "Word formation: professions",
+      "level": "A1",
+      "firstLesson": "A1-37",
+      "lessons": [
+        "A1-37"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-modal-verbs",
+      "title": "Modal verbs",
+      "level": "A1",
+      "firstLesson": "A1-38",
+      "lessons": [
+        "A1-38"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_07.htm",
+        "title": "Wie heißt das richtige Modalverb?",
+        "detail": "müssen und können"
+      }
+    },
+    {
+      "id": "a1-the-dative",
+      "title": "The dative",
+      "level": "A1",
+      "firstLesson": "A1-39",
+      "lessons": [
+        "A1-39"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_09.htm",
+        "title": "Substantive im Dativ",
+        "detail": "Substantive im Dativ"
+      }
+    },
+    {
+      "id": "a1-modal-verbs-wollen",
+      "title": "Modal verbs: wollen",
+      "level": "A1",
+      "firstLesson": "A1-40",
+      "lessons": [
+        "A1-40"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-prepositions-bei-von",
+      "title": "Prepositions: bei, von",
+      "level": "A1",
+      "firstLesson": "A1-41",
+      "lessons": [
+        "A1-41"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap2_praepositionen.htm",
+        "title": "Welche Präposition ist richtig?",
+        "detail": "Wählen Sie aus."
+      }
+    },
+    {
+      "id": "a1-prepositions-of-place",
+      "title": "Prepositions of place",
+      "level": "A1",
+      "firstLesson": "A1-42",
+      "lessons": [
+        "A1-42"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+        "title": "Grimm Grammar : two-way prepositions : Wechselpräpositionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm",
+        "title": "Zu Hause",
+        "detail": "Ergänzen Sie den Akkusativ oder den Dativ."
+      }
+    },
+    {
+      "id": "a1-prepositions-mit",
+      "title": "Prepositions: mit",
+      "level": "A1",
+      "firstLesson": "A1-43",
+      "lessons": [
+        "A1-43"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k07_verkehrsmittel.htm",
+        "title": "Verkehrsmittel",
+        "detail": "Ergänzen Sie die Verkehrsmittel im Nominativ und im Dativ."
+      }
+    },
+    {
+      "id": "a1-two-case-prepositions",
+      "title": "Two-case prepositions",
+      "level": "A1",
+      "firstLesson": "A1-44",
+      "lessons": [
+        "A1-44",
+        "A2-43"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+        "title": "Grimm Grammar : two-way prepositions : Wechselpräpositionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm",
+        "title": "Zu Hause",
+        "detail": "Ergänzen Sie den Akkusativ oder den Dativ."
+      }
+    },
+    {
+      "id": "a1-negation-nicht-kein",
+      "title": "Negation: nicht/kein",
+      "level": "A1",
+      "firstLesson": "A1-45",
+      "lessons": [
+        "A1-45",
+        "B1-30"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_02.html",
+        "title": "Grimm Grammar : negation : Negation"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap2_verneinung.htm",
+        "title": "Ein schlechter Tag",
+        "detail": "Wählen Sie das richtige Verneinungswort aus."
+      }
+    },
+    {
+      "id": "a1-comparative",
+      "title": "Comparative",
+      "level": "A1",
+      "firstLesson": "A1-46",
+      "lessons": [
+        "A1-46"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+        "title": "Grimm Grammar : comparative and superlative : Komparativ und Superlativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm",
+        "title": "Steigerung von Adjektiven",
+        "detail": "Ergänzen Sie die Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a1-comparison-wie-als",
+      "title": "Comparison: wie/als",
+      "level": "A1",
+      "firstLesson": "A1-47",
+      "lessons": [
+        "A1-47"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+        "title": "Grimm Grammar : comparative and superlative : Komparativ und Superlativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm",
+        "title": "Steigerung von Adjektiven",
+        "detail": "Ergänzen Sie die Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a1-gehen-infinitive",
+      "title": "gehen + infinitive",
+      "level": "A1",
+      "firstLesson": "A1-48",
+      "lessons": [
+        "A1-48"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a1-prepositions-in-auf",
+      "title": "Prepositions: in, auf",
+      "level": "A1",
+      "firstLesson": "A1-49",
+      "lessons": [
+        "A1-49"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_09.html",
+        "title": "Grimm Grammar : two-way prepositions : Wechselpräpositionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap7_zuhause.htm",
+        "title": "Zu Hause",
+        "detail": "Ergänzen Sie den Akkusativ oder den Dativ."
+      }
+    },
+    {
+      "id": "a1-question-words-wie-viel",
+      "title": "Question words: wie viel",
+      "level": "A1",
+      "firstLesson": "A1-51",
+      "lessons": [
+        "A1-51"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-instructions",
+      "title": "Instructions",
+      "level": "A1",
+      "firstLesson": "A1-52",
+      "lessons": [
+        "A1-52"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vimp_01.html",
+        "title": "Grimm Grammar : imperative : Der Imperativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k10_gesund.htm",
+        "title": "Tipps: Gesünder leben",
+        "detail": "Geben Sie Tipps im Imperativ. Ergänzen Sie die Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a1-present-perfect-with-haben",
+      "title": "Present perfect with \"haben\"",
+      "level": "A1",
+      "firstLesson": "A1-53",
+      "lessons": [
+        "A1-53"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+        "title": "Grimm Grammar : conversational past : Das Perfekt - Einführung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm",
+        "title": "HABEN oder SEIN? (1)",
+        "detail": "Perfektbildung mit haben und sein"
+      }
+    },
+    {
+      "id": "a1-comparison",
+      "title": "Comparison",
+      "level": "A1",
+      "firstLesson": "A1-54",
+      "lessons": [
+        "A1-54",
+        "A1-65",
+        "A1-67",
+        "A2-16"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+        "title": "Grimm Grammar : comparative and superlative : Komparativ und Superlativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k11_komparation.htm",
+        "title": "Steigerung von Adjektiven",
+        "detail": "Ergänzen Sie die Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a1-present-perfect-with-sein",
+      "title": "Present perfect with \"sein\"",
+      "level": "A1",
+      "firstLesson": "A1-55",
+      "lessons": [
+        "A1-55"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+        "title": "Grimm Grammar : conversational past : Das Perfekt - Einführung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm",
+        "title": "HABEN oder SEIN? (1)",
+        "detail": "Perfektbildung mit haben und sein"
+      }
+    },
+    {
+      "id": "a1-pronouns-es",
+      "title": "Pronouns: es",
+      "level": "A1",
+      "firstLesson": "A1-56",
+      "lessons": [
+        "A1-56"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+        "title": "Grimm Grammar : nominative pronouns : Personalpronomen im Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-adjective-declension",
+      "title": "Adjective declension",
+      "level": "A1",
+      "firstLesson": "A1-57",
+      "lessons": [
+        "A1-57",
+        "A1-61",
+        "A1-73",
+        "A2-10"
+      ],
+      "blank": "adjective",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_01.html",
+        "title": "Grimm Grammar : adjectives overview, adjective endings : Adjektive"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg08_11.htm",
+        "title": "Adjektive",
+        "detail": "Adjektivendungen"
+      }
+    },
+    {
+      "id": "a1-question-words-welch",
+      "title": "Question words: welch-",
+      "level": "A1",
+      "firstLesson": "A1-58",
+      "lessons": [
+        "A1-58"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-verbs-with-a-dative-object",
+      "title": "Verbs with a dative object",
+      "level": "A1",
+      "firstLesson": "A1-59",
+      "lessons": [
+        "A1-59",
+        "A2-28",
+        "A2-60"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap8_tagesablauf.htm",
+        "title": "Ulrichs Tag",
+        "detail": "Verben mit Dativ und Akkusativ. Ergänzen Sie die Endungen."
+      }
+    },
+    {
+      "id": "a1-personal-pronouns-accusative",
+      "title": "Personal pronouns: accusative",
+      "level": "A1",
+      "firstLesson": "A1-62",
+      "lessons": [
+        "A1-62"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_03.html",
+        "title": "Grimm Grammar : accusative pronouns : Personalpronomen im Akkusativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap4_personalpronomen.htm",
+        "title": "Personalpronomen im Akkusativ",
+        "detail": "Ergänzen Sie das Nomen durch ein Pronomen (ihn - es - sie)."
+      }
+    },
+    {
+      "id": "a1-the-possessive-determiner",
+      "title": "The possessive determiner",
+      "level": "A1",
+      "firstLesson": "A1-63",
+      "lessons": [
+        "A1-63"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/det_04.html",
+        "title": "Grimm Grammar : possessive determiners nominative : Possessivpronomen Als Artikel - Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-modal-verbs-sollen",
+      "title": "Modal verbs: sollen",
+      "level": "A1",
+      "firstLesson": "A1-64",
+      "lessons": [
+        "A1-64",
+        "A2-11",
+        "A2-54"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_08.htm",
+        "title": "Wie heißt die richtige Verbform?",
+        "detail": "Das Verb sollen"
+      }
+    },
+    {
+      "id": "a1-time-specification-wann",
+      "title": "Time specification: Wann ...?",
+      "level": "A1",
+      "firstLesson": "A1-66",
+      "lessons": [
+        "A1-66"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_01.html",
+        "title": "Grimm Grammar : adverbs of time, frequency, quantity, intensity : Das Adverb: Wann? Wie oft? Wie viel? Wie sehr?"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-imperative-informal",
+      "title": "Imperative: informal",
+      "level": "A1",
+      "firstLesson": "A1-68",
+      "lessons": [
+        "A1-68"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vimp_01.html",
+        "title": "Grimm Grammar : imperative : Der Imperativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k10_gesund.htm",
+        "title": "Tipps: Gesünder leben",
+        "detail": "Geben Sie Tipps im Imperativ. Ergänzen Sie die Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a1-muessen-or-sollen",
+      "title": "Müssen or sollen?",
+      "level": "A1",
+      "firstLesson": "A1-69",
+      "lessons": [
+        "A1-69"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a1-modal-verbs-duerfen",
+      "title": "Modal verbs: dürfen",
+      "level": "A1",
+      "firstLesson": "A1-70",
+      "lessons": [
+        "A1-70"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg08_04.htm",
+        "title": "dürfen",
+        "detail": "dürfen"
+      }
+    },
+    {
+      "id": "a1-present-perfect",
+      "title": "Present perfect",
+      "level": "A1",
+      "firstLesson": "A1-71",
+      "lessons": [
+        "A1-71"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+        "title": "Grimm Grammar : conversational past : Das Perfekt - Einführung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg04_10.htm",
+        "title": "HABEN oder SEIN? (1)",
+        "detail": "Perfektbildung mit haben und sein"
+      }
+    },
+    {
+      "id": "a1-prepositions-vor-nach",
+      "title": "Prepositions: vor, nach",
+      "level": "A1",
+      "firstLesson": "A1-72",
+      "lessons": [
+        "A1-72"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg04_12.htm",
+        "title": "Die richtige Präposition",
+        "detail": "Präpositionen mit und ohne Artikel"
+      }
+    },
+    {
+      "id": "a1-personal-pronouns-dative",
+      "title": "Personal pronouns: dative",
+      "level": "A1",
+      "firstLesson": "A1-74",
+      "lessons": [
+        "A1-74"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_04.html",
+        "title": "Grimm Grammar : dative pronouns : Personalpronomen im Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_10.htm",
+        "title": "Wie heißt das richtige Personalpronomen?",
+        "detail": "Personalpronomen im Dativ"
+      }
+    },
+    {
+      "id": "a1-subjunctive-wishes",
+      "title": "Subjunctive: Wishes",
+      "level": "A1",
+      "firstLesson": "A1-76",
+      "lessons": [
+        "A1-76"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+        "title": "Grimm Grammar : present subjunctive : Konjunktiv II im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm",
+        "title": "Wünsche und Träume",
+        "detail": "Formulieren Sie Wünsche und Träume im Konjunktiv II."
+      }
+    },
+    {
+      "id": "a2-prepositions-vor-seit",
+      "title": "Prepositions: vor, seit",
+      "level": "A2",
+      "firstLesson": "A2-1",
+      "lessons": [
+        "A2-1"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg05_12.htm",
+        "title": "Präpositionen",
+        "detail": "Präpositionen"
+      }
+    },
+    {
+      "id": "a2-compound-conjunctions",
+      "title": "Compound conjunctions",
+      "level": "A2",
+      "firstLesson": "A2-2",
+      "lessons": [
+        "A2-2"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-subordinate-clauses-dass",
+      "title": "Subordinate clauses: dass",
+      "level": "A2",
+      "firstLesson": "A2-3",
+      "lessons": [
+        "A2-3"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k03_gut_finden.htm",
+        "title": "Ich finde es gut, dass ...",
+        "detail": "Bilden Sie dass-Sätze wie im Beispiel."
+      }
+    },
+    {
+      "id": "a2-indirect-interrogatives",
+      "title": "Indirect interrogatives",
+      "level": "A2",
+      "firstLesson": "A2-4",
+      "lessons": [
+        "A2-4"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+        "title": "Einleitung von Nebensätzen",
+        "detail": "Einleitung von Nebensätzen"
+      }
+    },
+    {
+      "id": "a2-subordinate-clauses",
+      "title": "Subordinate clauses",
+      "level": "A2",
+      "firstLesson": "A2-5",
+      "lessons": [
+        "A2-5"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+        "title": "Einleitung von Nebensätzen",
+        "detail": "Einleitung von Nebensätzen"
+      }
+    },
+    {
+      "id": "a2-nouns-ending-in-ung",
+      "title": "Nouns ending in -ung",
+      "level": "A2",
+      "firstLesson": "A2-7",
+      "lessons": [
+        "A2-7",
+        "A2-50"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k09_wortbildung.htm",
+        "title": "Wortbildung",
+        "detail": "Was wurde gemacht? Ergänzen Sie die Verben wie im Beispiel."
+      }
+    },
+    {
+      "id": "a2-conjugation-buegeln",
+      "title": "Conjugation: bügeln",
+      "level": "A2",
+      "firstLesson": "A2-13",
+      "lessons": [
+        "A2-13"
+      ],
+      "blank": "verb",
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a2-verbs-preposition",
+      "title": "Verbs + preposition",
+      "level": "A2",
+      "firstLesson": "A2-14",
+      "lessons": [
+        "A2-14",
+        "A2-22",
+        "A2-58"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vphr_01.html",
+        "title": "Grimm Grammar : verbal phrases : Verben mit Präpositionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap4_praepositionen1.htm",
+        "title": "Helga und ihr neuer Freund",
+        "detail": "Verben mit Präpositionen. Wählen Sie die richtige Präposition aus."
+      }
+    },
+    {
+      "id": "a2-conjunctions-aber",
+      "title": "Conjunctions: aber",
+      "level": "A2",
+      "firstLesson": "A2-17",
+      "lessons": [
+        "A2-17"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-conjunctions-oder",
+      "title": "Conjunctions: oder",
+      "level": "A2",
+      "firstLesson": "A2-18",
+      "lessons": [
+        "A2-18"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-reflexive-verbs",
+      "title": "Reflexive verbs",
+      "level": "A2",
+      "firstLesson": "A2-21",
+      "lessons": [
+        "A2-21"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vrf_01.html",
+        "title": "Grimm Grammar : reflexive verbs : Die Reflexiven Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_07.htm",
+        "title": "Reflexive Verben",
+        "detail": "Reflexive Verben"
+      }
+    },
+    {
+      "id": "a2-adjective-preposition",
+      "title": "Adjective + preposition",
+      "level": "A2",
+      "firstLesson": "A2-23",
+      "lessons": [
+        "A2-23"
+      ],
+      "blank": "preposition",
+      "grimm": null,
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k10_gefuehle.htm",
+        "title": "Gefühle",
+        "detail": "Ergänzen Sie die Präpositionen und das zugehörige Fragewort."
+      }
+    },
+    {
+      "id": "a2-expressions-with-the-dative",
+      "title": "Expressions with the dative",
+      "level": "A2",
+      "firstLesson": "A2-25",
+      "lessons": [
+        "A2-25"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a2-indefinite-pronouns",
+      "title": "Indefinite pronouns",
+      "level": "A2",
+      "firstLesson": "A2-26",
+      "lessons": [
+        "A2-26"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a2-reflexive-pronouns",
+      "title": "Reflexive pronouns",
+      "level": "A2",
+      "firstLesson": "A2-27",
+      "lessons": [
+        "A2-27",
+        "A2-40"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vrf_01.html",
+        "title": "Grimm Grammar : reflexive verbs : Die Reflexiven Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_reflexivpronomen.htm",
+        "title": "Reflexivpronomen",
+        "detail": "Ergänzen Sie die Reflexivpronomen."
+      }
+    },
+    {
+      "id": "a2-time-specification-wie-oft",
+      "title": "Time specification: Wie oft ...?",
+      "level": "A2",
+      "firstLesson": "A2-29",
+      "lessons": [
+        "A2-29"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_01.html",
+        "title": "Grimm Grammar : adverbs of time, frequency, quantity, intensity : Das Adverb: Wann? Wie oft? Wie viel? Wie sehr?"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-indirect-questions-ob",
+      "title": "Indirect questions: ob",
+      "level": "A2",
+      "firstLesson": "A2-30",
+      "lessons": [
+        "A2-30"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_subjunktionen.htm",
+        "title": "dass, wenn oder ob",
+        "detail": "Ergänzen Sie die Sätze."
+      }
+    },
+    {
+      "id": "a2-messages-without-a-subject",
+      "title": "Messages without a subject",
+      "level": "A2",
+      "firstLesson": "A2-31",
+      "lessons": [
+        "A2-31"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a2-indirect-questions",
+      "title": "Indirect questions",
+      "level": "A2",
+      "firstLesson": "A2-32",
+      "lessons": [
+        "A2-32",
+        "A2-52"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_15.htm",
+        "title": "Einleitung von Nebensätzen",
+        "detail": "Einleitung von Nebensätzen"
+      }
+    },
+    {
+      "id": "a2-relative-clauses-nominative",
+      "title": "Relative clauses: nominative",
+      "level": "A2",
+      "firstLesson": "A2-33",
+      "lessons": [
+        "A2-33"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm",
+        "title": "Nora hat Glück: Ihre Familie ist sehr nett.",
+        "detail": "Ergänzen Sie die Relativpronomen."
+      }
+    },
+    {
+      "id": "a2-relative-clauses-interruptive",
+      "title": "Relative clauses: interruptive",
+      "level": "A2",
+      "firstLesson": "A2-34",
+      "lessons": [
+        "A2-34"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-relative-clauses-accusative",
+      "title": "Relative clauses: accusative",
+      "level": "A2",
+      "firstLesson": "A2-35",
+      "lessons": [
+        "A2-35"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm",
+        "title": "Nora hat Glück: Ihre Familie ist sehr nett.",
+        "detail": "Ergänzen Sie die Relativpronomen."
+      }
+    },
+    {
+      "id": "a2-linked-relative-clauses",
+      "title": "Linked relative clauses",
+      "level": "A2",
+      "firstLesson": "A2-36",
+      "lessons": [
+        "A2-36"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-adverbs-gradable",
+      "title": "Adverbs: gradable",
+      "level": "A2",
+      "firstLesson": "A2-38",
+      "lessons": [
+        "A2-38",
+        "A2-72"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_01.html",
+        "title": "Grimm Grammar : adverbs of time, frequency, quantity, intensity : Das Adverb: Wann? Wie oft? Wie viel? Wie sehr?"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-simple-past-muessen-duerfen",
+      "title": "Simple past: müssen, dürfen",
+      "level": "A2",
+      "firstLesson": "A2-45",
+      "lessons": [
+        "A2-45"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_02.html",
+        "title": "Grimm Grammar : modal verbs - past tense : Modalverben im Imperfekt"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k12_modalverben.htm",
+        "title": "Modalverben in der Vergangenheit",
+        "detail": "Was haben die Leute gemacht? Wählen Sie das richtige Verb aus."
+      }
+    },
+    {
+      "id": "a2-impersonal-verbs",
+      "title": "Impersonal verbs",
+      "level": "A2",
+      "firstLesson": "A2-46",
+      "lessons": [
+        "A2-46"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_02.html",
+        "title": "Grimm Grammar : nominative pronouns : Personalpronomen im Nominativ"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-simple-past-koennen-wollen",
+      "title": "Simple past: können, wollen",
+      "level": "A2",
+      "firstLesson": "A2-47",
+      "lessons": [
+        "A2-47"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_02.html",
+        "title": "Grimm Grammar : modal verbs - past tense : Modalverben im Imperfekt"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_k12_modalverben.htm",
+        "title": "Modalverben in der Vergangenheit",
+        "detail": "Was haben die Leute gemacht? Wählen Sie das richtige Verb aus."
+      }
+    },
+    {
+      "id": "a2-simple-past-regular-verbs",
+      "title": "Simple past: regular verbs",
+      "level": "A2",
+      "firstLesson": "A2-48",
+      "lessons": [
+        "A2-48",
+        "A2-55"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsp_01.html",
+        "title": "Grimm Grammar : simple past regular verbs : Das Imperfekt - Regelmäßige Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg07_04.htm",
+        "title": "Wie heißt die richtige Verbform?",
+        "detail": "Präteritum"
+      }
+    },
+    {
+      "id": "a2-conjunctions-denn",
+      "title": "Conjunctions: denn",
+      "level": "A2",
+      "firstLesson": "A2-49",
+      "lessons": [
+        "A2-49"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap3_nebensaetze.htm",
+        "title": "Wenn, weil oder denn?",
+        "detail": "Ergänzen Sie die Sätze."
+      }
+    },
+    {
+      "id": "a2-subjunctive-polite-requests",
+      "title": "Subjunctive: polite requests",
+      "level": "A2",
+      "firstLesson": "A2-51",
+      "lessons": [
+        "A2-51"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+        "title": "Grimm Grammar : present subjunctive : Konjunktiv II im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k09_fragen.htm",
+        "title": "Höfliche Fragen",
+        "detail": "Formulieren Sie höfliche Fragen."
+      }
+    },
+    {
+      "id": "a2-question-words-case",
+      "title": "Question words: case",
+      "level": "A2",
+      "firstLesson": "A2-57",
+      "lessons": [
+        "A2-57"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "a2-subordinate-clauses-wenn",
+      "title": "Subordinate clauses: wenn",
+      "level": "A2",
+      "firstLesson": "A2-59",
+      "lessons": [
+        "A2-59"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap3_nebensaetze.htm",
+        "title": "Wenn, weil oder denn?",
+        "detail": "Ergänzen Sie die Sätze."
+      }
+    },
+    {
+      "id": "a2-verbs-with-two-objects",
+      "title": "Verbs with two objects",
+      "level": "A2",
+      "firstLesson": "A2-61",
+      "lessons": [
+        "A2-61"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_07.html",
+        "title": "Grimm Grammar : dative : Der Dativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a1/a1_kap8_tagesablauf.htm",
+        "title": "Ulrichs Tag",
+        "detail": "Verben mit Dativ und Akkusativ. Ergänzen Sie die Endungen."
+      }
+    },
+    {
+      "id": "a2-sentence-construction-pronouns",
+      "title": "Sentence construction: pronouns",
+      "level": "A2",
+      "firstLesson": "A2-62",
+      "lessons": [
+        "A2-62"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_06.html",
+        "title": "Grimm Grammar : word order : Wortstellung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg03_11.htm",
+        "title": "Welche Variante ist richtig?",
+        "detail": "Personalpronomen im Dativ und Akkusativ"
+      }
+    },
+    {
+      "id": "a2-making-suggestions",
+      "title": "Making suggestions",
+      "level": "A2",
+      "firstLesson": "A2-63",
+      "lessons": [
+        "A2-63"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "a2-relative-clauses",
+      "title": "Relative clauses",
+      "level": "A2",
+      "firstLesson": "A2-65",
+      "lessons": [
+        "A2-65",
+        "A2-73"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_kap6_relativpronomen.htm",
+        "title": "Nora hat Glück: Ihre Familie ist sehr nett.",
+        "detail": "Ergänzen Sie die Relativpronomen."
+      }
+    },
+    {
+      "id": "a2-genitive",
+      "title": "Genitive",
+      "level": "A2",
+      "firstLesson": "A2-66",
+      "lessons": [
+        "A2-66"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+        "title": "Grimm Grammar : genitive : Der Genitiv"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k02_superlative.htm",
+        "title": "Das älteste Buch der Bibliothek",
+        "detail": "Ergänzen Sie das Adjektiv im Superlativ und das Nomen im Genitiv."
+      }
+    },
+    {
+      "id": "a2-relative-clauses-preposition",
+      "title": "Relative clauses + preposition",
+      "level": "A2",
+      "firstLesson": "A2-68",
+      "lessons": [
+        "A2-68"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k11_pronomen.htm",
+        "title": "Wer sucht was?",
+        "detail": "Ergänzen Sie die Relativpronomen."
+      }
+    },
+    {
+      "id": "a2-adjectives-preposition",
+      "title": "Adjectives + preposition",
+      "level": "A2",
+      "firstLesson": "A2-70",
+      "lessons": [
+        "A2-70"
+      ],
+      "blank": "preposition",
+      "grimm": null,
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k10_gefuehle.htm",
+        "title": "Gefühle",
+        "detail": "Ergänzen Sie die Präpositionen und das zugehörige Fragewort."
+      }
+    },
+    {
+      "id": "a2-passive",
+      "title": "Passive",
+      "level": "A2",
+      "firstLesson": "A2-74",
+      "lessons": [
+        "A2-74"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vpass_01.html",
+        "title": "Grimm Grammar : passive voice present tense : Das Passiv im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k08_passiv.htm",
+        "title": "Was wird gemacht?",
+        "detail": "Ergänzen Sie die Verben im Passiv."
+      }
+    },
+    {
+      "id": "a2-final-clauses-um-zu",
+      "title": "Final clauses: um ... zu",
+      "level": "A2",
+      "firstLesson": "A2-75",
+      "lessons": [
+        "A2-75"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+        "title": "Grimm Grammar : infinitive constructions : Der Infinitivsatz"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg11_01.htm",
+        "title": "Infinitivkonstruktionen",
+        "detail": "Infinitivkonstruktionen"
+      }
+    },
+    {
+      "id": "b1-indirekte-fragesaetze-ob",
+      "title": "Indirekte Fragesätze: ob",
+      "level": "B1",
+      "firstLesson": "B1-3",
+      "lessons": [
+        "B1-3"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_05.html",
+        "title": "Grimm Grammar : interrogatives : Fragen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k05_subjunktionen.htm",
+        "title": "dass, wenn oder ob",
+        "detail": "Ergänzen Sie die Sätze."
+      }
+    },
+    {
+      "id": "b1-modalverben",
+      "title": "Modalverben",
+      "level": "B1",
+      "firstLesson": "B1-4",
+      "lessons": [
+        "B1-4"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap2_modalverben.htm",
+        "title": "Am Telefon",
+        "detail": "Wählen Sie das richtige Modalverb aus."
+      }
+    },
+    {
+      "id": "b1-nominalisierung",
+      "title": "Nominalisierung",
+      "level": "B1",
+      "firstLesson": "B1-5",
+      "lessons": [
+        "B1-5"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k11_nomen-verb.htm",
+        "title": "Nominalisierung",
+        "detail": "Bilden Sie aus den Verben die passenden Nomen."
+      }
+    },
+    {
+      "id": "b1-nebensaetze-waehrend",
+      "title": "Nebensätze: während",
+      "level": "B1",
+      "firstLesson": "B1-6",
+      "lessons": [
+        "B1-6"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-indirekte-rede",
+      "title": "Indirekte Rede",
+      "level": "B1",
+      "firstLesson": "B1-8",
+      "lessons": [
+        "B1-8"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsub_04.html",
+        "title": "Grimm Grammar : reported speech : Konjunktiv I"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-praeteritum-unregelmaessig",
+      "title": "Präteritum: unregelmäßig",
+      "level": "B1",
+      "firstLesson": "B1-9",
+      "lessons": [
+        "B1-9"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsp_02.html",
+        "title": "Grimm Grammar : simple past irregular verbs : Das Imperfekt - Unregelmäßige Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap8_praeteritum.htm",
+        "title": "Ein Restaurantbesuch",
+        "detail": "Ergänzen Sie die Verben im Präteritum."
+      }
+    },
+    {
+      "id": "b1-praeteritum-oder-perfekt",
+      "title": "Präteritum oder Perfekt?",
+      "level": "B1",
+      "firstLesson": "B1-11",
+      "lessons": [
+        "B1-11"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vcp_01.html",
+        "title": "Grimm Grammar : conversational past : Das Perfekt - Einführung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k03_vergangenheitsformen.htm",
+        "title": "Was machte der Koch? Was hat der Koch gemacht?",
+        "detail": "Ergänzen Sie die Verben im Präteritum und im Perfekt wie im Beispiel."
+      }
+    },
+    {
+      "id": "b1-satzbau-hauptsaetze",
+      "title": "Satzbau: Hauptsätze",
+      "level": "B1",
+      "firstLesson": "B1-12",
+      "lessons": [
+        "B1-12"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_06.html",
+        "title": "Grimm Grammar : word order : Wortstellung"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-adverbien-gruende",
+      "title": "Adverbien: Gründe",
+      "level": "B1",
+      "firstLesson": "B1-14",
+      "lessons": [
+        "B1-14"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_03.html",
+        "title": "Grimm Grammar : adverbs of narration : Das Adverb - Narration"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k12_gruende.htm",
+        "title": "Gründe und Gegengründe",
+        "detail": "Formen Sie Hauptsätze mit den Adverbien deshalb oder trotzdem."
+      }
+    },
+    {
+      "id": "b1-konjunktiv-ii-tipps",
+      "title": "Konjunktiv II: Tipps",
+      "level": "B1",
+      "firstLesson": "B1-15",
+      "lessons": [
+        "B1-15"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+        "title": "Grimm Grammar : present subjunctive : Konjunktiv II im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k06_relativpronomen2.htm",
+        "title": "Ratschläge",
+        "detail": "Formulieren Sie Ratschläge mit sollte-."
+      }
+    },
+    {
+      "id": "b1-doppelkonjunktionen",
+      "title": "Doppelkonjunktionen",
+      "level": "B1",
+      "firstLesson": "B1-17",
+      "lessons": [
+        "B1-17",
+        "B1-28",
+        "B1-42",
+        "B1-57"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-finalsaetze-um-zu",
+      "title": "Finalsätze: um ... zu",
+      "level": "B1",
+      "firstLesson": "B1-20",
+      "lessons": [
+        "B1-20"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+        "title": "Grimm Grammar : infinitive constructions : Der Infinitivsatz"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg11_01.htm",
+        "title": "Infinitivkonstruktionen",
+        "detail": "Infinitivkonstruktionen"
+      }
+    },
+    {
+      "id": "b1-wortbildung-adjektive",
+      "title": "Wortbildung: Adjektive",
+      "level": "B1",
+      "firstLesson": "B1-22",
+      "lessons": [
+        "B1-22"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg07_11.htm",
+        "title": "Adjektive und Adverbien mit den Suffixen -arm und -reich",
+        "detail": "-arm und -reich"
+      }
+    },
+    {
+      "id": "b1-kausale-verbindungen",
+      "title": "Kausale Verbindungen",
+      "level": "B1",
+      "firstLesson": "B1-23",
+      "lessons": [
+        "B1-23"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k06_kausalsaetze.htm",
+        "title": "Körperliche Probleme und ihre Ursachen",
+        "detail": "Formulieren Sie Kausalsätze."
+      }
+    },
+    {
+      "id": "b1-nebensaetze-obwohl",
+      "title": "Nebensätze: obwohl",
+      "level": "B1",
+      "firstLesson": "B1-24",
+      "lessons": [
+        "B1-24"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_subjunktionen.htm",
+        "title": "Wie wir leben: Thomas Müller",
+        "detail": "Ergänzen Sie weil, wenn, damit oder obwohl."
+      }
+    },
+    {
+      "id": "b1-konzessive-verbindungen",
+      "title": "Konzessive Verbindungen",
+      "level": "B1",
+      "firstLesson": "B1-25",
+      "lessons": [
+        "B1-25"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adv_03.html",
+        "title": "Grimm Grammar : adverbs of narration : Das Adverb - Narration"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k12_gruende.htm",
+        "title": "Gründe und Gegengründe",
+        "detail": "Formen Sie Hauptsätze mit den Adverbien deshalb oder trotzdem."
+      }
+    },
+    {
+      "id": "b1-nebensaetze-zu-infinitiv",
+      "title": "Nebensätze: zu + Infinitiv",
+      "level": "B1",
+      "firstLesson": "B1-26",
+      "lessons": [
+        "B1-26"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+        "title": "Grimm Grammar : infinitive constructions : Der Infinitivsatz"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap2_zu.htm",
+        "title": "Regines Pläne",
+        "detail": "Mit oder ohne zu? Wählen Sie aus."
+      }
+    },
+    {
+      "id": "b1-konjunktionen-sondern",
+      "title": "Konjunktionen: sondern",
+      "level": "B1",
+      "firstLesson": "B1-27",
+      "lessons": [
+        "B1-27"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-praeteritum",
+      "title": "Präteritum",
+      "level": "B1",
+      "firstLesson": "B1-31",
+      "lessons": [
+        "B1-31"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsp_01.html",
+        "title": "Grimm Grammar : simple past regular verbs : Das Imperfekt - Regelmäßige Verben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap8_praeteritum.htm",
+        "title": "Ein Restaurantbesuch",
+        "detail": "Ergänzen Sie die Verben im Präteritum."
+      }
+    },
+    {
+      "id": "b1-nebensaetze-wenn",
+      "title": "Nebensätze: wenn",
+      "level": "B1",
+      "firstLesson": "B1-32",
+      "lessons": [
+        "B1-32"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_subjunktionen.htm",
+        "title": "Wie wir leben: Thomas Müller",
+        "detail": "Ergänzen Sie weil, wenn, damit oder obwohl."
+      }
+    },
+    {
+      "id": "b1-ordnungszahlen",
+      "title": "Ordnungszahlen",
+      "level": "B1",
+      "firstLesson": "B1-33",
+      "lessons": [
+        "B1-33"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_06.html",
+        "title": "Grimm Grammar : months and seasons : Monate und die Jahreszeiten"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-konjunktiv-ii-praesens",
+      "title": "Konjunktiv II: Präsens",
+      "level": "B1",
+      "firstLesson": "B1-34",
+      "lessons": [
+        "B1-34"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vsub_02.html",
+        "title": "Grimm Grammar : present subjunctive : Konjunktiv II im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm",
+        "title": "Wünsche und Träume",
+        "detail": "Formulieren Sie Wünsche und Träume im Konjunktiv II."
+      }
+    },
+    {
+      "id": "b1-fragewoerter-wo-r",
+      "title": "Fragewörter: wo(r)-",
+      "level": "B1",
+      "firstLesson": "B1-37",
+      "lessons": [
+        "B1-37"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vphr_01.html",
+        "title": "Grimm Grammar : verbal phrases : Verben mit Präpositionen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg08_10.htm",
+        "title": "Fragewörter",
+        "detail": "Fragewörter"
+      }
+    },
+    {
+      "id": "b1-praepositionen-wegen",
+      "title": "Präpositionen: wegen",
+      "level": "B1",
+      "firstLesson": "B1-43",
+      "lessons": [
+        "B1-43"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+        "title": "Grimm Grammar : genitive : Der Genitiv"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-futur-i",
+      "title": "Futur I",
+      "level": "B1",
+      "firstLesson": "B1-44",
+      "lessons": [
+        "B1-44"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vf_01.html",
+        "title": "Grimm Grammar : future tense : Das Futur"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-modalverben-sollen",
+      "title": "Modalverben: sollen",
+      "level": "B1",
+      "firstLesson": "B1-54",
+      "lessons": [
+        "B1-54"
+      ],
+      "blank": "verb",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg06_08.htm",
+        "title": "Wie heißt die richtige Verbform?",
+        "detail": "Das Verb sollen"
+      }
+    },
+    {
+      "id": "b1-partizip-i",
+      "title": "Partizip I",
+      "level": "B1",
+      "firstLesson": "B1-55",
+      "lessons": [
+        "B1-55"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg12_01.htm",
+        "title": "Partizip I",
+        "detail": "Partizip I"
+      }
+    },
+    {
+      "id": "b1-plusquamperfekt",
+      "title": "Plusquamperfekt",
+      "level": "B1",
+      "firstLesson": "B1-56",
+      "lessons": [
+        "B1-56"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vpp_01.html",
+        "title": "Grimm Grammar : past perfect : Das Plusquamperfekt"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-nebensaetze-seit",
+      "title": "Nebensätze: seit",
+      "level": "B1",
+      "firstLesson": "B1-58",
+      "lessons": [
+        "B1-58"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-nebensaetze-bevor",
+      "title": "Nebensätze: bevor",
+      "level": "B1",
+      "firstLesson": "B1-59",
+      "lessons": [
+        "B1-59"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_04.html",
+        "title": "Grimm Grammar : subordinating conjunctions : Subordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-genitiv",
+      "title": "Genitiv",
+      "level": "B1",
+      "firstLesson": "B1-61",
+      "lessons": [
+        "B1-61"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+        "title": "Grimm Grammar : genitive : Der Genitiv"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_k02_superlative.htm",
+        "title": "Das älteste Buch der Bibliothek",
+        "detail": "Ergänzen Sie das Adjektiv im Superlativ und das Nomen im Genitiv."
+      }
+    },
+    {
+      "id": "b1-brauchen-zu-infinitiv",
+      "title": "brauchen + zu + Infinitiv",
+      "level": "B1",
+      "firstLesson": "B1-62",
+      "lessons": [
+        "B1-62"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vinf_01.html",
+        "title": "Grimm Grammar : infinitive constructions : Der Infinitivsatz"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-nomen-auf-heit-keit",
+      "title": "Nomen auf -heit/-keit",
+      "level": "B1",
+      "firstLesson": "B1-63",
+      "lessons": [
+        "B1-63"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg08_13.htm",
+        "title": "Substantive mit den Suffixen -heit oder -keit",
+        "detail": "Substantive auf -heit oder -keit"
+      }
+    },
+    {
+      "id": "b1-passiv",
+      "title": "Passiv",
+      "level": "B1",
+      "firstLesson": "B1-64",
+      "lessons": [
+        "B1-64"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vpass_01.html",
+        "title": "Grimm Grammar : passive voice present tense : Das Passiv im Präsens"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/xg/xg09_08.htm",
+        "title": "Welche Satzteile gehören zusammen?",
+        "detail": "Passiv"
+      }
+    },
+    {
+      "id": "b1-nomen-auf-chen",
+      "title": "Nomen auf -chen",
+      "level": "B1",
+      "firstLesson": "B1-65",
+      "lessons": [
+        "B1-65"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/mis_02.html",
+        "title": "Grimm Grammar : word formation : Wortbildung"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-praepositionen-waehrend",
+      "title": "Präpositionen: während",
+      "level": "B1",
+      "firstLesson": "B1-66",
+      "lessons": [
+        "B1-66"
+      ],
+      "blank": "preposition",
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/cas_08.html",
+        "title": "Grimm Grammar : genitive : Der Genitiv"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-vergleiche-wie-als",
+      "title": "Vergleiche: wie/als",
+      "level": "B1",
+      "firstLesson": "B1-67",
+      "lessons": [
+        "B1-67"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/adj_05.html",
+        "title": "Grimm Grammar : comparative and superlative : Komparativ und Superlativ"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap4_komparation.htm",
+        "title": "Produkte",
+        "detail": "Grundform oder Komparativ? Ergänzen Sie."
+      }
+    },
+    {
+      "id": "b1-temporale-praepositionen",
+      "title": "Temporale Präpositionen",
+      "level": "B1",
+      "firstLesson": "B1-69",
+      "lessons": [
+        "B1-69"
+      ],
+      "blank": "preposition",
+      "grimm": null,
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap1_praepositionen2.htm",
+        "title": "Das Deutsche Historische Museum",
+        "detail": "Ergänzen Sie die temporalen Präpositionen."
+      }
+    },
+    {
+      "id": "b1-relativsaetze-genitiv",
+      "title": "Relativsätze: Genitiv",
+      "level": "B1",
+      "firstLesson": "B1-71",
+      "lessons": [
+        "B1-71"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/pro_05.html",
+        "title": "Grimm Grammar : relative pronouns : Relativpronomen"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_kap4_relativpronomen.htm",
+        "title": "Produkte und Wünsche",
+        "detail": "Ergänzen Sie die Relativpronomen."
+      }
+    },
+    {
+      "id": "b1-adversative-verbindungen",
+      "title": "Adversative Verbindungen",
+      "level": "B1",
+      "firstLesson": "B1-72",
+      "lessons": [
+        "B1-72"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/con_03.html",
+        "title": "Grimm Grammar : coordinating conjunctions : Koordinierende Konjunktionen"
+      },
+      "schubert": null
+    },
+    {
+      "id": "b1-relativadverb-wo",
+      "title": "Relativadverb: wo",
+      "level": "B1",
+      "firstLesson": "B1-73",
+      "lessons": [
+        "B1-73"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "b1-lassen-infinitiv",
+      "title": "lassen + Infinitiv",
+      "level": "B1",
+      "firstLesson": "B1-74",
+      "lessons": [
+        "B1-74"
+      ],
+      "blank": null,
+      "grimm": null,
+      "schubert": null
+    },
+    {
+      "id": "b1-n-deklination",
+      "title": "n-Deklination",
+      "level": "B1",
+      "firstLesson": "B1-75",
+      "lessons": [
+        "B1-75"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/no_04.html",
+        "title": "Grimm Grammar : masculine weak nouns : Schwache Substantive"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k07_nomen.htm",
+        "title": "Deklination maskuliner Nomen",
+        "detail": "Ergänzen Sie die Nomen in der richtigen Form."
+      }
+    },
+    {
+      "id": "b1-wuensche-ausdruecken",
+      "title": "Wünsche ausdrücken",
+      "level": "B1",
+      "firstLesson": "B1-76",
+      "lessons": [
+        "B1-76"
+      ],
+      "blank": null,
+      "grimm": {
+        "url": "https://coerll.utexas.edu/gg/gr/vm_01.html",
+        "title": "Grimm Grammar : modal verbs - present tense : Modalverben"
+      },
+      "schubert": {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_b1/b1_k08_wuensche.htm",
+        "title": "Wünsche und Träume",
+        "detail": "Formulieren Sie Wünsche und Träume im Konjunktiv II."
+      }
+    }
+  ]
+}

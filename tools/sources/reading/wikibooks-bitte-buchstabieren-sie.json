@@ -1,0 +1,78 @@
+{
+  "id": "wikibooks-bitte-buchstabieren-sie",
+  "stage": 2,
+  "title": "Fernsprechauskunft",
+  "titleEn": "Directory Assistance",
+  "author": "Wikibooks contributors",
+  "year": 2026,
+  "historicalSpelling": false,
+  "lesson": "I.3",
+  "lessonTitle": "Bitte buchstabieren Sie",
+  "de": {
+    "source": "Wikibooks, German course, Level I lesson 3",
+    "url": "https://en.wikibooks.org/w/index.php?title=German/Level_I/Bitte_buchstabieren_Sie&oldid=4669476",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Wikibooks contributors; page history https://en.wikibooks.org/w/index.php?title=German/Level_I/Bitte_buchstabieren_Sie&action=history"
+  },
+  "en": {
+    "source": "Wikibooks, German course, Level I lesson 3",
+    "url": "https://en.wikibooks.org/w/index.php?title=German/Level_I/Bitte_buchstabieren_Sie&oldid=4669476",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Wikibooks contributors; page history https://en.wikibooks.org/w/index.php?title=German/Level_I/Bitte_buchstabieren_Sie&action=history",
+    "translator": "Wikibooks contributors",
+    "year": 2026
+  },
+  "paragraphs": [
+    {
+      "speaker": "Auskunft",
+      "speakerEn": "Assistant",
+      "de": [
+        "Auskunft, guten Tag."
+      ],
+      "en": [
+        "Directory assistance, hello."
+      ]
+    },
+    {
+      "speaker": "Franz",
+      "de": [
+        "Guten Tag.",
+        "Ich hätte gerne die Telefonnummer von Frau Claudia Bolliger aus Bern."
+      ],
+      "enPara": "Hello, I would like to have the phone number of Mrs. Claudia Bolliger from Berne."
+    },
+    {
+      "speaker": "Auskunft",
+      "speakerEn": "Assistant",
+      "de": [
+        "Wie schreibt man das?",
+        "Bitte buchstabieren Sie."
+      ],
+      "en": [
+        "How do you write the name?",
+        "Please spell it."
+      ]
+    },
+    {
+      "speaker": "Franz",
+      "de": [
+        "Natürlich.",
+        "Claudia: C wie Cäsar, L wie Ludwig, A wie Anton, U wie Ursula, D wie Dora, I wie Ida, A wie Anton.",
+        "Bolliger: B wie Berta, O wie Otto, zweimal L wie Ludwig, I wie Ida, G wie Gustav, E wie Emil und R wie Richard."
+      ],
+      "enPara": "Of course. Claudia: C as in Cäsar, L as in Ludwig, A as in Anton, ..."
+    },
+    {
+      "speaker": "Auskunft",
+      "speakerEn": "Assistant",
+      "de": [
+        "Danke.",
+        "Die Nummer lautet ..."
+      ],
+      "en": [
+        "Thanks.",
+        "The number is..."
+      ]
+    }
+  ]
+}

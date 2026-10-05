@@ -1,0 +1,592 @@
+{
+  "id": "heidi-1-10",
+  "stage": 4,
+  "title": "Eine Großmama",
+  "titleEn": "Another Grandmother",
+  "author": "Johanna Spyri",
+  "year": 1880,
+  "historicalSpelling": false,
+  "book": "Heidis Lehr- und Wanderjahre",
+  "bookEn": "Heidi",
+  "part": 1,
+  "chapter": 10,
+  "de": {
+    "source": "Project Gutenberg #7500",
+    "edition": "Heidis Lehr- und Wanderjahre (Gutenberg Projekt-DE text, modernised spelling)",
+    "url": "https://www.gutenberg.org/ebooks/7500",
+    "license": "Public domain"
+  },
+  "en": {
+    "source": "Project Gutenberg #1448",
+    "edition": "Heidi",
+    "translator": "Marian Edwardes (listed there as Marion Edwards)",
+    "year": 1910,
+    "url": "https://www.gutenberg.org/ebooks/1448",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Am folgenden Abend waren große Erwartungen und lebhafte Vorbereitungen im Hause Sesemann sichtbar, man konnte deutlich bemerken, dass die erwartete Dame ein bedeutendes Wort im Hause mitzusprechen hatte und dass jedermann großen Respekt vor ihr empfand.",
+        "Tinette hatte ein ganz neues, weißes Deckelchen auf den Kopf gesetzt, und Sebastian raffte eine Menge von Schemeln zusammen und stellte sie an alle passenden Stellen hin, damit die Dame gleich einen Schemel unter den Füßen finde, wohin sie sich auch setzen möge.",
+        "Fräulein Rottenmeier ging zur Musterung der Dinge sehr aufrecht durch die Zimmer, so wie um anzudeuten, dass, wenn auch eine zweite Herrschermacht herannahe, die ihrige dennoch nicht am Erlöschen sei."
+      ],
+      "en": [
+        "There was much expectation and preparation about the house on the following evening, and it was easy to see that the lady who was coming was one whose opinion was highly thought of, and for whom everybody had a great respect.",
+        "Tinette had a new white cap on her head, and Sebastian collected all the footstools he could find and placed them in convenient spots, so that the lady might find one ready to her feet whenever she chose to sit.",
+        "Fraulein Rottenmeier went about surveying everything, very upright and dignified, as if to show that though a rival power was expected, her own authority was not going to be extinguished."
+      ]
+    },
+    {
+      "de": [
+        "Jetzt rollte der Wagen vor das Haus, und Sebastian und Tinette stürzten die Treppe hinunter; langsam und würdevoll folgte Fräulein Rottenmeier nach, denn sie wusste, dass auch sie zum Empfang der Frau Sesemann zu erscheinen hatte.",
+        "Heidi war beordert worden, sich in sein Zimmer zurückzuziehen und da zu warten, bis es gerufen würde, denn die Großmutter würde zuerst bei Klara eintreten und diese wohl allein sehen wollen.",
+        "Heidi setzte sich in einen Winkel und repetierte seine Anrede.",
+        "Es währte gar nicht lange, so steckte die Tinette den Kopf ein klein wenig unter Heidis Zimmertür und sagte kurz angebunden wie immer: \"Hinübergehen ins Studierzimmer!\""
+      ],
+      "en": [
+        "And now the carriage came driving up to the door, and Tinette and Sebastian ran down the steps, followed with a slower and more stately step by the lady, who advanced to greet the guest.",
+        "Heidi had been sent up to her room and ordered to remain there until called down, as the grandmother would certainly like to see Clara alone first.",
+        "Heidi sat herself down in a corner and repeated her instructions over to herself.",
+        "She had not to wait long before Tinette put her head in and said abruptly, \"Go downstairs into the study.\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi hatte Fräulein Rottenmeier nicht fragen dürfen, wie es mit der Anrede sei, aber es dachte, die Dame habe sich nur versprochen, denn es hatte bis jetzt immer erst den Titel nennen gehört und nachher den Namen; so hatte es sich nun die Sache zurechtgelegt.",
+        "Wie es die Tür zum Studierzimmer aufmachte, rief ihm die Großmutter mit freundlicher Stimme entgegen: \"Ah, da kommt ja das Kind!",
+        "Komm mal her zu mir und lass dich recht ansehen.\""
+      ],
+      "en": [
+        "Heidi had not dared to ask Fraulein Rottenmeier again how she was to address the grandmother: she thought the lady had perhaps made a mistake, for she had never heard any one called by other than their right name.",
+        "As she opened the study door she heard a kind voice say, \"Ah, here comes the child!",
+        "Come along in and let me have a good look at you.\""
+      ]
+    },
+    {
+      "de": [
+        "Heidi trat heran, und mit seiner klaren Stimme sagte es sehr deutlich: \"Guten Tag, Frau Gnädige.\""
+      ],
+      "en": [
+        "Heidi walked up to her and said very distinctly in her clear voice, \"Good-evening,\" and then wishing to follow her instructions called her what would be in English \"Mrs. Madam.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Warum nicht gar!\", lachte die Großmama.",
+        "\"Sagt man so bei euch?",
+        "Hast du das daheim auf der Alp gehört?\""
+      ],
+      "enPara": "\"Well!\" said the grandmother, laughing, \"is that how they address people in your home on the mountain?\""
+    },
+    {
+      "de": [
+        "\"Nein, bei uns heißt niemand so\", erklärte Heidi ernsthaft."
+      ],
+      "en": [
+        "\"No,\" replied Heidi gravely, \"I never knew any one with that name before.\""
+      ]
+    },
+    {
+      "de": [
+        "\"So, bei uns auch nicht\", lachte die Großmama wieder und klopfte Heidi freundlich auf die Wange.",
+        "\"Das ist nichts! In der Kinderstube bin ich die Großmama; so sollst du mich nennen, das kannst du wohl behalten, wie?\""
+      ],
+      "en": [
+        "\"Nor I either,\" laughed the grandmother again as she patted Heidi's cheek.",
+        "\"Never mind! when I am with the children I am always grandmamma; you won't forget that name, will you?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Ja, das kann ich gut\", versicherte Heidi, \"vorher hab ich schon immer so gesagt.\""
+      ],
+      "en": [
+        "\"No, no,\" Heidi assured her, \"I often used to say it at home.\""
+      ]
+    },
+    {
+      "de": [
+        "\"So, so, verstehe schon!\", sagte die Großmama und nickte ganz lustig mit dem Kopfe.",
+        "Dann schaute sie Heidi genau an und nickte von Zeit zu Zeit wieder mit dem Kopf, und Heidi guckte ihr auch ganz ernsthaft in die Augen, denn da kam etwas so Herzliches heraus, dass es dem Heidi ganz wohl machte, und die ganze Großmama gefiel dem Heidi so, dass es sie unverwandt anschauen musste.",
+        "Sie hatte so schöne weiße Haare, und um den Kopf ging eine schöne Spitzenkrause, und zwei breite Bänder flatterten von der Haube weg und bewegten sich immer irgendwie, so als ob stets ein leichter Wind um die Großmama wehe, was das Heidi ganz besonders anmutete."
+      ],
+      "en": [
+        "\"I understand,\" said the grandmother, with a cheerful little nod of the head.",
+        "Then she looked more closely at Heidi, giving another nod from time to time, and the child looked back at her with steady, serious eyes, for there was something kind and warm-hearted about this new-comer that pleased Heidi, and indeed everything to do with the grandmother attracted her, so that she could not turn her eyes away.",
+        "She had such beautiful white hair, and two long lace ends hung down from the cap on her head and waved gently about her face every time she moved, as if a soft breeze were blowing round her, which gave Heidi a peculiar feeling of pleasure."
+      ]
+    },
+    {
+      "de": [
+        "\"Und wie heißt du, Kind?\", fragte jetzt die Großmama."
+      ],
+      "en": [
+        "\"And what is your name, child?\" the grandmother now asked."
+      ]
+    },
+    {
+      "de": [
+        "\"Ich heiße nur Heidi; aber weil ich soll Adelheid heißen, so will ich schon Acht geben--\"; Heidi stockte, denn es fühlte sich ein wenig schuldig, da es noch immer keine Antwort gab, wenn Fräulein Rottenmeier unversehens rief: \"Adelheid!\", indem es ihm noch immer nicht recht gegenwärtig war, dass dies sein Name sei, und Fräulein Rottenmeier war eben ins Zimmer getreten."
+      ],
+      "en": [
+        "\"I am always called Heidi; but as I am now to be called Adelaide, I will try and take care--\" Heidi stopped short, for she felt a little guilty; she had not yet grown accustomed to this name; she continued not to respond when Fraulein Rottenmeier suddenly addressed her by it, and the lady was at this moment entering the room."
+      ]
+    },
+    {
+      "de": [
+        "\"Frau Sesemann wird unstreitig billigen\", fiel hier die eben Eingetretene ein, \"dass ich einen Namen wählen musste, den man doch aussprechen kann, ohne sich selbst genieren zu müssen, schon um der Dienstboten willen.\""
+      ],
+      "en": [
+        "\"Frau Sesemann will no doubt agree with me,\" she interrupted, \"that it was necessary to choose a name that could be pronounced easily, if only for the sake of the servants.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Werteste Rottenmeier\", entgegnete Frau Sesemann, \"wenn ein Mensch einmal 'Heidi' heißt und an den Namen gewöhnt ist, so nenn ich ihn so, und dabei bleibt's!\""
+      ],
+      "en": [
+        "\"My worthy Rottenmeier,\" replied Frau Sesemann, \"if a person is called 'Heidi' and has grown accustomed to that name, I call her by the same, and so let it be.\""
+      ]
+    },
+    {
+      "de": [
+        "Es war Fräulein Rottenmeier sehr genierlich, dass die alte Dame sie beständig nur bei ihrem Namen nannte, ohne weitere Titulatur; aber da war nichts zu machen; die Großmama hatte einmal ihre eigenen Wege, und diese ging sie, da half kein Mittel dagegen.",
+        "Auch ihre fünf Sinne hatte die Großmama noch ganz scharf und gesund, und sie bemerkte, was im Hause vorging, sobald sie es betreten hatte."
+      ],
+      "en": [
+        "Fraulein Rottenmeier was always very much annoyed that the old lady continually addressed her by her surname only; but it was no use minding, for the grandmother always went her own way, and so there was no help for it.",
+        "Moreover the grandmother was a keen old lady, and had all her five wits about her, and she knew what was going on in the house as soon as she entered it."
+      ]
+    },
+    {
+      "de": [
+        "Als am Tage nach ihrer Ankunft Klara sich zur gewohnten Zeit nach Tisch niederlegte, setzte die Großmama sich neben sie auf einen Lehnstuhl und schloss ihre Augen für einige Minuten; dann stand sie schon wieder auf--denn sie war gleich wieder munter--und trat ins Esszimmer hinaus; da war niemand.",
+        "\"Die schläft\", sagte sie vor sich hin, ging dann nach dem Zimmer der Dame Rottenmeier und klopfte kräftig an die Tür.",
+        "Nach einiger Zeit erschien diese und fuhr erschrocken ein wenig zurück bei dem unerwarteten Besuch."
+      ],
+      "enPara": "When on the following day Clara lay down as usual on her couch after dinner, the grandmother sat down beside her for a few minutes and closed her eyes, then she got up again as lively as ever, and trotted off into the dining-room. No one was there. \"She is asleep, I suppose,\" she said to herself, and then going up to Fraulein Rottenmeier's room she gave a loud knock at the door. She waited a few minutes and then Fraulein Rottenmeier opened the door and drew back in surprise at this unexpected visit."
+    },
+    {
+      "de": [
+        "\"Wo hält sich das Kind auf um diese Zeit, und was tut es?",
+        "Das wollte ich wissen\", sagte Frau Sesemann."
+      ],
+      "en": [
+        "\"Where is the child, and what is she doing all this time?",
+        "That is what I came to ask,\" said Frau Sesemann."
+      ]
+    },
+    {
+      "de": [
+        "\"In seinem Zimmer sitzt es, wo es sich nützlich beschäftigen könnte, wenn es den leisesten Tätigkeitstrieb hätte; aber Frau Sesemann sollte nur wissen, was für verkehrtes Zeug sich dieses Wesen oft ausdenkt und wirklich ausführt, Dinge, die ich in gebildeter Gesellschaft kaum erzählen könnte.\""
+      ],
+      "en": [
+        "\"She is sitting in her room, where she could well employ herself if she had the least idea of making herself useful; but you have no idea, Frau Sesemann, of the out-of-the-way things this child imagines and does, things which I could hardly repeat in good society.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Das würde ich gerade auch tun, wenn ich so da drinnen säße wie dieses Kind, das kann ich Ihnen sagen, und Sie könnten zusehen, wie Sie mein Zeug in gebildeter Gesellschaft erzählen wollten!",
+        "Jetzt holen Sie mir das Kind heraus und bringen Sie mir's in meine Stube, ich will ihm einige hübsche Bücher geben, die ich mitgebracht habe.\""
+      ],
+      "en": [
+        "\"I should do the same if I had to sit in there like that child, I can tell you; I doubt if you would then like to repeat what I did, in good society!",
+        "Go and fetch the child and bring her to my room; I have some pretty books with me that I should like to give her.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Das ist ja gerade das Unglück, das ist es ja eben!\", rief Fräulein Rottenmeier aus und schlug die Hände zusammen.",
+        "\"Was sollte das Kind mit Büchern tun?",
+        "In all dieser Zeit hat es noch nicht einmal das Abc erlernt; es ist völlig unmöglich, diesem Wesen auch nur einen Begriff beizubringen, davon kann der Herr Kandidat reden!",
+        "Wenn dieser treffliche Mensch nicht die Geduld eines himmlischen Engels besäße, er hätte diesen Unterricht längst aufgegeben.\""
+      ],
+      "enPara": "\"That is just the misfortune,\" said Fraulein Rottenmeier with a despairing gesture, \"what use are books to her? She has not been able to learn her A B C even, all the long time she has been here; it is quite impossible to get the least idea of it into her head, and that the tutor himself will tell you; if he had not the patience of an angel he would have given up teaching her long ago.\""
+    },
+    {
+      "de": [
+        "\"So, das ist merkwürdig, das Kind sieht nicht aus wie eines, das das Abc nicht erlernen kann\", sagte Frau Sesemann.",
+        "\"Jetzt holen Sie mir's herüber, es kann vorläufig die Bilder in den Büchern ansehen.\""
+      ],
+      "en": [
+        "\"That is very strange,\" said Frau Sesemann, \"she does not look to me like a child who would be unable to learn her alphabet.",
+        "However, bring her now to me, she can at least amuse herself with the pictures in the books.\""
+      ]
+    },
+    {
+      "de": [
+        "Fräulein Rottenmeier wollte noch einiges bemerken, aber Frau Sesemann hatte sich schon umgewandt und ging rasch ihrem Zimmer zu.",
+        "Sie musste sich sehr verwundern über die Nachricht von Heidis Beschränktheit und gedachte, die Sache zu untersuchen, jedoch nicht mit dem Herrn Kandidaten, den sie zwar um seines guten Charakters willen sehr schätzte; sie grüßte ihn auch immer, wenn sie mit ihm zusammentraf, überaus freundlich, lief dann aber sehr schnell auf eine andere Seite, um nicht in ein Gespräch mit ihm verwickelt zu werden, denn seine Ausdrucksweise war ihr ein wenig beschwerlich."
+      ],
+      "en": [
+        "Fraulein Rottenmeier was prepared with some further remarks, but the grandmother had turned away and gone quickly towards her own room.",
+        "She was surprised at what she had been told about Heidi's incapacity for learning, and determined to find out more concerning this matter, not by inquiries from the tutor, however, although she esteemed him highly for his uprightness of character; she had always a friendly greeting for him, but always avoided being drawn into conversation with him, for she found his style of talk somewhat wearisome."
+      ]
+    },
+    {
+      "de": [
+        "Heidi erschien im Zimmer der Großmama und machte die Augen weit auf, als es die prächtigen bunten Bilder in den großen Büchern sah, welche die Großmama mitgebracht hatte.",
+        "Auf einmal schrie Heidi laut auf, als die Großmama wieder ein Blatt umgewandt hatte; mit glühendem Blick schaute es auf die Figuren, dann stürzten ihm plötzlich die hellen Tränen aus den Augen, und es fing gewaltig zu schluchzen an.",
+        "Die Großmama schaute das Bild an.",
+        "Es war eine schöne, grüne Weide, wo allerlei Tierlein herumweideten und an den grünen Gebüschen nagten.",
+        "In der Mitte stand der Hirt, auf einen langen Stab gestützt, der schaute den fröhlichen Tierchen zu.",
+        "Alles war wie in Goldschimmer gemalt, denn hinten am Horizont war eben die Sonne im Untergehen."
+      ],
+      "enPara": "Heidi now appeared and gazed with open-eyed delight and wonder at the beautiful colored pictures in the books which the grandmother gave her to look at. All of a sudden, as the latter turned over one of the pages to a fresh picture, the child gave a cry. For a moment or two she looked at it with brightening eyes, then the tears began to fall, and at last she burst into sobs. The grandmother looked at the picture--it represented a green pasture, full of young animals, some grazing and others nibbling at the shrubs. In the middle was a shepherd leaning upon his staff and looking on at his happy flock. The whole scene was bathed in golden light, for the sun was just sinking below the horizon."
+    },
+    {
+      "de": [
+        "Die Großmama nahm Heidi bei der Hand.",
+        "\"Komm, komm, Kind\", sagte sie in freundlichster Weise, \"nicht weinen, nicht weinen.",
+        "Das hat dich wohl an etwas erinnert; aber sieh, da ist auch eine schöne Geschichte dazu, die erzähl ich heut Abend.",
+        "Und da sind noch so viele schöne Geschichten in dem Buch, die kann man alle lesen und wieder erzählen.",
+        "Komm, nun müssen wir etwas besprechen zusammen, trockne schön deine Tränen, so, und nun stell dich hier vor mich hin, dass ich dich recht ansehen kann; so ist's recht, nun sind wir wieder fröhlich.\""
+      ],
+      "en": [
+        "The grandmother laid her hand kindly On Heidi's.",
+        "\"Don't cry, dear child, don't cry,\" she said, \"the picture has reminded you perhaps of something.",
+        "But see, there is a beautiful tale to the picture which I will tell you this evening.",
+        "And there are other nice tales of all kinds to read and to tell again.",
+        "But now we must have a little talk together, so dry your tears and come and stand in front of me, so that I may see you well--there, now we are happy again.\""
+      ]
+    },
+    {
+      "de": [
+        "Aber noch verging einige Zeit, bevor Heidi zu schluchzen aufhören konnte.",
+        "Die Großmama ließ ihm auch eine gute Weile zur Erholung, nur sagte sie von Zeit zu Zeit ermunternd: \"So, nun ist's gut, nun sind wir wieder froh zusammen.\""
+      ],
+      "en": [
+        "But it was some little time before Heidi could overcome her sobs.",
+        "The grandmother gave her time to recover herself, saying cheering words to her now and then, \"There, it's all right now, and we are quite happy again.\""
+      ]
+    },
+    {
+      "de": [
+        "Als sie endlich das Kind beruhigt sah, sagte sie: \"Nun musst du mir was erzählen, Kind!",
+        "Wie geht es denn beim Herrn Kandidaten in den Unterrichtsstunden, lernst du auch gut und kannst du was?\""
+      ],
+      "en": [
+        "When at last she saw that Heidi was growing calmer, she said, \"Now I want you to tell me something.",
+        "How are you getting on in your school-time; do you like your lessons, and have you learnt a great deal?\""
+      ]
+    },
+    {
+      "de": [
+        "\"O nein\", antwortete Heidi seufzend; \"aber ich wusste schon, dass man es nicht lernen kann.\""
+      ],
+      "en": [
+        "\"O no!\" replied Heidi, sighing, \"but I knew beforehand that it was not possible to learn.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Was kann man denn nicht lernen, Heidi, was meinst du?\""
+      ],
+      "en": [
+        "\"What is it you think impossible to learn?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Lesen kann man nicht lernen, es ist zu schwer.\""
+      ],
+      "en": [
+        "\"Why, to read, it is too difficult.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Das wäre! Und woher weißt du denn diese Neuigkeit?\""
+      ],
+      "en": [
+        "\"You don't say so! and who told you that?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Der Peter hat es mir gesagt und er weiß es schon, der muss immer wieder probieren, aber er kann es nie lernen, es ist zu schwer.\""
+      ],
+      "en": [
+        "\"Peter told me, and he knew all about it, for he had tried and tried and could not learn it.\""
+      ]
+    },
+    {
+      "de": [
+        "\"So, das ist mir ein eigener Peter, der!",
+        "Aber sieh, Heidi, man muss nicht alles nur so hinnehmen, was einem ein Peter sagt, man muss selbst probieren.",
+        "Gewiss hast du nicht recht mit all deinen Gedanken dem Herrn Kandidaten zugehört und seine Buchstaben angesehen.\""
+      ],
+      "en": [
+        "\"Peter must be a very odd boy then!",
+        "But listen, Heidi, we must not always go by what Peter says, we must try for ourselves.",
+        "I am certain that you did not give all your attention to the tutor when he was trying to teach you your letters.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Es nützt nichts\", versicherte Heidi mit dem Ton der vollen Ergebung in das Unabänderliche."
+      ],
+      "en": [
+        "\"It's of no use,\" said Heidi in the tone of one who was ready to endure what could not be cured."
+      ]
+    },
+    {
+      "de": [
+        "\"Heidi\", sagte nun die Großmama, \"jetzt will ich dir etwas sagen: Du hast noch nie lesen gelernt, weil du deinem Peter geglaubt hast; nun aber sollst du mir glauben, und ich sage dir fest und sicher, dass du in kurzer Zeit lesen lernen kannst, wie eine große Menge von Kindern, die geartet sind wie du und nicht wie der Peter.",
+        "Und nun musst du wissen, was nachher kommt, wenn du dann lesen kannst-- du hast den Hirten gesehen auf der schönen, grünen Weide--; sobald du nun lesen kannst, bekommst du das Buch, da kannst du seine ganze Geschichte vernehmen, ganz so, als ob sie dir jemand erzählte, alles, was er macht mit seinen Schafen und Ziegen und was ihm für merkwürdige Dinge begegnen.",
+        "Das möchtest du schon wissen, Heidi, nicht?\""
+      ],
+      "enPara": "\"Listen to what I have to say,\" continued the grandmother. \"You have not been able to learn your alphabet because you believed what Peter said; but now you must believe what I tell you--and I tell you that you can learn to read in a very little while, as many other children do, who are made like you and not like Peter. And now hear what comes after--you see that picture with the shepherd and the animals--well, as soon as you are able to read you shall have that book for your own, and then you will know all about the sheep and the goats, and what the shepherd did, and the wonderful things that happened to him, just as if some one were telling you the whole tale. You will like to hear about all that, won't you?\""
+    },
+    {
+      "de": [
+        "Heidi hatte mit gespannter Aufmerksamkeit zugehört, und mit leuchtenden Augen sagte es jetzt, tief Atem holend: \"Oh, wenn ich nur schon lesen könnte!\""
+      ],
+      "en": [
+        "Heidi had listened with eager attention to the grandmother's words and now with a sigh exclaimed, \"Oh, if only I could read now!\""
+      ]
+    },
+    {
+      "de": [
+        "\"Jetzt wird's kommen, und gar nicht lange wird's währen, das kann ich schon sehen, Heidi, und nun müssen wir mal nach der Klara sehen; komm, die schönen Bücher nehmen wir mit.\"",
+        "Damit nahm die Großmama Heidi bei der Hand und ging mit ihm nach dem Studierzimmer."
+      ],
+      "en": [
+        "\"It won't take you long now to learn, that I can see; and now we must go down to Clara; bring the books with you.\"",
+        "And hand in hand the two returned to the study."
+      ]
+    },
+    {
+      "de": [
+        "Seit dem Tage, da Heidi hatte heimgehen wollen und Fräulein Rottenmeier es auf der Treppe ausgescholten und ihm gesagt hatte, wie schlecht und undankbar es sich erweise durch sein Fortlaufenwollen und wie gut es sei, dass Herr Sesemann nichts davon wisse, war mit dem Kinde eine Veränderung vorgegangen.",
+        "Es hatte begriffen, dass es nicht heimgehen könne, wenn es wolle, wie ihm die Base gesagt hatte, sondern dass es in Frankfurt zu bleiben habe, lange, lange, vielleicht für immer.",
+        "Es hatte auch verstanden, dass Herr Sesemann es sehr undankbar von ihm finden würde, wenn es heimgehen wollte, und es dachte sich aus, dass die Großmama und Klara auch so denken würden.",
+        "So durfte es keinem Menschen sagen, dass es heimgehen möchte, denn dass die Großmama, die so freundlich mit ihm war, auch böse würde, wie Fräulein Rottenmeier geworden war, das wollte Heidi nicht verursachen.",
+        "Aber in seinem Herzen wurde die Last, die darinnen lag, immer schwerer; es konnte nicht mehr essen, und jeden Tag wurde es ein wenig bleicher.",
+        "Am Abend konnte es oft lange, lange nicht einschlafen, denn sobald es allein war und alles still ringsumher, kam ihm alles so lebendig vor die Augen, die Alm und der Sonnenschein darauf und die Blumen; und schlief es endlich doch ein, so sah es im Traum die roten Felsenspitzen am Falknis und das feurige Schneefeld an der Schesaplana, und erwachte dann Heidi am Morgen und wollte voller Freude hinausspringen aus der Hütte--da war es auf einmal in seinem großen Bett in Frankfurt, so weit, weit weg, und konnte nicht mehr heim.",
+        "Dann drückte Heidi oft seinen Kopf in das Kissen und weinte lang, ganz leise, dass niemand es höre."
+      ],
+      "en": [
+        "Since the day when Heidi had so longed to go home, and Fraulein Rottenmeier had met her and scolded her on the steps, and told her how wicked and ungrateful she was to try and run away, and what a good thing it was that Herr Sesemann knew nothing about it, a change had come over the child.",
+        "She had at last understood that day that she could not go home when she wished as Dete had told her, but that she would have to stay on in Frankfurt for a long, long time, perhaps for ever.",
+        "She had also understood that Herr Sesemann would think it ungrateful of her if she wished to leave, and she believed that the grandmother and Clara would think the same.",
+        "So there was nobody to whom she dared confide her longing to go home, for she would not for the world have given the grandmother, who was so kind to her, any reason for being as angry with her as Fraulein Rottenmeier had been.",
+        "But the weight of trouble on the little heart grew heavier and heavier; she could no longer eat her food, and every day she grew a little paler.",
+        "She lay awake for long hours at night, for as soon as she was alone and everything was still around her, the picture of the mountain with its sunshine and flowers rose vividly before her eyes; and when at last she fell asleep it was to dream of the rocks and the snow-field turning crimson in the evening light, and waking in the morning she would think herself back at the hut and prepare to run joyfully out into--the sun--and then-- there was her large bed, and here she was in Frankfurt far, far away from home.",
+        "And Heidi would often lay her face down on the pillow and weep long and quietly so that no one might hear her."
+      ]
+    },
+    {
+      "de": [
+        "Heidis freudloser Zustand entging der Großmama nicht.",
+        "Sie ließ einige Tage vorübergehen und sah zu, ob die Sache sich ändere und das Kind sein niedergeschlagenes Wesen verlieren würde.",
+        "Als es aber gleich blieb und die Großmama manchmal am frühen Morgen schon sehen konnte, dass Heidi geweint hatte, da nahm sie eines Tages das Kind wieder in ihre Stube, stellte es vor sich hin und sagte mit großer Freundlichkeit: \"Jetzt sag mir, was dir fehlt, Heidi; hast du einen Kummer?\""
+      ],
+      "en": [
+        "Heidi's unhappiness did not escape the grandmother's notice.",
+        "She let some days go by to see if the child grew brighter and lost her down-cast appearance.",
+        "But as matters did not mend, and she saw that many mornings Heidi had evidently been crying before she came downstairs, she took her again into her room one day, and drawing the child to her said, \"Now tell me, Heidi, what is the matter; are you in trouble?\""
+      ]
+    },
+    {
+      "de": [
+        "Aber gerade dieser freundlichen Großmama wollte Heidi nicht sich so undankbar zeigen, dass sie vielleicht nachher gar nicht mehr so freundlich wäre; so sagte Heidi traurig: \"Man kann es nicht sagen.\""
+      ],
+      "en": [
+        "But Heidi, afraid if she told the truth that the grandmother would think her ungrateful, and would then leave off being so kind to her, answered, \"can't tell you.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Nicht? Kann man es etwa der Klara sagen?\", fragte die Großmama."
+      ],
+      "en": [
+        "\"Well, could you tell Clara about it?\""
+      ]
+    },
+    {
+      "de": [
+        "\"O nein, keinem Menschen\", versicherte Heidi und sah dabei so unglücklich aus, dass es die Großmama erbarmte."
+      ],
+      "en": [
+        "\"Oh, no, I cannot tell any one,\" said Heidi in so positive a tone, and with a look of such trouble on her face, that the grandmother felt full of pity for the child."
+      ]
+    },
+    {
+      "de": [
+        "\"Komm, Kind\", sagte sie, \"ich will dir was sagen: Wenn man einen Kummer hat, den man keinem Menschen sagen kann, so klagt man ihn dem lieben Gott im Himmel und bittet ihn, dass er helfe, denn er kann allem Leid abhelfen, das uns drückt.",
+        "Das verstehst du, nicht wahr?",
+        "Du betest doch jeden Abend zum lieben Gott im Himmel und dankst ihm für alles Gute und bittest ihn, dass er dich vor allem Bösen behüte?\""
+      ],
+      "en": [
+        "\"Then, dear child, let me tell you what to do: you know that when we are in great trouble, and cannot speak about it to anybody, we must turn to God and pray Him to help, for He can deliver us from every care, that oppresses us.",
+        "You understand that, do you not?",
+        "You say your prayers every evening to the dear God in Heaven, and thank Him for all He has done for you, and pray Him to keep you from all evil, do you not?\""
+      ]
+    },
+    {
+      "de": [
+        "\"O nein, das tu ich nie\", antwortete das Kind."
+      ],
+      "en": [
+        "\"No, I never say any prayers,\" answered Heidi."
+      ]
+    },
+    {
+      "de": [
+        "\"Hast du denn gar nie gebetet, Heidi, weißt du nicht, was das ist?\""
+      ],
+      "en": [
+        "\"Have you never been taught to pray, Heidi; do you not know even what it means?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Nur mit der ersten Großmutter habe ich gebetet, aber es ist schon lang, und jetzt habe ich es vergessen.\""
+      ],
+      "en": [
+        "\"I used to say prayers with the first grandmother, but that is a long time ago, and I have forgotten them.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Siehst du, Heidi, darum musst du so traurig sein, weil du jetzt gar niemanden kennst, der dir helfen kann.",
+        "Denk einmal nach, wie wohl das tun muss, wenn einen im Herzen etwas immerfort drückt und quält und man kann so jeden Augenblick zum lieben Gott hingehen und ihm alles sagen und ihn bitten, dass er helfe, wo uns sonst gar niemand helfen kann!",
+        "Und er kann überall helfen und uns geben, was uns wieder froh macht.\""
+      ],
+      "en": [
+        "\"That is the reason, Heidi, that you are so unhappy, because you know no one who can help you.",
+        "Think what a comfort it is when the heart is heavy with grief to be able at any moment to go and tell everything to God, and pray Him for the help that no one else can give us.",
+        "And He can help us and give us everything that will make us happy again.\""
+      ]
+    },
+    {
+      "de": [
+        "Durch Heidis Augen fuhr ein Freudenstrahl: \"Darf man ihm alles, alles sagen?\""
+      ],
+      "enPara": "A sudden gleam of joy came into Heidi's eyes. \"May I tell Him everything, everything?\""
+    },
+    {
+      "de": [
+        "\"Alles, Heidi, alles.\""
+      ],
+      "en": [
+        "\"Yes, everything, Heidi, everything.\""
+      ]
+    },
+    {
+      "de": [
+        "Das Kind zog seine Hand aus den Händen der Großmama und sagte eilig: \"Kann ich gehen?\""
+      ],
+      "en": [
+        "Heidi drew her hand away, which the grandmother was holding affectionately between her own, and said quickly, \"May I go?\""
+      ]
+    },
+    {
+      "de": [
+        "\"Gewiss! Gewiss!\", gab diese zur Antwort, und Heidi lief davon und hinüber in sein Zimmer, und hier setzte es sich auf seinen Schemel nieder und faltete seine Hände und sagte dem lieben Gott alles, was in seinem Herzen war und es so traurig machte, und bat ihn dringend und herzlich, dass er ihm helfe und es wieder heimkommen lasse zum Großvater.--"
+      ],
+      "en": [
+        "\"Yes, of course,\" was the answer, and Heidi ran out of the room into her own, and sitting herself on a stool, folded her hands together and told God about everything that was making her so sad and unhappy, and begged Him earnestly to help her and to let her go home to her grandfather."
+      ]
+    },
+    {
+      "de": [
+        "Es mochte etwas mehr als eine Woche verflossen sein seit diesem Tage, als der Herr Kandidat begehrte, der Frau Sesemann seine Aufwartung zu machen, indem er eine Besprechung über einen merkwürdigen Gegenstand mit der Dame abzuhalten gedachte.",
+        "Er wurde auf ihre Stube berufen, und hier, wie er eintrat, streckte ihm Frau Sesemann sogleich freundlich die Hand entgegen: \"Mein lieber Herr Kandidat, seien Sie mir willkommen!",
+        "Setzen Sie sich her zu mir, hier\"--sie rückte ihm den Stuhl zurecht.",
+        "\"So, nun sagen Sie mir, was bringt Sie zu mir; doch nichts Schlimmes, keine Klagen?\""
+      ],
+      "enPara": "It was about a week after this that the tutor asked Frau Sesemann's permission for an interview with her, as he wished to inform her of a remarkable thing that had come to pass. So she invited him to her room, and as he entered she held out her hand in greeting, and pushing a chair towards him, \"I am pleased to see you,\" she said, \"pray sit down and tell me what brings you here; nothing bad, no complaints, I hope?\""
+    },
+    {
+      "de": [
+        "\"Im Gegenteil, gnädige Frau\", begann der Herr Kandidat; \"es ist etwas vorgefallen, das ich nicht mehr erwarten konnte und keiner, der einen Blick in alles Vorhergegangene hätte werfen können, denn nach allen Voraussetzungen musste angenommen werden, dass es eine völlige Unmöglichkeit sein müsse, was dennoch jetzt wirklich geschehen ist und in der wunderbarsten Weise stattgefunden hat, gleichsam im Gegensatz zu allem folgerichtig zu Erwartenden--\""
+      ],
+      "enPara": "\"Quite the reverse,\" began the tutor. \"Something has happened that I had given up hoping for, and which no one, knowing what has gone before, could have guessed, for, according to all expectations, that which has taken place could only be looked upon as a miracle, and yet it really has come to pass and in the most extraordinary manner, quite contrary to all that one could anticipate--\""
+    },
+    {
+      "de": [
+        "\"Sollte das Kind Heidi etwa lesen gelernt haben, Herr Kandidat?\", setzte hier Frau Sesemann ein."
+      ],
+      "en": [
+        "\"Has the child Heidi really learnt to read at last?\" put in Frau Sesemann."
+      ]
+    },
+    {
+      "de": [
+        "In sprachlosem Erstaunen schaute der überraschte Herr die Dame an."
+      ],
+      "enPara": "The tutor looked at the lady in speechless astonishment. At last he spoke again. \"It is indeed truly marvellous, not only because she never seemed able to learn her A B C even after all my full explanations, and after spending unusual pains upon her, but because now she has learnt it so rapidly, just after I had made up my mind to make no further attempts at the impossible but to put the letters as they were before her without any dissertation on their origin and meaning, and now she has as you might say learnt her letters over night, and started at once to read correctly, quite unlike most beginners. And it is almost as astonishing to me that you should have guessed such an unlikely thing.\""
+    },
+    {
+      "de": [
+        "\"Es ist ja wirklich völlig wunderbar\", sagte er endlich, \"nicht nur, dass das junge Mädchen nach all meinen gründlichen Erklärungen, und ungewöhnlichen Bemühungen das Abc nicht erlernt hat, sondern auch und besonders, dass es jetzt in kürzester Zeit, nachdem ich mich entschlossen hatte, das Unerreichbare aus den Augen zu lassen und ohne alle weiter greifenden Erläuterungen nur noch sozusagen die nackten Buchstaben vor die Augen des jungen Mädchens zu bringen, sozusagen über Nacht das Lesen erfasst hat, und dann sogleich mit einer Korrektheit die Worte liest, wie mir bei Anfängern noch selten vorgekommen ist.",
+        "Fast ebenso wunderbar ist mir die Wahrnehmung, dass die gnädige Frau gerade diese fern liegende Tatsache als Möglichkeit vermutete.\""
+      ],
+      "enPara": "The tutor looked at the lady in speechless astonishment. At last he spoke again. \"It is indeed truly marvellous, not only because she never seemed able to learn her A B C even after all my full explanations, and after spending unusual pains upon her, but because now she has learnt it so rapidly, just after I had made up my mind to make no further attempts at the impossible but to put the letters as they were before her without any dissertation on their origin and meaning, and now she has as you might say learnt her letters over night, and started at once to read correctly, quite unlike most beginners. And it is almost as astonishing to me that you should have guessed such an unlikely thing.\""
+    },
+    {
+      "de": [
+        "\"Es geschehen viele wunderbare Dinge im Menschenleben\", bestätigte Frau Sesemann und lächelte vergnüglich; \"es können auch einmal zwei Dinge glücklich zusammentreffen, wie ein neuer Lerneifer und eine neue Lehrmethode, und beide können nichts schaden, Herr Kandidat.",
+        "Jetzt wollen wir uns freuen, dass das Kind so weit ist, und auf guten Fortgang hoffen.\""
+      ],
+      "enPara": "\"Many unlikely things happen in life,\" said Frau Sesemann with a pleased smile. \"Two things coming together may produce a happy result, as for instance, a fresh zeal for learning and a new method of teaching, and neither does any harm. We can but rejoice that the child has made such a good start and hope for her future progress.\""
+    },
+    {
+      "de": [
+        "Damit begleitete sie den Herrn Kandidaten zur Tür hinaus und ging rasch nach dem Studierzimmer, um sich selbst der erfreulichen Nachricht zu versichern.",
+        "Richtig saß hier Heidi neben Klara und las dieser eine Geschichte vor, sichtlich selbst mit dem größten Erstaunen und mit einem wachsenden Eifer in die neue Welt eindringend, die ihm aufgegangen war, nun ihm mit einem Mal aus den schwarzen Buchstaben Menschen und Dinge entgegentraten und Leben gewannen und zu herzbewegenden Geschichten wurden.",
+        "Noch am selben Abend, als man sich zu Tische setzte, fand Heidi auf seinem Teller das große Buch liegen mit den schönen Bildern, und als es fragend nach der Großmama blickte, sagte diese freundlich nickend: \"Ja, ja, nun gehört es dir.\""
+      ],
+      "en": [
+        "After parting with the tutor she went down to the study to make sure of the good news.",
+        "There sure enough was Heidi, sitting beside Clara and reading aloud to her, evidently herself very much surprised, and growing more and more delighted with the new world that was now open to her as the black letters grew alive and turned into men and things and exciting stories.",
+        "That same evening Heidi found the large book with the beautiful pictures lying on her plate when she took her place at table, and when she looked questioningly at the grandmother, the latter nodded kindly to her and said, \"Yes, it's yours now.\""
+      ]
+    },
+    {
+      "de": [
+        "\"Für immer? Auch wenn ich heimgehe?\", fragte Heidi ganz rot vor Freude."
+      ],
+      "en": [
+        "\"Mine, to keep always? even when I go home?\" said, Heidi, blushing with pleasure."
+      ]
+    },
+    {
+      "de": [
+        "\"Gewiss, für immer!\", versicherte die Großmama; \"morgen fangen wir an zu lesen.\""
+      ],
+      "enPara": "\"Yes, of course, yours for ever,\" the grandmother assured her. \"To-morrow we will begin to read it.\""
+    },
+    {
+      "de": [
+        "\"Aber du gehst nicht heim, noch viele Jahre nicht, Heidi\", warf Klara hier ein; \"wenn nun die Großmama wieder fortgeht, dann musst du erst recht bei mir bleiben.\""
+      ],
+      "enPara": "\"But you are not going home yet, Heidi, not for years,\" put in Clara. \"When grandmother goes away, I shall want you to stay on with me.\""
+    },
+    {
+      "de": [
+        "Noch vor dem Schlafengehen musste Heidi in seinem Zimmer sein schönes Buch ansehen, und von dem Tage an war es sein Liebstes, über seinem Buch zu sitzen und immer wieder die Geschichten zu lesen, zu denen die schönen bunten Bilder gehörten.",
+        "Sagte am Abend die Großmama: \"Nun liest uns Heidi vor\", so war das Kind sehr beglückt, denn das Lesen ging ihm nun ganz leicht, und wenn es die Geschichten laut vorlas, so kamen sie ihm noch viel schöner und verständlicher vor, und die Großmama erklärte dann noch so vieles und erzählte immer noch mehr dazu.",
+        "Am liebsten beschaute Heidi immer wieder seine grüne Weide und den Hirten mitten unter der Herde, wie er so vergnüglich, auf seinen langen Stab gelehnt, dastand, denn da war er noch bei der schönen Herde des Vaters und ging nur den lustigen Schäfchen und Ziegen nach, weil es ihn freute.",
+        "Aber dann kam das Bild, wo er, vom Vaterhaus weggelaufen, nun in der Fremde war und die Schweinchen hüten musste und ganz mager geworden war bei den Trebern, die er allein noch zu essen bekam.",
+        "Und auf dem Bilde schien auch die Sonne nicht mehr so golden, da war das Land grau und nebelig.",
+        "Aber dann kam noch ein Bild zu der Geschichte: Da kam der alte Vater mit ausgebreiteten Armen aus dem Hause heraus und lief dem heimkehrenden reuigen Sohn entgegen, um ihn zu empfangen, der ganz furchtsam und abgemagert in einem zerrissenen Wams daherkam.",
+        "Das war Heidis Lieblingsgeschichte, die es immer wieder las, laut und leise, und es konnte nie genug der Erklärungen bekommen, welche die Großmama den Kindern dazu machte.",
+        "Da waren aber noch so viele schöne Geschichten in dem Buch, und bei dem Lesen derselben und dem Bilderbesehen gingen die Tage sehr schnell dahin, und schon nahte die Zeit heran, welche die Großmama zu ihrer Abreise bestimmt hatte."
+      ],
+      "en": [
+        "When, Heidi went to her room that night she had another look at her book before going to bed, and from that day forth her chief pleasure was to read the tales which belonged to the beautiful pictures over and over again.",
+        "If the grandmother said, as they were sitting together in the evening, \"Now Heidi will read aloud to us,\" Heidi was delighted, for reading was no trouble to her now, and when she read the tales aloud the scenes seemed to grow more beautiful and distinct, and then grandmother would explain and tell her more about them still.",
+        "Still the picture she liked best was the one of the shepherd leaning on his staff with his flock around him in the midst of the green pasture, for he was now at home and happy, following his father's sheep and goats.",
+        "Then came the picture where he was seen far away from his father's house, obliged to look after the swine, and he had grown pale and thin from the husks which were all he had to eat.",
+        "Even the sun seemed here to be less bright and everything looked grey and misty.",
+        "But there was the third picture still to this tale: here was the old father with outstretched arms running to meet and embrace his returning and repentant son, who was advancing timidly, worn out and emaciated and clad in a ragged coat.",
+        "That was Heidi's favorite tale, which she read over and over again, aloud and to herself, and she was never tired of hearing the grandmother explain it to her and Clara.",
+        "But there were other tales in the book besides, and what with reading and looking at the pictures the days passed quickly away, and the time drew near for the grandmother to return home."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "grimm-die-sternthaler",
+  "stage": 3,
+  "title": "Die Sternthaler",
+  "titleEn": "The Star-Money",
+  "author": "Brüder Grimm",
+  "year": 1857,
+  "historicalSpelling": true,
+  "khm": "153",
+  "de": {
+    "source": "German Wikisource",
+    "edition": "Kinder- und Haus-Märchen, 7th edition (Ausgabe letzter Hand), Göttingen: Dieterich, 1857",
+    "url": "https://de.wikisource.org/w/index.php?title=Die_Sternthaler_%281857%29&oldid=3577237",
+    "license": "Public domain (original text); Wikisource transcription under CC BY-SA 4.0"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Es war einmal ein kleines Mädchen, dem war Vater und Mutter gestorben, und es war so arm, daß es kein Kämmerchen mehr hatte darin zu wohnen und kein Bettchen mehr darin zu schlafen und endlich gar nichts mehr als die Kleider auf dem Leib und ein Stückchen Brot in der Hand, das ihm ein mitleidiges Herz geschenkt hatte.",
+        "Es war aber gut und fromm.",
+        "Und weil es so von aller Welt verlassen war, gieng es im Vertrauen auf den lieben Gott hinaus ins Feld.",
+        "Da begegnete ihm ein armer Mann, der sprach „ach, gib mir etwas zu essen, ich bin so hungerig.“",
+        "Es reichte ihm das ganze Stückchen Brot und sagte „Gott segne dirs“ und gieng weiter.",
+        "Da kam ein Kind das jammerte und sprach „es friert mich so an meinem Kopfe, schenk mir etwas, womit ich ihn bedecken kann.“",
+        "Da that es seine Mütze ab und gab sie ihm.",
+        "Und als es noch eine Weile gegangen war, kam wieder ein Kind und hatte kein Leibchen an und fror: da gab es ihm seins: und noch weiter, da bat eins um ein Röcklein, das gab es auch von sich hin.",
+        "Endlich gelangte es in einen Wald, und es war schon dunkel geworden, da kam noch eins und bat um ein Hemdlein, und das fromme Mädchen dachte „es ist dunkle Nacht, da sieht dich niemand du kannst wohl dein Hemd weg geben,“ und zog das Hemd ab und gab es auch noch hin.",
+        "Und wie es so stand und gar nichts mehr hatte, fielen auf einmal die Sterne vom Himmel, und waren lauter harte blanke Thaler: und ob es gleich sein Hemdlein weg gegeben, so hatte es ein neues an und das war vom allerfeinsten Linnen.",
+        "Da sammelte es sich die Thaler hinein und war reich für sein Lebtag."
+      ],
+      "enPara": "There was once on a time a little girl whose father and mother were dead, and she was so poor that she no longer had any little room to live in, or bed to sleep in, and at last she had nothing else but the clothes she was wearing and a little bit of bread in her hand which some charitable soul had given her. She was, however, good and pious. And as she was thus forsaken by all the world, she went forth into the open country, trusting in the good God. Then a poor man met her, who said, “Ah, give me something to eat, I am so hungry!” She reached him the whole of her piece of bread, and said, “May God bless it to thy use,” and went onwards. Then came a child who moaned and said, “My head is so cold, give me something to cover it with.” So she took off her hood and gave it to him; and when she had walked a little farther, she met another child who had no jacket and was frozen with cold. Then she gave it her own; and a little farther on one begged for a frock, and she gave away that also. At length she got into a forest and it had already become dark, and there came yet another child, and asked for a little shirt, and the good little girl thought to herself, “It is a dark night and no one sees thee, thou canst very well give thy little shirt away,” and took it off, and gave away that also. And as she so stood, and had not one single thing left, suddenly some stars from heaven fell down, and they were nothing else but hard smooth pieces of money, and although she had just given her little shirt away, she had a new one which was of the very finest linen. Then she gathered together the money into this, and was rich all the days of her life."
+    }
+  ]
+}

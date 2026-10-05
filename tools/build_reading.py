@@ -169,6 +169,8 @@ def main():
                     missing += 0 if g else 1
                     counts[key] = counts.get(key, 0) + 1
         out = {k: x[k] for k in ("id", "stage", "title", "titleEn", "author", "year", "historicalSpelling", "de", "en") if k in x}
+        if x.get("stage") == 2:
+            out.pop("year", None)  # a wiki page has no edition year
         out["paragraphs"] = x["paragraphs"]
         out["gloss"] = gloss
         rec = recording_for(x)

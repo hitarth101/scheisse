@@ -1,0 +1,37 @@
+{
+  "id": "grimm-der-suesse-brei",
+  "stage": 3,
+  "title": "Der süße Brei",
+  "titleEn": "Sweet Porridge",
+  "author": "Brüder Grimm",
+  "year": 1857,
+  "historicalSpelling": true,
+  "khm": "103",
+  "de": {
+    "source": "German Wikisource",
+    "edition": "Kinder- und Haus-Märchen, 7th edition (Ausgabe letzter Hand), Göttingen: Dieterich, 1857",
+    "url": "https://de.wikisource.org/w/index.php?title=Der_s%C3%BC%C3%9Fe_Brei_%281857%29&oldid=3445434",
+    "license": "Public domain (original text); Wikisource transcription under CC BY-SA 4.0"
+  },
+  "en": {
+    "source": "Project Gutenberg #5314",
+    "edition": "Household Tales by Brothers Grimm",
+    "translator": "Margaret Hunt",
+    "year": 1884,
+    "url": "https://www.gutenberg.org/ebooks/5314",
+    "license": "Public domain"
+  },
+  "paragraphs": [
+    {
+      "de": [
+        "Es war einmal ein armes frommes Mädchen, das lebte mit seiner Mutter allein, und sie hatten nichts mehr zu essen.",
+        "Da gieng das Kind hinaus in den Wald, und begegnete ihm da eine alte Frau, die wußte seinen Jammer schon und schenkte ihm ein Töpfchen, zu dem sollt es sagen „Töpfchen, koche,“ so kochte es guten süßen Hirsenbrei, und wenn es sagte „Töpfchen, steh,“ so hörte es wieder auf zu kochen.",
+        "Das Mädchen brachte den Topf seiner Mutter heim, und nun waren sie ihrer Armuth und ihres Hungers ledig und aßen süßen Brei so oft sie wollten.",
+        "Auf eine Zeit war das Mädchen ausgegangen, da sprach die Mutter „Töpfchen, koche,“ da kocht es, und sie ißt sich satt; nun will sie daß das Töpfchen wieder aufhören soll, aber sie weiß das Wort nicht.",
+        "Also kocht es fort, und der Brei steigt über den Rand hinaus und kocht immer zu, die Küche und das ganze Haus voll, und das zweite Haus und dann die Straße, als wollts die ganze Welt satt machen, und ist die größte Noth, und kein Mensch weiß sich da zu helfen.",
+        "Endlich, wie nur noch ein einziges Haus übrig ist, da kommt das Kind heim, und spricht nur „Töpfchen, steh,“ da steht es und hört auf zu kochen; und wer wieder in die Stadt wollte, der mußte sich durchessen."
+      ],
+      "enPara": "There was a poor but good little girl who lived alone with her mother, and they no longer had anything to eat. So the child went into the forest, and there an aged woman met her who was aware of her sorrow, and presented her with a little pot, which when she said, “Cook, little pot, cook,” would cook good, sweet porridge, and when she said, “Stop, little pot,” it ceased to cook. The girl took the pot home to her mother, and now they were freed from their poverty and hunger, and ate sweet porridge as often as they chose. Once on a time when the girl had gone out, her mother said, “Cook, little pot, cook.” And it did cook and she ate till she was satisfied, and then she wanted the pot to stop cooking, but did not know the word. So it went on cooking and the porridge rose over the edge, and still it cooked on until the kitchen and whole house were full, and then the next house, and then the whole street, just as if it wanted to satisfy the hunger of the whole world, and there was the greatest distress, but no one knew how to stop it. At last when only one single house remained, the child came home and just said, “Stop, little pot,” and it stopped and gave up cooking, and whosoever wished to return to the town had to eat his way back."
+    }
+  ]
+}
