@@ -8,6 +8,11 @@ const SOURCES: { name: string; what: string; url: string }[] = [
   { name: 'Wiktionary', what: 'Meanings, gender, plurals, word forms · CC BY-SA 4.0, via kaikki.org', url: 'https://en.wiktionary.org/' },
   { name: 'Goethe-Institut', what: 'A1, A2, B1 word lists', url: 'https://www.goethe.de/' },
   { name: 'Leibniz-Institut für Deutsche Sprache', what: 'DeReWo frequency list, used for the order of new words', url: 'https://www.ids-mannheim.de/digspra/kl/projekte/methoden/derewo/' },
+  { name: 'Wikibooks German course', what: 'Prepositions-by-case table, reading dialogues · CC BY-SA', url: 'https://en.wikibooks.org/wiki/German' },
+  { name: 'Project Gutenberg and Wikisource', what: 'Grimm fairy tales and Heidi, German and English · public domain', url: 'https://www.gutenberg.org/' },
+  { name: 'DW Nicos Weg', what: 'Lesson and grammar topic names and order; lessons are linked, not copied', url: 'https://learngerman.dw.com/en/nicos-weg/c-36519789' },
+  { name: 'Grimm Grammar, University of Texas at Austin', what: 'Linked from grammar topics', url: 'https://coerll.utexas.edu/gg/' },
+  { name: 'Schubert-Verlag', what: 'Online exercises, linked from grammar topics', url: 'https://www.schubert-verlag.de/aufgaben/' },
 ];
 
 /** Attributions the open licences require, in one place (design spec 5.7). */
