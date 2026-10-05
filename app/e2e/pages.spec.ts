@@ -57,7 +57,7 @@ test('outside time is added to the week on Status', async ({ page }) => {
 });
 
 test('every key on the new pages has a name for VoiceOver', async ({ page }) => {
-  for (const hash of ['#/flashcards/inbox', '#/flashcards/inbox/capture', '#/grammar', '#/grammar/tables/definite-articles', '#/reading', '#/status/dictionaries']) {
+  for (const hash of ['#/flashcards/inbox', '#/flashcards/inbox/capture', '#/grammar', '#/grammar/topics/a1-articles-definite', '#/grammar/tables/definite-articles', '#/reading', '#/reading/heidi-1-01', '#/status/dictionaries']) {
     await page.goto('./' + hash);
     await page.waitForTimeout(400);
     const unnamed = await page.evaluate(() => Array.from(document.querySelectorAll('button, a, input, [role="button"]'))
@@ -67,4 +67,18 @@ test('every key on the new pages has a name for VoiceOver', async ({ page }) => 
     expect(unnamed, hash).toEqual([]);
     await noSidewaysScroll(page);
   }
+});
+
+test('reading: a sentence shows its English, a word in it opens its popup', async ({ page }) => {
+  await fresh(page, '#/reading');
+  await expect(page.getByRole('heading', { name: 'Reading' })).toBeVisible();
+  await page.getByRole('button', { name: /^Hänsel und Gretel/ }).click();
+  const first = page.locator('.text .s').first();
+  await first.click();
+  await expect(page.locator('.en-line, .para-en').first()).toBeVisible();
+  await first.locator('.w').nth(3).click();
+  const popup = page.getByRole('dialog');
+  await expect(popup).toBeVisible();
+  await expect(popup.getByRole('button', { name: 'Dictionary' })).toBeVisible();
+  await noSidewaysScroll(page);
 });
